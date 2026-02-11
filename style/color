@@ -1,0 +1,18 @@
+he green: #10b981
+he cyan: #00e5ff
+the purple: #9333ea
+the indigo: #4546e5
+
+
+light mode.
+bg: #f8fafc
+card-surface: #fff
+shadow-color: rgba(0,0,0,0.05)
+text-cl: #1e293b
+
+dark mode.
+bg: #0f172a
+card-surface: rgba(30,41,59,0.7)
+border-cl: rgba(255,255,0.1)
+text-cl(primary): #fff
+text-cl(secondary): #94a3bb
