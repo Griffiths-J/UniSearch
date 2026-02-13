@@ -369,8 +369,43 @@ main{
 
 
 
+/*Grade page*/
+.gradePage{
 
+}
+.gradePagehero{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
 
+.grade-p-1{
+  font-size:3rem;
+  color: #000;
+
+}
+
+.grade-p-2{
+  color: #555;
+  font-weight: bold;
+}
+
+.gradeWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gradeCon{
+  width: 50%;
+  min-width: 400px;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 
 
