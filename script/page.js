@@ -26,7 +26,7 @@ export function pages(){
 
 
   document.querySelector('.backTolanding').addEventListener('click',()=>{
-    history.pushState(document.title,window.location.pathname+window.location.search);
+    history.pushState("",document.title,window.location.pathname+window.location.search);
     
     showLandingPage();
   })
@@ -34,7 +34,7 @@ export function pages(){
 
 
   window.addEventListener('load',()=>{
-      if(window.location.hash==='#grade'|| window.location.hash==='#grade1'){
+      if(window.location.hash==='#grade'){
         showGradePage();
       }else{
         showLandingPage();
