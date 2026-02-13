@@ -21,14 +21,17 @@ header{
   align-items: center;
   position: relative;
   height: 8vh;
-  position: fixed;
+  position: sticky;
   top: 0;
   right: 0;
   left: 0;
+  z-index: 1000;
  
 }
 body{
   background-color: var(---main-bg);
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
 html{
@@ -86,7 +89,6 @@ transform: rotate(-45deg) translate(5px , -6px);
 main{
    flex: 1;
    z-index: 200;
-   margin-top: 8vh;
    
 }
 
@@ -215,9 +217,6 @@ main{
     font-size: 1.65rem;
   }
 
-  main{
-    margin-top: 5rem;
-  }
 
   .third{
     font-size: 0.89rem;
@@ -370,9 +369,14 @@ main{
 
 
 /*Grade page*/
-.gradePage{
 
+.gradePage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
 .gradePagehero{
  display: flex;
  flex-direction: column;
@@ -381,7 +385,7 @@ main{
 }
 
 .grade-p-1{
-  font-size:3rem;
+  font-size:2.3rem;
   color: #000;
 
 }
@@ -392,14 +396,17 @@ main{
 }
 
 .gradeWrapper{
+  margin-top: 1.5rem;
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
+  background-color: blue;
 }
 
 .gradeCon{
   width: 50%;
-  min-width: 400px;
+  min-width: 380px;
   background-color: red;
   display: flex;
   flex-direction: column;
@@ -407,11 +414,61 @@ main{
   align-items: center;
 }
 
+ /* select,::picker(select){
+  appearance: base-select;
+}  */
+
+ select{
+  width: 200px;
+  padding: 8.5px;
+  border-radius: 5px;
+  margin: 3px;
+  background-color: #fff;
+}
+
+.coreSub,.elective-sub{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Csubjects-1,.Csubjects-2,.Csubjects-3,.Csubjects-4,.Esubjects-1,.Esubjects-2,.Esubjects-3,.Esubjects-4{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin:2px 10px;
+}
+
+select:focus{
+  outline:1px solid green;
+}
 
 
 
 
+@media (max-width:989.33px){
+  .Csubjects-1,.Csubjects-2,.Csubjects-3,.Csubjects-4,.Esubjects-1,.Esubjects-2,.Esubjects-3,.Esubjects-4{
+    margin: 1px 5px;
+  }
+ .grade-p-1{
+  font-size: 1.7rem;
+  margin-top: 1rem;
+ 
+ }
+ .grade-p-2{
+  font-size: 0.9rem;
+   margin-bottom: 2rem;
+ }
 
+ select{
+  width: 160px;
+ }
+
+ .gradeWrapper{
+  flex: 1;
+  justify-content: center;
+ }
+}
 
 
 
