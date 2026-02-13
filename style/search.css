@@ -396,18 +396,16 @@ main{
 }
 
 .gradeWrapper{
-  margin-top: 1.5rem;
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
-  background-color: blue;
+
 }
 
 .gradeCon{
   width: 50%;
   min-width: 380px;
-  background-color: red;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -424,6 +422,8 @@ main{
   border-radius: 5px;
   margin: 3px;
   background-color: #fff;
+  border: 1px solid var(---card-surface);
+  box-shadow: 0 0 2px #00000035;
 }
 
 .coreSub,.elective-sub{
@@ -440,7 +440,7 @@ main{
 }
 
 select:focus{
-  outline:1px solid green;
+  outline:1px solid var(---text-color);
 }
 
 
@@ -466,8 +466,34 @@ select:focus{
 
  .gradeWrapper{
   flex: 1;
+  margin-top: 1.6rem;
   justify-content: center;
  }
+
+
+}
+
+
+
+.find {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 0.78rem;
+  
+}
+
+.gradeButton1{
+  width: 200px;
+  padding: 0.8rem 0.5rem;
+  font-size: 1rem;
+}
+.gradeButton2{
+  width: 140px;
+  padding: 0.3rem 0.2rem;
+  margin-bottom: 0.4rem;
+   font-size: 0.8rem;
 }
 
 
@@ -475,14 +501,28 @@ select:focus{
 
 
 
+@media (max-width:700px){
 
+  .find{
+    margin-top: 1.5rem;
+    gap: 2rem;
+   
+  }
+   .gradeButton1{
+  width: 200px;
+  padding: 0.65rem 0.4rem;
+  font-size: 1rem;
+}
+.gradeButton2{
+  width: 140px;
+  padding: 0.65rem 0.1rem;
+  font-size: 0.9rem;
+}
+}
 
-
-
-
-
-
-
+.gradePage{
+  display: none;
+}
 
 
 
