@@ -53,10 +53,23 @@ html{
   color: var(---text-color);
 }
 
-.last{
-    display:none;
-  }
 
+.last{
+  background:linear-gradient(to right,var(---Hspan),#9333ea,#4546e5 );
+  color: #fff;
+  border-radius: 4rem;
+  padding:0.8rem 0.6rem;
+  font-size: 1.12rem;
+  width: 170px;
+  box-shadow: 0px 0px 3px #18181878;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  transition: background-color .45s ease;
+  display: none;
+}
 
 .burger{
   display: none;
@@ -93,11 +106,14 @@ main{
 }
 
 
+
 /*responsible nav*/
 @media (max-width:950px) and (min-width:730px){
 .uls{
   width:50%;
 }
+
+
 }
 
 @media (max-width:729.99px){
@@ -123,22 +139,10 @@ main{
     transition: all .12s ease;
   }
 
-  .overlay{
-    width: 100%;
-    height: 100vh; 
-    background-color: #d9d8d87b;
-    position: fixed;
-    top: 8vh;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 55;
-    display: none;
+  .last{
+    display: grid;
   }
 
-  /* .overlay-show{
-    display: block;
-  } */
 
   .uls li{
     padding: 1.7rem;
@@ -154,17 +158,6 @@ main{
 
   }
 
-  .last{
-    display:block;
-    background-color: #0035ff;
-    padding: 1rem;
-    border-radius: 1rem;
-    color: #fff;
-    font-weight: bold;
-    width: 150px;
-    display: flex;
-    justify-content: center;
-  }
 
   .show{
     transform:translate(0%);
@@ -284,6 +277,13 @@ main{
   border: none;
   transition: background-color .45s ease;
 }
+
+.last{
+  padding:1rem 0.7rem;
+  width: 170px;
+  font-size: 0.95rem;
+}
+
 
 .heroButton:hover{
   background-color: #ff9100;
@@ -418,7 +418,7 @@ main{
 
  select{
   width: 200px;
-  padding: 8.5px;
+  padding: 10.5px;
   border-radius: 5px;
   margin: 3px;
   background-color: #fff;
@@ -437,6 +437,7 @@ main{
   display: flex;
   justify-content: space-around;
   margin:2px 10px;
+  align-items: center;
 }
 
 select:focus{
@@ -449,6 +450,7 @@ select:focus{
 @media (max-width:989.33px){
   .Csubjects-1,.Csubjects-2,.Csubjects-3,.Csubjects-4,.Esubjects-1,.Esubjects-2,.Esubjects-3,.Esubjects-4{
     margin: 1px 5px;
+    align-items: center;
   }
  .grade-p-1{
   font-size: 1.7rem;
@@ -457,16 +459,17 @@ select:focus{
  }
  .grade-p-2{
   font-size: 0.9rem;
-   margin-bottom: 2rem;
+   margin-bottom: 0.3rem;
  }
 
  select{
   width: 160px;
+  padding: 0.8rem 0.6rem;
  }
 
  .gradeWrapper{
   flex: 1;
-  margin-top: 1.6rem;
+  margin-top: 0.55rem;
   justify-content: center;
  }
 
@@ -485,7 +488,8 @@ select:focus{
 }
 
 .gradeButton1{
-  width: 200px;
+  width: 100%;
+  max-width: 340px;
   padding: 0.8rem 0.5rem;
   font-size: 1rem;
 }
@@ -498,31 +502,48 @@ select:focus{
 
 
 
-
+.type-topic{
+  font-size: 1.2rem;
+}
 
 
 @media (max-width:700px){
 
   .find{
-    margin-top: 1.5rem;
-    gap: 2rem;
+    margin-top: 1.4rem;
+    gap: 1.11rem;
    
   }
    .gradeButton1{
-  width: 200px;
-  padding: 0.65rem 0.4rem;
+  padding: 1rem 0.7rem;
   font-size: 1rem;
 }
 .gradeButton2{
   width: 140px;
-  padding: 0.65rem 0.1rem;
-  font-size: 0.9rem;
+  padding: 0.65rem 0.25rem;
+  font-size: 0.85rem;
+}
+
+.type-topic{
+  font-size: 1.1rem;
+  margin: 3px 1px;
 }
 }
 
 .gradePage{
   display: none;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

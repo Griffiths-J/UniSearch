@@ -1,19 +1,44 @@
 export function pages(){
-  const landingPage = document.querySelector('.landingPage');
-  const gradingPage = document.querySelector('.gradePage');
-
-document.querySelector('.switchTograde').addEventListener('click',()=>{
-
-  landingPage.style.display='none';
-  gradingPage.style.display='block';
-})
 
 
-document.querySelector('.switchBackTolanding').addEventListener('click',()=>{
-  landingPage.style.display='block';
-  gradingPage.style.display='none';
-})
+  const landingSection = document.querySelector('.landingPage');
+  const gradeSection = document.querySelector('.gradePage');
+
+    
+  function showGradePage(){
+       window.location.hash='grade';
+      landingSection.style.display='none';
+      gradeSection.style.display='block';
+    }                                                                                             
+
+  function showLandingPage(){
+     landingSection.style.display='block';
+     gradeSection.style.display='none'
+  }
 
 
 
+  document.querySelector('.getStarted-btn').addEventListener('click',()=>{
+    window.location.hash='grade';
+    showGradePage();
+  });
+
+
+
+  document.querySelector('.backTolanding').addEventListener('click',()=>{
+    history.pushState(document.title,window.location.pathname+window.location.search);
+    
+    showLandingPage();
+  })
+
+
+
+  window.addEventListener('load',()=>{
+      if(window.location.hash==='#grade'|| window.location.hash==='#grade1'){
+        showGradePage();
+      }else{
+        showLandingPage();
+      }
+  });
+ 
 }
