@@ -1,0 +1,123 @@
+.universities , .hostels , .howitwork{
+  margin: 1rem 0.4rem;
+}
+/*university*/
+.search{
+  display: flex;
+  max-width: 500px;
+  width: 70%;
+  background-color: #fff;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 0 10px -7px #1b1a1ab1;
+  margin-top: 0.7rem;
+}
+.search img{
+  width: 25px;
+}
+.search input{
+  border: none;
+  width: 100%;
+  font-size: 1.1rem;
+}
+.search ::placeholder{
+  font-size:0.8rem;
+  font-weight: lighter;
+  color: #7a7a7ae7;
+}
+.search input:focus{
+  border: none;
+  outline: none;
+}
+.uni-p{
+  font-size: calc(2.2rem + 1.5vw);
+}
+
+
+.card{
+  box-shadow: 0 0 2px -1px #00000081;
+  padding: 0.4rem;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+.card-img{
+  width: calc(2rem + 1vw);
+}
+
+.gridCont{
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill ,minmax(240px , 1fr));
+  gap: 10px;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 1rem;
+}
+
+.card-sch{
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.card-sch-type{
+  background-color: aqua;
+  width: fit-content;
+  padding: 0 0.3rem;
+  border-radius: 2px;
+  box-shadow: 0 0 2px #0000001e;
+}
+
+.middlesec{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.location{
+  color: #555;
+  font-weight: light;
+}
+
+.topsec{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.rank{
+  position: absolute;
+  right: 20px;
+  font-size: 2rem;
+  font-weight: bolder;
+  color: red;
+}
+
+.downsec button{
+  border: none;
+  padding:0.4rem;
+  border-radius: 5px;
+  background-color: red;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+.hostels{
+  display: none;
+}
+.howitwork{
+  display: none;
+}

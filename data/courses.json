@@ -1,0 +1,1404 @@
+
+[
+  {
+  "KNUST": [
+    {
+      "program_id": "KNUST_BIOCHEM_001",
+      "program_name": "BSc Biochemistry",
+      "college": "College of Science",
+      "faculty": "Biosciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 9,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "biology",
+            "chemistry",
+            "physics",
+            "elective_maths"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_FOODTECH_001",
+      "program_name": "BSc Food Science and Technology",
+      "college": "College of Science",
+      "faculty": "Biosciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 11,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "biology",
+            "chemistry",
+            "physics",
+            "elective_maths"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_DIETETICS_001",
+      "program_name": "BSc Dietetics",
+      "college": "College of Science",
+      "faculty": "Biosciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 9,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "biology",
+            "chemistry",
+            "physics",
+            "elective_maths",
+            "food_nutrition",
+            "management_in_living"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_NUTRITION_001",
+      "program_name": "BSc Human Nutrition",
+      "college": "College of Science",
+      "faculty": "Biosciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 10,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "biology",
+            "chemistry",
+            "physics",
+            "elective_maths",
+            "food_nutrition",
+            "management_in_living"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_BIOSCI_001",
+      "program_name": "BSc Biological Sciences",
+      "college": "College of Science",
+      "faculty": "Biosciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 9,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "biology",
+            "chemistry",
+            "physics",
+            "elective_maths"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_ENVSCI_001",
+      "program_name": "BSc Environmental Science",
+      "college": "College of Science",
+      "faculty": "Biosciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 12,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "biology",
+            "chemistry",
+            "physics",
+            "elective_maths",
+            "agricultural_science"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_OPTOMETRY_001",
+      "program_name": "Doctor of Optometry",
+      "college": "College of Science",
+      "faculty": "Biosciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 6,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "biology",
+            "physics",
+            "chemistry",
+            "elective_maths"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_CHEM_001",
+      "program_name": "BSc Chemistry",
+      "college": "College of Science",
+      "faculty": "Physical and Computational Sciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 15,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "chemistry",
+            "physics",
+            "mathematics",
+            "biology"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_PHYSICS_001",
+      "program_name": "BSc Physics",
+      "college": "College of Science",
+      "faculty": "Physical and Computational Sciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 16,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "mathematics",
+            "physics",
+            "chemistry",
+            "electronics"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_METEOR_001",
+      "program_name": "BSc Meteorology and Climate Science",
+      "college": "College of Science",
+      "faculty": "Physical and Computational Sciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 17,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "mathematics",
+            "physics",
+            "chemistry",
+            "electronics"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_MATHS_001",
+      "program_name": "BSc Mathematics",
+      "college": "College of Science",
+      "faculty": "Physical and Computational Sciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 15,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "mathematics",
+            "physics",
+            "chemistry",
+            "biology"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_ACTUARIAL_001",
+      "program_name": "BSc Actuarial Science",
+      "college": "College of Science",
+      "faculty": "Physical and Computational Sciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 10,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "mathematics",
+            "physics",
+            "chemistry",
+            "biology",
+            "economics",
+            "accounting",
+            "business_management"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_STAT_001",
+      "program_name": "BSc Statistics",
+      "college": "College of Science",
+      "faculty": "Physical and Computational Sciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 12,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "mathematics",
+            "physics",
+            "chemistry",
+            "biology",
+            "economics",
+            "accounting",
+            "business_management"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_CS_001",
+      "program_name": "BSc Computer Science",
+      "college": "College of Science",
+      "faculty": "Physical and Computational Sciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 7,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "mathematics",
+            "physics",
+            "chemistry",
+            "applied_electricity",
+            "electronics"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_IT_001",
+      "program_name": "BSc Information Technology",
+      "college": "College of Science",
+      "faculty": "Physical and Computational Sciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 10,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "mathematics",
+            "physics",
+            "chemistry",
+            "biology",
+            "economics",
+            "government",
+            "business_management",
+            "geography",
+            "visual_arts"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_AGR_ENG_001",
+      "program_name": "BSc Agricultural Engineering",
+      "college": "College of Engineering",
+      "faculty": "Engineering",
+      "cutoff_criteria": {
+        "minimum_aggregate": 13,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["physics", "elective_maths", "chemistry", "technical_drawing", "engineering_science", "general_agriculture", "biology", "metal_work", "auto_mechanics", "applied_electricity", "building_construction"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_CHEM_ENG_001",
+      "program_name": "BSc Chemical Engineering",
+      "college": "College of Engineering",
+      "faculty": "Engineering",
+      "cutoff_criteria": {
+        "minimum_aggregate": 7,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["physics", "elective_maths", "chemistry"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_CIVIL_ENG_001",
+      "program_name": "BSc Civil Engineering",
+      "college": "College of Engineering",
+      "faculty": "Engineering",
+      "cutoff_criteria": {
+        "minimum_aggregate": 7,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["physics", "elective_maths", "chemistry"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_MAT_ENG_001",
+      "program_name": "BSc Materials Engineering",
+      "college": "College of Engineering",
+      "faculty": "Engineering",
+      "cutoff_criteria": {
+        "minimum_aggregate": 10,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["physics", "elective_maths", "chemistry"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_MECH_ENG_001",
+      "program_name": "BSc Mechanical Engineering",
+      "college": "College of Engineering",
+      "faculty": "Engineering",
+      "cutoff_criteria": {
+        "minimum_aggregate": 7,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["physics", "elective_maths", "chemistry", "metal_work", "auto_mechanics", "applied_electricity", "technical_drawing", "building_construction", "woodwork"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_AERO_ENG_001",
+      "program_name": "BSc Aerospace Engineering",
+      "college": "College of Engineering",
+      "faculty": "Engineering",
+      "cutoff_criteria": {
+        "minimum_aggregate": 7,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["physics", "elective_maths", "chemistry", "metal_work", "auto_mechanics", "applied_electricity", "technical_drawing", "building_construction", "woodwork"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_PET_ENG_001",
+      "program_name": "BSc Petroleum Engineering",
+      "college": "College of Engineering",
+      "faculty": "Engineering",
+      "cutoff_criteria": {
+        "minimum_aggregate": 6,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["physics", "elective_maths", "chemistry"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_GEOL_ENG_001",
+      "program_name": "BSc Geological Engineering",
+      "college": "College of Engineering",
+      "faculty": "Engineering",
+      "cutoff_criteria": {
+        "minimum_aggregate": 8,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["physics", "elective_maths", "chemistry"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_GEOM_ENG_001",
+      "program_name": "BSc Geomatic (Geodetic) Engineering",
+      "college": "College of Engineering",
+      "faculty": "Engineering",
+      "cutoff_criteria": {
+        "minimum_aggregate": 9,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["physics", "elective_maths", "chemistry", "geography"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_ELEC_ENG_001",
+      "program_name": "BSc Electrical and Electronic Engineering",
+      "college": "College of Engineering",
+      "faculty": "Engineering",
+      "cutoff_criteria": {
+        "minimum_aggregate": 6,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["physics", "elective_maths", "chemistry", "applied_electricity", "electronics", "ict"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_COMP_ENG_001",
+      "program_name": "BSc Computer Engineering",
+      "college": "College of Engineering",
+      "faculty": "Engineering",
+      "cutoff_criteria": {
+        "minimum_aggregate": 6,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["physics", "elective_maths", "chemistry", "applied_electricity", "electronics", "ict"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_TELE_ENG_001",
+      "program_name": "BSc Telecommunication Engineering",
+      "college": "College of Engineering",
+      "faculty": "Engineering",
+      "cutoff_criteria": {
+        "minimum_aggregate": 9,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["physics", "elective_maths", "chemistry", "applied_electricity", "electronics", "ict"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_BIOMED_ENG_001",
+      "program_name": "BSc Biomedical Engineering",
+      "college": "College of Engineering",
+      "faculty": "Engineering",
+      "cutoff_criteria": {
+        "minimum_aggregate": 6,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["physics", "elective_maths", "chemistry", "biology", "applied_electricity", "electronics", "ict"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_PETROCHEM_ENG_001",
+      "program_name": "BSc Petrochemical Engineering",
+      "college": "College of Engineering",
+      "faculty": "Engineering",
+      "cutoff_criteria": {
+        "minimum_aggregate": 7,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["physics", "elective_maths", "chemistry"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_MET_ENG_001",
+      "program_name": "BSc Metallurgical Engineering",
+      "college": "College of Engineering",
+      "faculty": "Engineering",
+      "cutoff_criteria": {
+        "minimum_aggregate": 11,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["physics", "elective_maths", "chemistry"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_AUTO_ENG_001",
+      "program_name": "BSc Automobile Engineering",
+      "college": "College of Engineering",
+      "faculty": "Engineering",
+      "cutoff_criteria": {
+        "minimum_aggregate": 10,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["physics", "elective_maths", "chemistry", "metal_work", "auto_mechanics", "applied_electricity", "technical_drawing", "building_construction", "woodwork"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_IND_ENG_001",
+      "program_name": "BSc Industrial Engineering",
+      "college": "College of Engineering",
+      "faculty": "Engineering",
+      "cutoff_criteria": {
+        "minimum_aggregate": 10,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["physics", "elective_maths", "chemistry", "metal_work", "auto_mechanics", "applied_electricity", "technical_drawing", "building_construction", "woodwork"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_MARINE_ENG_001",
+      "program_name": "BSc Marine Engineering",
+      "college": "College of Engineering",
+      "faculty": "Engineering",
+      "cutoff_criteria": {
+        "minimum_aggregate": 9,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["physics", "elective_maths", "chemistry", "metal_work", "auto_mechanics", "applied_electricity", "technical_drawing", "building_construction", "woodwork"],
+          "count": 3
+        }
+      }
+    },
+     {
+      "program_id": "KNUST_AKAN_001",
+      "program_name": "BA. Akan Language and Culture",
+      "college": "College of Humanities and Social Sciences",
+      "faculty": "Social Sciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 22,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["twi", "fante", "literature_in_english", "government", "history", "religious_studies", "geography", "economics"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_ECON_001",
+      "program_name": "BA. Economics",
+      "college": "College of Humanities and Social Sciences",
+      "faculty": "Social Sciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 10,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["economics", "elective_maths", "government", "history", "geography"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_ENGLISH_001",
+      "program_name": "BA. English",
+      "college": "College of Humanities and Social Sciences",
+      "faculty": "Social Sciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 13,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["literature_in_english", "government", "history", "religious_studies", "french", "akan"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_FRENCH_001",
+      "program_name": "BA. French and Francophone Studies",
+      "college": "College of Humanities and Social Sciences",
+      "faculty": "Social Sciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 14,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["french", "literature_in_english", "government", "history", "religious_studies"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_GEOG_001",
+      "program_name": "BA. Geography and Rural Development",
+      "college": "College of Humanities and Social Sciences",
+      "faculty": "Social Sciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 10,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["geography", "economics", "government", "history", "elective_maths"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_HISTORY_001",
+      "program_name": "BA. History",
+      "college": "College of Humanities and Social Sciences",
+      "faculty": "Social Sciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 15,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["history", "government", "religious_studies", "literature_in_english", "economics", "geography"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_LING_001",
+      "program_name": "BA. Linguistics",
+      "college": "College of Humanities and Social Sciences",
+      "faculty": "Social Sciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 15,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["literature_in_english", "government", "history", "religious_studies", "french", "akan"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_MEDIA_001",
+      "program_name": "BA. Media and Communication Studies",
+      "college": "College of Humanities and Social Sciences",
+      "faculty": "Social Sciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 9,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["literature_in_english", "government", "history", "religious_studies", "economics", "geography"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_POLS_001",
+      "program_name": "BA. Political Studies",
+      "college": "College of Humanities and Social Sciences",
+      "faculty": "Social Sciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 9,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["government", "history", "economics", "religious_studies", "literature_in_english", "geography"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_PUB_ADMIN_001",
+      "program_name": "Bachelor of Public Administration",
+      "college": "College of Humanities and Social Sciences",
+      "faculty": "Social Sciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 11,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["government", "history", "economics", "business_management", "accounting", "religious_studies"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_RELIGION_001",
+      "program_name": "BA. Religious Studies (BA. Religion and Human Development)",
+      "college": "College of Humanities and Social Sciences",
+      "faculty": "Social Sciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 20,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["religious_studies", "government", "history", "literature_in_english", "economics", "geography"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_SOCIOLOGY_001",
+      "program_name": "BA. Sociology",
+      "college": "College of Humanities and Social Sciences",
+      "faculty": "Social Sciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 11,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["government", "history", "economics", "religious_studies", "geography", "literature_in_english"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_SOCIAL_WORK_001",
+      "program_name": "BA. Social Work",
+      "college": "College of Humanities and Social Sciences",
+      "faculty": "Social Sciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 11,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["government", "history", "economics", "religious_studies", "geography", "literature_in_english"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_BUSINESS_HRM_001",
+      "program_name": "BSc Business Administration (Human Resource Mgt./Management)",
+      "college": "College of Humanities and Social Sciences",
+      "faculty": "KNUST Business School",
+      "cutoff_criteria": {
+        "minimum_aggregate": 7,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["business_management", "financial_accounting", "economics", "cost_accounting", "elective_maths", "government", "history", "geography"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_BUSINESS_MKT_001",
+      "program_name": "BSc Business Administration (Marketing/International Business)",
+      "college": "College of Humanities and Social Sciences",
+      "faculty": "KNUST Business School",
+      "cutoff_criteria": {
+        "minimum_aggregate": 9,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["business_management", "financial_accounting", "economics", "cost_accounting", "elective_maths", "government", "history", "geography"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_BUSINESS_ACC_001",
+      "program_name": "BSc Business Administration (Accounting/Banking and Finance)",
+      "college": "College of Humanities and Social Sciences",
+      "faculty": "KNUST Business School",
+      "cutoff_criteria": {
+        "minimum_aggregate": 7,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["business_management", "financial_accounting", "economics", "cost_accounting", "elective_maths", "government", "history", "geography"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_BUSINESS_LOG_001",
+      "program_name": "BSc Business Adm. (Logistics and Supply Chain Mgt/Bus. Info. Tech.)",
+      "college": "College of Humanities and Social Sciences",
+      "faculty": "KNUST Business School",
+      "cutoff_criteria": {
+        "minimum_aggregate": 8,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["business_management", "financial_accounting", "economics", "cost_accounting", "elective_maths", "government", "history", "geography"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_HOSPITALITY_001",
+      "program_name": "BSc Hospitality and Tourism Management",
+      "college": "College of Humanities and Social Sciences",
+      "faculty": "KNUST Business School",
+      "cutoff_criteria": {
+        "minimum_aggregate": 10,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["food_and_nutrition", "management_in_living", "economics", "business_management", "accounting", "geography", "french"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_LLB_001",
+      "program_name": "LLB",
+      "college": "College of Humanities and Social Sciences",
+      "faculty": "Faculty of Law",
+      "cutoff_criteria": {
+        "minimum_aggregate": 6,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["government", "history", "literature_in_english", "economics", "elective_maths", "physics", "chemistry", "biology"],
+          "count": 3
+        }
+      }
+    },
+    
+    {
+      "program_id": "KNUST_MED_001",
+      "program_name": "BSc. Human Biology (Medicine)",
+      "college": "College of Health Sciences",
+      "faculty": "School of Medicine and Dentistry",
+      "cutoff_criteria": {
+        "minimum_aggregate": 6,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["biology", "chemistry", "physics", "elective_maths"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_DENT_001",
+      "program_name": "Bachelor of Dental Surgery (BDS) (Fee-Paying Only)",
+      "college": "College of Health Sciences",
+      "faculty": "School of Medicine and Dentistry",
+      "cutoff_criteria": {
+        "minimum_aggregate": 6,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["biology", "chemistry", "physics", "elective_maths"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_VET_001",
+      "program_name": "Doctor of Veterinary Medicine (DVM)",
+      "college": "College of Health Sciences",
+      "faculty": "School of Veterinary Medicine",
+      "cutoff_criteria": {
+        "minimum_aggregate": 10,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["biology", "chemistry", "physics", "elective_maths", "animal_husbandry"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_MLS_001",
+      "program_name": "BSc. Medical Laboratory Science",
+      "college": "College of Health Sciences",
+      "faculty": "Faculty of Allied Health Sciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 7,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["biology", "chemistry", "physics", "elective_maths"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_IMAGING_001",
+      "program_name": "BSc. Medical Imaging",
+      "college": "College of Health Sciences",
+      "faculty": "Faculty of Allied Health Sciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 7,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["biology", "chemistry", "physics", "elective_maths"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_PHYSIO_001",
+      "program_name": "BSc. Physiotherapy and Sports Science",
+      "college": "College of Health Sciences",
+      "faculty": "Faculty of Allied Health Sciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 12,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["biology", "chemistry", "physics", "elective_maths"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_NURS_001",
+      "program_name": "BSc. Nursing",
+      "college": "College of Health Sciences",
+      "faculty": "Faculty of Allied Health Sciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 7,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["biology", "chemistry", "physics", "elective_maths"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_MIDWIF_001",
+      "program_name": "BSc. Midwifery",
+      "college": "College of Health Sciences",
+      "faculty": "Faculty of Allied Health Sciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 8,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["biology", "chemistry", "physics", "elective_maths"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_DISABIL_001",
+      "program_name": "BSc. Disability and Rehabilitation Studies",
+      "college": "College of Health Sciences",
+      "faculty": "Faculty of Allied Health Sciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 13,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["biology", "chemistry", "physics", "elective_maths", "government", "history", "economics", "management_in_living", "general_knowledge_in_art"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_PHARM_001",
+      "program_name": "Pharm D (Doctor of Pharmacy)",
+      "college": "College of Health Sciences",
+      "faculty": "Faculty of Pharmacy and Pharmaceutical Sciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 6,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["biology", "chemistry", "physics", "elective_maths"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_HERBAL_001",
+      "program_name": "Bachelor of Herbal Medicine (BHM)",
+      "college": "College of Health Sciences",
+      "faculty": "Faculty of Pharmacy and Pharmaceutical Sciences",
+      "cutoff_criteria": {
+        "minimum_aggregate": 14,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["biology", "chemistry", "physics", "elective_maths"],
+          "count": 3
+        }
+      }
+    },
+    
+    {
+      "program_id": "KNUST_AGR_001",
+      "program_name": "BSc. Agriculture",
+      "college": "College of Agriculture and Natural Resources",
+      "faculty": "Faculty of Agriculture",
+      "cutoff_criteria": {
+        "minimum_aggregate": 20,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["chemistry", "physics", "mathematics", "biology", "general_agriculture", "animal_husbandry", "crop_husbandry", "horticulture"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_AGRBIOTECH_001",
+      "program_name": "BSc. Agricultural Biotechnology",
+      "college": "College of Agriculture and Natural Resources",
+      "faculty": "Faculty of Agriculture",
+      "cutoff_criteria": {
+        "minimum_aggregate": 17,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["chemistry", "physics", "mathematics", "biology", "general_agriculture", "animal_husbandry", "crop_husbandry", "horticulture"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_AGR_BUS_001",
+      "program_name": "BSc. Agribusiness Management",
+      "college": "College of Agriculture and Natural Resources",
+      "faculty": "Faculty of Agriculture",
+      "cutoff_criteria": {
+        "minimum_aggregate": 15,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["chemistry", "physics", "mathematics", "biology", "general_agriculture", "economics", "accounting", "business_management", "costing", "geography"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_LANDSCAPE_001",
+      "program_name": "BSc. Landscape Design and Management",
+      "college": "College of Agriculture and Natural Resources",
+      "faculty": "Faculty of Agriculture",
+      "cutoff_criteria": {
+        "minimum_aggregate": 17,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["chemistry", "physics", "mathematics", "biology", "general_agriculture", "geography", "economics", "technical_drawing", "general_knowledge_in_art", "graphic_design"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_NAT_RES_001",
+      "program_name": "BSc. Natural Resources Management",
+      "college": "College of Agriculture and Natural Resources",
+      "faculty": "Faculty of Natural Resource Management",
+      "cutoff_criteria": {
+        "minimum_aggregate": 18,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["chemistry", "physics", "mathematics", "biology", "general_agriculture"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_FOREST_001",
+      "program_name": "BSc. Forest Resources Technology",
+      "college": "College of Agriculture and Natural Resources",
+      "faculty": "Faculty of Natural Resource Management",
+      "cutoff_criteria": {
+        "minimum_aggregate": 24,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["chemistry", "physics", "mathematics", "biology", "general_agriculture"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_AQUA_001",
+      "program_name": "BSc. Aquaculture and Water Resources Management",
+      "college": "College of Agriculture and Natural Resources",
+      "faculty": "Faculty of Natural Resource Management",
+      "cutoff_criteria": {
+        "minimum_aggregate": 20,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["chemistry", "physics", "mathematics", "biology", "general_agriculture"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_PACKAGING_001",
+      "program_name": "BSc. Packaging Technology",
+      "college": "College of Agriculture and Natural Resources",
+      "faculty": "Faculty of Natural Resource Management",
+      "cutoff_criteria": {
+        "minimum_aggregate": 15,
+        "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+        "elective_required": {
+          "any_of": ["chemistry", "physics", "mathematics", "biology", "general_agriculture", "general_knowledge_in_art", "visual_arts", "technical_drawing", "economics"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_ABE_ARCH_001",
+      "program_name": "BSc. Architecture",
+      "college": "College of Art and Built Environment",
+      "faculty": "Faculty of Built Environment",
+      "cutoff_criteria": {
+        "minimum_aggregate": 7,
+        "core_subjects_required": ["english", "core_maths", "int_science"],
+        "elective_required": {
+          "any_of": ["physics", "chemistry", "elective_maths", "general_knowledge_in_art", "technical_drawing"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_ABE_CONST_002",
+      "program_name": "BSc. Construction Technology and Management",
+      "college": "College of Art and Built Environment",
+      "faculty": "Faculty of Built Environment",
+      "cutoff_criteria": {
+        "minimum_aggregate": 9,
+        "core_subjects_required": ["english", "core_maths", "int_science"],
+        "elective_required": {
+          "any_of": ["physics", "chemistry", "elective_maths", "economics", "technical_drawing"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_ABE_QS_003",
+      "program_name": "BSc. Quantity Surveying and Construction Economics",
+      "college": "College of Art and Built Environment",
+      "faculty": "Faculty of Built Environment",
+      "cutoff_criteria": {
+        "minimum_aggregate": 9,
+        "core_subjects_required": ["english", "core_maths", "int_science"],
+        "elective_required": {
+          "any_of": ["physics", "chemistry", "elective_maths", "economics", "technical_drawing"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_ABE_DEVPLAN_004",
+      "program_name": "BSc. Development Planning",
+      "college": "College of Art and Built Environment",
+      "faculty": "Faculty of Built Environment",
+      "cutoff_criteria": {
+        "minimum_aggregate": 9,
+        "core_subjects_required": ["english", "core_maths", "int_science"],
+        "elective_required": {
+          "any_of": ["economics", "geography", "elective_maths", "government"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_ABE_SETTLE_005",
+      "program_name": "BSc. Human Settlement Planning",
+      "college": "College of Art and Built Environment",
+      "faculty": "Faculty of Built Environment",
+      "cutoff_criteria": {
+        "minimum_aggregate": 10,
+        "core_subjects_required": ["english", "core_maths", "int_science"],
+        "elective_required": {
+          "any_of": ["economics", "geography", "elective_maths", "government"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_ABE_LAND_006",
+      "program_name": "BSc. Land Economy",
+      "college": "College of Art and Built Environment",
+      "faculty": "Faculty of Built Environment",
+      "cutoff_criteria": {
+        "minimum_aggregate": 8,
+        "core_subjects_required": ["english", "core_maths", "int_science"],
+        "elective_required": {
+          "any_of": ["economics", "geography", "elective_maths", "business_management", "accounting"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_ABE_REAL_007",
+      "program_name": "BSc. Real Estate",
+      "college": "College of Art and Built Environment",
+      "faculty": "Faculty of Built Environment",
+      "cutoff_criteria": {
+        "minimum_aggregate": 9,
+        "core_subjects_required": ["english", "core_maths", "int_science"],
+        "elective_required": {
+          "any_of": ["economics", "geography", "elective_maths", "business_management", "accounting"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_ABE_FINEART_008",
+      "program_name": "BFA. Fine Art and Curatorial Practice",
+      "college": "College of Art and Built Environment",
+      "faculty": "Faculty of Art",
+      "cutoff_criteria": {
+        "minimum_aggregate": 16,
+        "core_subjects_required": ["english", "core_maths", "int_science"],
+        "elective_required": {
+          "any_of": ["general_knowledge_in_art", "graphic_design", "picture_making", "sculpture", "ceramics"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_ABE_COMM_009",
+      "program_name": "BA. Communication Design (Graphic Design)",
+      "college": "College of Art and Built Environment",
+      "faculty": "Faculty of Art",
+      "cutoff_criteria": {
+        "minimum_aggregate": 11,
+        "core_subjects_required": ["english", "core_maths", "int_science"],
+        "elective_required": {
+          "any_of": ["general_knowledge_in_art", "graphic_design", "picture_making", "textiles"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_ABE_RURAL_010",
+      "program_name": "BA. Integrated Rural Art and Industry",
+      "college": "College of Art and Built Environment",
+      "faculty": "Faculty of Art",
+      "cutoff_criteria": {
+        "minimum_aggregate": 15,
+        "core_subjects_required": ["english", "core_maths", "int_science"],
+        "elective_required": {
+          "any_of": ["general_knowledge_in_art", "visual_arts", "economics", "geography"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_ABE_PUB_011",
+      "program_name": "BA. Publishing Studies",
+      "college": "College of Art and Built Environment",
+      "faculty": "Faculty of Art",
+      "cutoff_criteria": {
+        "minimum_aggregate": 12,
+        "core_subjects_required": ["english", "core_maths", "int_science"],
+        "elective_required": {
+          "any_of": ["general_knowledge_in_art", "visual_arts", "business_management", "economics"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_ABE_METAL_012",
+      "program_name": "BSc. Metal Product Design Technology",
+      "college": "College of Art and Built Environment",
+      "faculty": "Faculty of Art",
+      "cutoff_criteria": {
+        "minimum_aggregate": 16,
+        "core_subjects_required": ["english", "core_maths", "int_science"],
+        "elective_required": {
+          "any_of": ["metal_work", "technical_drawing", "physics", "general_knowledge_in_art"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_ABE_TEXTILE_013",
+      "program_name": "BSc. Textile Design and Technology",
+      "college": "College of Art and Built Environment",
+      "faculty": "Faculty of Art",
+      "cutoff_criteria": {
+        "minimum_aggregate": 13,
+        "core_subjects_required": ["english", "core_maths", "int_science"],
+        "elective_required": {
+          "any_of": ["textiles", "general_knowledge_in_art", "chemistry", "visual_arts"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_ABE_FASHION_014",
+      "program_name": "BSc. Fashion Design",
+      "college": "College of Art and Built Environment",
+      "faculty": "Faculty of Art",
+      "cutoff_criteria": {
+        "minimum_aggregate": 11,
+        "core_subjects_required": ["english", "core_maths", "int_science"],
+        "elective_required": {
+          "any_of": ["clothing_and_textiles", "management_in_living", "general_knowledge_in_art", "textiles"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_ABE_CERAMICS_015",
+      "program_name": "BSc. Ceramics Technology",
+      "college": "College of Art and Built Environment",
+      "faculty": "Faculty of Art",
+      "cutoff_criteria": {
+        "minimum_aggregate": 23,
+        "core_subjects_required": ["english", "core_maths", "int_science"],
+        "elective_required": {
+          "any_of": ["ceramics", "general_knowledge_in_art", "chemistry", "physics"],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "KNUST_ABE_JHS_016",
+      "program_name": "B.Ed. Junior High School Specialism",
+      "college": "College of Art and Built Environment",
+      "faculty": "Faculty of Art",
+      "cutoff_criteria": {
+        "minimum_aggregate": 15,
+        "core_subjects_required": ["english", "core_maths", "int_science"],
+        "elective_required": {
+          "any_of": ["general_knowledge_in_art", "visual_arts", "social_studies", "history"],
+          "count": 3
+        }
+      }
+    }
+ 
+  ]
+  },
+  {
+    "UG":[]
+  },
+  {
+    "UCC":[]
+  },
+  {
+    "UMAT":[]
+  }
+]

@@ -46,6 +46,7 @@ html{
   display: flex;
   width: 40%;
   justify-content: space-between;
+  align-items: center;
 }
 
 .uls a{
@@ -55,20 +56,17 @@ html{
 
 
 .last{
-  background:linear-gradient(to right,var(---Hspan),#9333ea,#4546e5 );
-  color: #fff;
-  border-radius: 4rem;
-  padding:0.8rem 0.6rem;
+  color: #000;
+  border-radius: 2rem;
   font-size: 1.12rem;
-  width: 170px;
-  box-shadow: 0px 0px 3px #18181878;
+  padding: 0.2rem 0.3rem;
   display: grid;
   place-content: center;
   cursor: pointer;
   font-weight: bold;
   border: none;
-  transition: background-color .45s ease;
-  display: none;
+
+ 
 }
 
 .burger{
@@ -141,12 +139,17 @@ main{
 
   .last{
     display: grid;
+   
   }
 
 
-  .uls li{
+  .uls li{ 
     padding: 1.7rem;
     border-bottom: 1px solid #00000024;
+  }
+
+  .uls a{
+    width: 100%;
   }
 
   .astray{
@@ -278,11 +281,6 @@ main{
   transition: background-color .45s ease;
 }
 
-.last{
-  padding:1rem 0.7rem;
-  width: 170px;
-  font-size: 0.95rem;
-}
 
 
 .heroButton:hover{
@@ -387,6 +385,7 @@ main{
 .grade-p-1{
   font-size:2.3rem;
   color: #000;
+  font-weight: 400;
 
 }
 
@@ -417,13 +416,20 @@ main{
 }  */
 
  select{
-  width: 200px;
+  width: 230px;
   padding: 10.5px;
   border-radius: 5px;
   margin: 3px;
   background-color: #fff;
   border: 1px solid var(---card-surface);
   box-shadow: 0 0 2px #00000035;
+   color: #555;
+}
+
+.subjectName1{
+   width: 230px;
+  padding: 10.5px;
+   color: #555;
 }
 
 .coreSub,.elective-sub{
@@ -446,7 +452,6 @@ select:focus{
 
 
 
-
 @media (max-width:989.33px){
   .Csubjects-1,.Csubjects-2,.Csubjects-3,.Csubjects-4,.Esubjects-1,.Esubjects-2,.Esubjects-3,.Esubjects-4{
     margin: 1px 5px;
@@ -454,7 +459,7 @@ select:focus{
   }
  .grade-p-1{
   font-size: 1.7rem;
-  margin-top: 1rem;
+  margin-top:0.5rem;
  
  }
  .grade-p-2{
@@ -465,6 +470,12 @@ select:focus{
  select{
   width: 160px;
   padding: 0.8rem 0.6rem;
+ }
+
+ .subjectName1{
+    width: 160px;
+  padding: 0.8rem 0.6rem;
+   color: #555;
  }
 
  .gradeWrapper{
@@ -503,14 +514,17 @@ select:focus{
 
 
 .type-topic{
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: 300;
+  font-family:monospace;
+ 
 }
 
 
 @media (max-width:700px){
 
   .find{
-    margin-top: 1.4rem;
+    margin-top: 0.5rem;
     gap: 1.11rem;
    
   }
@@ -530,10 +544,22 @@ select:focus{
 }
 }
 
+.prompt{
+  width: 100%;
+ margin-top: .2rem;
+ text-align: center;
+ color: red;
+ height: 0.95rem;
+ font-size: .8rem;
+ font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .gradePage{
   display: none;
 }
-
+.landingPage{
+  display: none;
+}
 
 
 
@@ -556,7 +582,7 @@ select:focus{
 footer{
   width: 100%;
   background-color: #e6ecf5;
-  height: 7vh;
+  height: 4.5vh;
   display: flex;
   justify-content: center;
   align-items: center;
