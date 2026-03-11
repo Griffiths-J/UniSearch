@@ -1,6 +1,4 @@
 
-export function burger(){
-
 const burger = document.querySelector('.burger');
 const uls = document.querySelector('.uls');
 
@@ -24,8 +22,3 @@ document.addEventListener('click',()=>{
   }
 })
 
-
-
-}
-
-burger();

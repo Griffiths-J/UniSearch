@@ -124,12 +124,10 @@ function processStudentGrades(){
   console.log("this is the final " + finalAggregrate);
   document.querySelector('.prompt').innerHTML=finalAggregrate
 
-  let allResult_main = allResult.push({finalAggregrate});
-  console.log(allResult_main);
 
-  let check =KNUST.filter(course=>course.cutoff_criteria.minimum_aggregate===10);
-console.log(KNUST);
-  console.log(check)
+  let check =KNUST.filter(course=>finalAggregrate <= course.cutoff_criteria.minimum_aggregate);
+  console.log(KNUST);
+  console.log(check);
 
   return finalAggregrate
 }

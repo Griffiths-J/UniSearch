@@ -383,7 +383,7 @@ main{
 }
 
 .grade-p-1{
-  font-size:2.3rem;
+  font-size:2rem;
   color: #000;
   font-weight: 400;
 
@@ -417,7 +417,7 @@ main{
 
  select{
   width: 230px;
-  padding: 10.5px;
+  padding: 8px;
   border-radius: 5px;
   margin: 3px;
   background-color: #fff;
@@ -458,18 +458,18 @@ select:focus{
     align-items: center;
   }
  .grade-p-1{
-  font-size: 1.7rem;
-  margin-top:0.5rem;
+  font-size: 1.5rem;
+  margin-top:0.3rem;
  
  }
  .grade-p-2{
   font-size: 0.9rem;
-   margin-bottom: 0.3rem;
+   margin-bottom: 0.2rem;
  }
 
  select{
   width: 160px;
-  padding: 0.8rem 0.6rem;
+  padding: 0.65rem 0.5rem;
  }
 
  .subjectName1{
@@ -500,8 +500,8 @@ select:focus{
 
 .gradeButton1{
   width: 100%;
-  max-width: 340px;
-  padding: 0.8rem 0.5rem;
+  max-width: 320px;
+  padding: 0.65rem 0.4rem;
   font-size: 1rem;
 }
 .gradeButton2{
@@ -525,11 +525,11 @@ select:focus{
 
   .find{
     margin-top: 0.5rem;
-    gap: 1.11rem;
+    gap: 1rem;
    
   }
    .gradeButton1{
-  padding: 1rem 0.7rem;
+  padding: 0.89rem 0.65rem;
   font-size: 1rem;
 }
 .gradeButton2{
@@ -563,15 +563,48 @@ select:focus{
 
 
 
+.getsch{
+  background-color: #fff;
+  border-radius: 13px;
+  box-shadow: 0 2px 2px #0000003a;
+  padding: 5px 8px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3px auto;
+}
 
 
+.getsch-title{
+  text-align: left;
+  font-size: 17.5px;
+  width: auto;
+}
+
+.getsch-select{
+  justify-items: center;
+  width: 40%;
+  padding: 0 10px;
+}
+
+#getsch-select{
+ width: 100%;
+ padding: 5px;
+ font-size: 12px;
+}
+
+.getsch-icon img{
+  width: clamp(0.9rem, 1vw + 0.66rem, 2rem);
+}
 
 
-
-
-
-
-
+@media (max-width:700px){
+  .getsch{
+    width: 95%;
+    margin: 0 10px;
+  }
+}
 
 
 
