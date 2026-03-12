@@ -192,7 +192,7 @@ let j;
   console.log(studentData);
 
   let check =KNUST.filter(course=>finalAggregrate <= course.cutoff_criteria.minimum_aggregate && course.college==="College of Science");
- console.log(check);
+ 
 
   return finalAggregrate
 }
