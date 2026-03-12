@@ -93,7 +93,7 @@ html{
 .burger div{
   width: 21.5px;
   height: 3.3px;
-  background:linear-gradient(to bottom, #0035ff,#0035ff,#005684,#10b981);
+   background-color: #0161c1;
   margin: 4px;
   transition: transform .12s ease;
 }
