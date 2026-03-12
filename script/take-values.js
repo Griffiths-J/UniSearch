@@ -199,9 +199,9 @@ let j;
 
 
 
-document.querySelector('.gradeButton1').addEventListener('click',()=>{
- Getvalues();
-});
+  document.querySelector('.gradeButton1').addEventListener('click',()=>{
+  Getvalues();
+  });
 
 
 }

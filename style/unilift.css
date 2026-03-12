@@ -164,6 +164,10 @@ main{
     border-bottom: 1px solid #00000024;
   }
 
+  .ul li{
+    transform: translate(-30px);
+  }
+
   .uls a{
     width: 100%;
   }
@@ -184,6 +188,8 @@ main{
 
   .uls li:hover{
     background-color:#0035ff;
+     background: linear-gradient(to right, #177de4, #00BFFF);
+     font-weight: 600;
     cursor: pointer;
     color: #fff;
   }
