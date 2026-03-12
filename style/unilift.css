@@ -33,7 +33,6 @@ body{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  display: none;
 }
 html{
    background-color: var(---main-bg);
