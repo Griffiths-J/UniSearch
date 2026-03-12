@@ -49,7 +49,7 @@ html{
   width: 35px;
 }
 .logo p{
-  background: linear-gradient(90deg, #177de4, #00BFFF, #40E0D0);
+  background: linear-gradient(to left, #177de4, #00BFFF, #40E0D0);
   background-clip:text ;
   -webkit-background-clip:text ;
   -webkit-text-fill-color: transparent;
