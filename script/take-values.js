@@ -14,6 +14,25 @@ function Getvalues(){
         if(university==="Select University" || university ===""){
           document.querySelector(".prompt").innerHTML="Select university and all inputs"
           throw new Error("Select university");
+        };
+
+        let requiredUni;
+
+        switch(university){
+          case "KNUST":
+            requiredUni=KNUST;
+            break;
+          case "UG":
+            requiredUni=UG;
+            break;
+          case "UCC":
+            requiredUni=UCC;
+            break;
+          case "UMAT":
+            requiredUni=UMAT;
+            break;
+          default:
+          throw new Error("error");       
         }
 
          const userResult=[];
@@ -45,7 +64,7 @@ function Getvalues(){
 
       })
 
-     /*  console.log(coreSubresult); */
+    
 
 
       //ellectives
@@ -55,6 +74,7 @@ function Getvalues(){
       allERows.forEach((row)=>{
         let name = row.querySelector('.electivesub-js').value;
         let grade = row.querySelector('.electivegrade-js').value;
+
         let type = 'elective';
 
         if(name ==="Select Course" || grade=="Select Grade" || grade===""){
@@ -65,11 +85,11 @@ function Getvalues(){
           throw new Error("Missing elective selection"); 
         }
 
-
+        let grade_main = knustCheck(grade);
       electiveSubresult.push({
         type,
         name,
-        grade
+        grade:grade_main
       })
       })
 
@@ -129,26 +149,41 @@ function Getvalues(){
     return;
   }
 
- 
+ function knustCheck(grade){
+  if(requiredUni==KNUST){
+      if(grade >= 4 && grade <= 6){
+    grade = 4
+      }else{
+        grade = grade;
+      }
+    }
+    return grade;
+  }
 
   const englishSelect = cores.find(en=>en.finalSub.includes("English"))
   const englishGrade = englishSelect.finalGrade;
+  const englishGrade_main = knustCheck(englishGrade);
 
   const mathSelect = cores.find(mth=>mth.finalSub.includes("Mathematics"))
   const mathGrade = mathSelect.finalGrade;
+  const mathGrade_main = knustCheck(mathGrade);
 
   const scienceSelect = cores.find(sci=>sci.finalSub.includes("Science"))
   const scienceGrade = scienceSelect.finalGrade;
+   const scienceGrade_main=  knustCheck(scienceGrade);
+  
+  
 
   const socialSelect = cores.find(soc=>soc.finalSub.includes("Social"))
   const socialGrade = socialSelect.finalGrade;
 
-  console.log(scienceGrade,englishGrade,mathGrade,socialGrade)
+
+  
 
   const bestThreeElective = elective.map(el=>(el.finalGrade)).sort((a,b)=>a-b).slice(0,3).reduce((sum,grade)=>sum+grade,0)
-  const finalAggregrate = mathGrade + scienceGrade + englishGrade + bestThreeElective
+  const finalAggregrate = mathGrade_main + scienceGrade_main + englishGrade_main + bestThreeElective
 
-  console.log("this is the final " + finalAggregrate);
+
   document.querySelector('.prompt').innerHTML=finalAggregrate
 
   const electiveOne = elective[0];
@@ -173,28 +208,34 @@ let j;
         }
     }
   } 
-  console.log(lete);
 
   const finalBestThree = lete.slice(0,3);
-  console.log(finalBestThree);
 
  
   const studentData = {
-    coreMath:mathGrade,
-    coreScience:scienceGrade,
-    coreEnglish:englishGrade,
+    core_math:mathGrade_main,
+    int_science:scienceGrade_main,
+    english:englishGrade_main,
     [finalBestThree[0].finalSub]:finalBestThree[0].finalGrade,
     [finalBestThree[1].finalSub]:finalBestThree[1].finalGrade,
     [finalBestThree[2].finalSub]:finalBestThree[2].finalGrade,
     aggregrate:finalAggregrate
   };
 
-  console.log(studentData);
 
-  let check =KNUST.filter(course=>finalAggregrate <= course.cutoff_criteria.minimum_aggregate && course.college==="College of Science");
- 
+ const elegible = requiredUni.filter(program => {
+    const passAggregrate = studentData.aggregrate<= program.cutoff_criteria.minimum_aggregate;
 
-  return finalAggregrate
+    const studentElectives = program.cutoff_criteria.elective_required.any_of.filter(subject => {
+      return studentData[subject]!==undefined;
+    }) ;
+
+    const passElective = studentElectives.length>= program.cutoff_criteria.elective_required.count;
+
+    return passAggregrate && passElective;
+ })
+console.log(elegible)
+  return elegible
 }
 
 

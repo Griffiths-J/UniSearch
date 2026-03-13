@@ -192,7 +192,7 @@
           "any_of": [
             "chemistry",
             "physics",
-            "mathematics",
+            "elective_maths",
             "biology"
           ],
           "count": 3
@@ -214,7 +214,7 @@
         ],
         "elective_required": {
           "any_of": [
-            "mathematics",
+            "elective_maths",
             "physics",
             "chemistry",
             "electronics"
@@ -238,7 +238,7 @@
         ],
         "elective_required": {
           "any_of": [
-            "mathematics",
+            "elective_maths",
             "physics",
             "chemistry",
             "electronics"
@@ -262,7 +262,7 @@
         ],
         "elective_required": {
           "any_of": [
-            "mathematics",
+            "elective_maths",
             "physics",
             "chemistry",
             "biology"
@@ -286,7 +286,7 @@
         ],
         "elective_required": {
           "any_of": [
-            "mathematics",
+            "elective_maths",
             "physics",
             "chemistry",
             "biology",
@@ -313,7 +313,7 @@
         ],
         "elective_required": {
           "any_of": [
-            "mathematics",
+            "elective_maths",
             "physics",
             "chemistry",
             "biology",
@@ -340,7 +340,7 @@
         ],
         "elective_required": {
           "any_of": [
-            "mathematics",
+            "elective_maths",
             "physics",
             "chemistry",
             "applied_electricity",
@@ -365,7 +365,7 @@
         ],
         "elective_required": {
           "any_of": [
-            "mathematics",
+            "elective_maths",
             "physics",
             "chemistry",
             "biology",
@@ -373,7 +373,9 @@
             "government",
             "business_management",
             "geography",
-            "visual_arts"
+            "visual_arts",
+            "ict",
+            "graphic_design"
           ],
           "count": 3
         }
@@ -402,7 +404,7 @@
         "minimum_aggregate": 7,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
         "elective_required": {
-          "any_of": ["physics", "elective_maths", "chemistry"],
+          "any_of": ["physics", "elective_maths","chemistry"],
           "count": 3
         }
       }
@@ -766,7 +768,7 @@
         "minimum_aggregate": 11,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
         "elective_required": {
-          "any_of": ["government", "history", "economics", "business_management", "accounting", "religious_studies"],
+          "any_of": ["government", "history", "economics", "business_management", "cost_accounting", "religious_studies"],
           "count": 3
         }
       }
@@ -878,7 +880,7 @@
         "minimum_aggregate": 10,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
         "elective_required": {
-          "any_of": ["food_and_nutrition", "management_in_living", "economics", "business_management", "accounting", "geography", "french"],
+          "any_of": ["food_and_nutrition", "management_in_living", "economics", "business_management", "cost_accounting", "financial_accounting","geography", "french"],
           "count": 3
         }
       }
@@ -892,7 +894,7 @@
         "minimum_aggregate": 6,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
         "elective_required": {
-          "any_of": ["government", "history", "literature_in_english", "economics", "elective_maths", "physics", "chemistry", "biology"],
+          "any_of": ["government", "history", "literature_in_english", "economics", "elective_maths", "physics", "chemistry", "biology","cost_accounting","financial_accounting"],
           "count": 3
         }
       }
@@ -977,7 +979,7 @@
         "minimum_aggregate": 12,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
         "elective_required": {
-          "any_of": ["biology", "chemistry", "physics", "elective_maths"],
+          "any_of": ["biology", "chemistry", "physics", "elective_maths","ict"],
           "count": 3
         }
       }
@@ -1019,7 +1021,7 @@
         "minimum_aggregate": 13,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
         "elective_required": {
-          "any_of": ["biology", "chemistry", "physics", "elective_maths", "government", "history", "economics", "management_in_living", "general_knowledge_in_art"],
+          "any_of": ["biology", "chemistry", "physics", "ict","elective_maths", "government", "history", "economics", "management_in_living", "general_knowledge_in_art"],
           "count": 3
         }
       }
@@ -1090,7 +1092,7 @@
         "minimum_aggregate": 15,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
         "elective_required": {
-          "any_of": ["chemistry", "physics", "mathematics", "biology", "general_agriculture", "economics", "accounting", "business_management", "costing", "geography"],
+          "any_of": ["chemistry", "physics", "elective_maths", "biology", "general_agriculture", "economics", "financial_accounting", "business_management", "cost_accounting", "geography"],
           "count": 3
         }
       }
@@ -1104,7 +1106,7 @@
         "minimum_aggregate": 17,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
         "elective_required": {
-          "any_of": ["chemistry", "physics", "mathematics", "biology", "general_agriculture", "geography", "economics", "technical_drawing", "general_knowledge_in_art", "graphic_design"],
+          "any_of": ["chemistry", "physics", "elective_maths", "biology", "general_agriculture", "geography", "economics", "technical_drawing", "general_knowledge_in_art", "graphic_design"],
           "count": 3
         }
       }
@@ -1118,7 +1120,7 @@
         "minimum_aggregate": 18,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
         "elective_required": {
-          "any_of": ["chemistry", "physics", "mathematics", "biology", "general_agriculture"],
+          "any_of": ["chemistry", "physics", "elective_maths", "biology", "general_agriculture"],
           "count": 3
         }
       }
@@ -1132,7 +1134,7 @@
         "minimum_aggregate": 24,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
         "elective_required": {
-          "any_of": ["chemistry", "physics", "mathematics", "biology", "general_agriculture"],
+          "any_of": ["chemistry", "physics", "elective_maths", "biology", "general_agriculture"],
           "count": 3
         }
       }
@@ -1146,7 +1148,7 @@
         "minimum_aggregate": 20,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
         "elective_required": {
-          "any_of": ["chemistry", "physics", "mathematics", "biology", "general_agriculture"],
+          "any_of": ["chemistry", "physics", "elective_maths", "biology", "general_agriculture"],
           "count": 3
         }
       }
@@ -1160,7 +1162,7 @@
         "minimum_aggregate": 15,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
         "elective_required": {
-          "any_of": ["chemistry", "physics", "mathematics", "biology", "general_agriculture", "general_knowledge_in_art", "visual_arts", "technical_drawing", "economics"],
+          "any_of": ["chemistry", "physics", "elective_maths", "biology", "general_agriculture", "general_knowledge_in_art", "visual_arts", "technical_drawing", "economics"],
           "count": 3
         }
       }
@@ -1370,7 +1372,7 @@
         "minimum_aggregate": 23,
         "core_subjects_required": ["english", "core_maths", "int_science"],
         "elective_required": {
-          "any_of": ["ceramics", "general_knowledge_in_art", "chemistry", "physics"],
+          "any_of": ["ceramics", "geography","biology","general_knowledge_in_art", "chemistry", "physics"],
           "count": 3
         }
       }
@@ -1382,9 +1384,9 @@
       "faculty": "Faculty of Art",
       "cutoff_criteria": {
         "minimum_aggregate": 15,
-        "core_subjects_required": ["english", "core_maths", "int_science"],
+        "core_subjects_required": ["english","social_studies", "core_maths", "int_science"],
         "elective_required": {
-          "any_of": ["general_knowledge_in_art", "visual_arts", "social_studies", "history"],
+          "any_of": ["general_knowledge_in_art", "visual_arts","history","physics","chemistry", "elective_maths"],
           "count": 3
         }
       }
