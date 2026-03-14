@@ -666,7 +666,13 @@ select:focus{
     cursor: pointer;
     font-weight: bold;
     width: 100%;
+    outline: none;
 }
+
+.btn-primary:hover{
+    background:linear-gradient(to left, #1575d5, #0db1e8, #3bd1c2);
+}
+
 .btn-secondary{
   position: absolute;
   cursor: pointer;
