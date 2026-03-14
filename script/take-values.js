@@ -223,28 +223,63 @@ let j;
   };
 
 
- const elegible = requiredUni.filter(program => {
-    const passAggregrate = studentData.aggregrate<= program.cutoff_criteria.minimum_aggregate;
 
-    const studentElectives = program.cutoff_criteria.elective_required.any_of.filter(subject => {
-      return studentData[subject]!==undefined;
-    }) ;
+   document.getElementById('payment-modal').style.display='flex';
+    document.getElementById('display-agg').innerText=`${finalAggregrate}`;   
 
-    const passElective = studentElectives.length>= program.cutoff_criteria.elective_required.count;
+  document.getElementById('pay-button').onclick=function(e){
+    e.preventDefault();
+    const name = document.getElementById('student-name').value;
+    const email = document.getElementById('student-email').value;
+    
+    if(!name|| !email.includes('@')){
+      alert("please enter valid name and email");
+      return;
+    }
 
-    return passAggregrate && passElective;
- })
-console.log(elegible)
-  return elegible
+    const handler = PaystackPop.setup({
+      key:'pk_test_217133aa809e4d9c253ad67a39601a632ad77e4f',
+      email:email,
+      amount:1500,
+      currency:'GHS',
+      ref: '' + Math.floor((Math.random()*99999)+1),
+      callback:function(responds){
+       
+        document.getElementById('gradePage').style.display='none';
+        document.getElementById('payment-modal').style.display='none';
+        document.getElementById('results-view').style.display='block';
+        
+        const elegible = requiredUni.filter(program => {
+        const passAggregrate = studentData.aggregrate<= program.cutoff_criteria.minimum_aggregate;
+
+        const studentElectives = program.cutoff_criteria.elective_required.any_of.filter(subject => {
+          return studentData[subject]!==undefined;
+        }) ;
+
+        const passElective = studentElectives.length>= program.cutoff_criteria.elective_required.count;
+
+        return passAggregrate && passElective;
+      })
+
+       console.log(elegible)
+
+      },
+      onClose:function(){
+        alert("why");
+      }
+
+    });
+    handler.openIframe(); 
+  }
+
 }
 
 
 
   document.querySelector('.gradeButton1').addEventListener('click',()=>{
   Getvalues();
+  
   });
-
-
 }
 
 unis();
