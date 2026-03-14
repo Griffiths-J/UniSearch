@@ -1,7 +1,6 @@
 
 const burger = document.querySelector('.burger');
 const uls = document.querySelector('.uls');
-const links = document.querySelectorAll(".uls li");
 
 
 burger.addEventListener('click',(e)=>{

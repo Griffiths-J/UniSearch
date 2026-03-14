@@ -12,7 +12,10 @@ function Getvalues(){
 
         const university = document.querySelector(".getsch-select-value").value;
         if(university==="Select University" || university ===""){
-          document.querySelector(".prompt").innerHTML="Select university and all inputs"
+          document.querySelector(".prompt").innerHTML="Select university and all inputs";
+          setTimeout(()=>{
+            document.querySelector(".prompt").innerHTML='';
+          },5000)
           throw new Error("Select university");
         };
 
@@ -49,10 +52,10 @@ function Getvalues(){
         let type = 'core';
         
          if(grade ==="Select Grade"|| grade===""){
-            document.querySelector('.prompt').innerHTML='Please select all core subject grades';
+            document.querySelector('.prompt').innerHTML='Select all core subject grades';
             setTimeout(()=>{
               document.querySelector('.prompt').innerHTML='';
-            },5500);
+            },5000);
             throw new Error("Missing core grade"); 
           }
 
@@ -78,10 +81,10 @@ function Getvalues(){
         let type = 'elective';
 
         if(name ==="Select Course" || grade=="Select Grade" || grade===""){
-          document.querySelector('.prompt').innerHTML='Please select all elective subjects and grades';
+          document.querySelector('.prompt').innerHTML='Select all elective subjects and grades';
           setTimeout(()=>{
             document.querySelector('.prompt').innerHTML='';
-          },5500);
+          },5000);
           throw new Error("Missing elective selection"); 
         }
 
@@ -99,7 +102,7 @@ function Getvalues(){
         document.querySelector('.prompt').innerHTML = "No selections made. Please choose your subjects.";
         setTimeout(()=>{
           document.querySelector('.prompt').innerHTML ='';
-        },5500)
+        },5000)
         return;
       }
 
@@ -141,10 +144,10 @@ function Getvalues(){
 
 
   if(uniqueElectiveName.size !== electiveNames.length){
-     document.querySelector('.prompt').innerHTML='you selected two same courses';
+     document.querySelector('.prompt').innerHTML='You selected two same courses';
     setTimeout(()=>{
       document.querySelector('.prompt').innerHTML=''
-    },5800)
+    },5000)
    
     return;
   }
@@ -233,7 +236,10 @@ let j;
     const email = document.getElementById('student-email').value;
     
     if(!name|| !email.includes('@')){
-      alert("please enter valid name and email");
+      document.querySelector(".checkinputerror").innerHTML='Enter valid name and email';
+      setTimeout(()=>{
+        document.querySelector(".checkinputerror").innerHTML='';
+      },5000)
       return;
     }
 
@@ -247,7 +253,7 @@ let j;
        
         document.getElementById('gradePage').style.display='none';
         document.getElementById('payment-modal').style.display='none';
-        document.getElementById('results-view').style.display='block';
+        document.getElementById('resultPage').style.display='block';
         
         const elegible = requiredUni.filter(program => {
         const passAggregrate = studentData.aggregrate<= program.cutoff_criteria.minimum_aggregate;
@@ -262,6 +268,7 @@ let j;
       })
 
        console.log(elegible)
+       console.log("helllllllloooo")
 
       },
       onClose:function(){
@@ -278,8 +285,12 @@ let j;
 
   document.querySelector('.gradeButton1').addEventListener('click',()=>{
   Getvalues();
-  
   });
+
+  document.getElementById('closeM').addEventListener('click',()=>{
+      document.getElementById('payment-modal').style.display='none';
+  })
+
 }
 
 unis();
