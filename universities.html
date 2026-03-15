@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="images/w-logo.jpeg" />
     <link rel="stylesheet" href="style/unilift.css" />
-    <link rel="stylesheet" href="style/navsContent.css">
+    <link rel="stylesheet" href="style/navsContent.css" />
     <title>Unilift | Universities</title>
   </head>
   <body>
     <header>
       <div class="logo">
-         <img loading="lazy" src="images/u-logo.png" alt="logo" /><p>UniLift</p>
+        <img loading="lazy" src="images/u-logo.png" alt="logo" />
+        <p>UniLift</p>
       </div>
 
       <ul class="uls">
-        <a  href="#"><li>Universities</li></a>
+        <a href="#"><li>Universities</li></a>
         <a href="how-works.html"><li>How it Works</li></a>
         <a href="hostel.html"><li>Hostel</li></a>
         <div class="astray">
@@ -32,40 +33,43 @@
 
     <main>
       <div class="universities">
-
+        <div class="universities-header">
           <p class="uni-p">Explore Universities In Ghana</p>
+          <a class="return-home-btn" href="index.html">← Return to homepage</a>
+        </div>
 
-          <div class="searchCont">
-              <div class="search">
-                <img src="icons/search.svg" alt="search_icon">
-                <input type="text" placeholder=" search university eg KNUST,UG,UCC .....">
-              </div>
+        <div class="searchCont">
+          <div class="search">
+            <img src="icons/search.svg" alt="search_icon" />
+            <input
+              type="text"
+              placeholder=" search university eg KNUST,UG,UCC ....."
+            />
           </div>
+        </div>
 
-          
-
-          <div class="gridCont">
-            <div class="card">
-                <div class="topsec">
-                  <img class="card-img" src="images/kwame-nkrumah-university-of-science-technology-seeklogo.png" alt="knust logo">
-                  <p class="card-sch">KNUST</p>
-                  <div class="rank">#1</div>
-                </div>
-                <div class="middlesec">
-                  <div class="card-sch-type">Public</div>
-                  <div class="location">Kumasi | Ashanti Region</div>
-                </div>
-                <div class="downsec">
-                  <button>View Profile</button>
-                </div>
-            </div>
-           
-          </div>
+        <div class="gridCont" id="universityGrid"></div>
       </div>
     </main>
-      
+
+    <div class="modal-overlay" id="uniModal" aria-hidden="true">
+      <div class="modal-content-university">
+        <button class="modal-close" id="modalClose">×</button>
+        <div class="modal-header">
+          <img id="modalLogo" src="" alt="University logo" class="modal-logo" />
+          <div>
+            <h2 id="modalTitle"></h2>
+            <p id="modalType" class="modal-type"></p>
+          </div>
+        </div>
+        <p id="modalDescription"></p>
+        <p><strong>Location:</strong> <span id="modalLocation"></span></p>
+        <p><strong>Top faculties:</strong> <span id="modalFaculties"></span></p>
+      </div>
+    </div>
 
     <footer></footer>
     <script src="script/burger.js"></script>
+    <script type="module" src="script/universities.js"></script>
   </body>
 </html>
