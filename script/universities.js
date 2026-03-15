@@ -7,6 +7,7 @@ const universityData = [
     location: 'Kumasi, Ashanti Region',
     rank: '#1',
     logo: 'images/kwame-nkrumah-university-of-science-technology-seeklogo.png',
+    image:'images/kwame-nkrumah-university-of-science-technology-seeklogo.png',
     faculties: ['Engineering', 'Science', 'Nursing', 'Architecture'],
     description: 'KNUST is Ghana\'s top science and technology university, renowned for engineering, applied sciences, and strong research programmes.'
   },
@@ -18,6 +19,7 @@ const universityData = [
     location: 'Legon, Greater Accra Region',
     rank: '#2',
     logo: 'images/university-of-ghana-seeklogo.svg',
+     image:'images/kwame-nkrumah-university-of-science-technology-seeklogo.png',
     faculties: ['Social Sciences', 'Business', 'Law', 'Health Sciences'],
     description: 'UG is Ghana\'s oldest and largest university offering a wide range of humanities, social sciences, engineering, and health programmes.'
   },
@@ -29,6 +31,7 @@ const universityData = [
     location: 'Cape Coast, Central Region',
     rank: '#3',
     logo: 'images/ucc.png',
+     image:'images/kwame-nkrumah-university-of-science-technology-seeklogo.png',
     faculties: ['Education', 'Humanities', 'Science', 'Business'],
     description: 'UCC is known for strong education, humanities and teacher training programmes, with a scenic campus by the ocean.'
   },
@@ -40,6 +43,7 @@ const universityData = [
     location: 'Tarkwa, Western Region',
     rank: '#4',
     logo: 'images/umat.png',
+    image:'images/kwame-nkrumah-university-of-science-technology-seeklogo.png',
     faculties: ['Mining Engineering', 'Geology', 'Computer Science'],
     description: 'UMAT specializes in mining, geology and technology disciplines with a practical strong industry focus.'
   },
@@ -51,6 +55,7 @@ const universityData = [
     location: 'Accra, Greater Accra Region',
     rank: '#5',
     logo: 'images/upsa.png',
+     image:'images/kwame-nkrumah-university-of-science-technology-seeklogo.png',
     faculties: ['Business', 'Law', 'Technology'],
     description: 'UPSA is Ghana\'s leading business school with strong programmes in accounting, finance, and professional studies.'
   },
@@ -62,6 +67,7 @@ const universityData = [
     location: 'Berekuso, Eastern Region',
     rank: '#6',
     logo: 'images/ashesi.png',
+    image:'images/kwame-nkrumah-university-of-science-technology-seeklogo.png',
     faculties: ['Computer Science', 'Business', 'Engineering'],
     description: 'Ashesi is a top private university focused on leadership, ethics, and innovation with strong computer science and business degrees.'
   }
@@ -105,6 +111,8 @@ function openUniversityModal(id) {
   document.getElementById('modalDescription').innerText = selected.description;
   document.getElementById('modalLocation').innerText = selected.location;
   document.getElementById('modalFaculties').innerText = selected.faculties.join(', ');
+  document.getElementById('modalimage').src=selected.image;
+  document.getElementById('modalimage').alt=`${selected.short}`;
 
   modal.classList.add('open');
   modal.setAttribute('aria-hidden', 'false');

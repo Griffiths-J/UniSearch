@@ -35,7 +35,7 @@ async function unis(){
       <div class="result-summary">
         <div>
           <h2>Eligible programs</h2>
-          <p>Your aggregate: <strong>${aggregate}</strong> · ${elegible.length} program(s)</p>
+          <p>Your aggregate: <strong>${aggregate}</strong> · Eligible program(${elegible.lenght>1?'s':''}) ${elegible.length} </p>
         </div>
       </div>
       ${noProgramsHtml}

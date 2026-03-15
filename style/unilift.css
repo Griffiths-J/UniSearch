@@ -596,7 +596,8 @@ select:focus{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 3px auto;
+  margin: 10px auto;
+  margin-bottom: 2px;
 }
 
 
