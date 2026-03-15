@@ -42,15 +42,8 @@ async function unis(){
       <div class="eligible-programs">${listItems}</div>
     `;
 
-    const returnBtn = document.getElementById('return-home-btn');
-    if(returnBtn){
-      returnBtn.addEventListener('click', ()=>{
-        if(window.showLandingPage) window.showLandingPage();
-        localStorage.setItem('uniSearchPageState','landing');
-      });
-    }
-
     localStorage.setItem('uniSearchResult', JSON.stringify({elegible, aggregate}));
+    localStorage.setItem('uniSearchPageState', 'result');
   }
 
   window.restoreResultFromStorage = function(){
@@ -66,17 +59,27 @@ async function unis(){
     }
   };
 
-  window.addEventListener('load', ()=>{
-    if(localStorage.getItem('uniSearchPageState') === 'result' && window.restoreResultFromStorage){
-      const stored = localStorage.getItem('uniSearchResult');
-      if(stored){
-        if(window.showResultPage) window.showResultPage();
-        window.restoreResultFromStorage();
-      } else {
-        if(window.showLandingPage) window.showLandingPage();
-      }
-    }
-  });
+  const returnHomeBtn = document.getElementById('return-home-btn');
+  if(returnHomeBtn){
+    returnHomeBtn.addEventListener('click', ()=>{
+      if(window.showLandingPage) window.showLandingPage();
+      localStorage.setItem('uniSearchPageState', 'landing');
+      localStorage.removeItem('uniSearchResult');
+    });
+  }
+
+  function restoreResultPageIfNeeded(){
+    const stored = localStorage.getItem('uniSearchResult');
+    if(!stored) return;
+    if(window.showResultPage) window.showResultPage();
+    window.restoreResultFromStorage();
+  }
+
+  if(document.readyState === 'complete'){
+    restoreResultPageIfNeeded();
+  } else {
+    window.addEventListener('load', restoreResultPageIfNeeded);
+  }
 
 function Getvalues(){
 

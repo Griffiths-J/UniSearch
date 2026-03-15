@@ -33,15 +33,37 @@ export function pages(){
   const backToLandingBtn = document.querySelector('.backTolanding');
   if(backToLandingBtn) backToLandingBtn.addEventListener('click', ()=> showLandingPage());
 
+  const returnHomeBtn = document.getElementById('return-home-btn');
+  if(returnHomeBtn){
+    returnHomeBtn.addEventListener('click', ()=> {
+      showLandingPage();
+      localStorage.setItem('uniSearchPageState', 'landing');
+      localStorage.removeItem('uniSearchResult');
+    });
+  }
+
   window.showGradePage = showGradePage;
   window.showLandingPage = showLandingPage;
   window.showResultPage = showResultPage;
 
   window.addEventListener('load', ()=>{
+    const savedResult = localStorage.getItem('uniSearchResult');
     const state = localStorage.getItem('uniSearchPageState') || 'landing';
+
+    if(savedResult){
+      showResultPage();
+      if(typeof window.restoreResultFromStorage === 'function'){
+        window.restoreResultFromStorage();
+      }
+      return;
+    }
+
     if(state === 'grade') showGradePage();
     else if(state === 'result'){
       showResultPage();
+      if(typeof window.restoreResultFromStorage === 'function'){
+        window.restoreResultFromStorage();
+      }
     } else showLandingPage();
   });
 }
