@@ -7,6 +7,76 @@ async function unis(){
  const UCC = data[2].UCC;
  const UMAT = data[3].UMAT;
 
+ function renderEligiblePrograms(elegible, aggregate){
+    const resultHero = document.querySelector('.resultPagehero');
+    if(!resultHero){
+      console.error('resultPagehero element not found');
+      return;
+    }
+
+    const listItems = elegible.map(p => `
+      <div class="result-card">
+        <h3>${p.program_name}</h3>
+        <p><strong>College:</strong> ${p.college || 'N/A'}</p>
+        <p><strong>Faculty:</strong> ${p.faculty || 'N/A'}</p>
+        <p><strong>Min aggregate:</strong> ${p.cutoff_criteria?.minimum_aggregate ?? 'N/A'}</p>
+        <p><strong>Required electives:</strong> ${(p.cutoff_criteria?.elective_required?.any_of || []).join(', ') || 'N/A'}</p>
+      </div>
+    `).join('');
+
+    const noProgramsHtml = elegible.length === 0 ? `
+      <div class="result-card no-match">
+        <h2>Payment complete ✅</h2>
+        <p>No eligible programs matched your aggregate and electives.</p>
+      </div>
+    ` : '';
+
+    resultHero.innerHTML = `
+      <div class="result-summary">
+        <div>
+          <h2>Eligible programs</h2>
+          <p>Your aggregate: <strong>${aggregate}</strong> · ${elegible.length} program(s)</p>
+        </div>
+      </div>
+      ${noProgramsHtml}
+      <div class="eligible-programs">${listItems}</div>
+    `;
+
+    const returnBtn = document.getElementById('return-home-btn');
+    if(returnBtn){
+      returnBtn.addEventListener('click', ()=>{
+        if(window.showLandingPage) window.showLandingPage();
+        localStorage.setItem('uniSearchPageState','landing');
+      });
+    }
+
+    localStorage.setItem('uniSearchResult', JSON.stringify({elegible, aggregate}));
+  }
+
+  window.restoreResultFromStorage = function(){
+    const stored = localStorage.getItem('uniSearchResult');
+    if(!stored) return;
+    try{
+      const parsed = JSON.parse(stored);
+      if(parsed && Array.isArray(parsed.elegible)){
+        renderEligiblePrograms(parsed.elegible, parsed.aggregate || 'N/A');
+      }
+    } catch(e){
+      console.error('Failed to restore result', e);
+    }
+  };
+
+  window.addEventListener('load', ()=>{
+    if(localStorage.getItem('uniSearchPageState') === 'result' && window.restoreResultFromStorage){
+      const stored = localStorage.getItem('uniSearchResult');
+      if(stored){
+        if(window.showResultPage) window.showResultPage();
+        window.restoreResultFromStorage();
+      } else {
+        if(window.showLandingPage) window.showLandingPage();
+      }
+    }
+  });
 
 function Getvalues(){
 
@@ -243,6 +313,7 @@ let j;
       return;
     }
 
+    document.querySelector('.resultPage').style.display = 'none';
     const handler = PaystackPop.setup({
       key:'pk_test_217133aa809e4d9c253ad67a39601a632ad77e4f',
       email:email,
@@ -251,21 +322,27 @@ let j;
       ref: '' + Math.floor((Math.random()*99999)+1),
       callback:function(responds){
        
-        document.getElementById('gradePage').style.display='none';
         document.getElementById('payment-modal').style.display='none';
-        document.getElementById('resultPage').style.display='block';
+        if(window.showResultPage){
+          window.showResultPage();
+        } else {
+          const resultPageEl = document.querySelector('.resultPage');
+          if(resultPageEl) resultPageEl.style.display = 'block';
+        }
         
-        const elegible = requiredUni.filter(program => {
-        const passAggregrate = studentData.aggregrate<= program.cutoff_criteria.minimum_aggregate;
+        const elegible = (requiredUni || []).filter(program => {
+          const cutoff = program.cutoff_criteria || {};
+          const passAggregrate = studentData.aggregrate <= cutoff.minimum_aggregate;
 
-        const studentElectives = program.cutoff_criteria.elective_required.any_of.filter(subject => {
-          return studentData[subject]!==undefined;
-        }) ;
+          const studentElectives = (cutoff.elective_required?.any_of || []).filter(subject => {
+            return studentData[subject] !== undefined;
+          });
 
-        const passElective = studentElectives.length>= program.cutoff_criteria.elective_required.count;
+          const passElective = studentElectives.length >= (cutoff.elective_required?.count || 0);
+          return passAggregrate && passElective;
+        });
 
-        return passAggregrate && passElective;
-      })
+        renderEligiblePrograms(elegible, studentData.aggregrate);
 
        console.log(elegible)
        console.log("helllllllloooo")
@@ -294,3 +371,4 @@ let j;
 }
 
 unis();
+

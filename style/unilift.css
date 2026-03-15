@@ -581,7 +581,7 @@ select:focus{
   display: none;
 }
 .landingPage{
-  display: none;
+  display: block;
 }
 
 
@@ -642,6 +642,10 @@ select:focus{
     color: #000;
 }
 
+.agg{
+  margin-bottom: 20px;
+} 
+
 .modal-content input {
     width: 100%;
     padding: 12px;
@@ -692,6 +696,117 @@ select:focus{
   height: 0.78rem;
 }
 
+.resultPage {
+  padding: 1.2rem;
+  margin: 0 auto;
+  width: min(1000px, 95%);
+  display: none;
+}
+
+.resultPagehero {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.result-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -0.5rem;
+}
+
+.btn-return {
+  margin-top: 8px;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  background: #177de4;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-return:hover {
+  background: #0f65b5;
+}
+
+.result-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 0.5rem;
+}
+
+.btn-return {
+  background: #177de4;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 0.9rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all .2s ease;
+}
+
+.btn-return:hover {
+  background: #0f65b5;
+}
+
+.eligible-programs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.8rem;
+}
+
+.result-card {
+  border: 1px solid #dde5f2;
+  background: #f9fbff;
+  border-radius: 0.8rem;
+  padding: 0.9rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.result-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.result-card h3 {
+  margin-bottom: 0.4rem;
+  color: #0b3d7d;
+}
+
+.no-match {
+  border-left: 4px solid #ff7a42;
+  background: #fff8f0;
+}
+
+@media (max-width: 760px) {
+  .resultPage {
+    width: 95%;
+  }
+
+  .result-summary {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.result-card h3 {
+  margin-bottom: 0.3rem;
+}
+
+.eligible-programs {
+  display: grid;
+  gap: 0.6rem;
+}
 
 footer{
   width: 100%;

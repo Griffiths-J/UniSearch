@@ -1,36 +1,47 @@
 export function pages(){
-  
   const landingSection = document.querySelector('.landingPage');
   const gradeSection = document.querySelector('.gradePage');
+  const resultSection = document.querySelector('.resultPage');
 
-    
-  function showGradePage(){
-       window.location.hash='grade';
-      landingSection.style.display='none';
-      gradeSection.style.display='block';
-    }                                                                                          
-  function showLandingPage(){
-     landingSection.style.display='block';
-     gradeSection.style.display='none'
+  function hideAll(){
+    if(landingSection) landingSection.style.display = 'none';
+    if(gradeSection) gradeSection.style.display = 'none';
+    if(resultSection) resultSection.style.display = 'none';
   }
 
-  document.querySelector('.getStarted-btn').addEventListener('click',()=>{
-    window.location.hash='grade';
-    showGradePage();
-  });
+  function showLandingPage(){
+    hideAll();
+    if(landingSection) landingSection.style.display = 'block';
+    localStorage.setItem('uniSearchPageState', 'landing');
+  }
 
-  document.querySelector('.backTolanding').addEventListener('click',()=>{
-    history.pushState("",document.title,window.location.pathname+window.location.search);
-    
-    showLandingPage();
-  })
+  function showGradePage(){
+    hideAll();
+    if(gradeSection) gradeSection.style.display = 'block';
+    localStorage.setItem('uniSearchPageState', 'grade');
+  }
 
-  window.addEventListener('load',()=>{
-      if(window.location.hash==='#grade'){
-        showGradePage();
-      }else{
-        showLandingPage();
-      }
+  function showResultPage(){
+    hideAll();
+    if(resultSection) resultSection.style.display = 'block';
+    localStorage.setItem('uniSearchPageState', 'result');
+  }
+
+  const getStartedBtn = document.querySelector('.getStarted-btn');
+  if(getStartedBtn) getStartedBtn.addEventListener('click', ()=> showGradePage());
+
+  const backToLandingBtn = document.querySelector('.backTolanding');
+  if(backToLandingBtn) backToLandingBtn.addEventListener('click', ()=> showLandingPage());
+
+  window.showGradePage = showGradePage;
+  window.showLandingPage = showLandingPage;
+  window.showResultPage = showResultPage;
+
+  window.addEventListener('load', ()=>{
+    const state = localStorage.getItem('uniSearchPageState') || 'landing';
+    if(state === 'grade') showGradePage();
+    else if(state === 'result'){
+      showResultPage();
+    } else showLandingPage();
   });
- 
 }
