@@ -6,7 +6,7 @@
       "program_id": "KNUST_BIOCHEM_001",
       "program_name": "BSc Biochemistry",
       "college": "College of Science",
-      "faculty": "Biosciences",
+      "faculty": "Faculty of Biosciences",
       "cutoff_criteria": {
         "minimum_aggregate": 9,
         "core_subjects_required": [
@@ -30,7 +30,7 @@
       "program_id": "KNUST_FOODTECH_001",
       "program_name": "BSc Food Science and Technology",
       "college": "College of Science",
-      "faculty": "Biosciences",
+      "faculty": "Faculty of Biosciences",
       "cutoff_criteria": {
         "minimum_aggregate": 11,
         "core_subjects_required": [
@@ -54,7 +54,7 @@
       "program_id": "KNUST_DIETETICS_001",
       "program_name": "BSc Dietetics",
       "college": "College of Science",
-      "faculty": "Biosciences",
+      "faculty": "Faculty of Biosciences",
       "cutoff_criteria": {
         "minimum_aggregate": 9,
         "core_subjects_required": [
@@ -80,7 +80,7 @@
       "program_id": "KNUST_NUTRITION_001",
       "program_name": "BSc Human Nutrition",
       "college": "College of Science",
-      "faculty": "Biosciences",
+      "faculty": "Faculty of Biosciences",
       "cutoff_criteria": {
         "minimum_aggregate": 10,
         "core_subjects_required": [
@@ -106,7 +106,7 @@
       "program_id": "KNUST_BIOSCI_001",
       "program_name": "BSc Biological Sciences",
       "college": "College of Science",
-      "faculty": "Biosciences",
+      "faculty": "Faculty of Biosciences",
       "cutoff_criteria": {
         "minimum_aggregate": 9,
         "core_subjects_required": [
@@ -130,7 +130,7 @@
       "program_id": "KNUST_ENVSCI_001",
       "program_name": "BSc Environmental Science",
       "college": "College of Science",
-      "faculty": "Biosciences",
+      "faculty": "Faculty of Biosciences",
       "cutoff_criteria": {
         "minimum_aggregate": 12,
         "core_subjects_required": [
@@ -155,7 +155,7 @@
       "program_id": "KNUST_OPTOMETRY_001",
       "program_name": "Doctor of Optometry",
       "college": "College of Science",
-      "faculty": "Biosciences",
+      "faculty": "Faculty of Biosciences",
       "cutoff_criteria": {
         "minimum_aggregate": 6,
         "core_subjects_required": [
@@ -179,7 +179,7 @@
       "program_id": "KNUST_CHEM_001",
       "program_name": "BSc Chemistry",
       "college": "College of Science",
-      "faculty": "Physical and Computational Sciences",
+      "faculty": "Faculty of Physical and Computational Sciences",
       "cutoff_criteria": {
         "minimum_aggregate": 15,
         "core_subjects_required": [
@@ -203,7 +203,7 @@
       "program_id": "KNUST_PHYSICS_001",
       "program_name": "BSc Physics",
       "college": "College of Science",
-      "faculty": "Physical and Computational Sciences",
+      "faculty": "Faculty of Physical and Computational Sciences",
       "cutoff_criteria": {
         "minimum_aggregate": 16,
         "core_subjects_required": [
@@ -227,7 +227,7 @@
       "program_id": "KNUST_METEOR_001",
       "program_name": "BSc Meteorology and Climate Science",
       "college": "College of Science",
-      "faculty": "Physical and Computational Sciences",
+      "faculty": "Faculty of Physical and Computational Sciences",
       "cutoff_criteria": {
         "minimum_aggregate": 17,
         "core_subjects_required": [
@@ -251,7 +251,7 @@
       "program_id": "KNUST_MATHS_001",
       "program_name": "BSc Mathematics",
       "college": "College of Science",
-      "faculty": "Physical and Computational Sciences",
+      "faculty": "Faculty of Physical and Computational Sciences",
       "cutoff_criteria": {
         "minimum_aggregate": 15,
         "core_subjects_required": [
@@ -275,7 +275,7 @@
       "program_id": "KNUST_ACTUARIAL_001",
       "program_name": "BSc Actuarial Science",
       "college": "College of Science",
-      "faculty": "Physical and Computational Sciences",
+      "faculty": "Faculty of Physical and Computational Sciences",
       "cutoff_criteria": {
         "minimum_aggregate": 10,
         "core_subjects_required": [
@@ -302,7 +302,7 @@
       "program_id": "KNUST_STAT_001",
       "program_name": "BSc Statistics",
       "college": "College of Science",
-      "faculty": "Physical and Computational Sciences",
+      "faculty": "Faculty of Physical and Computational Sciences",
       "cutoff_criteria": {
         "minimum_aggregate": 12,
         "core_subjects_required": [
@@ -329,7 +329,7 @@
       "program_id": "KNUST_CS_001",
       "program_name": "BSc Computer Science",
       "college": "College of Science",
-      "faculty": "Physical and Computational Sciences",
+      "faculty": "Faculty of Physical and Computational Sciences",
       "cutoff_criteria": {
         "minimum_aggregate": 7,
         "core_subjects_required": [
@@ -354,7 +354,7 @@
       "program_id": "KNUST_IT_001",
       "program_name": "BSc Information Technology",
       "college": "College of Science",
-      "faculty": "Physical and Computational Sciences",
+      "faculty": "Faculty of Physical and Computational Sciences",
       "cutoff_criteria": {
         "minimum_aggregate": 10,
         "core_subjects_required": [
@@ -385,7 +385,7 @@
       "program_id": "KNUST_AGR_ENG_001",
       "program_name": "BSc Agricultural Engineering",
       "college": "College of Engineering",
-      "faculty": "Engineering",
+      "faculty": "Faculty of Engineering",
       "cutoff_criteria": {
         "minimum_aggregate": 13,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -399,7 +399,7 @@
       "program_id": "KNUST_CHEM_ENG_001",
       "program_name": "BSc Chemical Engineering",
       "college": "College of Engineering",
-      "faculty": "Engineering",
+      "faculty": "Faculty of Engineering",
       "cutoff_criteria": {
         "minimum_aggregate": 7,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -413,7 +413,7 @@
       "program_id": "KNUST_CIVIL_ENG_001",
       "program_name": "BSc Civil Engineering",
       "college": "College of Engineering",
-      "faculty": "Engineering",
+      "faculty": "Faculty of Engineering",
       "cutoff_criteria": {
         "minimum_aggregate": 7,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -427,7 +427,7 @@
       "program_id": "KNUST_MAT_ENG_001",
       "program_name": "BSc Materials Engineering",
       "college": "College of Engineering",
-      "faculty": "Engineering",
+      "faculty": "Faculty of Engineering",
       "cutoff_criteria": {
         "minimum_aggregate": 10,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -441,7 +441,7 @@
       "program_id": "KNUST_MECH_ENG_001",
       "program_name": "BSc Mechanical Engineering",
       "college": "College of Engineering",
-      "faculty": "Engineering",
+      "faculty": "Faculty of Engineering",
       "cutoff_criteria": {
         "minimum_aggregate": 7,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -455,7 +455,7 @@
       "program_id": "KNUST_AERO_ENG_001",
       "program_name": "BSc Aerospace Engineering",
       "college": "College of Engineering",
-      "faculty": "Engineering",
+      "faculty": "Faculty of Engineering",
       "cutoff_criteria": {
         "minimum_aggregate": 7,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -469,7 +469,7 @@
       "program_id": "KNUST_PET_ENG_001",
       "program_name": "BSc Petroleum Engineering",
       "college": "College of Engineering",
-      "faculty": "Engineering",
+      "faculty": "Faculty of Engineering",
       "cutoff_criteria": {
         "minimum_aggregate": 6,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -483,7 +483,7 @@
       "program_id": "KNUST_GEOL_ENG_001",
       "program_name": "BSc Geological Engineering",
       "college": "College of Engineering",
-      "faculty": "Engineering",
+      "faculty": "Faculty of Engineering",
       "cutoff_criteria": {
         "minimum_aggregate": 8,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -497,7 +497,7 @@
       "program_id": "KNUST_GEOM_ENG_001",
       "program_name": "BSc Geomatic (Geodetic) Engineering",
       "college": "College of Engineering",
-      "faculty": "Engineering",
+      "faculty": "Faculty of Engineering",
       "cutoff_criteria": {
         "minimum_aggregate": 9,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -511,7 +511,7 @@
       "program_id": "KNUST_ELEC_ENG_001",
       "program_name": "BSc Electrical and Electronic Engineering",
       "college": "College of Engineering",
-      "faculty": "Engineering",
+      "faculty": "Faculty of Engineering",
       "cutoff_criteria": {
         "minimum_aggregate": 6,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -525,7 +525,7 @@
       "program_id": "KNUST_COMP_ENG_001",
       "program_name": "BSc Computer Engineering",
       "college": "College of Engineering",
-      "faculty": "Engineering",
+      "faculty": "Faculty of Engineering",
       "cutoff_criteria": {
         "minimum_aggregate": 6,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -539,7 +539,7 @@
       "program_id": "KNUST_TELE_ENG_001",
       "program_name": "BSc Telecommunication Engineering",
       "college": "College of Engineering",
-      "faculty": "Engineering",
+      "faculty": "Faculty of Engineering",
       "cutoff_criteria": {
         "minimum_aggregate": 9,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -553,7 +553,7 @@
       "program_id": "KNUST_BIOMED_ENG_001",
       "program_name": "BSc Biomedical Engineering",
       "college": "College of Engineering",
-      "faculty": "Engineering",
+      "faculty": "Faculty of Engineering",
       "cutoff_criteria": {
         "minimum_aggregate": 6,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -567,7 +567,7 @@
       "program_id": "KNUST_PETROCHEM_ENG_001",
       "program_name": "BSc Petrochemical Engineering",
       "college": "College of Engineering",
-      "faculty": "Engineering",
+      "faculty": "Faculty of Engineering",
       "cutoff_criteria": {
         "minimum_aggregate": 7,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -581,7 +581,7 @@
       "program_id": "KNUST_MET_ENG_001",
       "program_name": "BSc Metallurgical Engineering",
       "college": "College of Engineering",
-      "faculty": "Engineering",
+      "faculty": "Faculty of Engineering",
       "cutoff_criteria": {
         "minimum_aggregate": 11,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -595,7 +595,7 @@
       "program_id": "KNUST_AUTO_ENG_001",
       "program_name": "BSc Automobile Engineering",
       "college": "College of Engineering",
-      "faculty": "Engineering",
+      "faculty": "Faculty of Engineering",
       "cutoff_criteria": {
         "minimum_aggregate": 10,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -609,7 +609,7 @@
       "program_id": "KNUST_IND_ENG_001",
       "program_name": "BSc Industrial Engineering",
       "college": "College of Engineering",
-      "faculty": "Engineering",
+      "faculty": "Faculty of Engineering",
       "cutoff_criteria": {
         "minimum_aggregate": 10,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -623,7 +623,7 @@
       "program_id": "KNUST_MARINE_ENG_001",
       "program_name": "BSc Marine Engineering",
       "college": "College of Engineering",
-      "faculty": "Engineering",
+      "faculty": "Faculty of Engineering",
       "cutoff_criteria": {
         "minimum_aggregate": 9,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -637,7 +637,7 @@
       "program_id": "KNUST_AKAN_001",
       "program_name": "BA. Akan Language and Culture",
       "college": "College of Humanities and Social Sciences",
-      "faculty": "Social Sciences",
+      "faculty": "Faculty of Social Sciences",
       "cutoff_criteria": {
         "minimum_aggregate": 22,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],

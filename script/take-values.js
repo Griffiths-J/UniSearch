@@ -7,7 +7,7 @@ async function unis(){
  const UCC = data[2].UCC;
  const UMAT = data[3].UMAT;
 
- function renderEligiblePrograms(elegible, aggregate){
+ function renderEligiblePrograms(elegible, aggregate,Uni){
     const resultHero = document.querySelector('.resultPagehero');
     if(!resultHero){
       console.error('resultPagehero element not found');
@@ -15,12 +15,20 @@ async function unis(){
     }
 
     const listItems = elegible.map(p => `
-      <div class="result-card">
-        <h3>${p.program_name}</h3>
-        <p><strong>College:</strong> ${p.college || 'N/A'}</p>
-        <p><strong>Faculty:</strong> ${p.faculty || 'N/A'}</p>
-        <p><strong>Min aggregate:</strong> ${p.cutoff_criteria?.minimum_aggregate ?? 'N/A'}</p>
-        <p><strong>Required electives:</strong> ${(p.cutoff_criteria?.elective_required?.any_of || []).join(', ') || 'N/A'}</p>
+       <div class="result-card">
+          <div class="result-card-left">
+              <div class="result-card-top">${p.program_name}</div>
+          <div class="Co_Fa">
+              <div class="result-card-college">
+                <img src="icons/icons8-pentagon-24.png" alt="icon">${p.college}</div>
+              <div class="result-card-faculty">
+                <img src="icons/icons8-pencil-24.png" alt="icon">${p.faculty}</div>
+            </div>
+          </div>
+          <div class="result-card-right">
+            <div class="resultAgg">${p.cutoff_criteria.minimum_aggregate}</div>
+            <div class="resultAgg-t1">AGG</div>
+          </div>
       </div>
     `).join('');
 
@@ -33,16 +41,18 @@ async function unis(){
 
     resultHero.innerHTML = `
       <div class="result-summary">
-        <div>
-          <h2>Eligible programs</h2>
-          <p>Your aggregate: <strong>${aggregate}</strong> · Eligible program(${elegible.lenght>1?'s':''}) ${elegible.length} </p>
-        </div>
+          <h2>Eligible Courses at <br><span class="result-summaryUni">${Uni}</span> </h2>
+          <div class="result-summaryBox">
+            <div class="resultAgg-t">Your Aggregrate</div> <span>|</span>
+            <div class="resultAgg">${aggregate}</div>
+          </div>
       </div>
       ${noProgramsHtml}
+      <div class="numberCourses">${elegible.length} COURSE${elegible>1?'S':''} FOUND</div>
       <div class="eligible-programs">${listItems}</div>
     `;
 
-    localStorage.setItem('uniSearchResult', JSON.stringify({elegible, aggregate}));
+    localStorage.setItem('uniSearchResult', JSON.stringify({elegible, aggregate,Uni}));
     localStorage.setItem('uniSearchPageState', 'result');
   }
 
@@ -52,7 +62,7 @@ async function unis(){
     try{
       const parsed = JSON.parse(stored);
       if(parsed && Array.isArray(parsed.elegible)){
-        renderEligiblePrograms(parsed.elegible, parsed.aggregate || 'N/A');
+        renderEligiblePrograms(parsed.elegible, parsed.aggregate,parsed.Uni || 'N/A');
       }
     } catch(e){
       console.error('Failed to restore result', e);
@@ -81,6 +91,8 @@ async function unis(){
     window.addEventListener('load', restoreResultPageIfNeeded);
   }
 
+   
+
 function Getvalues(){
 
         const university = document.querySelector(".getsch-select-value").value;
@@ -92,7 +104,7 @@ function Getvalues(){
           throw new Error("Select university");
         };
 
-        let requiredUni;
+       let requiredUni;
 
         switch(university){
           case "KNUST":
@@ -287,6 +299,15 @@ let j;
 
   const finalBestThree = lete.slice(0,3);
 
+  let resultUniTitle;
+  switch(requiredUni){
+    case KNUST:
+      resultUniTitle='Kwame Nkrumah University of Science Technology';
+      break;
+    case UG:
+      resultUniTitle='University of Ghana'
+      break;  
+  }
  
   const studentData = {
     core_math:mathGrade_main,
@@ -295,10 +316,11 @@ let j;
     [finalBestThree[0].finalSub]:finalBestThree[0].finalGrade,
     [finalBestThree[1].finalSub]:finalBestThree[1].finalGrade,
     [finalBestThree[2].finalSub]:finalBestThree[2].finalGrade,
-    aggregrate:finalAggregrate
+    aggregrate:finalAggregrate,
+    Uni:resultUniTitle
   };
 
-
+console.log(studentData)
 
    document.getElementById('payment-modal').style.display='flex';
     document.getElementById('display-agg').innerText=`${finalAggregrate}`;   
@@ -345,7 +367,7 @@ let j;
           return passAggregrate && passElective;
         });
 
-        renderEligiblePrograms(elegible, studentData.aggregrate);
+        renderEligiblePrograms(elegible, studentData.aggregrate,studentData.Uni);
 
        console.log(elegible)
        console.log("helllllllloooo")
