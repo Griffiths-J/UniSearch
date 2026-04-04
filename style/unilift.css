@@ -15,16 +15,30 @@
   ---card-surface:#fff;
   ---shadow-cl: #0000000d;
   ---background-btn:linear-gradient(to left, #177de4, #00BFFF, #40E0D0);
+  ---muted-text: #555;
   --montserrat: 'Montserrat', sans-serif;
   --poppins: 'Poppins', sans-serif;
   --inter: 'Inter', sans-serif;
   --jetbrains-mono: 'JetBrains Mono', monospace;
+  ---footer-p: #475569;
+
+}
+
+.dark-mode {
+  ---text-color: #e2e8f0;
+  ---main-bg: #1a202c;
+  ---header-cl: #2d3748;
+  ---Hspan: #63b3ed;
+  ---card-surface: #2d3748;
+  ---shadow-cl: #00000040;
+  ---muted-text: #cbd5e0;
+  ---footer-p: #a6b7ca;
 }
 /*hearder side*/
 header{
   display: flex;
   justify-content: space-between;
-  padding:0 20px 0 0 ;
+  padding:0 5px 0 0 ;
   background-color: var(---header-cl);
   align-items: center;
   position: relative;
@@ -36,11 +50,29 @@ header{
   z-index: 1000;
  
 }
+
+.logo {
+  order: 1;
+}
+
+.uls {
+  order: 2;
+}
+
+.nav-controls {
+  order: 3;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* optional gap between toggle and burger */
+}
+
+
 body{
   background-color: var(---main-bg);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  
 }
 html{
    background-color: var(---main-bg);
@@ -78,7 +110,7 @@ html{
 
 
 .last{
-  color: #000;
+  color: var(---text-color);
   border-radius: 2rem;
   font-size: 1.12rem;
   padding: 0.2rem 0.3rem;
@@ -99,7 +131,7 @@ html{
 .burger div{
   width: 21.5px;
   height: 3.3px;
-   background-color: #0161c1;
+   background-color: var(---Hspan);
   margin: 4px;
   transition: transform .12s ease;
 }
@@ -115,8 +147,55 @@ transform: rotate(45deg) translate(5px , 5.5px);
 .animate .line2{
 opacity: 0;
 }
-.animate .line3{
-transform: rotate(-45deg) translate(5px , -6px);
+.theme-toggle {
+  width: 50px;
+  height: 25px;
+  background: #ccc;
+  border: none;
+  border-radius: 25px;
+  position: relative;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-ball {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2.5px;
+  left: 2.5px;
+  transition: all 0.3s ease;
+}
+
+.dark-mode .theme-toggle {
+  background: #555;
+}
+
+.dark-mode .toggle-ball {
+  background: #333;
+  left: 27.5px;
+}
+
+.theme-toggle:hover {
+  background: #bbb;
+}
+
+.dark-mode .theme-toggle:hover {
+  background: #666;
+}
+
+@media (max-width: 768px) {
+  .theme-toggle {
+    margin-left: 0.5rem;
+    order: 3;
+  }
+  
+  .burger {
+    order: 3;
+  }
 }
 
 main{
@@ -187,7 +266,6 @@ main{
 
   .show{
     transform:translate(0%);
-    
   }
 
   .uls li:hover{
@@ -215,19 +293,23 @@ main{
   gap: 3.5rem;
   font-size: 4rem;
   width: 100%;
+  color: var(---text-color); 
 }
 
 .heroText abbr{
   text-decoration: none;
   font-size: 4.3rem;
+  
 }
 
 .third{
   margin-top: 40px;
   font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
-  color: #555;
+  color: var(---muted-text);
 }
+
+
 
 @media (max-width:729.99px){
   .mainHero{
@@ -243,7 +325,7 @@ main{
   .third{
     font-size: 0.89rem;
     font-weight:300;
-    color: #555;
+    color: var(---muted-text);
   }
 
   .mainn{
@@ -342,6 +424,7 @@ main{
   text-align: center;
   font-size: 1.2rem;
   font-weight: bold;
+  color: var(---text-color);
 }
 
 
@@ -369,6 +452,7 @@ main{
   text-align: center;
   grid-template-rows: 2.3fr 1fr;
   transition: all .3s ease ;
+  color: var(---text-color);
 }
 
 .whyCard:hover{
@@ -418,7 +502,7 @@ main{
 .review-text{
   font-size: 0.98rem;
   line-height: 1.8;
-  color: #334155;
+  color: var(---text-color);
   margin-bottom: 1rem;
 }
 
@@ -452,13 +536,13 @@ main{
 
 .grade-p-1{
   font-size:2rem;
-  color: #000;
+  color: var(---text-color);
   font-weight: 400;
 
 }
 
 .grade-p-2{
-  color: #555;
+  color: var(---muted-text);
   font-weight: bold;
 }
 
@@ -488,10 +572,10 @@ main{
   padding: 10px;
   border-radius: 5px;
   margin: 4px;
-  background-color: #fff;
+  background-color: var(---card-surface);
   border: 1px solid var(---card-surface);
   box-shadow: 0 0 2px #00000035;
-  color: #555;
+  color: var(---text-color);
 }
 
 select:hover{
@@ -501,7 +585,7 @@ select:hover{
 .subjectName1{
    width: 240px;
   padding: 10.5px;
-   color: #555;
+   color: var(---text-color);
 }
 
 .coreSub,.elective-sub{
@@ -516,6 +600,7 @@ select:hover{
   justify-content: space-around;
   margin:2px 10px;
   align-items: center;
+  color: var(---text-color);
 }
 
 select:focus{
@@ -547,7 +632,7 @@ select:focus{
  .subjectName1{
     width: 160px;
   padding: 0.8rem 0.6rem;
-   color: #555;
+   color: var(---text-color);
  }
 
  .gradeWrapper{
@@ -589,7 +674,7 @@ select:focus{
   font-size: clamp(1rem, 0.5rem + 0.6vw, 1.4rem);
   font-weight: 300;
   font-family:monospace;
- 
+  color: var(---text-color);
 }
 
 
@@ -636,7 +721,7 @@ select:focus{
 
 
 .getsch{
-  background-color: #fff;
+  background-color: var(---card-surface);
   border-radius: 13px;
   box-shadow: 0 2px 2px #0000003a;
   padding: 2px 5px;
@@ -647,7 +732,9 @@ select:focus{
   align-items: center;
   margin: 10px auto;
   margin-bottom: 2px;
+  color: var(---text-color);
 }
+
 
 
 .getsch-title{
@@ -656,6 +743,7 @@ select:focus{
 
 #getsch-select-value{
  padding: 5px;
+
 }
 
 
@@ -683,17 +771,18 @@ select:focus{
 .modal-content {
   position: relative;
     background: var(---main-bg); 
-    padding: 2rem;
-    border-radius: 15px;
+    padding: 2.5rem;
+    border-radius: 10px;
     width: 90%; 
-    max-width: 400px;
+    max-width: 450px;
     text-align: center;
-    border: 1px solid #333;
-    color: #000;
+    border: 2px solid var(---shadow-cl);
+    color: var(---text-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 .modal-content h3 img{
-  width: 40px;
+  width: 50px;
 }
 
 .modal-content h3{
@@ -701,27 +790,50 @@ select:focus{
   align-items: center;
   gap: 10px;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.modal-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
 }
 
 .agg{
-  margin-bottom: 10px;
-} 
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(---text-color);
+}
 
 .modal-content input {
     width: 100%;
     padding: 12px;
-    margin: 10px 0;
-    border-radius: 8px;
-    border: 1px solid #444;
+    margin: 0;
+    border-radius: 6px;
+    border: 1px solid var(---shadow-cl);
     background: var(---card-surface);
-    color:#000;
+    color: var(---text-color);
+    font-size: 1rem;
 }
 
 #display-agg{
   font-size: 1.3rem;
   font-weight: bolder;
-  color: #3bd1c2;
+  color: var(---Hspan);
   font-family: poppins;
 }
 
@@ -749,10 +861,13 @@ select:focus{
 .btn-secondary{
   position: absolute;
   cursor: pointer;
-  font-size: 2.5rem;
-  color: #fff;
-  top: -40px;
-  right: -12px;
+  font-size: 1.5rem;
+  color: var(---text-color);
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 
@@ -763,6 +878,20 @@ select:focus{
   position: relative;
   top: 0.9rem;
   height: 0.78rem;
+}
+
+.payment-info {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.payment-note {
+  font-size: 0.85rem;
+  color: var(---muted-text);
+  margin: 0.5rem 0 1.5rem 0;
+  text-align: center;
+  line-height: 1.4;
 }
 
 .resultPage {
@@ -1007,7 +1136,7 @@ footer{
 .footer-section p {
   margin-bottom: 0.5rem;
   line-height: 1.6;
-  color: #475569;
+  color: var(---footer-p);
 }
 
 .footer-section ul {
@@ -1056,7 +1185,7 @@ footer{
 .footer-bottom p {
   margin: 0;
   font-size: 0.9rem;
-  color: #64748b;
+  color: #70829b;
 }
 
 @media (max-width: 768px) {
@@ -1068,5 +1197,42 @@ footer{
   .social-links {
     justify-content: center;
   }
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+.whatsapp-float a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+footer {
+  z-index: 10001;
+  position: relative;
+  display: block !important;
 }
 

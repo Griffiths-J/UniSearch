@@ -72,4 +72,26 @@ export function pages(){
 
     showLandingPage();
   });
+
+  // Theme toggle
+  const themeToggle = document.getElementById('theme-toggle');
+  if(themeToggle) {
+    let currentTheme = localStorage.getItem('theme');
+    if(!currentTheme) {
+      // Check system preference
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      currentTheme = prefersDark ? 'dark' : 'light';
+      localStorage.setItem('theme', currentTheme);
+    }
+    if(currentTheme === 'dark') {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const isDark = document.body.classList.contains('dark-mode');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  }
 }

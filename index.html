@@ -24,10 +24,20 @@
         </div>
       </ul>
 
-      <div class="burger">
-        <div class="line line1"></div>
-        <div class="line line2"></div>
-        <div class="line line3"></div>
+      <div class="nav-controls">
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Toggle dark mode"
+        >
+          <div class="toggle-ball"></div>
+        </button>
+
+        <div class="burger">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
+        </div>
       </div>
     </header>
 
@@ -633,22 +643,33 @@
         <p>Enter your details to unlock your full University Match Report.</p>
 
         <form>
-          <input
-            type="text"
-            id="student-name"
-            placeholder="Full Name"
-            required
-          />
-          <input
-            type="email"
-            id="student-email"
-            placeholder="Email Address"
-            required
-          />
+          <div class="form-group">
+            <label for="student-name">Full Name</label>
+            <input
+              type="text"
+              id="student-name"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="student-email">Email Address</label>
+            <input
+              type="email"
+              id="student-email"
+              placeholder="Enter your email address"
+              required
+            />
+          </div>
 
           <div class="payment-info">
             <span>Price: <strong>GHS 15.00</strong></span>
           </div>
+
+          <p class="payment-note">
+            Your payment is secure and processed by Paystack. Unilift does not
+            store your payment information.
+          </p>
 
           <button id="pay-button" class="btn-primary">
             Pay & Unlock Results
@@ -697,15 +718,28 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>
-          &copy; 2026 Unilift. All rights reserved. | Privacy Policy | Terms of
-          Service
-        </p>
+        <p>&copy; 2026 Unilift. All rights reserved.</p>
       </div>
     </footer>
     <script type="module" src="script/page.js"></script>
     <script type="module" src="script/unilift.js"></script>
     <script src="script/burger.js"></script>
     <script src="script/take-values.js"></script>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+      <a
+        href="https://wa.me/1234567890"
+        target="_blank"
+        aria-label="Contact us on WhatsApp"
+      >
+        <img
+          src="icons/icons8-whatsapp-48.png"
+          alt="WhatsApp"
+          width="24"
+          height="24"
+        />
+      </a>
+    </div>
   </body>
 </html>
