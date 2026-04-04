@@ -147,6 +147,11 @@ transform: rotate(45deg) translate(5px , 5.5px);
 .animate .line2{
 opacity: 0;
 }
+
+.animate .line3{
+  transform: rotate(-45deg) translate(4px , -5px);
+}
+
 .theme-toggle {
   width: 50px;
   height: 25px;
