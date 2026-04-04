@@ -52,12 +52,12 @@ async function unis(){
       <div class="eligible-programs">${listItems}</div>
     `;
 
-    localStorage.setItem('uniSearchResult', JSON.stringify({elegible, aggregate,Uni}));
-    localStorage.setItem('uniSearchPageState', 'result');
+    sessionStorage.setItem('uniSearchResult', JSON.stringify({elegible, aggregate,Uni}));
+    sessionStorage.setItem('uniSearchPageState', 'result');
   }
 
   window.restoreResultFromStorage = function(){
-    const stored = localStorage.getItem('uniSearchResult');
+    const stored = sessionStorage.getItem('uniSearchResult');
     if(!stored) return;
     try{
       const parsed = JSON.parse(stored);
@@ -73,14 +73,18 @@ async function unis(){
   if(returnHomeBtn){
     returnHomeBtn.addEventListener('click', ()=>{
       if(window.showLandingPage) window.showLandingPage();
-      localStorage.setItem('uniSearchPageState', 'landing');
-      localStorage.removeItem('uniSearchResult');
+      sessionStorage.setItem('uniSearchPageState', 'landing');
+      sessionStorage.removeItem('uniSearchResult');
     });
   }
 
   function restoreResultPageIfNeeded(){
-    const stored = localStorage.getItem('uniSearchResult');
+    const pageState = sessionStorage.getItem('uniSearchPageState');
+    if(pageState !== 'result') return;
+
+    const stored = sessionStorage.getItem('uniSearchResult');
     if(!stored) return;
+
     if(window.showResultPage) window.showResultPage();
     window.restoreResultFromStorage();
   }
@@ -367,10 +371,20 @@ console.log(studentData)
           return passAggregrate && passElective;
         });
 
+        for(let i = 0 ; i< elegible.length; i++){
+          for(let j =0; j<elegible.length; j++){
+            if(elegible[i].cutoff_criteria.minimum_aggregate < elegible[j].cutoff_criteria.minimum_aggregate){
+              let temp = elegible[i];
+              elegible[i] = elegible[j];
+              elegible[j] = temp;
+            }
+        }
+      }
+
         renderEligiblePrograms(elegible, studentData.aggregrate,studentData.Uni);
 
        console.log(elegible)
-       console.log("helllllllloooo")
+      
 
       },
       onClose:function(){

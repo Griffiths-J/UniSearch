@@ -3,32 +3,39 @@ export function pages(){
   const gradeSection = document.querySelector('.gradePage');
   const resultSection = document.querySelector('.resultPage');
 
+  const footerSection = document.querySelector('footer');
+
   function hideAll(){
     if(landingSection) landingSection.style.display = 'none';
     if(gradeSection) gradeSection.style.display = 'none';
     if(resultSection) resultSection.style.display = 'none';
+    if(footerSection) footerSection.style.display = 'none';
   }
 
   function showLandingPage(){
     hideAll();
     if(landingSection) landingSection.style.display = 'block';
-    localStorage.setItem('uniSearchPageState', 'landing');
+    if(footerSection) footerSection.style.display = 'block';
+    sessionStorage.setItem('uniSearchPageState', 'landing');
   }
 
   function showGradePage(){
     hideAll();
     if(gradeSection) gradeSection.style.display = 'block';
-    localStorage.setItem('uniSearchPageState', 'grade');
+    sessionStorage.setItem('uniSearchPageState', 'grade');
   }
 
   function showResultPage(){
     hideAll();
     if(resultSection) resultSection.style.display = 'block';
-    localStorage.setItem('uniSearchPageState', 'result');
+    sessionStorage.setItem('uniSearchPageState', 'result');
   }
 
-  const getStartedBtn = document.querySelector('.getStarted-btn');
-  if(getStartedBtn) getStartedBtn.addEventListener('click', ()=> showGradePage());
+  const getStartedBtns = document.querySelectorAll('.getStarted-btn');
+  getStartedBtns.forEach(btn => btn.addEventListener('click', e => {
+    e.preventDefault();
+    showGradePage();
+  }));
 
   const backToLandingBtn = document.querySelector('.backTolanding');
   if(backToLandingBtn) backToLandingBtn.addEventListener('click', ()=> showLandingPage());
@@ -37,8 +44,8 @@ export function pages(){
   if(returnHomeBtn){
     returnHomeBtn.addEventListener('click', ()=> {
       showLandingPage();
-      localStorage.setItem('uniSearchPageState', 'landing');
-      localStorage.removeItem('uniSearchResult');
+      sessionStorage.setItem('uniSearchPageState', 'landing');
+      sessionStorage.removeItem('uniSearchResult');
     });
   }
 
@@ -47,10 +54,15 @@ export function pages(){
   window.showResultPage = showResultPage;
 
   window.addEventListener('load', ()=>{
-    const savedResult = localStorage.getItem('uniSearchResult');
-    const state = localStorage.getItem('uniSearchPageState') || 'landing';
+    const savedResult = sessionStorage.getItem('uniSearchResult');
+    const state = sessionStorage.getItem('uniSearchPageState') || 'landing';
 
-    if(savedResult){
+    if(state === 'grade'){
+      showGradePage();
+      return;
+    }
+
+    if(state === 'result' && savedResult){
       showResultPage();
       if(typeof window.restoreResultFromStorage === 'function'){
         window.restoreResultFromStorage();
@@ -58,12 +70,6 @@ export function pages(){
       return;
     }
 
-    if(state === 'grade') showGradePage();
-    else if(state === 'result'){
-      showResultPage();
-      if(typeof window.restoreResultFromStorage === 'function'){
-        window.restoreResultFromStorage();
-      }
-    } else showLandingPage();
+    showLandingPage();
   });
 }
