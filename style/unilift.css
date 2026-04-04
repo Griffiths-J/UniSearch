@@ -1231,7 +1231,6 @@ footer{
 }
 
 footer {
-  z-index: 10001;
   position: relative;
   display: block !important;
 }

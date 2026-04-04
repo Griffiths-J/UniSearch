@@ -22,12 +22,14 @@ export function pages(){
   function showGradePage(){
     hideAll();
     if(gradeSection) gradeSection.style.display = 'block';
+    if(footerSection) footerSection.style.display = 'none';
     sessionStorage.setItem('uniSearchPageState', 'grade');
   }
 
   function showResultPage(){
     hideAll();
     if(resultSection) resultSection.style.display = 'block';
+    if(footerSection) footerSection.style.display = 'none';
     sessionStorage.setItem('uniSearchPageState', 'result');
   }
 
