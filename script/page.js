@@ -3,13 +3,10 @@ export function pages() {
   const gradeSection = document.querySelector(".gradePage");
   const resultSection = document.querySelector(".resultPage");
 
-  const footerSection = document.querySelector("footer");
-
   function hideAll() {
     if (landingSection) landingSection.style.display = "none";
     if (gradeSection) gradeSection.style.display = "none";
     if (resultSection) resultSection.style.display = "none";
-    if (footerSection) footerSection.style.display = "none";
   }
 
   function showLandingPage() {
