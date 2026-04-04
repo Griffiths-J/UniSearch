@@ -21,8 +21,9 @@
   --inter: 'Inter', sans-serif;
   --jetbrains-mono: 'JetBrains Mono', monospace;
   ---footer-p: #475569;
-
+  ---gray:gray;
 }
+
 
 .dark-mode {
   ---text-color: #e2e8f0;
@@ -33,7 +34,9 @@
   ---shadow-cl: #00000040;
   ---muted-text: #cbd5e0;
   ---footer-p: #a6b7ca;
+  ---gray:#a7c4c9;
 }
+
 /*hearder side*/
 header{
   display: flex;
@@ -795,24 +798,22 @@ select:focus{
   align-items: center;
   gap: 10px;
   justify-content: center;
-  font-size: 1.8rem;
+  font-size: clamp(1rem , 0.79vw +  0.95rem, 2rem);
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
 .modal-content p {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 1rem;
+  font-size: clamp(0.9rem , 0.5vw +  0.7rem, 1rem);
+  line-height: 1;
 }
 
 .agg{
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
 }
 
 .form-group {
-  margin-bottom: 1rem;
+  margin-top: 0.85rem;
   text-align: left;
 }
 
@@ -892,11 +893,15 @@ select:focus{
 }
 
 .payment-note {
-  font-size: 0.85rem;
   color: var(---muted-text);
-  margin: 0.5rem 0 1.5rem 0;
+  margin: 0.2rem 0 1rem 0;
   text-align: center;
   line-height: 1.4;
+  padding: 0.25rem;
+  border-radius: 8px;
+  border: 1px solid #0db1e832;
+  background-color:#1ac6ff0e;
+  box-shadow: 0 0 4.5px #00000019;
 }
 
 .resultPage {
@@ -947,6 +952,7 @@ select:focus{
     }
     .result-summary h2{
       font-size: clamp(0.8rem, 1vw + 0.89rem, 1.7rem);
+      color: var(---text-color);
     }
     .result-summaryUni{
       background:linear-gradient(to left, #177de4, #00BFFF, #40E0D0);
@@ -971,7 +977,7 @@ select:focus{
     }
 
     .resultAgg-t{
-      color: gray;
+      color: var(---gray);
       font-size: 0.87rem;
     }
 
@@ -984,7 +990,7 @@ select:focus{
     .numberCourses{
       font-size:0.8rem;
       font-weight: 700;
-      color: gray;
+      color: var(---gray);
       margin: 10px 0 0 10px;
     }
 
@@ -1005,13 +1011,13 @@ select:focus{
 
 .eligible-programs {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1rem;
 }
 
 .result-card{
       box-shadow: 0 0 3px #00000027;
-      background-color: #fff;
+      background-color: var(---card-surface);
       padding: 0.8rem;
       border-radius: 10px;
       border-top: 4px solid #40E0D0;
@@ -1029,6 +1035,7 @@ select:focus{
       font-weight: 500;
       font-size: clamp(1.1rem, 0.5vw + 0.9rem , 2rem);
       margin-bottom: 9px;
+      color: var(---text-color);
     }
 
     .Co_Fa{
@@ -1072,7 +1079,7 @@ select:focus{
     }
     .resultAgg-t1{
       font-size: 0.7rem;
-      color: gray;
+      color: var(---gray);
     }
     .result-card-college img,.result-card-faculty img{
         width: 9px;
