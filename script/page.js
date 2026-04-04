@@ -15,14 +15,12 @@ export function pages() {
   function showLandingPage() {
     hideAll();
     if (landingSection) landingSection.style.display = "block";
-    if (footerSection) footerSection.style.display = "block";
     sessionStorage.setItem("uniSearchPageState", "landing");
   }
 
   function showGradePage() {
     hideAll();
     if (gradeSection) gradeSection.style.display = "block";
-    if (footerSection) footerSection.style.display = "none";
     sessionStorage.setItem("uniSearchPageState", "grade");
   }
 
@@ -46,7 +44,6 @@ export function pages() {
   function showResultPage() {
     hideAll();
     if (resultSection) resultSection.style.display = "block";
-    if (footerSection) footerSection.style.display = "none";
     sessionStorage.setItem("uniSearchPageState", "result");
 
     clearFormSelections();
@@ -83,7 +80,6 @@ export function pages() {
 
     if (state === "grade") {
       showGradePage();
-      footerSection.style.display = "none";
       return;
     }
 
@@ -91,7 +87,6 @@ export function pages() {
       showResultPage();
       if (typeof window.restoreResultFromStorage === "function") {
         window.restoreResultFromStorage();
-        if (footerSection) footerSection.style.display = "none";
       }
       return;
     }
