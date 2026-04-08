@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="images/w-logo.jpeg" />
     <link rel="stylesheet" href="style/unilift.css" />
+    <link rel="stylesheet" href="style/navsContent.css">
     <title>Unilift | Hostel</title>
   </head>
   <body>
@@ -40,7 +41,51 @@
       </div>
     </header>
 
-    <main>l</main>
+    <main>
+
+    <div class="hostel-hero">
+        <div class="container">
+            <h1>Hostel Directory</h1>
+            <p>Find premium, verified accommodation near your campus.</p>
+        </div>
+      </div>
+
+    <section class="booking-advert container">
+        <div class="advert-card">
+            <div class="advert-content">
+                <span class="badge">Coming Soon</span>
+                <h2>Direct Booking & Payments</h2>
+                <p>We are integrating secure payments to let you reserve rooms instantly. Join the waitlist for early access.</p>
+                <div class="waitlist-form">
+                    <input type="email" id="waitlistEmail" placeholder="Enter your student email">
+                    <button class="btn-primary" id="notifyBtn">Get Notified</button>
+                </div>
+            </div>
+            <div class="advert-image">
+                <img src="https://cdn-icons-png.flaticon.com/512/3030/3030336.png" alt="Booking feature illustration">
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="directory-controls">
+            <h3>Explore verified hostels</h3>
+            <div class="filter-wrapper">
+                <select id="uniFilter">
+                    <option value="all">All Universities</option>
+                    <option value="KNUST">KNUST</option>
+                    <option value="UG">University of Ghana</option>
+                    <option value="UCC">University of Cape Coast</option>
+                    <option value="UPSA">UPSA</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="hostel-grid" id="hostelGrid">
+        </div>
+
+    </main>
+
     <footer>
       <div class="footer-container">
         <div class="footer-section">
@@ -84,7 +129,7 @@
       });
     </script>
 
-    <!-- WhatsApp Floating Button -->
+   
     <div class="whatsapp-float">
       <a
         href="https://wa.me/+233256689934"
@@ -99,5 +144,6 @@
         />
       </a>
     </div>
+    <script src="script/hostel.js"></script>
   </body>
 </html>

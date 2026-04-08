@@ -346,7 +346,7 @@ console.log(studentData)
     const handler = PaystackPop.setup({
       key:'pk_test_217133aa809e4d9c253ad67a39601a632ad77e4f',
       email:email,
-      amount:1500,
+      amount:1100,
       currency:'GHS',
       ref: '' + Math.floor((Math.random()*99999)+1),
       callback:function(responds){
