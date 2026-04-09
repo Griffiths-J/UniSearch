@@ -41,7 +41,7 @@ function displayHostels(uniFilter = 'all') {
     filteredHostels.forEach(h => {
         const card = `
             <div class="hostel-card">
-                <div class="card-img" style="background-image: url('${h.image}')">
+                <div class="card-img card-img1" style="background-image: url('${h.image}')">
                     <span class="uni-tag">${h.uni}</span>
                 </div>
                 <div class="card-body">
@@ -71,17 +71,53 @@ function openEnquiry(hostelName, university) {
 }
 
 
+ const advertBtn = document.querySelector('.advertNotice');
+
 document.getElementById('notifyBtn').addEventListener('click', () => {
     const email = document.getElementById('waitlistEmail').value;
+
+    const checkEmail = localStorage.getItem('waitlistEmail');
+    if (checkEmail && checkEmail === email) {
+       advertBtn.innerText = "You're already on the waitlist! We'll notify you as soon as direct booking is available.";
+
+       setTimeout(() => {
+        advertBtn.innerText = "";
+       }, 2500);
+        return;
+    }
+
+
+   
     if (email.includes('@')) {
         const btn = document.getElementById('notifyBtn');
+        if (btn.innerText === "You're on the list! ✅") {
+            advertBtn.innerText = "You're already on the waitlist! We'll notify you as soon as direct booking is available.";
+
+            setTimeout(() => {
+            advertBtn.innerText = "";
+           }, 2500);
+            return;
+        }
+
+        
+
         btn.innerText = "You're on the list! ✅";
         btn.style.background = "#10b981";
+        setTimeout(() => {
+            btn.innerText = "Get Notified";
+        }, 2500);
+
         document.getElementById('waitlistEmail').value = "";
+        localStorage.setItem('waitlistEmail', email);
     } else {
-        alert("Please enter a valid student email.");
+       advertBtn.innerText = "⚠️ Please enter a valid student email to join the waitlist.";
+       setTimeout(() => {
+        advertBtn.innerText = "";
+       }, 3000);
     }
 });
+
+
 
 filter.addEventListener('change', (e) => displayHostels(e.target.value));
 

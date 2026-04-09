@@ -91,12 +91,13 @@ export function pages() {
     showLandingPage();
   });
 
-  // Theme toggle
+
+  const advertImage = document.querySelector('.advert-image img');
+  
   const themeToggle = document.getElementById("theme-toggle");
   if (themeToggle) {
     let currentTheme = localStorage.getItem("theme");
     if (!currentTheme) {
-      // Check system preference
       const prefersDark = window.matchMedia(
         "(prefers-color-scheme: dark)",
       ).matches;
@@ -105,12 +106,18 @@ export function pages() {
     }
     if (currentTheme === "dark") {
       document.body.classList.add("dark-mode");
+      advertImage.src = "icons/icons8-bed-96-L.png"; 
     } else {
       document.body.classList.remove("dark-mode");
+      advertImage.src = "icons/icons8-bed-96-D.png";
     }
     themeToggle.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
+      document.body.classList.toggle
+      ("dark-mode");
       const isDark = document.body.classList.contains("dark-mode");
+
+      advertImage.src = isDark ? "icons/icons8-bed-96-L.png" : "icons/icons8-bed-96-D.png";
+
       localStorage.setItem("theme", isDark ? "dark" : "light");
     });
   }

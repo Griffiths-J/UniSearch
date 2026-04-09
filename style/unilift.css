@@ -24,8 +24,8 @@
   --gray:gray;
   --white:#fff;
   --navy: #001f3f;
-  --blue-accent: #3cc6d6;
-  --text-muted: #555;
+  ---mm : rgba(255, 255, 255, 0.21);
+  ---bg-h:#001f3f;
 }
 
 
@@ -40,6 +40,8 @@
   --footer-p: #a6b7ca;
   --gray:#a7c4c9;
   --white:#000;
+  ---mm:rgba(255, 255, 255, 0.82);
+  ---bg-h:#f1f5f9;
 }
 
 /*hearder side*/
