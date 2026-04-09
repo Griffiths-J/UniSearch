@@ -92,7 +92,18 @@ export function pages() {
   });
 
 
-  const advertImage = document.querySelector('.advert-image img');
+  
+  function advert(mode){
+      const advertImage = document.querySelector('.advert-image img');
+      if (!advertImage)return;
+
+      if(mode === "light"){
+        advertImage.src = "icons/icons8-bed-96-L.png"; 
+      }else if(mode === "dark" ){
+        advertImage.src = "icons/icons8-bed-96-D.png";
+      }
+
+  }
   
   const themeToggle = document.getElementById("theme-toggle");
   if (themeToggle) {
@@ -106,17 +117,17 @@ export function pages() {
     }
     if (currentTheme === "dark") {
       document.body.classList.add("dark-mode");
-      advertImage.src = "icons/icons8-bed-96-L.png"; 
+      advert("light")
     } else {
       document.body.classList.remove("dark-mode");
-      advertImage.src = "icons/icons8-bed-96-D.png";
+      advert("dark")
     }
     themeToggle.addEventListener("click", () => {
       document.body.classList.toggle
       ("dark-mode");
       const isDark = document.body.classList.contains("dark-mode");
 
-      advertImage.src = isDark ? "icons/icons8-bed-96-L.png" : "icons/icons8-bed-96-D.png";
+      isDark ? advert("light") : advert("dark");
 
       localStorage.setItem("theme", isDark ? "dark" : "light");
     });

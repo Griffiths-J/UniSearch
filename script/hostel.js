@@ -2,12 +2,12 @@
 const hostelData = [
     {
         id: 1,
-        name: "Crystal Rose",
+        name: "P3",
         uni: "KNUST",
         price: "GHS 4,500/yr",
         dist: "5 mins walk to Engineering gate",
-        tags: ["WiFi", "AC", "Gym"],
-        image: "https://images.unsplash.com/photo-1555854817-5b2260d50c4e?q=80&w=600"
+        tags: ["WiFi", "AC", "Gym" , "3 IN 1"],
+        image: ""
     },
     {
         id: 2,
@@ -15,8 +15,8 @@ const hostelData = [
         uni: "UG",
         price: "GHS 5,200/yr",
         dist: "Near University of Ghana Main Gate",
-        tags: ["Shuttle", "Pharmacy", "Generator"],
-        image: "https://images.unsplash.com/photo-1595181814923-d3444453b341?q=80&w=600"
+        tags: ["Shuttle", "Pharmacy", "Generator" ,"2 IN 1"],
+        image: ""
     },
     {
         id: 3,
@@ -24,8 +24,8 @@ const hostelData = [
         uni: "UG",
         price: "GHS 3,800/yr",
         dist: "Inside University of Ghana Campus",
-        tags: ["Security", "WiFi", "Study Room"],
-        image: "https://images.unsplash.com/photo-1522770179533-24471fcdba45?q=80&w=600"
+        tags: ["Security", "WiFi", "Study Room", " 2 IN 1"],
+        image: ""
     }
 ];
 
