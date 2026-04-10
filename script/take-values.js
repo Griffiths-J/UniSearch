@@ -59,7 +59,7 @@ async function unis() {
       <div class="eligible-programs">${listItems}</div>
     `;
 
-    // Save to sessionStorage only (auto-clears when browser closes)
+   
     const resultData = JSON.stringify({ elegible, aggregate, Uni });
     sessionStorage.setItem("uniSearchResult", resultData);
     sessionStorage.setItem("uniSearchPageState", "result");
