@@ -519,6 +519,18 @@ main{
   text-align: left;
   display: grid;
   grid-template-rows: 1fr 20px;
+  position: relative;
+}
+
+.reviewIcon{
+  position: absolute;
+  top: 5px;
+  left: 9px;
+  opacity: 0.4;
+}
+
+.reviewIcon img{
+  width: 25px;
 }
 
 .review-text{

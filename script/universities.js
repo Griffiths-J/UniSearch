@@ -20,6 +20,11 @@ const universityData = [
       "Minimum aggregate of 8-10 in relevant subjects, WASSCE results required",
     facilities:
       "Modern libraries, research laboratories, sports facilities, hostels, health centers",
+    gallery: [
+      "images/kwame-nkrumah-university-of-science-technology-seeklogo.png",
+      "images/kwame-nkrumah-university-of-science-technology-seeklogo.png",
+      "images/kwame-nkrumah-university-of-science-technology-seeklogo.png",
+    ],
   },
   {
     id: "ug",
@@ -42,6 +47,11 @@ const universityData = [
       "Minimum aggregate of 6-8 in relevant subjects, WASSCE results required",
     facilities:
       "University of Ghana Library, sports complex, medical center, student hostels, ICT centers",
+    gallery: [
+      "images/university-of-ghana-seeklogo.svg",
+      "images/university-of-ghana-seeklogo.svg",
+      "images/university-of-ghana-seeklogo.svg",
+    ],
   },
   {
     id: "ucc",
@@ -64,6 +74,7 @@ const universityData = [
       "Minimum aggregate of 7-9 in relevant subjects, WASSCE results required",
     facilities:
       "Coastal campus, academic libraries, sports facilities, student accommodation, health clinic",
+    gallery: ["images/ucc.png", "images/ucc.png", "images/ucc.png"],
   },
   {
     id: "umat",
@@ -86,6 +97,7 @@ const universityData = [
       "Minimum aggregate of 7-9 with strong science grades, WASSCE results required",
     facilities:
       "Mining museum, geology laboratory, computer centers, student hostels, library",
+    gallery: ["images/umat.png", "images/umat.png", "images/umat.png"],
   },
   {
     id: "upsa",
@@ -108,6 +120,7 @@ const universityData = [
       "Minimum aggregate of 8-10, WASSCE results required, competitive selection",
     facilities:
       "Modern classrooms, computer labs, business center, student accommodation, library",
+    gallery: ["images/upsa.png", "images/upsa.png", "images/upsa.png"],
   },
   {
     id: "ashesi",
@@ -130,6 +143,7 @@ const universityData = [
       "Minimum aggregate of 6-8, strong academic record, entrance examination, WASSCE results required",
     facilities:
       "State-of-the-art IT labs, modern campus facilities, student residence halls, recreational facilities",
+    gallery: ["images/ashesi.png", "images/ashesi.png", "images/ashesi.png"],
   },
 ];
 
@@ -191,6 +205,24 @@ function openUniversityModal(id) {
   document.getElementById("modalimage").src = selected.image;
   document.getElementById("modalimage").alt = `${selected.short}`;
 
+  // Populate gallery
+  const galleryContainer = document.getElementById("modalGallery");
+  if (galleryContainer) {
+    if (selected.gallery && selected.gallery.length > 0) {
+      galleryContainer.innerHTML = selected.gallery
+        .map(
+          (imgSrc) =>
+            `<div class="gallery-image-container">
+              <img src="${imgSrc}" alt="University campus image" />
+            </div>`,
+        )
+        .join("");
+    } else {
+      galleryContainer.innerHTML =
+        '<div class="no-gallery">No images available</div>';
+    }
+  }
+
   modal.classList.add("open");
   modal.setAttribute("aria-hidden", "false");
 }
@@ -223,6 +255,4 @@ searchInput?.addEventListener("input", (event) => {
 });
 
 modalClose?.addEventListener("click", closeUniversityModal);
-modal?.addEventListener("click", (event) => {
-  if (event.target === modal) closeUniversityModal();
-});
+

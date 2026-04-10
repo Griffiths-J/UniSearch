@@ -134,7 +134,7 @@
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.491);
   display: none;
   align-items: center;
   justify-content: center;
@@ -147,84 +147,305 @@
 .modal-content-university {
   background: var(--card-surface);
   border-radius: 10px;
-  max-width: 540px;
+  max-width: 80vw;
   width: 100%;
-  padding: 1rem;
+  max-height: 89vh;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
   position: relative;
   z-index: 10000;
   color: var(--text-color);
-}
-.modal-close {
-  position: absolute;
-  right: 0.5rem;
-  top: 0.3rem;
-  border: none;
-  background: transparent;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: var(--text-color);
-}
-.modal-header {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.5rem;
-}
-.modal-logo {
-  width: calc(2.2rem + 1vw);
-  height: auto;
-  border-radius: 6px;
-  border: 1px solid #e5e5e5;
-}
-.modal-type {
-  color: var(--muted-text);
-  margin: 0.1rem 0 0.25rem;
-  font-size: 0.95rem;
-}
-
-.modalimage {
-  width: 60%;
-  height: 200px;
-  overflow: hidden;
-  margin: 10px auto;
-}
-
-.modalimage img {
-  width: 100%;
-  height: 100%;
-  background-position: center;
-}
-
-.modaldDDescription {
-  margin-top: 5px;
-}
-
-.modal-details {
-  margin-top: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  max-height: 400px;
-  overflow-y: auto;
+  overflow: hidden;
 }
 
-.detail-row {
+.modal-header-fixed {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+}
+
+.header-title-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-text h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.header-text {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
 }
 
-.detail-row strong {
-  color: var(--text-color);
+.modal-scrollable {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Custom scrollbar */
+.modal-scrollable::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-scrollable::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.modal-scrollable::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.modal-scrollable::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.modal-hero {
+  width: 100%;
+  height: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05));
+}
+
+.modal-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.section-title {
+  font-size: 1.1rem;
   font-weight: 600;
+  color: var(--text-color);
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.description-text {
   font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.75rem;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 6px;
+}
+
+.info-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--muted-text);
+}
+
+.info-value {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  line-height: 1.4;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 6px;
+}
+
+.contact-item strong {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.contact-item span {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.academic-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.academic-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 6px;
+}
+
+.academic-item strong {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.academic-item span {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.facilities-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0.75rem;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 6px;
+}
+.modal-close {
+  position: relative;
+  border: none;
+  background: transparent;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--text-color);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s ease;
+}
+
+.modal-close:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.modal-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  object-fit: contain;
+  padding: 4px;
+}
+
+.modal-type {
+  color: var(--muted-text);
+  margin: 0;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.modalimage {
+  display: none;
+}
+
+.modaldDDescription {
+  display: none;
+}
+
+.modal-details {
+  display: none;
+}
+
+.detail-row {
+  display: none;
+}
+
+.detail-row strong {
+  display: none;
 }
 
 .detail-row span {
+  display: none;
+}
+
+.modal-gallery-section {
+  display: none;
+}
+
+.gallery-title {
+  display: none;
+}
+
+.gallery-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-color);
+}
+
+.modal-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+
+.gallery-image-container {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.gallery-image-container:hover {
+  transform: scale(1.05);
+}
+
+.gallery-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.no-gallery {
+  text-align: center;
+  padding: 2rem 1rem;
   color: var(--muted-text);
   font-size: 0.9rem;
-  line-height: 1.4;
+  grid-column: 1 / -1;
 }
 
 /*Hostel*/

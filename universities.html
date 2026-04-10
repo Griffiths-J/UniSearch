@@ -64,55 +64,100 @@
 
     <div class="modal-overlay" id="uniModal" aria-hidden="true">
       <div class="modal-content-university">
-        <button class="modal-close" id="modalClose">×</button>
-        <div class="modal-header">
-          <img id="modalLogo" src="" alt="University logo" class="modal-logo" />
-          <div>
-            <h2 id="modalTitle"></h2>
-            <p id="modalType" class="modal-type"></p>
+        <!-- Fixed Header -->
+        <div class="modal-header-fixed">
+          <div class="header-title-group">
+            <img
+              id="modalLogo"
+              src=""
+              alt="University logo"
+              class="modal-logo"
+            />
+            <div class="header-text">
+              <h2 id="modalTitle"></h2>
+              <p id="modalType" class="modal-type"></p>
+            </div>
           </div>
+          <button class="modal-close" id="modalClose">×</button>
         </div>
-        <div class="modalimage">
-          <img id="modalimage" src="" alt="" />
-        </div>
-        <p id="modalDescription"></p>
 
-        <div class="modal-details">
-          <div class="detail-row">
-            <strong>Location:</strong>
-            <span id="modalLocation"></span>
+        <!-- Scrollable Content -->
+        <div class="modal-scrollable">
+          <!-- Hero Image -->
+          <div class="modal-hero">
+            <img id="modalimage" src="" alt="" />
           </div>
-          <div class="detail-row">
-            <strong>Established:</strong>
-            <span id="modalEstablished"></span>
+
+          <!-- Description -->
+          <div class="modal-section">
+            <p id="modalDescription" class="description-text"></p>
           </div>
-          <div class="detail-row">
-            <strong>Top Faculties:</strong>
-            <span id="modalFaculties"></span>
+
+          <!-- Quick Info -->
+          <div class="modal-section">
+            <h3 class="section-title">Quick Info</h3>
+            <div class="info-grid">
+              <div class="info-item">
+                <span class="info-label">Location</span>
+                <span class="info-value" id="modalLocation"></span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Established</span>
+                <span class="info-value" id="modalEstablished"></span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Student Population</span>
+                <span class="info-value" id="modalStudentPop"></span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Accreditation</span>
+                <span class="info-value" id="modalAccreditation"></span>
+              </div>
+            </div>
           </div>
-          <div class="detail-row">
-            <strong>Student Population:</strong>
-            <span id="modalStudentPop"></span>
+
+          <!-- Contact & Website -->
+          <div class="modal-section">
+            <h3 class="section-title">Contact Information</h3>
+            <div class="contact-info">
+              <div class="contact-item">
+                <strong>Website:</strong>
+                <span id="modalWebsite"></span>
+              </div>
+              <div class="contact-item">
+                <strong>Phone:</strong>
+                <span id="modalContact"></span>
+              </div>
+            </div>
           </div>
-          <div class="detail-row">
-            <strong>Accreditation:</strong>
-            <span id="modalAccreditation"></span>
+
+          <!-- Academics -->
+          <div class="modal-section">
+            <h3 class="section-title">Academics</h3>
+            <div class="academic-info">
+              <div class="academic-item">
+                <strong>Top Faculties:</strong>
+                <span id="modalFaculties"></span>
+              </div>
+              <div class="academic-item">
+                <strong>Admission Requirements:</strong>
+                <span id="modalAdmission"></span>
+              </div>
+            </div>
           </div>
-          <div class="detail-row">
-            <strong>Website:</strong>
-            <span id="modalWebsite"></span>
+
+          <!-- Facilities -->
+          <div class="modal-section">
+            <h3 class="section-title">Campus Facilities</h3>
+            <p id="modalFacilitiesInfo" class="facilities-text"></p>
           </div>
-          <div class="detail-row">
-            <strong>Contact:</strong>
-            <span id="modalContact"></span>
-          </div>
-          <div class="detail-row">
-            <strong>Admission Requirements:</strong>
-            <span id="modalAdmission"></span>
-          </div>
-          <div class="detail-row">
-            <strong>Facilities:</strong>
-            <span id="modalFacilitiesInfo"></span>
+
+          <!-- Gallery -->
+          <div class="modal-section">
+            <h3 class="section-title">Campus Gallery</h3>
+            <div class="modal-gallery" id="modalGallery">
+              <div class="no-gallery">No images available</div>
+            </div>
           </div>
         </div>
       </div>

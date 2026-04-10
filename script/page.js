@@ -102,7 +102,17 @@ export function pages() {
       }else if(mode === "dark" ){
         advertImage.src = "icons/icons8-bed-96-D.png";
       }
+  }
 
+  function reviewIcon(mode){
+    const reviewIcons = document.querySelectorAll('.reviewIcon img');
+    if (!reviewIcons)return;
+
+    if(mode === "light"){
+      reviewIcons.forEach(icon => icon.src = "icons/quote-L.png");
+    }else if(mode === "dark" ){
+      reviewIcons.forEach(icon => icon.src = "icons/quote-D.png");
+    }
   }
   
   const themeToggle = document.getElementById("theme-toggle");
@@ -118,9 +128,11 @@ export function pages() {
     if (currentTheme === "dark") {
       document.body.classList.add("dark-mode");
       advert("light")
+      reviewIcon("dark")
     } else {
       document.body.classList.remove("dark-mode");
       advert("dark")
+      reviewIcon("light")
     }
     themeToggle.addEventListener("click", () => {
       document.body.classList.toggle
@@ -128,6 +140,7 @@ export function pages() {
       const isDark = document.body.classList.contains("dark-mode");
 
       isDark ? advert("light") : advert("dark");
+      isDark ? reviewIcon("dark") : reviewIcon("light");
 
       localStorage.setItem("theme", isDark ? "dark" : "light");
     });
