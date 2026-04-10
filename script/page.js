@@ -88,11 +88,8 @@ export function pages() {
       return;
     }
 
-    if (state === "result" && savedResult) {
+    if (state === "result") {
       showResultPage();
-   
-        window.restoreResultFromStorage();
-      
       return;
     }
 
