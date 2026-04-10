@@ -80,6 +80,22 @@ export function pages() {
 
   window.addEventListener("load", () => {
 
+     const savedResult = sessionStorage.getItem("uniSearchResult");
+    const state = sessionStorage.getItem("uniSearchPageState") || "landing";
+
+    if (state === "grade") {
+      showGradePage();
+      return;
+    }
+
+    if (state === "result" && savedResult) {
+      showResultPage();
+      if (typeof window.restoreResultFromStorage === "function") {
+        window.restoreResultFromStorage();
+      }
+      return;
+    }
+
     showLandingPage();
   });
 
