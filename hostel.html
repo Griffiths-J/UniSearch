@@ -126,9 +126,11 @@
         const homeLink = document.querySelector('.uls a[href="index.html"]');
         if (homeLink) {
           homeLink.addEventListener("click", (e) => {
-            e.preventDefault();
-            sessionStorage.removeItem("uniSearchPageState")
+            e.preventDefault();            
             window.location.href = "index.html";
+            window.location.reload();
+            sessionStorage.removeItem("uniSearchPageState")
+
           });
         }
 
