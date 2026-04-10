@@ -41,21 +41,6 @@
   flex-wrap: wrap;
 }
 
-.return-home-btn {
-  text-decoration: none;
-  background: #177de4;
-  color: #fff;
-  border-radius: 999px;
-  padding: 0.5rem 0.9rem;
-  font-weight: 700;
-  border: 1px solid #1666c2;
-  transition: background .2s ease, transform .2s ease;
-}
-.return-home-btn:hover {
-  background: #0f65b5;
-  transform: translateY(-1px);
-}
-
 .uni-p{
   font-size: calc(2.2rem + 1.5vw);
   color: var(--text-color);

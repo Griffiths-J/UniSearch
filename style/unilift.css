@@ -82,7 +82,6 @@ body{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  
 }
 html{
    background-color: var(--main-bg);
@@ -130,7 +129,6 @@ html{
   font-weight: bold;
   border: none;
 
- 
 }
 
 .burger{
@@ -309,6 +307,8 @@ main{
   font-size: 4rem;
   width: 100%;
   color: var(--text-color); 
+  font-family: var(--inter);
+  margin-top: 1rem;
 }
 
 .heroText abbr{
@@ -330,6 +330,7 @@ main{
   .mainHero{
     padding: 10px;
     font-size: 1.5rem;
+    margin-top: 0.2rem;
   }
 
   .heroText abbr{
@@ -455,7 +456,7 @@ main{
 
 .whyCont{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
 
@@ -560,7 +561,7 @@ main{
   font-size:2rem;
   color: var(--text-color);
   font-weight: 400;
-
+  font-family: var(--inter);
 }
 
 .grade-p-2{
