@@ -168,7 +168,7 @@ function initSavedResults() {
     });
   });
 
-  // Handle "Get Started" buttons in the header of saved-results page
+  
   const getStartedBtns = document.querySelectorAll(".getStarted-btn");
   getStartedBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
@@ -179,9 +179,8 @@ function initSavedResults() {
 }
 
 window.goToGradePage = function () {
-  // Set state FIRST before redirecting
   sessionStorage.setItem("uniSearchPageState", "grade");
-  // Then redirect to index.html
+
   window.location.href = "index.html";
 };
 
