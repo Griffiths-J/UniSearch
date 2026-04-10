@@ -516,6 +516,8 @@ main{
   border-radius: 1.5rem;
   padding: 1.5rem;
   text-align: left;
+  display: grid;
+  grid-template-rows: 1fr 20px;
 }
 
 .review-text{
@@ -1246,6 +1248,21 @@ footer{
   height: 100%;
   text-decoration: none;
 }
+
+
+/*hostel*/
+
+.noData{
+    display: flex;
+    gap: 5px;
+    box-shadow: 0 0 3px #0000002b;
+    padding: 0.4rem;
+    border-radius: 5px;
+    border-bottom: 1.5px solid var( --Hspan);
+    color: var(--text-color);
+    background-color: var(--header-cl);
+    margin: 10px 0;
+  }
 
 footer {
   position: relative;

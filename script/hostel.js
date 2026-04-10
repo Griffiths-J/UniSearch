@@ -11,6 +11,15 @@ const hostelData = [
     },
     {
         id: 2,
+        name: "St Theresah Hostel",
+        uni: "KNUST",
+        price: "GHS 9,200/yr",
+        dist: "5 mins walk to Engineering gate",
+        tags: ["Shuttle", "Pharmacy", "Generator" ,"2 IN 1"],
+        image: ""
+    },
+    {
+        id: 3,
         name: "Evandy Hostel",
         uni: "UG",
         price: "GHS 5,200/yr",
@@ -19,7 +28,16 @@ const hostelData = [
         image: ""
     },
     {
-        id: 3,
+        id: 4,
+        name: "Frontline Hostel",
+        uni: "KNUST",
+        price: "GHS 5,200/yr",
+        dist: "5 mins walk to Engineering gate",
+        tags: ["Shuttle", "Pharmacy", "Generator" ,"2 IN 1"],
+        image: ""
+    },
+    {
+        id: 5,
         name: "Pentagon Hall",
         uni: "UG",
         price: "GHS 3,800/yr",
@@ -38,6 +56,13 @@ function displayHostels(uniFilter = 'all') {
     
     const filteredHostels = hostelData.filter(h => uniFilter === 'all' || h.uni === uniFilter);
 
+    if(filteredHostels.length===0){
+        grid.innerHTML =`<div class="noData">
+    <img src="icons/icons8-pencil-24.png" alt="">
+    <div class="noData-p">No data on hostels for this university</div>
+  </div>`;
+        return;
+    }
     filteredHostels.forEach(h => {
         const card = `
             <div class="hostel-card">
@@ -66,7 +91,7 @@ function displayHostels(uniFilter = 'all') {
 
 function openEnquiry(hostelName, university) {
     const myNumber = "233256689934";
-    const text = `Hello UniLift! I saw ${hostelName} (${university}) on your website. Is it still available for booking?`;
+    const text = `Hello UniLift! I saw ${hostelName} (${university}) on your website. I want to more enquires.`;
     window.open(`https://wa.me/${myNumber}?text=${encodeURIComponent(text)}`, '_blank');
 }
 
