@@ -78,26 +78,31 @@ export function pages() {
   window.showLandingPage = showLandingPage;
   window.showResultPage = showResultPage;
 
+ 
+
   window.addEventListener("load", () => {
+  const state = sessionStorage.getItem("uniSearchPageState");
+  const savedResult = sessionStorage.getItem("uniSearchResult");
 
-     const savedResult = sessionStorage.getItem("uniSearchResult");
-    const state = sessionStorage.getItem("uniSearchPageState") || "landing";
-
-    if (state === "grade") {
-      showGradePage();
-      return;
-    }
-
-    if (state === "result" && savedResult) {
-      showResultPage();
-   
-       
-      
-      return;
-    }
-
+  if (!state || state === "landing") {
     showLandingPage();
-  });
+    return;
+  }
+
+  if (state === "grade") {
+    showGradePage();
+    return;
+  }
+
+  if (state === "result" && savedResult) {
+    showResultPage();
+    return;
+  }
+
+  showLandingPage();
+});
+
+
 
   function advert(mode) {
     const advertImage = document.querySelector(".advert-image img");

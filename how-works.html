@@ -6,7 +6,7 @@
     <link rel="icon" href="images/w-logo.jpeg" />
     <link rel="stylesheet" href="style/unilift.css" />
     <link rel="stylesheet" href="style/how-works.css" />
-    <title>Unilift | how it works</title>
+    <title>Unilift | How it works</title>
   </head>
   <body>
     <header>
@@ -214,27 +214,31 @@
     </footer>
     <script src="script/burger.js"></script>
     <script type="module" src="script/unilift.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-      
-        const homeLink = document.querySelector('.uls a[href="index.html"]');
-        if (homeLink) {
-          homeLink.addEventListener("click", (e) => {
-            e.preventDefault();
-            sessionStorage.setItem("uniSearchPageState", "landing");
-            window.location.href = "index.html";
-          });
-        }
 
-        document.querySelectorAll(".getStarted-btn").forEach((btn) => {
-          btn.addEventListener("click", (e) => {
-            e.preventDefault();
-            sessionStorage.setItem("uniSearchPageState", "grade");
-            window.location.href = "index.html";
-          });
+
+     <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const homeLink = document.querySelector('.uls a[href="index.html"]');
+      if (homeLink) {
+        homeLink.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          sessionStorage.setItem("uniSearchPageState", "landing");
+          window.location.href = "index.html";
+        });
+      }
+
+      document.querySelectorAll(".getStarted-btn").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          sessionStorage.setItem("uniSearchPageState", "grade");
+          window.location.href = "index.html";
         });
       });
-    </script>
+    });
+</script>
+
+
 
     <div class="whatsapp-float">
       <a

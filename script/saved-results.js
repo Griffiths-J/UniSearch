@@ -85,9 +85,6 @@ function initSavedResults() {
 
   let savedResult = sessionStorage.getItem("uniSearchResult");
 
-  console.log("Checking for saved results...");
-  console.log("savedResult from sessionStorage:", savedResult);
-
   if (savedResult) {
     try {
       const parsed = JSON.parse(savedResult);
