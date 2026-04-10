@@ -20,6 +20,7 @@
         <a href="universities.html"><li>Universities</li></a>
         <a href="how-works.html"><li>How it Works</li></a>
         <a href="hostel.html"><li>Hostel</li></a>
+        <a href="saved-results.html"><li>My Results</li></a>
         <div class="astray">
           <a class="last last-js getStarted-btn" href="#">Get Started</a>
         </div>
@@ -152,7 +153,7 @@
           <div class="trustedCards">
             <div class="review-card">
               <p class="review-text">
-                <span class="reviewIcon"><img src="" alt="reviewicon"></span>
+                <span class="reviewIcon"><img src="" alt="reviewicon" /></span>
                 "Unilift showed me course options I never considered and helped
                 me pick the best fit for my WASSCE results. The process was fast
                 and accurate."
@@ -161,7 +162,7 @@
             </div>
             <div class="review-card">
               <p class="review-text">
-                 <span class="reviewIcon"><img src="" alt="reviewicon"></span>
+                <span class="reviewIcon"><img src="" alt="reviewicon" /></span>
                 "I loved how simple the site was. I got a clear picture of what
                 I could study and the results felt trustworthy."
               </p>
@@ -169,7 +170,7 @@
             </div>
             <div class="review-card">
               <p class="review-text">
-                 <span class="reviewIcon"><img src="" alt="reviewicon"></span>
+                <span class="reviewIcon"><img src="" alt="reviewicon" /></span>
                 "The recommended programs matched my grades perfectly. I would
                 recommend Unilift to every student preparing for university
                 admissions."
@@ -726,22 +727,19 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        
         const homeLink = document.querySelector('.uls a[href="index.html"]');
         if (homeLink) {
           homeLink.addEventListener("click", (e) => {
             e.preventDefault();
-            
+
             if (typeof window.showLandingPage === "function") {
               window.showLandingPage();
             }
-            sessionStorage.removeItem("uniSearchResult");
           });
         }
       });
     </script>
 
- 
     <div class="whatsapp-float">
       <a
         href="https://wa.me/+233256689934"

@@ -67,12 +67,10 @@ export function pages() {
     });
   }
 
- 
   const homeLinks = document.querySelectorAll('a[href="index.html"]');
   homeLinks.forEach((link) => {
     link.addEventListener("click", () => {
       sessionStorage.setItem("uniSearchPageState", "landing");
-      sessionStorage.removeItem("uniSearchResult");
     });
   });
 
