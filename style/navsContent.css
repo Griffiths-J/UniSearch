@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-.universities , .hostels , .howitwork{
+.universities,
+.hostels,
+.howitwork {
   margin: 1rem 0.4rem;
 }
 /*university*/
-.search{
+.search {
   display: flex;
   max-width: 500px;
   width: 70%;
@@ -14,22 +16,22 @@
   box-shadow: 0 0 10px -7px var(--shadow-cl);
   margin-top: 0.7rem;
 }
-.search img{
+.search img {
   width: 25px;
 }
-.search input{
+.search input {
   border: none;
   width: 100%;
   font-size: 1.1rem;
-    background-color: transparent;
-    color: var(--text-color);
+  background-color: transparent;
+  color: var(--text-color);
 }
-.search ::placeholder{
-  font-size:0.8rem;
+.search ::placeholder {
+  font-size: 0.8rem;
   font-weight: lighter;
   color: #7a7a7ae7;
 }
-.search input:focus{
+.search input:focus {
   border: none;
   outline: none;
 }
@@ -41,75 +43,74 @@
   flex-wrap: wrap;
 }
 
-.uni-p{
+.uni-p {
   font-size: calc(2.2rem + 1.5vw);
   color: var(--text-color);
 }
 
-
-.card{
+.card {
   box-shadow: 0 0 2px -1px var(--shadow-cl);
   padding: 0.4rem;
   background-color: var(--card-surface);
   border-radius: 2px;
 }
 
-.card-img{
+.card-img {
   width: calc(2rem + 1vw);
 }
 
-.gridCont{
+.gridCont {
   margin-top: 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill ,minmax(360px , 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   gap: 10px;
 }
 
-.card{
+.card {
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding-left: 1rem;
-  transition:all .2s ease;
+  transition: all 0.2s ease;
   color: var(--text-color);
 }
 
-.card:hover{
+.card:hover {
   box-shadow: 0 2px 13px var(--shadow-cl);
 }
 
-.card-sch{
+.card-sch {
   font-size: 1.25rem;
   font-weight: 500;
 }
 
-.card-sch-type{
+.card-sch-type {
   background-color: var(--Hspan);
   width: fit-content;
   padding: 0 0.3rem;
   border-radius: 2px;
-  box-shadow: 0 0 2px rgba(0,0,0,0.12);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.12);
 }
 
-.middlesec{
+.middlesec {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.location{
+.location {
   color: var(--muted-text);
   font-weight: lighter;
 }
 
-.topsec{
+.topsec {
   display: flex;
   align-items: center;
   gap: 10px;
   position: relative;
 }
 
-.rank{
+.rank {
   position: absolute;
   right: 20px;
   font-size: 1.5rem;
@@ -117,24 +118,23 @@
   color: red;
 }
 
-.downsec button{
+.downsec button {
   border: none;
-  padding:0.4rem;
+  padding: 0.4rem;
   border-radius: 5px;
- background: #177de4;
- color: #fff;
+  background: #177de4;
+  color: #fff;
   cursor: pointer;
 }
-.downsec button:hover{
+.downsec button:hover {
   background: #0f65b5;
   transform: translateY(-1px);
 }
 
-
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0, 0, 0, 0.45);
   display: none;
   align-items: center;
   justify-content: center;
@@ -150,7 +150,7 @@
   max-width: 540px;
   width: 100%;
   padding: 1rem;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
   position: relative;
   z-index: 10000;
   color: var(--text-color);
@@ -183,263 +183,286 @@
   font-size: 0.95rem;
 }
 
-.modalimage{
+.modalimage {
   width: 60%;
   height: 200px;
   overflow: hidden;
   margin: 10px auto;
 }
 
-.modalimage img{
+.modalimage img {
   width: 100%;
   height: 100%;
   background-position: center;
 }
 
-.modaldDDescription{
+.modaldDDescription {
   margin-top: 5px;
 }
 
+.modal-details {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.detail-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.detail-row strong {
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.detail-row span {
+  color: var(--muted-text);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
 
 /*Hostel*/
 
-
-.container { 
-  max-width: 1140px; 
-  margin: 0 auto; 
-  padding: 0 20px; 
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .hostel-hero {
-    background: var(--Hspan);
-    color: #fff;
-    padding: 90px 0 120px 0;
-    text-align: center;
-    font-family: var(--montserrat);
+  background: var(--Hspan);
+  color: #fff;
+  padding: 90px 0 120px 0;
+  text-align: center;
+  font-family: var(--montserrat);
 }
 
-.hostel-hero h1 { 
-    font-family:var(--montserrat); 
-    font-size: 3rem; 
-    margin-bottom: 10px; 
+.hostel-hero h1 {
+  font-family: var(--montserrat);
+  font-size: 3rem;
+  margin-bottom: 10px;
 }
 
-.booking-advert { 
-  margin-top: -60px; 
-  margin-bottom: 60px; 
+.booking-advert {
+  margin-top: -60px;
+  margin-bottom: 60px;
 }
 
 .advert-card {
-    background: var( --header-cl);
-    border-radius: 24px;
-    padding: 45px;
-    display: flex;
-    align-items: center;
-    color: var(--text-color);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--header-cl);
+  border-radius: 24px;
+  padding: 45px;
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.advert-content { 
-  flex: 2; 
+.advert-content {
+  flex: 2;
 }
 
 .badge {
-    background: var(--main-bg);
-    color: var(--text-muted);
-    padding: 4px 10px;
-    border-radius: 50px;
-    font-size: 0.7rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  background: var(--main-bg);
+  color: var(--text-muted);
+  padding: 4px 10px;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.waitlist-form { 
-  display: flex; 
-  gap: 10px; 
-  margin-top: 25px; 
+.waitlist-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
 }
 .waitlist-form input {
-    flex: 1;
-     background: var(--main-bg);
-     color: var(--text-color);
-    padding: 15px 20px;
-    border-radius: 12px;
-    border: none;
-    font-size: 1rem;
+  flex: 1;
+  background: var(--main-bg);
+  color: var(--text-color);
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
 }
 
 .btn-primary {
-    background: var(--Hspan);
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 12px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.3s;
+  background: var(--Hspan);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.btn-primary:hover { 
-  transform: translateY(-3px); 
+.btn-primary:hover {
+  transform: translateY(-3px);
   background: var(--Hspan);
 }
 
-.advert-image { 
-  flex: 1; 
-  display: flex; 
-  justify-content: flex-end; 
+.advert-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .advertNotice {
-    margin-top: 10px;
-    color: var(--muted-text);
-    font-size: 0.85rem;
-    text-align: center;
-    height: 8.3px;
+  margin-top: 10px;
+  color: var(--muted-text);
+  font-size: 0.85rem;
+  text-align: center;
+  height: 8.3px;
 }
 
-.advert-image img { 
-  width: 160px; 
-  /* filter: brightness(0) invert(1); */ 
-  /* opacity: 0.8; */ 
+.advert-image img {
+  width: 160px;
+  /* filter: brightness(0) invert(1); */
+  /* opacity: 0.8; */
 }
-
 
 .directory-controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
 }
 .directory-controls h3 {
-    color: var(--text-color);
-    font-size: 1.3rem;
-    font-weight: 700;
+  color: var(--text-color);
+  font-size: 1.3rem;
+  font-weight: 700;
 }
 
 .hostel-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 30px;
-    padding-bottom: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  padding-bottom: 100px;
 }
-
 
 .hostel-card {
-    background:var( --header-cl) ;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 15px 30px -10px rgba(0,0,0,0.1);
-    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: var(--header-cl);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+  transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.hostel-card:hover { 
-  transform: translateY(-10px); 
-  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
- }
-
-.card-img { 
-  background-size: cover; 
-  background-position: center; 
-  position: relative; 
+.hostel-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
-.card-img1{
+.card-img {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.card-img1 {
   height: 230px;
 }
 
 .uni-tag {
-    position: absolute; 
-    top: 20px; 
-    left: 20px;
-    background: rgba(255,255,255,0.95);
-    background: var(--main-bg);
-    color: var(--text-color);
-    padding: 6px 12px; 
-    border-radius: 8px;
-    font-size: 0.7rem; 
-    font-weight: 800; 
-}
-
-.card-body { 
-  padding: 25px; 
-}
-
-.card-header { 
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  margin-bottom: 10px; 
-}
-
-.card-header h4 { 
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  background: var(--main-bg);
   color: var(--text-color);
-  margin: 0; 
-  font-size: 1.3rem; 
-  font-weight: 700; 
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  font-weight: 800;
 }
 
-.price { 
-  color: var(--Hspan); 
-  font-weight: 800; 
+.card-body {
+  padding: 25px;
 }
 
-.location { 
-  color: var(--muted-text); 
-  font-size: 0.9rem; display: block; 
-  margin-bottom: 15px; 
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-.amenities { 
-  display: flex; 
-  gap: 8px; 
-  flex-wrap: wrap; 
-  margin-bottom: 25px; 
+.card-header h4 {
+  color: var(--text-color);
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.price {
+  color: var(--Hspan);
+  font-weight: 800;
+}
+
+.location {
+  color: var(--muted-text);
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.amenities {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
 }
 
 .amenities span {
-    background:var(--main-bg); 
-    color: var(--muted-text);
-    padding: 4px 10px; 
-    border-radius: 6px; 
-    font-size: 0.7rem; font-weight: 600;
+  background: var(--main-bg);
+  color: var(--muted-text);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
 }
 
 .btn-details {
-    width: 100%; 
-    padding: 14px; 
-    border-radius: 12px;
-    background: transparent;
-    color: var(--text-color); 
-    font-weight: 700; 
-    cursor: pointer; 
-    transition: 0.7s;
-     border: 2px solid var(--Hspan);
-     box-shadow: 0 0 2px rgba(0,0,0,0.12);
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--text-color);
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.7s;
+  border: 2px solid var(--Hspan);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.12);
 }
 
-.btn-details:hover { 
-  color: white; 
-  background: var(--Hspan); 
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+.btn-details:hover {
+  color: white;
+  background: var(--Hspan);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
-    .advert-card { 
-      flex-direction: column; 
-      text-align: center; 
-    }
-    .advert-image { 
-      display: none; 
-    }
-    .waitlist-form {
-       flex-direction: column; 
-    }
-    .hostel-hero h1 {
-       font-size: 2.2rem; 
-    }
+  .advert-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .advert-image {
+    display: none;
+  }
+  .waitlist-form {
+    flex-direction: column;
+  }
+  .hostel-hero h1 {
+    font-size: 2.2rem;
+  }
 }
-
-
