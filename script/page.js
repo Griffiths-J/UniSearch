@@ -90,9 +90,9 @@ export function pages() {
 
     if (state === "result" && savedResult) {
       showResultPage();
-      if (typeof window.restoreResultFromStorage === "function") {
+   
         window.restoreResultFromStorage();
-      }
+      
       return;
     }
 
