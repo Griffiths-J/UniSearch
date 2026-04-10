@@ -1040,9 +1040,10 @@ select:focus{
       background-color: var(--card-surface);
       padding: 0.8rem;
       border-radius: 10px;
-      border-top: 4px solid #40E0D0;
+      border-top: 4px solid var(--Hspan);
       display: flex;
       justify-content: space-between;
+      height: 149.4px;
     }
 
 

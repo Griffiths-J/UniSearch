@@ -67,6 +67,15 @@ export function pages() {
     });
   }
 
+ 
+  const homeLinks = document.querySelectorAll('a[href="index.html"]');
+  homeLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      sessionStorage.setItem("uniSearchPageState", "landing");
+      sessionStorage.removeItem("uniSearchResult");
+    });
+  });
+
   window.showGradePage = showGradePage;
   window.showLandingPage = showLandingPage;
   window.showResultPage = showResultPage;
@@ -75,8 +84,7 @@ export function pages() {
     const savedResult = sessionStorage.getItem("uniSearchResult");
     const state = sessionStorage.getItem("uniSearchPageState") || "landing";
 
-   
-    if (state === "grade" && savedResult) {
+    if (state === "grade") {
       showGradePage();
       return;
     }
