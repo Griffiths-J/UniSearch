@@ -81,6 +81,17 @@ export function pages() {
  
 
   window.addEventListener("load", () => {
+
+    const urlParams = URLSearchParams(window.location.search);
+    const forceReset = urlParams.get('reset');
+
+    if(forceReset === 'true'){
+      sessionStorage.setItem("uniSearchPageState", "landing");
+      showLandingPage();
+      window.history.replaceState({},document.title,"index.html");
+      return;
+    }
+
   const state = sessionStorage.getItem("uniSearchPageState");
   const savedResult = sessionStorage.getItem("uniSearchResult");
 
