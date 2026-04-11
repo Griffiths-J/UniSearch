@@ -1317,10 +1317,16 @@ footer {
   box-shadow: 0 0 3px #0000002b;
   padding: 0.4rem;
   border-radius: 5px;
-  border-bottom: 1.5px solid var(--Hspan);
+  border-bottom: 1.8px solid var(--Hspan);
   color: var(--text-color);
   background-color: var(--header-cl);
   margin: 10px 0;
+  height: 65px;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
 }
 
 footer {
