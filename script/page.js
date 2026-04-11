@@ -67,38 +67,38 @@ export function pages() {
     });
   }
 
-  const homeLinks = document.querySelectorAll('a[href="index.html"]');
-  homeLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      sessionStorage.setItem("uniSearchPageState", "landing");
-    });
-  });
+   /*  const homeLinks = document.querySelectorAll('a[href="index.html"]');
+    homeLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        sessionStorage.setItem("uniSearchPageState", "landing");
+      });
+    }); */
 
-  window.showGradePage = showGradePage;
-  window.showLandingPage = showLandingPage;
-  window.showResultPage = showResultPage;
+    window.showGradePage = showGradePage;
+    window.showLandingPage = showLandingPage;
+    window.showResultPage = showResultPage;
 
- 
 
-  window.addEventListener("load", () => {
+    /* document.querySelectorAll(".getStarted-btn").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        sessionStorage.setItem("uniSearchPageState", "grade");
+        window.location.href = "index.html";
+      });
+    }); */
 
-    const urlParams = URLSearchParams(window.location.search);
-    const forceReset = urlParams.get('reset');
 
-    if(forceReset === 'true'){
-      sessionStorage.setItem("uniSearchPageState", "landing");
-      showLandingPage();
-      window.history.replaceState({},document.title,"index.html");
-      return;
-    }
 
-  const state = sessionStorage.getItem("uniSearchPageState");
-  const savedResult = sessionStorage.getItem("uniSearchResult");
+  window.addEventListener("pageshow", () => {
+    const state = sessionStorage.getItem("uniSearchPageState");
+    const savedResult = sessionStorage.getItem("uniSearchResult");
+      
+      console.log("live session state:" , state)
 
-  if (!state || state === "landing") {
+   if (!state || state === "landing") {
     showLandingPage();
     return;
-  }
+  } 
 
   if (state === "grade") {
     showGradePage();
@@ -166,4 +166,9 @@ export function pages() {
       localStorage.setItem("theme", isDark ? "dark" : "light");
     });
   }
+
+
+
+
+
 }

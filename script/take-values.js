@@ -102,11 +102,6 @@ async function unis() {
     window.restoreResultFromStorage();
   }
 
-  if (document.readyState === "complete") {
-    restoreResultPageIfNeeded();
-  } else {
-    window.addEventListener("load", restoreResultPageIfNeeded);
-  }
 
   function Getvalues() {
     const university = document.querySelector(".getsch-select-value").value;

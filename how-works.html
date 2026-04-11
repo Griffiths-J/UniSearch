@@ -16,7 +16,7 @@
       </div>
 
       <ul class="uls">
-        <a href="index.html"><li>Home</li></a>
+        <a href="index.html" class="homePage"><li>Home</li></a>
         <a href="universities.html"><li>Universities</li></a>
         <a href="how-works.html"><li>How it Works</li></a>
         <a href="hostel.html"><li>Hostel</li></a>
@@ -218,15 +218,14 @@
 
      <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const homeLink = document.querySelector('.uls a[href="index.html"]');
-      if (homeLink) {
-        homeLink.addEventListener("click", (e) => {
-          e.preventDefault();
 
+      document.querySelectorAll(".homePage").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
           sessionStorage.setItem("uniSearchPageState", "landing");
           window.location.href = "index.html";
         });
-      }
+      });
 
       document.querySelectorAll(".getStarted-btn").forEach((btn) => {
         btn.addEventListener("click", (e) => {
