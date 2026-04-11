@@ -11,16 +11,17 @@ function initSavedResults() {
     resultHero.innerHTML = `
       <div class="no-saved-results">
         <div class="no-results-icon">
-          <img src="icons/icons8-inbox-100.png" alt="No results" />
+          <img src="" alt="No results" />
         </div>
         <h2>No Saved Results</h2>
         <p>You haven't checked for eligible courses yet.</p>
-        <p>Click "Get Started" to find which universities match your WASSCE grades.</p>
+        <p>Click "Get Started" to find university courses that match your WASSCE grades.</p>
         <a href="#" class="heroButton getStarted-btn" onclick="goToGradePage()">Get Started Now</a>
       </div>
     `;
     savedResultActions.innerHTML = "";
   }
+
 
   function displaySavedResults(data) {
     const { elegible, aggregate, Uni } = data;
@@ -119,12 +120,15 @@ function initSavedResults() {
 
   function reviewIcon(mode) {
     const reviewIcons = document.querySelectorAll(".reviewIcon img");
+    const exclamationMark = document.querySelector('.no-results-icon img');
     if (!reviewIcons) return;
 
     if (mode === "light") {
       reviewIcons.forEach((icon) => (icon.src = "icons/quote-L.png"));
+      exclamationMark.src= "icons/exclamation-mark-L.png"
     } else if (mode === "dark") {
       reviewIcons.forEach((icon) => (icon.src = "icons/quote-D.png"));
+      exclamationMark.src= "icons/exclamation-mark-D.png";
     }
   }
 
