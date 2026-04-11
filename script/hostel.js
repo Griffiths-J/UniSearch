@@ -11,7 +11,7 @@ const hostelData = [
     },
     {
         id: 2,
-        name: "St Theresah Hostel",
+        name: "St Theresah",
         uni: "KNUST",
         price: "GHS 9,200/yr",
         dist: "5 mins walk to Engineering gate",
