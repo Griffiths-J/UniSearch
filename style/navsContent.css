@@ -159,6 +159,12 @@
   overflow: hidden;
 }
 
+@media (max-width:729.99){
+  .modal-content-university {
+    max-width: 100vw;
+  }
+}
+
 .modal-header-fixed {
   display: flex;
   align-items: center;
