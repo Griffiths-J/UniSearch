@@ -159,7 +159,7 @@
   overflow: hidden;
 }
 
-@media (max-width:729.99){
+@media (max-width:729.99px){
   .modal-content-university {
     max-width: 100vw;
   }
