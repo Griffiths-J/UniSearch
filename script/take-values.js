@@ -273,6 +273,9 @@ async function unis() {
       .sort((a, b) => a - b)
       .slice(0, 3)
       .reduce((sum, grade) => sum + grade, 0);
+
+      console.log(bestThreeElective)
+
     const finalAggregrate =
       mathGrade_main +
       scienceGrade_main +
@@ -298,7 +301,8 @@ async function unis() {
       }
     }
 
-    const finalBestThree = lete.slice(0, 3);
+    const finalBestThree = lete.slice(0, 4);
+    console.log(finalBestThree)
 
     let resultUniTitle;
     switch (requiredUni) {
@@ -317,6 +321,7 @@ async function unis() {
       [finalBestThree[0].finalSub]: finalBestThree[0].finalGrade,
       [finalBestThree[1].finalSub]: finalBestThree[1].finalGrade,
       [finalBestThree[2].finalSub]: finalBestThree[2].finalGrade,
+      [finalBestThree[3].finalSub]: finalBestThree[3].finalGrade,
       aggregrate: finalAggregrate,
       Uni: resultUniTitle,
     };
