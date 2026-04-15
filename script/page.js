@@ -67,26 +67,10 @@ export function pages() {
     });
   }
 
-   /*  const homeLinks = document.querySelectorAll('a[href="index.html"]');
-    homeLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        sessionStorage.setItem("uniSearchPageState", "landing");
-      });
-    }); */
 
     window.showGradePage = showGradePage;
     window.showLandingPage = showLandingPage;
     window.showResultPage = showResultPage;
-
-
-    /* document.querySelectorAll(".getStarted-btn").forEach((btn) => {
-      btn.addEventListener("click", (e) => {
-        e.preventDefault();
-        sessionStorage.setItem("uniSearchPageState", "grade");
-        window.location.href = "index.html";
-      });
-    }); */
-
 
 
   window.addEventListener("pageshow", () => {
@@ -166,9 +150,6 @@ export function pages() {
       localStorage.setItem("theme", isDark ? "dark" : "light");
     });
   }
-
-
-
 
 
 }

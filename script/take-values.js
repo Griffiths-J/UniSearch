@@ -279,7 +279,6 @@ async function unis() {
       englishGrade_main +
       bestThreeElective;
 
-    document.querySelector(".prompt").innerHTML = finalAggregrate;
 
     const electiveOne = elective[0];
     const electivetwo = elective[1];
@@ -324,7 +323,9 @@ async function unis() {
 
     console.log(studentData);
 
+    document.querySelector('.modal-overlay').style.display = "flex";
     document.getElementById("payment-modal").style.display = "flex";
+    document.querySelector('.cancelPayment').style.display ="none";
     document.getElementById("display-agg").innerText = `${finalAggregrate}`;
 
     document.getElementById("pay-button").onclick = function (e) {
@@ -345,7 +346,7 @@ async function unis() {
       const handler = PaystackPop.setup({
         key: "pk_test_217133aa809e4d9c253ad67a39601a632ad77e4f",
         email: email,
-        amount: 1100,
+        amount: 1150,
         currency: "GHS",
         ref: "" + Math.floor(Math.random() * 99999 + 1),
         callback: function (responds) {
@@ -395,7 +396,24 @@ async function unis() {
           console.log(elegible);
         },
         onClose: function () {
-          alert("why");
+          document.querySelector(".modal-content").style.display = "none";
+          document.querySelector('.cancelPayment').style.display ="flex";
+          let why = document.querySelector('.cancelPayment');
+
+          let exclamationMark;
+          const isDark = document.body.classList.contains("dark-mode");
+          isDark ? exclamationMark= "icons/exclamation-mark-D.png" :exclamationMark= "icons/exclamation-mark-L.png";
+
+         why.innerHTML= `
+      <div class="no-saved-results">
+        <div class="no-results-icon">
+          <img src="${exclamationMark}" alt="No results" />
+        </div>
+        <h2>Oops!! Payment canceled</h2>
+        <p>Pay to unlock full University match report.</p>
+        <a href="#" class="heroButton getStarted-btn" onclick="cancelW()">cancel</a>
+      </div>
+    `;
         },
       });
       handler.openIframe();
@@ -409,6 +427,15 @@ async function unis() {
   document.getElementById("closeM").addEventListener("click", () => {
     document.getElementById("payment-modal").style.display = "none";
   });
+
+window.cancelW = cancelW;
+
+  function cancelW(){
+    document.querySelector('.modal-overlay').style.display="none";
+    document.querySelector(".modal-content").style.display = "block";
+  }
+
+      
 }
 
 unis();

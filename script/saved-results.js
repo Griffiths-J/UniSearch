@@ -54,8 +54,7 @@ function initSavedResults() {
       )
       .join("");
 
-    const noProgramsHtml =
-      elegible.length === 0
+    const noProgramsHtml = elegible.length === 0
         ? `
       <div class="result-card no-match">
         <h2>No Eligible Programs</h2>
@@ -122,6 +121,7 @@ function initSavedResults() {
     const reviewIcons = document.querySelectorAll(".reviewIcon img");
     const exclamationMark = document.querySelector('.no-results-icon img');
     if (!reviewIcons) return;
+    if(!exclamationMark) return;
 
     if (mode === "light") {
       reviewIcons.forEach((icon) => (icon.src = "icons/quote-L.png"));
