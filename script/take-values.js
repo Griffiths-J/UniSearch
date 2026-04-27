@@ -669,9 +669,24 @@ async function unis() {
     };
   }
 
-  document.querySelector(".gradeButton1").addEventListener("click", Getvalues);
+
+  
+  document.querySelector(".gradeButton1").addEventListener("click", () => {
+    Getvalues();
+  });
+
   document.getElementById("closeM").addEventListener("click", () => {
     document.getElementById("payment-modal").style.display = "none";
   });
+
+window.cancelW = cancelW;
+
+  function cancelW(){
+    document.querySelector('.modal-overlay').style.display="none";
+    document.querySelector(".modal-content").style.display = "block";
+  }
+
+      
+
 }
 unis();
