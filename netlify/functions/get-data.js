@@ -1,30 +1,3 @@
-/* export const handler = async (event) => {
-  
-  const API_KEY = process.env.JSONBIN_KEY; 
-  const BIN_ID = "69ef6c19aaba88219742bc76"; 
-
-  try {
-    const response = await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`, {
-      method: 'GET',
-      headers: {
-        "X-Master-Key": API_KEY
-      }
-    });
-
-    const result = await response.json();
-
-    return {
-      statusCode: 200,
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(result.record), 
-    };
-  } catch (error) {
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ error: "Failed to fetch data" }),
-    };
-  }
-}; */
 
 
 export const handler = async (event) => {
@@ -32,7 +5,7 @@ export const handler = async (event) => {
   const API_KEY = process.env.JSONBIN_KEY; 
   const BIN_ID = "69ef6c19aaba88219742bc76";
 
-  // Handle GET requests (keep existing behavior)
+  
   if (event.httpMethod === 'GET') {
     try {
       const response = await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`, {
@@ -57,7 +30,7 @@ export const handler = async (event) => {
     }
   }
 
-  // Handle POST requests - filter programs server-side
+
   if (event.httpMethod === 'POST') {
     try {
       const { university, studentData } = JSON.parse(event.body);
@@ -80,7 +53,7 @@ export const handler = async (event) => {
       const result = await response.json();
       const data = result.record;
 
-      // Map university name to the correct dataset
+     
       let requiredUni;
       switch (university) {
         case "KNUST":
@@ -102,7 +75,7 @@ export const handler = async (event) => {
           };
       }
 
-      // Filter eligible programs
+      
       const elegible = (requiredUni || []).filter((program) => {
         const cutoff = program.cutoff_criteria || {};
         const passAggregrate =
@@ -120,7 +93,7 @@ export const handler = async (event) => {
         return passAggregrate && passElective;
       });
 
-      // Sort by cutoff aggregate (ascending)
+      
       for (let i = 0; i < elegible.length; i++) {
         for (let j = 0; j < elegible.length - 1; j++) {
           if (
