@@ -1,5 +1,5 @@
 async function unis() {
-  const responds = await fetch("/.netlify/functions/get-data.js");
+  const responds = await fetch("/.netlify/functions/get-data");
   const data = await responds.json();
   console.log(data)
 
