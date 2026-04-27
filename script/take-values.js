@@ -791,55 +791,41 @@ async function unis() {
         amount: 1150,
         currency: "GHS",
         ref: "" + Math.floor(Math.random() * 99999 + 1),
-        callback: /* async function (responds) {
-          document.getElementById("payment-modal").style.display = "none";
-          
-          // Show result page with loader
-          if (window.showResultPage) {
-            window.showResultPage();
-          } else {
-            const resultPageEl = document.querySelector(".resultPage");
-            if (resultPageEl) resultPageEl.style.display = "block";
-          }
+        callback:  function (responds) {
+        document.getElementById("payment-modal").style.display = "none";
+        
+        // Show result page with loader
+        if (window.showResultPage) {
+          window.showResultPage();
+        } else {
+          const resultPageEl = document.querySelector(".resultPage");
+          if (resultPageEl) resultPageEl.style.display = "block";
+        }
 
-          // Show loader in result area
-          const resultHero = document.querySelector(".resultPagehero");
-          if (resultHero) {
-            resultHero.innerHTML = `
-              <div class="loader-container">
-                <div class="loader-spinner"></div>
-                <p class="loader-text">Fetching your eligible programs...</p>
-              </div>
-            `;
-          }
+        const resultHero = document.querySelector(".resultPagehero");
+        if (resultHero) {
+          resultHero.innerHTML = `
+            <div class="loader-container">
+              <div class="loader-spinner"></div>
+              <p class="loader-text">Fetching your eligible programs...</p>
+            </div>
+          `;
+        }
 
-          try {
-            const response = await fetch("/.netlify/functions/get-data", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                university: university,
-                studentData: studentData,
-              }),
-            });
-
-            if (!response.ok) {
-              throw new Error("Failed to fetch results");
-            }
-
-            const result = await response.json();
-
-            renderEligiblePrograms(
-              result.elegible,
-              result.aggregate,
-              result.Uni,
-            );
-
-          } catch (error) {
+        fetch("/.netlify/functions/get-data", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ university, studentData })
+        })
+          .then(res => {
+            if (!res.ok) throw new Error("Failed to fetch results");
+            return res.json();
+          })
+          .then(result => {
+            renderEligiblePrograms(result.elegible, result.aggregate, result.Uni);
+          })
+          .catch(error => {
             console.error("Error fetching results:", error);
-            
             if (resultHero) {
               const isDark = document.body.classList.contains("dark-mode");
               const exclamationMark = isDark ? "icons/exclamation-mark-D.png" : "icons/exclamation-mark-L.png";
@@ -855,59 +841,8 @@ async function unis() {
                 </div>
               `;
             }
-          }
-        } */ function (responds) {
-  document.getElementById("payment-modal").style.display = "none";
-  
-  // Show result page with loader
-  if (window.showResultPage) {
-    window.showResultPage();
-  } else {
-    const resultPageEl = document.querySelector(".resultPage");
-    if (resultPageEl) resultPageEl.style.display = "block";
-  }
-
-  const resultHero = document.querySelector(".resultPagehero");
-  if (resultHero) {
-    resultHero.innerHTML = `
-      <div class="loader-container">
-        <div class="loader-spinner"></div>
-        <p class="loader-text">Fetching your eligible programs...</p>
-      </div>
-    `;
-  }
-
-  fetch("/.netlify/functions/get-data", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ university, studentData })
-  })
-    .then(res => {
-      if (!res.ok) throw new Error("Failed to fetch results");
-      return res.json();
-    })
-    .then(result => {
-      renderEligiblePrograms(result.elegible, result.aggregate, result.Uni);
-    })
-    .catch(error => {
-      console.error("Error fetching results:", error);
-      if (resultHero) {
-        const isDark = document.body.classList.contains("dark-mode");
-        const exclamationMark = isDark ? "icons/exclamation-mark-D.png" : "icons/exclamation-mark-L.png";
-        
-        resultHero.innerHTML = `
-          <div class="no-saved-results">
-            <div class="no-results-icon">
-              <img src="${exclamationMark}" alt="Error" />
-            </div>
-            <h2>Oops! Something went wrong</h2>
-            <p>We couldn't fetch your results. Please try again.</p>
-            <a href="#" class="heroButton getStarted-btn" onclick="location.reload()">Try Again</a>
-          </div>
-        `;
-      }
-    });
-},
+          });
+      },
           
         onClose: function () {
           document.querySelector(".modal-content").style.display = "none";
