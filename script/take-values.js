@@ -633,9 +633,7 @@ async function unis() {
           if (window.showResultPage) window.showResultPage();
           renderEligiblePrograms(elegible, studentData.aggregrate, studentData.Uni);
         },
-        onClose:
-          // Your existing onClose logic remains the same
-          function () {
+        onClose: function () {
           document.querySelector(".modal-content").style.display = "none";
           document.querySelector('.cancelPayment').style.display ="flex";
           let why = document.querySelector('.cancelPayment');
