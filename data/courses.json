@@ -69,7 +69,7 @@
             "chemistry",
             "physics",
             "elective_maths",
-            "food_nutrition",
+            "food_and_nutrition",
             "management_in_living"
           ],
           "count": 4
@@ -95,7 +95,7 @@
             "chemistry",
             "physics",
             "elective_maths",
-            "food_nutrition",
+            "food_and_nutrition",
             "management_in_living"
           ],
           "count": 4
@@ -1395,7 +1395,792 @@
   ]
   },
   {
-    "UG":[]
+    "UG":[
+  {
+    "program_id": "UG_CBAS_001",
+    "program_name": "BSc. Agricultural Engineering",
+    "college": "College of Basic & Applied Sciences",
+    "faculty": "Engineering Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 15,
+      "core_subjects_required": ["english", "core_maths", "int_science"],
+      "elective_required": {
+        "any_of": ["physics", "chemistry", "elective_maths"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_CBAS_002",
+    "program_name": "BSc. Biomedical Engineering",
+    "college": "College of Basic & Applied Sciences",
+    "faculty": "Engineering Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 6,
+      "core_subjects_required": ["english", "core_maths", "int_science"],
+      "elective_required": {
+        "any_of": ["physics", "chemistry", "elective_maths","biology"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_CBAS_003",
+    "program_name": "BSc. Computer Engineering",
+    "college": "College of Basic & Applied Sciences",
+    "faculty": "Engineering Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 7,
+      "core_subjects_required": ["english", "core_maths", "int_science"],
+      "elective_required": {
+        "any_of": ["physics", "chemistry", "elective_maths","ict"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_CBAS_004",
+    "program_name": "BSc. Food Process Engineering",
+    "college": "College of Basic & Applied Sciences",
+    "faculty": "Engineering Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 12,
+      "core_subjects_required": ["english", "core_maths", "int_science"],
+      "elective_required": {
+        "any_of": ["physics", "chemistry", "elective_maths","biology","food_and_nutrition"],
+        "count": 4
+      }
+    }
+  },
+  {
+    "program_id": "UG_CBAS_005",
+    "program_name": "BSc. Materials Science & Engineering",
+    "college": "College of Basic & Applied Sciences",
+    "faculty": "Engineering Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 13,
+      "core_subjects_required": ["english", "core_maths", "int_science"],
+      "elective_required": {
+        "any_of": ["physics", "chemistry", "elective_maths"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_CBAS_006",
+    "program_name": "BSc. Biological Sciences",
+    "college": "College of Basic & Applied Sciences",
+    "faculty": "Biological Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 14,
+      "core_subjects_required": ["english", "core_maths", "int_science"],
+      "elective_required": {
+        "any_of": ["chemistry", "physics", "biology","elective_maths"],
+        "count": 4
+      }
+    }
+  },
+  {
+    "program_id": "UG_CBAS_007",
+    "program_name": "BSc. Psychology",
+    "college": "College of Basic & Applied Sciences",
+    "faculty": "Biological Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 15,
+      "core_subjects_required": ["english", "core_maths", "int_science"],
+      "elective_required": {
+        "any_of": ["biology", "elective_maths", "physics", "chemistry"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_CBAS_008",
+    "program_name": "Doctor of Veterinary Medicine",
+    "college": "College of Basic & Applied Sciences",
+    "faculty": "Veterinary Medicine",
+    "cutoff_criteria": {
+      "minimum_aggregate": 14,
+      "core_subjects_required": ["english", "core_maths", "int_science"],
+      "elective_required": {
+        "any_of": ["biology", "chemistry", "physics", "elective_maths"],
+        "count": 4
+      }
+    }
+  },
+  {
+    "program_id": "UG_CBAS_009",
+    "program_name": "BSc. Actuarial Science",
+    "college": "College of Basic & Applied Sciences",
+    "faculty": "Physical and Mathematical Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 11,
+      "core_subjects_required": ["english", "core_maths", "int_science"],
+      "elective_required": {
+        "any_of": ["elective_maths","physics","chemistry","ict","business_management","cost_accounting","financial_accounting","economics","geography"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_CBAS_010",
+    "program_name": "BSc. Computer Science",
+    "college": "College of Basic & Applied Sciences",
+    "faculty": "Physical and Mathematical Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 7,
+      "core_subjects_required": ["english", "core_maths", "int_science"],
+      "elective_required": {
+        "any_of": ["elective_maths","chemistry","physics","ict"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_CBAS_011",
+    "program_name": "BSc. Information Technology",
+    "college": "College of Basic & Applied Sciences",
+    "faculty": "Physical and Mathematical Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 10,
+      "core_subjects_required": ["english", "core_maths", "int_science"],
+      "elective_required": {
+        "any_of": ["elective_maths","chemistry","physics","economics","applied_electricity","auto_mechanics","electronics","ict"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_CBAS_012",
+    "program_name": "BSc. Earth Science",
+    "college": "College of Basic & Applied Sciences",
+    "faculty": "Physical and Mathematical Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 15,
+      "core_subjects_required": ["english", "core_maths", "int_science"],
+      "elective_required": {
+        "any_of": ["chemistry", "physics", "biology", "geography", "elective_maths"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_CBAS_013",
+    "program_name": "BSc. Physical Sciences",
+    "college": "College of Basic & Applied Sciences",
+    "faculty": "Physical and Mathematical Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 24,
+      "core_subjects_required": ["english", "core_maths", "int_science"],
+      "elective_required": {
+        "any_of": ["physics", "chemistry", "elective_maths"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_CBAS_014",
+    "program_name": "BSc. Mathematical Sciences",
+    "college": "College of Basic & Applied Sciences",
+    "faculty": "Physical and Mathematical Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 15,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["elective_maths","physics","chemistry","economics"],
+        "count": 2
+      }
+    }
+  },
+  {
+    "program_id": "UG_CBAS_015",
+    "program_name": "BSc. Agriculture Science",
+    "college": "College of Basic & Applied Sciences",
+    "faculty": "Agriculture",
+    "cutoff_criteria": {
+      "minimum_aggregate": 22,
+      "core_subjects_required": ["english", "core_maths", "int_science"],
+      "elective_required": {
+        "any_of": ["chemistry", "physics", "biology", "general_agriculture", "geography", "elective_maths"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_CBAS_016",
+    "program_name": "BSc. Family & Consumer Sciences (Family & Child Studies)",
+    "college": "College of Basic & Applied Sciences",
+    "faculty": "Agriculture",
+    "cutoff_criteria": {
+      "minimum_aggregate": 16,
+      "core_subjects_required": ["english", "core_maths", "int_science"],
+      "elective_required": {
+        "any_of": ["management_in_living", "food_and_nutrition", "textiles_and_clothing", "general_knowledge_in_art", "biology", "chemistry","elective_maths"],
+        "count": 2
+      }
+    }
+  },
+  {
+    "program_id": "UG_CBAS_017",
+    "program_name": "BSc. Family & Consumer Sciences (Food & Clothing)",
+    "college": "College of Basic & Applied Sciences",
+    "faculty": "Agriculture",
+    "cutoff_criteria": {
+      "minimum_aggregate": 20,
+      "core_subjects_required": ["english", "core_maths", "int_science"],
+      "elective_required": {
+        "any_of": ["management_in_living", "chemistry", "food_and_nutrition", "textiles_and_clothing","elective_maths","biology"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_CHS_001",
+    "program_name": "Bachelor of Medicine and Bachelor of Surgery (MBChB)",
+    "college": "College of Health Sciences",
+    "faculty": "Medical",
+    "cutoff_criteria": {
+      "minimum_aggregate": 8,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["chemistry", "physics", "biology", "elective_maths"],
+        "count": 4
+      }
+    }
+  },
+  {
+    "program_id": "UG_CHS_002",
+    "program_name": "Bachelor of Dental Surgery",
+    "college": "College of Health Sciences",
+    "faculty": "Dental",
+    "cutoff_criteria": {
+      "minimum_aggregate": 10,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["chemistry", "physics", "biology", "elective_maths"],
+        "count": 4
+      }
+    }
+  },
+  {
+    "program_id": "UG_CHS_003",
+    "program_name": "Doctor of Pharmacy",
+    "college": "College of Health Sciences",
+    "faculty": "Pharmacy",
+    "cutoff_criteria": {
+      "minimum_aggregate": 10,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["chemistry", "biology", "physics", "elective_maths"],
+        "count": 4
+      }
+    }
+  },
+  {
+    "program_id": "UG_CHS_004",
+    "program_name": "BSc. Nursing",
+    "college": "College of Health Sciences",
+    "faculty": "Nursing and Midwifery",
+    "cutoff_criteria": {
+      "minimum_aggregate": 15,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["chemistry", "physics", "biology", "elective_maths", "general_agriculture", "food_and_nutrition"],
+        "count": 4
+      }
+    }
+  },
+  {
+    "program_id": "UG_CHS_005",
+    "program_name": "BSc. Midwifery",
+    "college": "College of Health Sciences",
+    "faculty": "Nursing and Midwifery",
+    "cutoff_criteria": {
+      "minimum_aggregate": 15,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["chemistry", "physics", "biology", "general_agriculture", "food_and_nutrition", "economics", "management_in_living", "general_knowledge_in_art", "french"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_CHS_006",
+    "program_name": "BSc. Medical Laboratory Sciences",
+    "college": "College of Health Sciences",
+    "faculty": "Biomedical and Allied Health Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 12,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["chemistry", "physics", "biology", "elective_maths"],
+        "count": 4
+      }
+    }
+  },
+  {
+    "program_id": "UG_CHS_007",
+    "program_name": "BSc. Physiotherapy",
+    "college": "College of Health Sciences",
+    "faculty": "Biomedical and Allied Health Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 14,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["chemistry", "physics", "biology", "elective_maths"],
+        "count": 4
+      }
+    }
+  },
+  {
+    "program_id": "UG_CHS_008",
+    "program_name": "BSc. Dietetics",
+    "college": "College of Health Sciences",
+    "faculty": "Biomedical and Allied Health Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 14,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["chemistry", "physics", "biology", "elective_maths"],
+        "count": 4
+      }
+    }
+  },
+  {
+    "program_id": "UG_CHS_009",
+    "program_name": "BSc. Diagnostic Radiography",
+    "college": "College of Health Sciences",
+    "faculty": "Biomedical and Allied Health Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 13,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["chemistry", "physics", "biology", "elective_maths"],
+        "count": 4
+      }
+    }
+  },
+  {
+    "program_id": "UG_CHS_010",
+    "program_name": "BSc. Occupational Therapy",
+    "college": "College of Health Sciences",
+    "faculty": "Biomedical and Allied Health Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 14,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["chemistry", "physics", "biology", "elective_maths"],
+        "count": 4
+      }
+    }
+  },
+  {
+    "program_id": "UG_CHS_011",
+    "program_name": "BSc. Respiratory Therapy",
+    "college": "College of Health Sciences",
+    "faculty": "Biomedical and Allied Health Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 14,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["chemistry", "physics", "biology", "elective_maths"],
+        "count": 4
+      }
+    }
+  },
+  {
+    "program_id": "UG_CHS_012",
+    "program_name": "Bachelor of Public Health",
+    "college": "College of Health Sciences",
+    "faculty": "Public Health",
+    "cutoff_criteria": {
+      "minimum_aggregate": 9,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["chemistry", "physics", "biology", "elective_maths", "general_agriculture", "food_and_nutrition", "french", "economics"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_COE_001",
+    "program_name": "B.Ed. Social Studies",
+    "college": "College of Education",
+    "faculty": "Education and Leadership",
+    "cutoff_criteria": {
+      "minimum_aggregate": 24,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology","elective_maths","chemistry","physics","literature_in_english","history","government","religious_studies","french","economics"],
+        "count": 2
+      }
+    }
+  },
+  {
+    "program_id": "UG_COE_002",
+    "program_name": "B.Ed. English",
+    "college": "College of Education",
+    "faculty": "Education and Leadership",
+    "cutoff_criteria": {
+      "minimum_aggregate": 24,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["elective_maths","biology","chemistry","physics","literature_in_english","history","government","religious_studies","french","economics"],
+        "count": 2
+      }
+    }
+  },
+  {
+    "program_id": "UG_COE_003",
+    "program_name": "B.Ed. Mathematics",
+    "college": "College of Education",
+    "faculty": "Education and Leadership",
+    "cutoff_criteria": {
+      "minimum_aggregate": 24,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology","elective_maths","chemistry","physics","government","economics","business_management"],
+        "count": 2
+      }
+    }
+  },
+  {
+    "program_id": "UG_COE_004",
+    "program_name": "B.Ed. Science (Physics)",
+    "college": "College of Education",
+    "faculty": "Education and Leadership",
+    "cutoff_criteria": {
+      "minimum_aggregate": 24,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology","elective_maths","chemistry","physics"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_COE_005",
+    "program_name": "B.Ed. Science (Chemistry)",
+    "college": "College of Education",
+    "faculty": "Education and Leadership",
+    "cutoff_criteria": {
+      "minimum_aggregate": 24,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["chemistry","biology","elective_maths","physics"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_COE_006",
+    "program_name": "B.Ed. Science (Biology)",
+    "college": "College of Education",
+    "faculty": "Education and Leadership",
+    "cutoff_criteria": {
+      "minimum_aggregate": 24,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology","elective_maths","chemistry","physics"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_COE_007",
+    "program_name": "B.Ed. Early Grade Specialism",
+    "college": "College of Education",
+    "faculty": "Education and Leadership",
+    "cutoff_criteria": {
+      "minimum_aggregate": 24,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["elective_maths","biology","chemistry","physics","literature_in_english","history","government","religious_studies","french","economics"],
+        "count": 2
+      }
+    }
+  },
+  {
+    "program_id": "UG_COE_008",
+    "program_name": "B.Ed. JHS Specialism",
+    "college": "College of Education",
+    "faculty": "Education and Leadership",
+    "cutoff_criteria": {
+      "minimum_aggregate": 24,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["elective_maths","biology","chemistry","physics","literature_in_english","history","government","religious_studies","french","economics"],
+        "count": 2
+      }
+    }
+  },
+  {
+    "program_id": "UG_COE_009",
+    "program_name": "B.Ed. Upper Grade Specialism",
+    "college": "College of Education",
+    "faculty": "Education and Leadership",
+    "cutoff_criteria": {
+      "minimum_aggregate": 24,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["elective_maths","biology","chemistry","physics","literature_in_english","history","government","religious_studies","french","economics"],
+        "count": 2
+      }
+    }
+  },
+  {
+    "program_id": "UG_COE_010",
+    "program_name": "BA Sports and Physical Culture",
+    "college": "College of Education",
+    "faculty": "Education and Leadership",
+    "cutoff_criteria": {
+      "minimum_aggregate": 24,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["elective_maths","biology","chemistry","physics","literature_in_english","history","government","religious_studies","french","economics"],
+        "count": 2
+      }
+    }
+  },
+  {
+    "program_id": "UG_COE_011",
+    "program_name": "BSc. Administration (Kumasi & Takoradi City Campuses)",
+    "college": "College of Education",
+    "faculty": "Education and Leadership",
+    "cutoff_criteria": {
+      "minimum_aggregate": 24,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["elective_maths","biology","chemistry","physics","literature_in_english","history","government","religious_studies","french","economics"],
+        "count": 2
+      }
+    }
+  },
+  {
+    "program_id": "UG_COE_012",
+    "program_name": "B.Ed. French",
+    "college": "College of Education",
+    "faculty": "Education and Leadership",
+    "cutoff_criteria": {
+      "minimum_aggregate": 24,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["french"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_COE_013",
+    "program_name": "B.Ed. Spanish",
+    "college": "College of Education",
+    "faculty": "Education and Leadership",
+    "cutoff_criteria": {
+      "minimum_aggregate": 24,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": [],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_COE_014",
+    "program_name": "B.Ed. Performing Arts",
+    "college": "College of Education",
+    "faculty": "Education and Leadership",
+    "cutoff_criteria": {
+      "minimum_aggregate": 24,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": [],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_COE_015",
+    "program_name": "B.Ed. Information and Communication Technology",
+    "college": "College of Education",
+    "faculty": "Education and Leadership",
+    "cutoff_criteria": {
+      "minimum_aggregate": 12,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": [],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_COE_016",
+    "program_name": "B.Ed. Consumer Sciences",
+    "college": "College of Education",
+    "faculty": "Education and Leadership",
+    "cutoff_criteria": {
+      "minimum_aggregate": 20,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology", "chemistry", "management_in_living"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_COE_017",
+    "program_name": "B.Ed. Arabic",
+    "college": "College of Education",
+    "faculty": "Education and Leadership",
+    "cutoff_criteria": {
+      "minimum_aggregate": 24,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": [],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_COE_018",
+    "program_name": "B.Ed. Computer Science",
+    "college": "College of Education",
+    "faculty": "Education and Leadership",
+    "cutoff_criteria": {
+      "minimum_aggregate": 9,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["elective_maths"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_COH_001",
+    "program_name": "Bachelor of Laws (LLB)",
+    "college": "College of Humanities",
+    "faculty": "Law",
+    "cutoff_criteria": {
+      "minimum_aggregate": 7,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology","chemistry","elective_maths","physics","business_management","financial_accounting","management_in_living","general_knowledge_in_art","cost_accounting","literature_in_english"],
+        "count": 2
+      }
+    }
+  },
+  {
+    "program_id": "UG_COH_002",
+    "program_name": "BSc. Administration",
+    "college": "College of Humanities",
+    "faculty": "Business",
+    "cutoff_criteria": {
+      "minimum_aggregate": 9,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": [],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_COH_003",
+    "program_name": "Bachelor of Arts (General Arts Background)",
+    "college": "College of Humanities",
+    "faculty": "Arts / Languages / Social Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 16,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["economics", "statistics", "french", "english", "geography","fante","akan","government","history","religious_studies",""],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_COH_004",
+    "program_name": "Bachelor of Arts (Bouquets with a Business Subject)",
+    "college": "College of Humanities",
+    "faculty": "Arts / Languages / Social Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 12,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["elective_maths","physics","chemistry","business_management","financial_accounting","cost_accounting"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_COH_005",
+    "program_name": "Bachelor of Arts (Business / Science / Vocational Background)",
+    "college": "College of Humanities",
+    "faculty": "Arts / Languages / Social Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 14,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["physics","chemistry","economics","elective_maths","electronics","biology","cost_accounting","business_management","business_management"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_COH_006",
+    "program_name": "Bachelor of Fine Arts",
+    "college": "College of Humanities",
+    "faculty": "Performing Arts",
+    "cutoff_criteria": {
+      "minimum_aggregate": 20,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": [],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_COH_007",
+    "program_name": "Bachelor of Music",
+    "college": "College of Humanities",
+    "faculty": "Performing Arts",
+    "cutoff_criteria": {
+      "minimum_aggregate": 20,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": [],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_ACC_001",
+    "program_name": "Bachelor of Arts",
+    "college": "Accra City Campus",
+    "faculty": "Humanities",
+    "cutoff_criteria": {
+      "minimum_aggregate": 24,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": [],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UG_ACC_002",
+    "program_name": "BSc. Administration",
+    "college": "Accra City Campus",
+    "faculty": "Business",
+    "cutoff_criteria": {
+      "minimum_aggregate": 24,
+      "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": [],
+        "count": 3
+      }
+    }
+  }
+  ]
   },
   {
     "UCC":[]

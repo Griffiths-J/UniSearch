@@ -1,3 +1,7 @@
+/* import renderEligiblePrograms from '.take-values.js'; */
+
+/* console.log(renderEligiblePrograms); */
+
 export function pages() {
   const landingSection = document.querySelector(".landingPage");
   const gradeSection = document.querySelector(".gradePage");
@@ -42,6 +46,8 @@ export function pages() {
     hideAll();
     if (resultSection) resultSection.style.display = "block";
     sessionStorage.setItem("uniSearchPageState", "result");
+
+
 
     clearFormSelections();
   }

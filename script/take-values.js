@@ -1,16 +1,17 @@
 async function unis() {
-  const responds = await fetch("./data/courses.json");
+  const responds = await fetch("/.netlify/functions/get-data.js");
   const data = await responds.json();
+  console.log(data)
 
   const KNUST = data[0].KNUST;
   const UG = data[1].UG;
   const UCC = data[2].UCC;
   const UMAT = data[3].UMAT;
 
-  function renderEligiblePrograms(elegible, aggregate, Uni) {
+ function renderEligiblePrograms(elegible, aggregate, Uni) {
     const resultHero = document.querySelector(".resultPagehero");
     if (!resultHero) {
-      console.error("resultPagehero element not found");
+      console.error("resultPagehero not found");
       return;
     }
 
@@ -64,6 +65,7 @@ async function unis() {
     sessionStorage.setItem("uniSearchResult", resultData);
     sessionStorage.setItem("uniSearchPageState", "result");
   }
+
 
   window.restoreResultFromStorage = function () {
     const stored = sessionStorage.getItem("uniSearchResult");
@@ -311,6 +313,10 @@ async function unis() {
         break;
       case UG:
         resultUniTitle = "University of Ghana";
+      case UCC:
+        resultUniTitle = "University of Cape Coast";
+      case UMAT:
+        resultUniTitle = "University of Mines and Technology";  
         break;
     }
 
