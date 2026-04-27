@@ -633,8 +633,28 @@ async function unis() {
           if (window.showResultPage) window.showResultPage();
           renderEligiblePrograms(elegible, studentData.aggregrate, studentData.Uni);
         },
-        onClose: function () {
+        onClose:
           // Your existing onClose logic remains the same
+          function () {
+          document.querySelector(".modal-content").style.display = "none";
+          document.querySelector('.cancelPayment').style.display ="flex";
+          let why = document.querySelector('.cancelPayment');
+
+          let exclamationMark;
+          const isDark = document.body.classList.contains("dark-mode");
+          isDark ? exclamationMark= "icons/exclamation-mark-D.png" :exclamationMark= "icons/exclamation-mark-L.png";
+
+         why.innerHTML= `
+      <div class="no-saved-results">
+        <div class="no-results-icon">
+          <img src="${exclamationMark}" alt="No results" />
+        </div>
+        <h2>Oops!! Payment canceled</h2>
+        <p>Pay to unlock full University match report.</p>
+        <a href="#" class="heroButton getStarted-btn" onclick="cancelW()">cancel</a>
+      </div>
+    `;
+        
         }
       });
       handler.openIframe();
