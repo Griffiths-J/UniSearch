@@ -455,13 +455,8 @@ unis();
 
 
 
-
-
-
-
-
 async function unis() {
-  // Initial fetch removed for security. Data is now requested ONLY after payment.
+  // SECURE: No more initial data fetch here.
 
   function renderEligiblePrograms(elegible, aggregate, Uni) {
     const resultHero = document.querySelector(".resultPagehero");
@@ -550,61 +545,99 @@ async function unis() {
       throw new Error("Select university");
     }
 
+    // This helper needs to be defined before it's used in the loops
+    function knustCheck(grade) {
+      if (university === "KNUST") {
+        if (grade >= 4 && grade <= 6) {
+          grade = 4;
+        }
+      }
+      return grade;
+    }
+
+    const userResult = [];
     const coreSubresult = [];
     document.querySelectorAll(".core-instance").forEach((row) => {
-      coreSubresult.push({
-        name: row.querySelector(".coresub-js").innerHTML,
-        grade: row.querySelector(".coregrade-js").value
-      });
+      let name = row.querySelector(".coresub-js").innerHTML;
+      let grade = row.querySelector(".coregrade-js").value;
+      if (grade === "Select Grade" || grade === "") {
+        document.querySelector(".prompt").innerHTML = "Select all core subject grades";
+        setTimeout(() => { document.querySelector(".prompt").innerHTML = ""; }, 5000);
+        throw new Error("Missing core grade");
+      }
+      coreSubresult.push({ type: "core", name, grade });
     });
 
     const electiveSubresult = [];
     document.querySelectorAll(".elective-instance").forEach((row) => {
-      electiveSubresult.push({
-        name: row.querySelector(".electivesub-js").value,
-        grade: row.querySelector(".electivegrade-js").value
-      });
+      let name = row.querySelector(".electivesub-js").value;
+      let grade = row.querySelector(".electivegrade-js").value;
+      if (name === "Select Course" || grade == "Select Grade" || grade === "") {
+        document.querySelector(".prompt").innerHTML = "Select all elective subjects and grades";
+        setTimeout(() => { document.querySelector(".prompt").innerHTML = ""; }, 5000);
+        throw new Error("Missing elective selection");
+      }
+      let grade_main = knustCheck(grade);
+      electiveSubresult.push({ type: "elective", name, grade: grade_main });
     });
 
-    if (electiveSubresult.some(e => e.name === "Select Course" || e.grade === "")) {
-      document.querySelector(".prompt").innerHTML = "Select all elective subjects and grades";
-      setTimeout(() => { document.querySelector(".prompt").innerHTML = ""; }, 5000);
-      return;
+    // Add to userResult main array
+    coreSubresult.forEach((course) => {
+      userResult.push({ finalType: course.type, finalSub: course.name, finalGrade: parseInt(course.grade) });
+    });
+    electiveSubresult.forEach((course) => {
+      userResult.push({ finalType: course.type, finalSub: course.name, finalGrade: parseInt(course.grade) });
+    });
+
+    const cores = userResult.filter((e) => e.finalType === "core");
+    const elective = userResult.filter((e) => e.finalType === "elective");
+
+    // English, Math, Science, Social logic
+    const englishGrade_main = knustCheck(cores.find((en) => en.finalSub.includes("English")).finalGrade);
+    const mathGrade_main = knustCheck(cores.find((mth) => mth.finalSub.includes("Mathematics")).finalGrade);
+    const scienceGrade_main = knustCheck(cores.find((sci) => sci.finalSub.includes("Science")).finalGrade);
+    const socialGrade = cores.find((soc) => soc.finalSub.includes("Social")).finalGrade;
+
+    // Sort Electives for Aggregate
+    const bestThreeElective = elective
+      .map((el) => el.finalGrade)
+      .sort((a, b) => a - b)
+      .slice(0, 3)
+      .reduce((sum, grade) => sum + grade, 0);
+
+    const finalAggregrate = mathGrade_main + scienceGrade_main + englishGrade_main + bestThreeElective;
+
+    // The Specific Elective Sorting Loop (Your Bubble Sort)
+    const lete = [...elective]; 
+    for (let i = 0; i < lete.length - 1; i++) {
+      for (let j = 0; j < lete.length - 1; j++) {
+        if (lete[j].finalGrade > lete[j + 1].finalGrade) {
+          let temp = lete[j];
+          lete[j] = lete[j + 1];
+          lete[j + 1] = temp;
+        }
+      }
     }
 
-    // Helper for KNUST adjustment
-    function knustCheck(grade) {
-      if (university === "KNUST" && grade >= 4 && grade <= 6) return 4;
-      return grade;
-    }
-
-    // Calculations
-    const mathGrade = knustCheck(parseInt(coreSubresult.find(c => c.name.includes("Mathematics")).grade));
-    const scienceGrade = knustCheck(parseInt(coreSubresult.find(c => c.name.includes("Science")).grade));
-    const englishGrade = knustCheck(parseInt(coreSubresult.find(c => c.name.includes("English")).grade));
-    
-    const processedElectives = electiveSubresult
-      .map(e => ({ name: e.name, grade: knustCheck(parseInt(e.grade)) }))
-      .sort((a, b) => a.grade - b.grade);
-
-    const finalAggregrate = mathGrade + scienceGrade + englishGrade + 
-                            processedElectives.slice(0, 3).reduce((sum, e) => sum + e.grade, 0);
+    const finalBestThree = lete.slice(0, 4);
 
     let resultUniTitle = "";
-    if(university === "KNUST") resultUniTitle = "Kwame Nkrumah University of Science Technology";
-    else if(university === "UG") resultUniTitle = "University of Ghana";
-    else if(university === "UCC") resultUniTitle = "University of Cape Coast";
-    else if(university === "UMAT") resultUniTitle = "University of Mines and Technology";
+    if (university === "KNUST") resultUniTitle = "Kwame Nkrumah University of Science Technology";
+    else if (university === "UG") resultUniTitle = "University of Ghana";
+    else if (university === "UCC") resultUniTitle = "University of Cape Coast";
+    else if (university === "UMAT") resultUniTitle = "University of Mines and Technology";
 
-    // Prepare student data for the server
     const studentData = {
-      core_math: mathGrade,
-      int_science: scienceGrade,
-      english: englishGrade,
+      core_math: mathGrade_main,
+      int_science: scienceGrade_main,
+      english: englishGrade_main,
+      [finalBestThree[0].finalSub]: finalBestThree[0].finalGrade,
+      [finalBestThree[1].finalSub]: finalBestThree[1].finalGrade,
+      [finalBestThree[2].finalSub]: finalBestThree[2].finalGrade,
+      [finalBestThree[3].finalSub]: finalBestThree[3].finalGrade,
       aggregrate: finalAggregrate,
-      Uni: resultUniTitle
+      Uni: resultUniTitle,
     };
-    processedElectives.forEach(e => { studentData[e.name] = e.grade; });
 
     document.querySelector('.modal-overlay').style.display = "flex";
     document.getElementById("payment-modal").style.display = "flex";
@@ -620,30 +653,22 @@ async function unis() {
         email: email,
         amount: 1150,
         currency: "GHS",
-        callback: /*async*/ function (response) {
+        callback: function (responds) {
           document.getElementById("payment-modal").style.display = "none";
           
-          // Request filtered results ONLY after successful payment
-         /*  const cloudRes = await fetch("/.netlify/functions/get-data", {
+          fetch("/.netlify/functions/get-data", {
             method: "POST",
             body: JSON.stringify({ university, studentData })
+          })
+          .then(res => res.json())
+          .then(elegible => {
+            if (window.showResultPage) window.showResultPage();
+            renderEligiblePrograms(elegible, studentData.aggregrate, studentData.Uni);
           });
-          const elegible = await cloudRes.json();
-
-          if (window.showResultPage) window.showResultPage();
-          renderEligiblePrograms(elegible, studentData.aggregrate, studentData.Uni); */
-
-          fetch("/.netlify/functions/get-data", {
-      method: "POST",
-      body: JSON.stringify({ university, studentData })
-    })
-    .then(res => res.json())
-    .then(elegible => {
-      if (window.showResultPage) window.showResultPage();
-      renderEligiblePrograms(elegible, studentData.aggregrate, studentData.Uni);
-    });
         },
         onClose: function () {
+
+          
           document.querySelector(".modal-content").style.display = "none";
           document.querySelector('.cancelPayment').style.display ="flex";
           let why = document.querySelector('.cancelPayment');
@@ -662,12 +687,13 @@ async function unis() {
         <a href="#" class="heroButton getStarted-btn" onclick="cancelW()">cancel</a>
       </div>
     `;
-        
+
         }
       });
       handler.openIframe();
     };
   }
+
 
 
   
@@ -686,7 +712,8 @@ window.cancelW = cancelW;
     document.querySelector(".modal-content").style.display = "block";
   }
 
-      
+
 
 }
 unis();
+
