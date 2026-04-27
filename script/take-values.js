@@ -1,4 +1,4 @@
-async function unis() {
+/* async function unis() {
   const responds = await fetch("/.netlify/functions/get-data");
   const data = await responds.json();
   console.log(data)
@@ -198,7 +198,7 @@ async function unis() {
       return;
     }
 
-    /* console.log(electiveSubresult) */
+    // console.log(electiveSubresult) 
     //add core to main array
     coreSubresult.forEach((course) => {
       let finalSub = course.name;
@@ -449,4 +449,201 @@ window.cancelW = cancelW;
       
 }
 
+unis();
+ */
+
+
+
+
+
+
+
+
+
+async function unis() {
+  // Initial fetch removed for security. Data is now requested ONLY after payment.
+
+  function renderEligiblePrograms(elegible, aggregate, Uni) {
+    const resultHero = document.querySelector(".resultPagehero");
+    if (!resultHero) {
+      console.error("resultPagehero element not found");
+      return;
+    }
+
+    const listItems = elegible
+      .map(
+        (p) => `
+       <div class="result-card">
+          <div class="result-card-left">
+              <div class="result-card-top">${p.program_name}</div>
+          <div class="Co_Fa">
+              <div class="result-card-college">
+                <img src="icons/icons8-pentagon-24.png" alt="icon">${p.college}</div>
+              <div class="result-card-faculty">
+                <img src="icons/icons8-pencil-24.png" alt="icon">${p.faculty}</div>
+            </div>
+          </div>
+          <div class="result-card-right">
+            <div class="resultAgg">${p.cutoff_criteria.minimum_aggregate}</div>
+            <div class="resultAgg-t1">AGG</div>
+          </div>
+      </div>
+    `,
+      )
+      .join("");
+
+    const noProgramsHtml =
+      elegible.length === 0
+        ? `
+      <div class="result-card no-match">
+        <h2>Payment complete ✅</h2>
+        <p>No eligible programs matched your aggregate and electives.</p>
+      </div>
+    `
+        : "";
+
+    resultHero.innerHTML = `
+      <div class="result-summary">
+          <h2>Eligible Courses at <br><span class="result-summaryUni">${Uni}</span> </h2>
+          <div class="result-summaryBox">
+            <div class="resultAgg-t">Your Aggregrate</div> <span>|</span>
+            <div class="resultAgg">${aggregate}</div>
+          </div>
+      </div>
+      ${noProgramsHtml}
+      <div class="numberCourses">${elegible.length} COURSE${elegible.length > 1 ? "S" : ""} FOUND</div>
+      <div class="eligible-programs">${listItems}</div>
+    `;
+
+    const resultData = JSON.stringify({ elegible, aggregate, Uni });
+    sessionStorage.setItem("uniSearchResult", resultData);
+    sessionStorage.setItem("uniSearchPageState", "result");
+  }
+
+  window.restoreResultFromStorage = function () {
+    const stored = sessionStorage.getItem("uniSearchResult");
+    if (!stored) return;
+    try {
+      const parsed = JSON.parse(stored);
+      if (parsed && Array.isArray(parsed.elegible)) {
+        renderEligiblePrograms(parsed.elegible, parsed.aggregate, parsed.Uni || "N/A");
+      }
+    } catch (e) {
+      console.error("Failed to restore result", e);
+    }
+  };
+
+  const returnHomeBtn = document.getElementById("return-home-btn");
+  if (returnHomeBtn) {
+    returnHomeBtn.addEventListener("click", () => {
+      if (window.showLandingPage) window.showLandingPage();
+      sessionStorage.setItem("uniSearchPageState", "landing");
+      sessionStorage.removeItem("uniSearchResult");
+    });
+  }
+
+  function Getvalues() {
+    const university = document.querySelector(".getsch-select-value").value;
+    if (university === "Select University" || university === "") {
+      document.querySelector(".prompt").innerHTML = "Select university and all inputs";
+      setTimeout(() => { document.querySelector(".prompt").innerHTML = ""; }, 5000);
+      throw new Error("Select university");
+    }
+
+    const coreSubresult = [];
+    document.querySelectorAll(".core-instance").forEach((row) => {
+      coreSubresult.push({
+        name: row.querySelector(".coresub-js").innerHTML,
+        grade: row.querySelector(".coregrade-js").value
+      });
+    });
+
+    const electiveSubresult = [];
+    document.querySelectorAll(".elective-instance").forEach((row) => {
+      electiveSubresult.push({
+        name: row.querySelector(".electivesub-js").value,
+        grade: row.querySelector(".electivegrade-js").value
+      });
+    });
+
+    if (electiveSubresult.some(e => e.name === "Select Course" || e.grade === "")) {
+      document.querySelector(".prompt").innerHTML = "Select all elective subjects and grades";
+      setTimeout(() => { document.querySelector(".prompt").innerHTML = ""; }, 5000);
+      return;
+    }
+
+    // Helper for KNUST adjustment
+    function knustCheck(grade) {
+      if (university === "KNUST" && grade >= 4 && grade <= 6) return 4;
+      return grade;
+    }
+
+    // Calculations
+    const mathGrade = knustCheck(parseInt(coreSubresult.find(c => c.name.includes("Mathematics")).grade));
+    const scienceGrade = knustCheck(parseInt(coreSubresult.find(c => c.name.includes("Science")).grade));
+    const englishGrade = knustCheck(parseInt(coreSubresult.find(c => c.name.includes("English")).grade));
+    
+    const processedElectives = electiveSubresult
+      .map(e => ({ name: e.name, grade: knustCheck(parseInt(e.grade)) }))
+      .sort((a, b) => a.grade - b.grade);
+
+    const finalAggregrate = mathGrade + scienceGrade + englishGrade + 
+                            processedElectives.slice(0, 3).reduce((sum, e) => sum + e.grade, 0);
+
+    let resultUniTitle = "";
+    if(university === "KNUST") resultUniTitle = "Kwame Nkrumah University of Science Technology";
+    else if(university === "UG") resultUniTitle = "University of Ghana";
+    else if(university === "UCC") resultUniTitle = "University of Cape Coast";
+    else if(university === "UMAT") resultUniTitle = "University of Mines and Technology";
+
+    // Prepare student data for the server
+    const studentData = {
+      core_math: mathGrade,
+      int_science: scienceGrade,
+      english: englishGrade,
+      aggregrate: finalAggregrate,
+      Uni: resultUniTitle
+    };
+    processedElectives.forEach(e => { studentData[e.name] = e.grade; });
+
+    document.querySelector('.modal-overlay').style.display = "flex";
+    document.getElementById("payment-modal").style.display = "flex";
+    document.getElementById("display-agg").innerText = `${finalAggregrate}`;
+
+    document.getElementById("pay-button").onclick = function (e) {
+      e.preventDefault();
+      const email = document.getElementById("student-email").value;
+      if (!email.includes("@")) return;
+
+      const handler = PaystackPop.setup({
+        key: "pk_test_217133aa809e4d9c253ad67a39601a632ad77e4f",
+        email: email,
+        amount: 1150,
+        currency: "GHS",
+        callback: async function (response) {
+          document.getElementById("payment-modal").style.display = "none";
+          
+          // Request filtered results ONLY after successful payment
+          const cloudRes = await fetch("/.netlify/functions/get-data", {
+            method: "POST",
+            body: JSON.stringify({ university, studentData })
+          });
+          const elegible = await cloudRes.json();
+
+          if (window.showResultPage) window.showResultPage();
+          renderEligiblePrograms(elegible, studentData.aggregrate, studentData.Uni);
+        },
+        onClose: function () {
+          // Your existing onClose logic remains the same
+        }
+      });
+      handler.openIframe();
+    };
+  }
+
+  document.querySelector(".gradeButton1").addEventListener("click", Getvalues);
+  document.getElementById("closeM").addEventListener("click", () => {
+    document.getElementById("payment-modal").style.display = "none";
+  });
+}
 unis();

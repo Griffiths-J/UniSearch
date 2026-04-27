@@ -1615,7 +1615,7 @@
       "minimum_aggregate": 16,
       "core_subjects_required": ["english", "core_maths", "int_science"],
       "elective_required": {
-        "any_of": ["management_in_living", "food_and_nutrition", "textiles_and_clothing", "general_knowledge_in_art", "biology", "chemistry","elective_maths"],
+        "any_of": ["management_in_living", "food_and_nutrition", "clothing_and_textiles", "general_knowledge_in_art", "biology", "chemistry","elective_maths"],
         "count": 2
       }
     }
@@ -1629,7 +1629,7 @@
       "minimum_aggregate": 20,
       "core_subjects_required": ["english", "core_maths", "int_science"],
       "elective_required": {
-        "any_of": ["management_in_living", "chemistry", "food_and_nutrition", "textiles_and_clothing","elective_maths","biology"],
+        "any_of": ["management_in_living", "chemistry", "food_and_nutrition", "clothing_and_textiles","elective_maths","biology"],
         "count": 3
       }
     }
@@ -1825,7 +1825,7 @@
       "minimum_aggregate": 24,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
       "elective_required": {
-        "any_of": ["elective_maths","biology","chemistry","physics","literature_in_english","history","government","religious_studies","french","economics"],
+        "any_of": ["elective_maths","biology","chemistry","physics","literature_in_english","history","government","religious_studies","french","economics","akan","fante"],
         "count": 2
       }
     }
@@ -1839,7 +1839,7 @@
       "minimum_aggregate": 24,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
       "elective_required": {
-        "any_of": ["biology","elective_maths","chemistry","physics","government","economics","business_management"],
+        "any_of": ["biology","elective_maths","chemistry","physics","government","economics","business_management","cost_accounting","financial_accounting"],
         "count": 2
       }
     }
@@ -1895,7 +1895,7 @@
       "minimum_aggregate": 24,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
       "elective_required": {
-        "any_of": ["elective_maths","biology","chemistry","physics","literature_in_english","history","government","religious_studies","french","economics"],
+        "any_of": ["elective_maths","biology","chemistry","physics","literature_in_english","history","government","religious_studies","french","economics","ict","management_in_living","business_management","food_and_nutrition","geography","cost_accounting"],
         "count": 2
       }
     }
@@ -1923,7 +1923,7 @@
       "minimum_aggregate": 24,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
       "elective_required": {
-        "any_of": ["elective_maths","biology","chemistry","physics","literature_in_english","history","government","religious_studies","french","economics"],
+        "any_of": ["elective_maths","biology","chemistry","physics","literature_in_english","history","government","religious_studies","french","economics","animal_husbandry","applied_electricity","business_management","clothing_and_textiles","cost_accounting","crop_husbandry","electronics","financial_accounting","food_and_nutrition","general_agriculture","geography","general_knowledge_in_art","graphic_design","horticulture","ict","woodwork","sculpture","picture_making"],
         "count": 2
       }
     }
@@ -1937,7 +1937,7 @@
       "minimum_aggregate": 24,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
       "elective_required": {
-        "any_of": ["elective_maths","biology","chemistry","physics","literature_in_english","history","government","religious_studies","french","economics"],
+        "any_of": ["elective_maths","biology","chemistry","physics","literature_in_english","history","government","religious_studies","french","economics","animal_husbandry","applied_electricity","business_management","clothing_and_textiles","cost_accounting","crop_husbandry","electronics","financial_accounting","food_and_nutrition","general_agriculture","geography","general_knowledge_in_art","graphic_design","horticulture","ict","woodwork","sculpture","picture_making"],
         "count": 2
       }
     }
@@ -1951,7 +1951,7 @@
       "minimum_aggregate": 24,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
       "elective_required": {
-        "any_of": ["elective_maths","biology","chemistry","physics","literature_in_english","history","government","religious_studies","french","economics"],
+        "any_of": ["elective_maths","biology","chemistry","physics","literature_in_english","history","government","religious_studies","french","economics","animal_husbandry","applied_electricity","business_management","clothing_and_textiles","cost_accounting","crop_husbandry","electronics","financial_accounting","food_and_nutrition","general_agriculture","geography","general_knowledge_in_art","graphic_design","horticulture","ict","woodwork","sculpture","picture_making"],
         "count": 2
       }
     }
@@ -1966,7 +1966,7 @@
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
       "elective_required": {
         "any_of": ["french"],
-        "count": 3
+        "count": 1
       }
     }
   },
@@ -1979,8 +1979,8 @@
       "minimum_aggregate": 24,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
       "elective_required": {
-        "any_of": [],
-        "count": 3
+        "any_of": ["Spanish"],
+        "count": 1
       }
     }
   },
@@ -1993,7 +1993,7 @@
       "minimum_aggregate": 24,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
       "elective_required": {
-        "any_of": [],
+        "any_of": ["elective_maths","biology","chemistry","physics","literature_in_english","history","government","religious_studies","french","economics","animal_husbandry","applied_electricity","business_management","clothing_and_textiles","cost_accounting","crop_husbandry","electronics","financial_accounting","food_and_nutrition","general_agriculture","geography","general_knowledge_in_art","graphic_design","horticulture","ict","woodwork","sculpture","picture_making"],
         "count": 3
       }
     }
@@ -2007,8 +2007,8 @@
       "minimum_aggregate": 12,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
       "elective_required": {
-        "any_of": [],
-        "count": 3
+        "any_of": ["ict","physics","chemistry","business_management","elective_maths"],
+        "count": 2
       }
     }
   },
@@ -2022,7 +2022,7 @@
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
       "elective_required": {
         "any_of": ["biology", "chemistry", "management_in_living"],
-        "count": 3
+        "count": 2
       }
     }
   },
@@ -2035,7 +2035,7 @@
       "minimum_aggregate": 24,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
       "elective_required": {
-        "any_of": [],
+        "any_of": ["arabic"],
         "count": 3
       }
     }
@@ -2049,8 +2049,8 @@
       "minimum_aggregate": 9,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
       "elective_required": {
-        "any_of": ["elective_maths"],
-        "count": 3
+        "any_of": ["elective_maths","ict"],
+        "count": 1
       }
     }
   },
@@ -2063,7 +2063,7 @@
       "minimum_aggregate": 7,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
       "elective_required": {
-        "any_of": ["biology","chemistry","elective_maths","physics","business_management","financial_accounting","management_in_living","general_knowledge_in_art","cost_accounting","literature_in_english"],
+        "any_of": ["biology","chemistry","elective_maths","physics","business_management","financial_accounting","management_in_living","general_knowledge_in_art","cost_accounting","literature_in_english","government","history"],
         "count": 2
       }
     }
@@ -2077,7 +2077,7 @@
       "minimum_aggregate": 9,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
       "elective_required": {
-        "any_of": [],
+        "any_of": ["elective_maths","biology","chemistry","physics","literature_in_english","history","government","religious_studies","french","economics","animal_husbandry","applied_electricity","business_management","clothing_and_textiles","cost_accounting","crop_husbandry","electronics","financial_accounting","food_and_nutrition","general_agriculture","geography","general_knowledge_in_art","graphic_design","horticulture","ict","woodwork","sculpture","picture_making"],
         "count": 3
       }
     }
@@ -2091,7 +2091,7 @@
       "minimum_aggregate": 16,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
       "elective_required": {
-        "any_of": ["economics", "statistics", "french", "english", "geography","fante","akan","government","history","religious_studies",""],
+        "any_of": ["elective_maths","literature_in_english","history","government","religious_studies","french","economics","food_and_nutrition","geography","general_knowledge_in_art","ict"],
         "count": 3
       }
     }
@@ -2105,7 +2105,7 @@
       "minimum_aggregate": 12,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
       "elective_required": {
-        "any_of": ["elective_maths","physics","chemistry","business_management","financial_accounting","cost_accounting"],
+        "any_of": ["elective_maths","business_management","financial_accounting","cost_accounting","economics","ict","geography"],
         "count": 3
       }
     }
@@ -2119,7 +2119,7 @@
       "minimum_aggregate": 14,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
       "elective_required": {
-        "any_of": ["physics","chemistry","economics","elective_maths","electronics","biology","cost_accounting","business_management","business_management"],
+        "any_of": ["physics","chemistry","economics","elective_maths","electronics","biology","cost_accounting","business_management","business_management","financial_accounting","economics","biology","food_and_nutrition","clothing_and_textiles","graphic_design"],
         "count": 3
       }
     }
@@ -2133,7 +2133,7 @@
       "minimum_aggregate": 20,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
       "elective_required": {
-        "any_of": [],
+        "any_of": ["elective_maths","biology","chemistry","physics","literature_in_english","history","government","religious_studies","french","economics","animal_husbandry","applied_electricity","business_management","clothing_and_textiles","cost_accounting","crop_husbandry","electronics","financial_accounting","food_and_nutrition","general_agriculture","geography","general_knowledge_in_art","graphic_design","horticulture","ict","woodwork","sculpture","picture_making"],
         "count": 3
       }
     }
@@ -2147,7 +2147,7 @@
       "minimum_aggregate": 20,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
       "elective_required": {
-        "any_of": [],
+        "any_of": ["elective_maths","biology","chemistry","physics","literature_in_english","history","government","religious_studies","french","economics","animal_husbandry","applied_electricity","business_management","clothing_and_textiles","cost_accounting","crop_husbandry","electronics","financial_accounting","food_and_nutrition","general_agriculture","geography","general_knowledge_in_art","graphic_design","horticulture","ict","woodwork","sculpture","picture_making"],
         "count": 3
       }
     }
@@ -2161,7 +2161,7 @@
       "minimum_aggregate": 24,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
       "elective_required": {
-        "any_of": [],
+        "any_of": ["elective_maths","biology","chemistry","physics","literature_in_english","history","government","religious_studies","french","economics","animal_husbandry","applied_electricity","business_management","clothing_and_textiles","cost_accounting","crop_husbandry","electronics","financial_accounting","food_and_nutrition","general_agriculture","geography","general_knowledge_in_art","graphic_design","horticulture","ict","woodwork","sculpture","picture_making"],
         "count": 3
       }
     }
@@ -2175,7 +2175,7 @@
       "minimum_aggregate": 24,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
       "elective_required": {
-        "any_of": [],
+        "any_of": ["elective_maths","biology","chemistry","physics","literature_in_english","history","government","religious_studies","french","economics","animal_husbandry","applied_electricity","business_management","clothing_and_textiles","cost_accounting","crop_husbandry","electronics","financial_accounting","food_and_nutrition","general_agriculture","geography","general_knowledge_in_art","graphic_design","horticulture","ict","woodwork","sculpture","picture_making"],
         "count": 3
       }
     }
