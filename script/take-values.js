@@ -620,18 +620,28 @@ async function unis() {
         email: email,
         amount: 1150,
         currency: "GHS",
-        callback: async function (response) {
+        callback: /*async*/ function (response) {
           document.getElementById("payment-modal").style.display = "none";
           
           // Request filtered results ONLY after successful payment
-          const cloudRes = await fetch("/.netlify/functions/get-data", {
+         /*  const cloudRes = await fetch("/.netlify/functions/get-data", {
             method: "POST",
             body: JSON.stringify({ university, studentData })
           });
           const elegible = await cloudRes.json();
 
           if (window.showResultPage) window.showResultPage();
-          renderEligiblePrograms(elegible, studentData.aggregrate, studentData.Uni);
+          renderEligiblePrograms(elegible, studentData.aggregrate, studentData.Uni); */
+
+          fetch("/.netlify/functions/get-data", {
+      method: "POST",
+      body: JSON.stringify({ university, studentData })
+    })
+    .then(res => res.json())
+    .then(elegible => {
+      if (window.showResultPage) window.showResultPage();
+      renderEligiblePrograms(elegible, studentData.aggregrate, studentData.Uni);
+    });
         },
         onClose: function () {
           document.querySelector(".modal-content").style.display = "none";
