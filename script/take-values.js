@@ -11,7 +11,7 @@ async function unis() {
  function renderEligiblePrograms(elegible, aggregate, Uni) {
     const resultHero = document.querySelector(".resultPagehero");
     if (!resultHero) {
-      console.error("resultPagehero not found");
+      console.error("resultPagehero element not found");
       return;
     }
 
