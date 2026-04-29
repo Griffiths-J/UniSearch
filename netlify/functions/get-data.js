@@ -42,7 +42,7 @@ export const handler = async (event) => {
         };
       }
 
-      // Fetch the full database
+      // Fetch full database
       const response = await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`, {
         method: 'GET',
         headers: {
