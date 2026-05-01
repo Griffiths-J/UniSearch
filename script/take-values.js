@@ -35,9 +35,15 @@ async function unis() {
     const noProgramsHtml =
       elegible.length === 0
         ? `
-      <div class="result-card no-match">
+       <div class="result-card no-match">
         <h2>Payment complete ✅</h2>
-        <p>No eligible programs matched your aggregate and electives.</p>
+        <p class="no-p1"><span>⚠️</span> No eligible programs matched your aggregate and electives.</p>
+        <div class="wa-link">
+          <p class="no-p2">Get a personal assistant for your grade: </p>
+          <a href="https://wa.me/+233256689934?text=Hi,I need help with selecting courses for my grade in ${Uni}">
+            <img src="./icons/icons8-whatsapp-48.png" alt="whatsapp_logo">CHAT HERE
+          </a>
+        </div>
       </div>
     `
         : "";
@@ -121,6 +127,9 @@ async function unis() {
         break;
       case "UMAT":
         resultUniTitle = "University of Mines and Technology";  
+        break;
+      case "UPSA":
+        resultUniTitle = "University of Professional Studies Accra"; 
         break;
     }
 

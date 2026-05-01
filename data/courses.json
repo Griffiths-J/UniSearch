@@ -391,7 +391,7 @@
         "minimum_aggregate": 13,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
         "elective_required": {
-          "any_of": ["physics", "elective_maths", "chemistry", "technical_drawing", "engineering_science", "general_agriculture", "biology", "metal_work", "auto_mechanics", "applied_electricity", "building_construction"],
+          "any_of": ["physics", "elective_maths", "chemistry", "technical_drawing", "engineering_science", "general_agriculture", "biology", "metal_work", "mechanical", "applied_electricity", "building_construction"],
           "count": 3
         }
       }
@@ -447,7 +447,7 @@
         "minimum_aggregate": 7,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
         "elective_required": {
-          "any_of": ["physics", "elective_maths", "chemistry", "metal_work", "auto_mechanics", "applied_electricity", "technical_drawing", "building_construction", "woodwork"],
+          "any_of": ["physics", "elective_maths", "chemistry", "metal_work", "mechanical", "applied_electricity", "technical_drawing", "building_construction", "woodwork"],
           "count": 3
         }
       }
@@ -461,7 +461,7 @@
         "minimum_aggregate": 7,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
         "elective_required": {
-          "any_of": ["physics", "elective_maths", "chemistry", "metal_work", "auto_mechanics", "applied_electricity", "technical_drawing", "building_construction", "woodwork"],
+          "any_of": ["physics", "elective_maths", "chemistry", "metal_work", "mechanical", "applied_electricity", "technical_drawing", "building_construction", "woodwork"],
           "count": 3
         }
       }
@@ -601,7 +601,7 @@
         "minimum_aggregate": 10,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
         "elective_required": {
-          "any_of": ["physics", "elective_maths", "chemistry", "metal_work", "auto_mechanics", "applied_electricity", "technical_drawing", "building_construction", "woodwork"],
+          "any_of": ["physics", "elective_maths", "chemistry", "metal_work", "mechanical", "applied_electricity", "technical_drawing", "building_construction", "woodwork"],
           "count": 3
         }
       }
@@ -615,7 +615,7 @@
         "minimum_aggregate": 10,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
         "elective_required": {
-          "any_of": ["physics", "elective_maths", "chemistry", "metal_work", "auto_mechanics", "applied_electricity", "technical_drawing", "building_construction", "woodwork"],
+          "any_of": ["physics", "elective_maths", "chemistry", "metal_work", "mechanical", "applied_electricity", "technical_drawing", "building_construction", "woodwork"],
           "count": 3
         }
       }
@@ -629,7 +629,7 @@
         "minimum_aggregate": 9,
         "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
         "elective_required": {
-          "any_of": ["physics", "elective_maths", "chemistry", "metal_work", "auto_mechanics", "applied_electricity", "technical_drawing", "building_construction", "woodwork"],
+          "any_of": ["physics", "elective_maths", "chemistry", "metal_work", "mechanical", "applied_electricity", "technical_drawing", "building_construction", "woodwork"],
           "count": 3
         }
       }
@@ -818,7 +818,7 @@
     },
     {
       "program_id": "KNUST_BUSINESS_HRM_001",
-      "program_name": "BSc Business Administration (Human Resource Mgt./Management)",
+      "program_name": "BSc Business Administration (Human Resource Mgt)",
       "college": "College of Humanities and Social Sciences",
       "faculty": "KNUST Business School",
       "cutoff_criteria": {
@@ -1400,7 +1400,7 @@
     "program_id": "UG_CBAS_001",
     "program_name": "BSc. Agricultural Engineering",
     "college": "College of Basic & Applied Sciences",
-    "faculty": "Engineering Sciences",
+    "faculty": "School of Engineering Sciences",
     "cutoff_criteria": {
       "minimum_aggregate": 15,
       "core_subjects_required": ["english", "core_maths", "int_science"],
@@ -1414,7 +1414,7 @@
     "program_id": "UG_CBAS_002",
     "program_name": "BSc. Biomedical Engineering",
     "college": "College of Basic & Applied Sciences",
-    "faculty": "Engineering Sciences",
+    "faculty": "School of Engineering Sciences",
     "cutoff_criteria": {
       "minimum_aggregate": 6,
       "core_subjects_required": ["english", "core_maths", "int_science"],
@@ -1428,7 +1428,7 @@
     "program_id": "UG_CBAS_003",
     "program_name": "BSc. Computer Engineering",
     "college": "College of Basic & Applied Sciences",
-    "faculty": "Engineering Sciences",
+    "faculty": "School of Engineering Sciences",
     "cutoff_criteria": {
       "minimum_aggregate": 7,
       "core_subjects_required": ["english", "core_maths", "int_science"],
@@ -1442,7 +1442,7 @@
     "program_id": "UG_CBAS_004",
     "program_name": "BSc. Food Process Engineering",
     "college": "College of Basic & Applied Sciences",
-    "faculty": "Engineering Sciences",
+    "faculty": "School of Engineering Sciences",
     "cutoff_criteria": {
       "minimum_aggregate": 12,
       "core_subjects_required": ["english", "core_maths", "int_science"],
@@ -1456,7 +1456,7 @@
     "program_id": "UG_CBAS_005",
     "program_name": "BSc. Materials Science & Engineering",
     "college": "College of Basic & Applied Sciences",
-    "faculty": "Engineering Sciences",
+    "faculty": "School of Engineering Sciences",
     "cutoff_criteria": {
       "minimum_aggregate": 13,
       "core_subjects_required": ["english", "core_maths", "int_science"],
@@ -1470,7 +1470,7 @@
     "program_id": "UG_CBAS_006",
     "program_name": "BSc. Biological Sciences",
     "college": "College of Basic & Applied Sciences",
-    "faculty": "Biological Sciences",
+    "faculty": "School of Biological Sciences",
     "cutoff_criteria": {
       "minimum_aggregate": 14,
       "core_subjects_required": ["english", "core_maths", "int_science"],
@@ -1484,7 +1484,7 @@
     "program_id": "UG_CBAS_007",
     "program_name": "BSc. Psychology",
     "college": "College of Basic & Applied Sciences",
-    "faculty": "Biological Sciences",
+    "faculty": "School of Biological Sciences",
     "cutoff_criteria": {
       "minimum_aggregate": 15,
       "core_subjects_required": ["english", "core_maths", "int_science"],
@@ -1498,7 +1498,7 @@
     "program_id": "UG_CBAS_008",
     "program_name": "Doctor of Veterinary Medicine",
     "college": "College of Basic & Applied Sciences",
-    "faculty": "Veterinary Medicine",
+    "faculty": "School of Veterinary Medicine",
     "cutoff_criteria": {
       "minimum_aggregate": 14,
       "core_subjects_required": ["english", "core_maths", "int_science"],
@@ -1512,7 +1512,7 @@
     "program_id": "UG_CBAS_009",
     "program_name": "BSc. Actuarial Science",
     "college": "College of Basic & Applied Sciences",
-    "faculty": "Physical and Mathematical Sciences",
+    "faculty": "School of Physical and Mathematical Sciences",
     "cutoff_criteria": {
       "minimum_aggregate": 11,
       "core_subjects_required": ["english", "core_maths", "int_science"],
@@ -1526,7 +1526,7 @@
     "program_id": "UG_CBAS_010",
     "program_name": "BSc. Computer Science",
     "college": "College of Basic & Applied Sciences",
-    "faculty": "Physical and Mathematical Sciences",
+    "faculty": "School of Physical and Mathematical Sciences",
     "cutoff_criteria": {
       "minimum_aggregate": 7,
       "core_subjects_required": ["english", "core_maths", "int_science"],
@@ -1540,12 +1540,12 @@
     "program_id": "UG_CBAS_011",
     "program_name": "BSc. Information Technology",
     "college": "College of Basic & Applied Sciences",
-    "faculty": "Physical and Mathematical Sciences",
+    "faculty": "School of Physical and Mathematical Sciences",
     "cutoff_criteria": {
       "minimum_aggregate": 10,
       "core_subjects_required": ["english", "core_maths", "int_science"],
       "elective_required": {
-        "any_of": ["elective_maths","chemistry","physics","economics","applied_electricity","auto_mechanics","electronics","ict"],
+        "any_of": ["elective_maths","chemistry","physics","economics","applied_electricity","mechanical","electronics","ict"],
         "count": 3
       }
     }
@@ -1554,7 +1554,7 @@
     "program_id": "UG_CBAS_012",
     "program_name": "BSc. Earth Science",
     "college": "College of Basic & Applied Sciences",
-    "faculty": "Physical and Mathematical Sciences",
+    "faculty": "School of Physical and Mathematical Sciences",
     "cutoff_criteria": {
       "minimum_aggregate": 15,
       "core_subjects_required": ["english", "core_maths", "int_science"],
@@ -1568,7 +1568,7 @@
     "program_id": "UG_CBAS_013",
     "program_name": "BSc. Physical Sciences",
     "college": "College of Basic & Applied Sciences",
-    "faculty": "Physical and Mathematical Sciences",
+    "faculty": "School of Physical and Mathematical Sciences",
     "cutoff_criteria": {
       "minimum_aggregate": 24,
       "core_subjects_required": ["english", "core_maths", "int_science"],
@@ -1582,7 +1582,7 @@
     "program_id": "UG_CBAS_014",
     "program_name": "BSc. Mathematical Sciences",
     "college": "College of Basic & Applied Sciences",
-    "faculty": "Physical and Mathematical Sciences",
+    "faculty": "School of Physical and Mathematical Sciences",
     "cutoff_criteria": {
       "minimum_aggregate": 15,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -1596,7 +1596,7 @@
     "program_id": "UG_CBAS_015",
     "program_name": "BSc. Agriculture Science",
     "college": "College of Basic & Applied Sciences",
-    "faculty": "Agriculture",
+    "faculty": "School of Agriculture",
     "cutoff_criteria": {
       "minimum_aggregate": 22,
       "core_subjects_required": ["english", "core_maths", "int_science"],
@@ -1610,7 +1610,7 @@
     "program_id": "UG_CBAS_016",
     "program_name": "BSc. Family & Consumer Sciences (Family & Child Studies)",
     "college": "College of Basic & Applied Sciences",
-    "faculty": "Agriculture",
+    "faculty": "School of Agriculture",
     "cutoff_criteria": {
       "minimum_aggregate": 16,
       "core_subjects_required": ["english", "core_maths", "int_science"],
@@ -1624,7 +1624,7 @@
     "program_id": "UG_CBAS_017",
     "program_name": "BSc. Family & Consumer Sciences (Food & Clothing)",
     "college": "College of Basic & Applied Sciences",
-    "faculty": "Agriculture",
+    "faculty": "School of Agriculture",
     "cutoff_criteria": {
       "minimum_aggregate": 20,
       "core_subjects_required": ["english", "core_maths", "int_science"],
@@ -1638,7 +1638,7 @@
     "program_id": "UG_CHS_001",
     "program_name": "Bachelor of Medicine and Bachelor of Surgery (MBChB)",
     "college": "College of Health Sciences",
-    "faculty": "Medical",
+    "faculty": "School of Medical",
     "cutoff_criteria": {
       "minimum_aggregate": 8,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -1652,7 +1652,7 @@
     "program_id": "UG_CHS_002",
     "program_name": "Bachelor of Dental Surgery",
     "college": "College of Health Sciences",
-    "faculty": "Dental",
+    "faculty": "School of Dental",
     "cutoff_criteria": {
       "minimum_aggregate": 10,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -1666,7 +1666,7 @@
     "program_id": "UG_CHS_003",
     "program_name": "Doctor of Pharmacy",
     "college": "College of Health Sciences",
-    "faculty": "Pharmacy",
+    "faculty": "School of Pharmacy",
     "cutoff_criteria": {
       "minimum_aggregate": 10,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -1680,7 +1680,7 @@
     "program_id": "UG_CHS_004",
     "program_name": "BSc. Nursing",
     "college": "College of Health Sciences",
-    "faculty": "Nursing and Midwifery",
+    "faculty": "School of Nursing and Midwifery",
     "cutoff_criteria": {
       "minimum_aggregate": 15,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -1694,7 +1694,7 @@
     "program_id": "UG_CHS_005",
     "program_name": "BSc. Midwifery",
     "college": "College of Health Sciences",
-    "faculty": "Nursing and Midwifery",
+    "faculty": "School of Nursing and Midwifery",
     "cutoff_criteria": {
       "minimum_aggregate": 15,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -1708,7 +1708,7 @@
     "program_id": "UG_CHS_006",
     "program_name": "BSc. Medical Laboratory Sciences",
     "college": "College of Health Sciences",
-    "faculty": "Biomedical and Allied Health Sciences",
+    "faculty": "School of Biomedical and Allied Health Sciences",
     "cutoff_criteria": {
       "minimum_aggregate": 12,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -1722,7 +1722,7 @@
     "program_id": "UG_CHS_007",
     "program_name": "BSc. Physiotherapy",
     "college": "College of Health Sciences",
-    "faculty": "Biomedical and Allied Health Sciences",
+    "faculty": "School of Biomedical and Allied Health Sciences",
     "cutoff_criteria": {
       "minimum_aggregate": 14,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -1736,7 +1736,7 @@
     "program_id": "UG_CHS_008",
     "program_name": "BSc. Dietetics",
     "college": "College of Health Sciences",
-    "faculty": "Biomedical and Allied Health Sciences",
+    "faculty": "School of Biomedical and Allied Health Sciences",
     "cutoff_criteria": {
       "minimum_aggregate": 14,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -1750,7 +1750,7 @@
     "program_id": "UG_CHS_009",
     "program_name": "BSc. Diagnostic Radiography",
     "college": "College of Health Sciences",
-    "faculty": "Biomedical and Allied Health Sciences",
+    "faculty": "School of Biomedical and Allied Health Sciences",
     "cutoff_criteria": {
       "minimum_aggregate": 13,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -1764,7 +1764,7 @@
     "program_id": "UG_CHS_010",
     "program_name": "BSc. Occupational Therapy",
     "college": "College of Health Sciences",
-    "faculty": "Biomedical and Allied Health Sciences",
+    "faculty": "School of Biomedical and Allied Health Sciences",
     "cutoff_criteria": {
       "minimum_aggregate": 14,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -1778,7 +1778,7 @@
     "program_id": "UG_CHS_011",
     "program_name": "BSc. Respiratory Therapy",
     "college": "College of Health Sciences",
-    "faculty": "Biomedical and Allied Health Sciences",
+    "faculty": "School of Biomedical and Allied Health Sciences",
     "cutoff_criteria": {
       "minimum_aggregate": 14,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -1792,7 +1792,7 @@
     "program_id": "UG_CHS_012",
     "program_name": "Bachelor of Public Health",
     "college": "College of Health Sciences",
-    "faculty": "Public Health",
+    "faculty": "School of Public Health",
     "cutoff_criteria": {
       "minimum_aggregate": 9,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -1806,7 +1806,7 @@
     "program_id": "UG_COE_001",
     "program_name": "B.Ed. Social Studies",
     "college": "College of Education",
-    "faculty": "Education and Leadership",
+    "faculty": "School of Education and Leadership",
     "cutoff_criteria": {
       "minimum_aggregate": 24,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -1820,7 +1820,7 @@
     "program_id": "UG_COE_002",
     "program_name": "B.Ed. English",
     "college": "College of Education",
-    "faculty": "Education and Leadership",
+    "faculty": "School of Education and Leadership",
     "cutoff_criteria": {
       "minimum_aggregate": 24,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -1834,7 +1834,7 @@
     "program_id": "UG_COE_003",
     "program_name": "B.Ed. Mathematics",
     "college": "College of Education",
-    "faculty": "Education and Leadership",
+    "faculty": "School of Education and Leadership",
     "cutoff_criteria": {
       "minimum_aggregate": 24,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -1848,7 +1848,7 @@
     "program_id": "UG_COE_004",
     "program_name": "B.Ed. Science (Physics)",
     "college": "College of Education",
-    "faculty": "Education and Leadership",
+    "faculty": "School of Education and Leadership",
     "cutoff_criteria": {
       "minimum_aggregate": 24,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -1862,7 +1862,7 @@
     "program_id": "UG_COE_005",
     "program_name": "B.Ed. Science (Chemistry)",
     "college": "College of Education",
-    "faculty": "Education and Leadership",
+    "faculty": "School of Education and Leadership",
     "cutoff_criteria": {
       "minimum_aggregate": 24,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -1876,7 +1876,7 @@
     "program_id": "UG_COE_006",
     "program_name": "B.Ed. Science (Biology)",
     "college": "College of Education",
-    "faculty": "Education and Leadership",
+    "faculty": "School of Education and Leadership",
     "cutoff_criteria": {
       "minimum_aggregate": 24,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -1890,7 +1890,7 @@
     "program_id": "UG_COE_007",
     "program_name": "B.Ed. Early Grade Specialism",
     "college": "College of Education",
-    "faculty": "Education and Leadership",
+    "faculty": "School of Education and Leadership",
     "cutoff_criteria": {
       "minimum_aggregate": 24,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -1904,7 +1904,7 @@
     "program_id": "UG_COE_008",
     "program_name": "B.Ed. JHS Specialism",
     "college": "College of Education",
-    "faculty": "Education and Leadership",
+    "faculty": "School of Education and Leadership",
     "cutoff_criteria": {
       "minimum_aggregate": 24,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -1918,7 +1918,7 @@
     "program_id": "UG_COE_009",
     "program_name": "B.Ed. Upper Grade Specialism",
     "college": "College of Education",
-    "faculty": "Education and Leadership",
+    "faculty": "School of Education and Leadership",
     "cutoff_criteria": {
       "minimum_aggregate": 24,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -1932,7 +1932,7 @@
     "program_id": "UG_COE_010",
     "program_name": "BA Sports and Physical Culture",
     "college": "College of Education",
-    "faculty": "Education and Leadership",
+    "faculty": "School of Education and Leadership",
     "cutoff_criteria": {
       "minimum_aggregate": 24,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -1946,7 +1946,7 @@
     "program_id": "UG_COE_011",
     "program_name": "BSc. Administration (Kumasi & Takoradi City Campuses)",
     "college": "College of Education",
-    "faculty": "Education and Leadership",
+    "faculty": "School of Education and Leadership",
     "cutoff_criteria": {
       "minimum_aggregate": 24,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -1960,7 +1960,7 @@
     "program_id": "UG_COE_012",
     "program_name": "B.Ed. French",
     "college": "College of Education",
-    "faculty": "Education and Leadership",
+    "faculty": "School of Education and Leadership",
     "cutoff_criteria": {
       "minimum_aggregate": 24,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -1974,7 +1974,7 @@
     "program_id": "UG_COE_013",
     "program_name": "B.Ed. Spanish",
     "college": "College of Education",
-    "faculty": "Education and Leadership",
+    "faculty": "School of Education and Leadership",
     "cutoff_criteria": {
       "minimum_aggregate": 24,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -1988,7 +1988,7 @@
     "program_id": "UG_COE_014",
     "program_name": "B.Ed. Performing Arts",
     "college": "College of Education",
-    "faculty": "Education and Leadership",
+    "faculty": "School of Education and Leadership",
     "cutoff_criteria": {
       "minimum_aggregate": 24,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -2002,7 +2002,7 @@
     "program_id": "UG_COE_015",
     "program_name": "B.Ed. Information and Communication Technology",
     "college": "College of Education",
-    "faculty": "Education and Leadership",
+    "faculty": "School of Education and Leadership",
     "cutoff_criteria": {
       "minimum_aggregate": 12,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -2016,7 +2016,7 @@
     "program_id": "UG_COE_016",
     "program_name": "B.Ed. Consumer Sciences",
     "college": "College of Education",
-    "faculty": "Education and Leadership",
+    "faculty": "School of Education and Leadership",
     "cutoff_criteria": {
       "minimum_aggregate": 20,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -2030,7 +2030,7 @@
     "program_id": "UG_COE_017",
     "program_name": "B.Ed. Arabic",
     "college": "College of Education",
-    "faculty": "Education and Leadership",
+    "faculty": "School of Education and Leadership",
     "cutoff_criteria": {
       "minimum_aggregate": 24,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -2044,7 +2044,7 @@
     "program_id": "UG_COE_018",
     "program_name": "B.Ed. Computer Science",
     "college": "College of Education",
-    "faculty": "Education and Leadership",
+    "faculty": "School of Education and Leadership",
     "cutoff_criteria": {
       "minimum_aggregate": 9,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -2058,7 +2058,7 @@
     "program_id": "UG_COH_001",
     "program_name": "Bachelor of Laws (LLB)",
     "college": "College of Humanities",
-    "faculty": "Law",
+    "faculty": "School of Law",
     "cutoff_criteria": {
       "minimum_aggregate": 7,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -2072,7 +2072,7 @@
     "program_id": "UG_COH_002",
     "program_name": "BSc. Administration",
     "college": "College of Humanities",
-    "faculty": "Business",
+    "faculty": "School of Business",
     "cutoff_criteria": {
       "minimum_aggregate": 9,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -2086,7 +2086,7 @@
     "program_id": "UG_COH_003",
     "program_name": "Bachelor of Arts (General Arts Background)",
     "college": "College of Humanities",
-    "faculty": "Arts / Languages / Social Sciences",
+    "faculty": "School of Arts / Languages / Social Sciences",
     "cutoff_criteria": {
       "minimum_aggregate": 16,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -2098,9 +2098,9 @@
   },
   {
     "program_id": "UG_COH_004",
-    "program_name": "Bachelor of Arts (Bouquets with a Business Subject)",
+    "program_name": "Bachelor of Arts(Bouquets with a Business Subject)",
     "college": "College of Humanities",
-    "faculty": "Arts / Languages / Social Sciences",
+    "faculty": "School of Arts / Languages / Social Sciences",
     "cutoff_criteria": {
       "minimum_aggregate": 12,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -2112,9 +2112,9 @@
   },
   {
     "program_id": "UG_COH_005",
-    "program_name": "Bachelor of Arts (Business / Science / Vocational Background)",
+    "program_name": "Bachelor of Arts (Business/ Science/ Vocational Background)",
     "college": "College of Humanities",
-    "faculty": "Arts / Languages / Social Sciences",
+    "faculty": "School of Arts / Languages / Social Sciences",
     "cutoff_criteria": {
       "minimum_aggregate": 14,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -2128,7 +2128,7 @@
     "program_id": "UG_COH_006",
     "program_name": "Bachelor of Fine Arts",
     "college": "College of Humanities",
-    "faculty": "Performing Arts",
+    "faculty": "School of Performing Arts",
     "cutoff_criteria": {
       "minimum_aggregate": 20,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -2142,7 +2142,7 @@
     "program_id": "UG_COH_007",
     "program_name": "Bachelor of Music",
     "college": "College of Humanities",
-    "faculty": "Performing Arts",
+    "faculty": "School of Performing Arts",
     "cutoff_criteria": {
       "minimum_aggregate": 20,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -2156,7 +2156,7 @@
     "program_id": "UG_ACC_001",
     "program_name": "Bachelor of Arts",
     "college": "Accra City Campus",
-    "faculty": "Humanities",
+    "faculty": "School of Humanities",
     "cutoff_criteria": {
       "minimum_aggregate": 24,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -2170,7 +2170,7 @@
     "program_id": "UG_ACC_002",
     "program_name": "BSc. Administration",
     "college": "Accra City Campus",
-    "faculty": "Business",
+    "faculty": "School of Business",
     "cutoff_criteria": {
       "minimum_aggregate": 24,
       "core_subjects_required": ["english", "core_maths", "int_science", "social_studies"],
@@ -2183,9 +2183,2021 @@
   ]
   },
   {
-    "UCC":[]
+    "UCC":[
+  {
+    "programid": "UCCMED_001",
+    "program_name": "Medicine & Surgery (MBChB)",
+    "college": "College of Health & Allied Sciences",
+    "faculty": "Faculty of Medical Science",
+    "cutoff_criteria": {
+      "minimum_aggregate": 7,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology", "chemistry", "physics"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCPHARM_002",
+    "program_name": "Doctor of Pharmacy (PharmD)",
+    "college": "College of Health & Allied Sciences",
+    "faculty": "Faculty of Pharmacy",
+    "cutoff_criteria": {
+      "minimum_aggregate": 7,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology", "chemistry", "physics"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCOPT_003",
+    "program_name": "Doctor of Optometry (OD)",
+    "college": "College of Health & Allied Sciences",
+    "faculty": "Faculty of Allied Health Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 9,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology", "chemistry", "physics"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCNURSE_004A",
+    "program_name": "BSc. Nursing",
+    "college": "College of Health & Allied Sciences",
+    "faculty": "Faculty of Nursing & Midwifery",
+    "cutoff_criteria": {
+      "minimum_aggregate": 11,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology", "chemistry", "physics", "agricultural_science", "geography","food_and_nutrition","management_in_living","economics","literature","religious_studies","general_knowledge_in_art","history"],
+        "count": 3
+      }
+    },
+    "_note": "Split from BSc. Nursing / Midwifery. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCMIDWIFERY_004B",
+    "program_name": "BSc. Midwifery",
+    "college": "College of Health & Allied Sciences",
+    "faculty": "Faculty of Nursing & Midwifery",
+    "cutoff_criteria": {
+      "minimum_aggregate": 11,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology", "chemistry", "physics", "agricultural_science", "geography","food_and_nutrition","management_in_living","economics","literature","religious_studies","general_knowledge_in_art","history"],
+        "count": 3
+      }
+    },
+    "_note": "Split from BSc. Nursing / Midwifery. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCMEDLAB_005",
+    "program_name": "BSc. Medical Laboratory Science",
+    "college": "College of Health & Allied Sciences",
+    "faculty": "Faculty of Allied Health Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 12,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology", "chemistry", "physics"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCPHYSASSIST_006",
+    "program_name": "BSc. Physician Assistant Studies",
+    "college": "College of Health & Allied Sciences",
+    "faculty": "Faculty of Medical Science",
+    "cutoff_criteria": {
+      "minimum_aggregate": 14,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology", "chemistry", "physics"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCDIAGIMAG_007",
+    "program_name": "BSc. Diagnostic Imaging Technology",
+    "college": "College of Health & Allied Sciences",
+    "faculty": "Faculty of Allied Health Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 12,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology", "chemistry", "physics"],
+        "count": 3
+      }
+    },
+    "_note": "Combined programme name from PDF. Verify if separate on admissions.ucc.edu.gh"
+  },{
+    "programid": "UCCDIAGIMAG_007B",
+    "program_name": "BSc. Diagnostic Medical Sonography",
+    "college": "College of Health & Allied Sciences",
+    "faculty": "Faculty of Allied Health Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 12,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology", "chemistry", "physics"],
+        "count": 3
+      }
+    },
+    "_note": "Combined programme name from PDF. Verify if separate on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCCLINNUT_008",
+    "program_name": "BSc. Clinical Nutrition & Dietetics",
+    "college": "College of Health & Allied Sciences",
+    "faculty": "Faculty of Allied Health Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 16,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology", "chemistry", "physics"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCHEALTHINFO_009",
+    "program_name": "BSc. Health Information Management",
+    "college": "College of Health & Allied Sciences",
+    "faculty": "Faculty of Allied Health Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 25,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology", "chemistry", "physics", "elective_maths", "economics", "geography", "literature", "government", "history", "business_management", "financial_accounting", "general_agric", "general_arts"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCOCCTHER_010",
+    "program_name": "BSc. Occupational Therapy",
+    "college": "College of Health & Allied Sciences",
+    "faculty": "Faculty of Allied Health Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 20,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology", "chemistry", "physics", "elective_maths"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCPHYSIO_011",
+    "program_name": "BSc. Physiotherapy",
+    "college": "College of Health & Allied Sciences",
+    "faculty": "Faculty of Allied Health Sciences",
+    "cutoff_criteria": {
+      "minimum_aggregate": 18,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology", "chemistry", "physics"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCCOSC_012",
+    "program_name": "BSc. Computer Science",
+    "college": "College of Agriculture & Natural Sciences",
+    "faculty": "Faculty of Physical Science",
+    "cutoff_criteria": {
+      "minimum_aggregate": 15,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["elective_maths", "physics", "chemistry", "biology", "electronics","ict"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCINFO_013",
+    "program_name": "BSc. Information Technology",
+    "college": "College of Agriculture & Natural Sciences",
+    "faculty": "Faculty of Physical Science",
+    "cutoff_criteria": {
+      "minimum_aggregate": 15,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["elective_maths", "physics", "chemistry", "biology", "economics", "geography", "business_management", "financial_accounting","ict","electronics","technical_drawing"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCACTS_014",
+    "program_name": "BSc. Actuarial Science",
+    "college": "College of Agriculture & Natural Sciences",
+    "faculty": "Faculty of Physical Science",
+    "cutoff_criteria": {
+      "minimum_aggregate": 19,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["elective_maths", "economics", "physics", "chemistry", "financial_accounting", "business_management", "geography","economics"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCFORENSIC_015",
+    "program_name": "BSc. Forensic Science",
+    "college": "College of Agriculture & Natural Sciences",
+    "faculty": "Faculty of Biological Science",
+    "cutoff_criteria": {
+      "minimum_aggregate": 21,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology", "chemistry", "physics"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCBIOCHEM_016A",
+    "program_name": "BSc. Biochemistry",
+    "college": "College of Agriculture & Natural Sciences",
+    "faculty": "Faculty of Biological Science",
+    "cutoff_criteria": {
+      "minimum_aggregate": 17,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology", "chemistry", "physics"],
+        "count": 3
+      }
+    },
+    "_note": "Split from BSc. Biochemistry / Biomedical Science. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCBIOMED_016B",
+    "program_name": "BSc. Biomedical Science",
+    "college": "College of Agriculture & Natural Sciences",
+    "faculty": "Faculty of Biological Science",
+    "cutoff_criteria": {
+      "minimum_aggregate": 16,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology", "chemistry", "physics"],
+        "count": 3
+      }
+    },
+    "_note": "Split from BSc. Biochemistry / Biomedical Science. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCSTAT_017A",
+    "program_name": "BSc. Statistics",
+    "college": "College of Agriculture & Natural Sciences",
+    "faculty": "Faculty of Physical Science",
+    "cutoff_criteria": {
+      "minimum_aggregate": 22,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["elective_maths", "physics", "chemistry", "biology", "economics", "geography", "financial_accounting", "business_management","cost_accounting"],
+        "count": 3
+      }
+    },
+    "_note": "Split from BSc. Statistics / Mathematics. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCMATH_017B",
+    "program_name": "BSc. Mathematics",
+    "college": "College of Agriculture & Natural Sciences",
+    "faculty": "Faculty of Physical Science",
+    "cutoff_criteria": {
+      "minimum_aggregate": 22,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["elective_maths", "physics", "chemistry", "biology", "economics", "geography", "financial_accounting", "business_management"],
+        "count": 3
+      }
+    },
+    "_note": "Split from BSc. Statistics / Mathematics. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCCHEM_018A",
+    "program_name": "BSc. Chemistry",
+    "college": "College of Agriculture & Natural Sciences",
+    "faculty": "Faculty of Physical Science",
+    "cutoff_criteria": {
+      "minimum_aggregate": 24,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["physics", "chemistry", "elective_maths"],
+        "count": 3
+      }
+    },
+    "_note": "Split from BSc. Chemistry / Physics. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCPHYS_018B",
+    "program_name": "BSc. Physics",
+    "college": "College of Agriculture & Natural Sciences",
+    "faculty": "Faculty of Physical Science",
+    "cutoff_criteria": {
+      "minimum_aggregate": 24,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["physics", "chemistry", "elective_maths"],
+        "count": 3
+      }
+    },
+    "_note": "Split from BSc. Chemistry / Physics. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCENGPHYS_019",
+    "program_name": "BSc. Engineering Physics",
+    "college": "College of Agriculture & Natural Sciences",
+    "faculty": "Faculty of Physical Science",
+    "cutoff_criteria": {
+      "minimum_aggregate": 26,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["physics", "chemistry", "biology", "elective_maths", "geography"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCLABTECH_020",
+    "program_name": "BSc. Laboratory Technology",
+    "college": "College of Agriculture & Natural Sciences",
+    "faculty": "Faculty of Biological Science",
+    "cutoff_criteria": {
+      "minimum_aggregate": 22,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology", "chemistry", "physics", "elective_maths", "general_agriculture"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCMATHE_021",
+    "program_name": "BSc. Mathematics with Economics",
+    "college": "College of Agriculture & Natural Sciences",
+    "faculty": "Faculty of Physical Science",
+    "cutoff_criteria": {
+      "minimum_aggregate": 19,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["elective_maths", "economics", "physics", "chemistry", "biology", "geography", "financial_accounting", "business_management"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCAGRIBUS_022",
+    "program_name": "BSc. Agribusiness",
+    "college": "College of Agriculture & Natural Sciences",
+    "faculty": "Faculty of Agriculture",
+    "cutoff_criteria": {
+      "minimum_aggregate": 26,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["general_agriculture", "biology", "chemistry", "physics", "economics", "business_management", "financial_accounting", "elective_maths"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCAGRIC_023",
+    "program_name": "BSc. Agriculture (General)",
+    "college": "College of Agriculture & Natural Sciences",
+    "faculty": "Faculty of Agriculture",
+    "cutoff_criteria": {
+      "minimum_aggregate": 32,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["general_agriculture", "biology", "chemistry", "physics", "elective_maths", "geography"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCBCOMACT_024",
+    "program_name": "B.Com (Accounting)",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Business",
+    "cutoff_criteria": {
+      "minimum_aggregate": 15,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["financial_accounting", "cost_accounting", "economics", "elective_maths", "business_management"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCBCOMFIN_025",
+    "program_name": "B.Com (Finance)",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Business",
+    "cutoff_criteria": {
+      "minimum_aggregate": 16,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["financial_accounting", "cost_accounting", "business_management", "economics", "elective_maths","physics","chemistry","geography","government"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCBCOMHRM_026",
+    "program_name": "B.Com (Human Resource Management)",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Business",
+    "cutoff_criteria": {
+      "minimum_aggregate": 17,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["business_management", "financial_accounting", "cost_accounting", "economics", "elective_maths","literature_in_english","geography","government","physics","chemistry","biology"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCBCOMMKT_027",
+    "program_name": "B.Com (Marketing)",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Business",
+    "cutoff_criteria": {
+      "minimum_aggregate": 20,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": [ "business_management", "financial_accounting", "cost_accounting", "economics", "elective_maths", "government","literature_in_english","physics","chemistry","biology"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCBPROCURE_028",
+    "program_name": "B.Com (Procurement & Supply Chain)",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Business",
+    "cutoff_criteria": {
+      "minimum_aggregate": 20,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["business_management", "financial_accounting", "cost_accounting", "economics", "elective_maths","physics","chemistry","biology","geography","government"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCBMGT_029",
+    "program_name": "B.Com (Management)",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Business",
+    "cutoff_criteria": {
+      "minimum_aggregate": 22,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["business_management", "financial_accounting", "cost_accounting", "economics", "elective_maths","physics","government","geography","chemistry","biology","literature_in_english"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCECONWITHFIN_030",
+    "program_name": "BSc. Economics with Finance",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Business",
+    "cutoff_criteria": {
+      "minimum_aggregate": 14,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["elective_maths", "economics", "financial_accounting", "business_management", "cost_accounting", "geography", "physics", "chemistry","financial_accounting"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCECON_031",
+    "program_name": "BSc. Economics",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Business",
+    "cutoff_criteria": {
+      "minimum_aggregate": 25,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["elective_maths", "economics", "financial_accounting", "business_management", "geography", "government", "history", "physics", "chemistry"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCAPPLIEDECON_032",
+    "program_name": "BSc. Applied Economics",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Business",
+    "cutoff_criteria": {
+      "minimum_aggregate": 28,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["elective_maths", "economics", "financial_accounting", "business_management", "geography", "government", "history", "physics", "chemistry", "general_agriculture"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCCLLB_033",
+    "program_name": "Bachelor of Laws (LLB)",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Law",
+    "cutoff_criteria": {
+      "minimum_aggregate": 8,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["literature_in_english","cost_accounting", "government", "history", "economics", "french", "geography", "religious_studies", "akan", "ewe", "ga", "music", "dance", "art", "business_management", "financial_accounting","physics","chemistry","elective_maths","biology"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCCCOMSTUD_034",
+    "program_name": "BA. Communication Studies",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Arts",
+    "cutoff_criteria": {
+      "minimum_aggregate": 17,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["literature_in_english", "government", "history", "religious_studies", "french", "english", "geography", "music", "dance", "art", "akan", "ewe", "ga","business_management","financial_accounting","economics","cost_accounting","physics","elective_maths","chemistry"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCARTSGEN_035",
+    "program_name": "BA. Arts (General)",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Arts",
+    "cutoff_criteria": {
+      "minimum_aggregate": 24,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["literature_in_english", "government", "history", "geography", "religious_studies", "french", "akan", "ewe", "ga", "music", "dance", "art", "economics","business_management","financial_accounting","cost_accounting","physics","chemistry","elective_maths"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCAFRSTUD_036",
+    "program_name": "BA. African Studies",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Arts",
+    "cutoff_criteria": {
+      "minimum_aggregate": 19,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["french", "chinese", "english", "literature_in_english", "government", "history", "geography", "religious_studies", "akan", "ewe", "ga","business_management","financial_accounting","economics","physics","elective_maths","elective_maths","chemistry","cost_accounting"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCLANGCHIN_037A",
+    "program_name": "BA. Chinese",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Arts",
+    "cutoff_criteria": {
+      "minimum_aggregate": 25,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["french", "chinese", "english", "literature_in_english", "government", "history", "geography", "religious_studies", "akan", "ewe", "ga","business_management","financial_accounting","economics"],
+        "count": 3
+      }
+    },
+    "_note": "Split from BA. Chinese / French / Linguistics. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCLANGFREN_037B",
+    "program_name": "BA. French",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Arts",
+    "cutoff_criteria": {
+      "minimum_aggregate": 25,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["french", "chinese", "english", "literature_in_english", "government", "history", "geography", "religious_studies", "akan", "ewe", "ga","business_management","financial_accounting","economics"],
+        "count": 3
+      }
+    },
+    "_note": "Split from BA. Chinese / French / Linguistics. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCLINGUISTICS_037C",
+    "program_name": "BA. Linguistics",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Arts",
+    "cutoff_criteria": {
+      "minimum_aggregate": 25,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["french", "chinese", "english", "literature_in_english", "government", "history", "geography", "religious_studies", "akan", "ewe", "ga","business_management","financial_accounting","economics"],
+        "count": 3
+      }
+    },
+    "_note": "Split from BA. Chinese / French / Linguistics. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCFILM_038A",
+    "program_name": "BA. Film Studies",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Arts",
+    "cutoff_criteria": {
+      "minimum_aggregate": 25,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["french", "chinese", "english", "literature_in_english", "government", "history", "geography", "religious_studies", "akan", "ewe", "ga","business_management","financial_accounting","economics"],
+        "count": 3
+      }
+    },
+    "_note": "Split from BA. Film / Theatre Studies. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCFILM_038B",
+    "program_name": "BA. Theatre Studies",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Arts",
+    "cutoff_criteria": {
+      "minimum_aggregate": 25,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": [ "literature_in_english", "government", "history", "geography", "religious_studies", "french", "music", "dance","elective_maths", "akan", "ewe", "ga", "economics", "business_management"],
+        "count": 2
+      }
+    },
+    "_note": "Split from BA. Film / Theatre Studies. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCSOCIO_039A",
+    "program_name": "BA. Sociology",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Arts",
+    "cutoff_criteria": {
+      "minimum_aggregate": 22,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["government", "history", "geography", "literature_in_english","business_management","elective_maths", "religious_studies", "french", "akan", "ewe", "ga", "economics", "business_management","physics","chemistry"],
+        "count": 3
+      }
+    },
+    "_note": "Split from BA. Sociology / Anthropology. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCANTHRO_039B",
+    "program_name": "BA. Anthropology",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Arts",
+    "cutoff_criteria": {
+      "minimum_aggregate": 22,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["government", "history", "geography", "literature_in_english","biology","elective_maths","chemistry","physics", "religious_studies", "french", "akan", "ewe", "ga", "economics", "business_management"],
+        "count": 3
+      }
+    },
+    "_note": "Split from BA. Sociology / Anthropology. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCGEORGP_040",
+    "program_name": "BSc. Geography & Regional Planning",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Social Science",
+    "cutoff_criteria": {
+      "minimum_aggregate": 18,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["geography", "economics", "elective_maths", "government", "history", "physics", "chemistry", "biology", "general_agriculture", "business_management", "financial_accounting"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCHOSPITALITY_041A",
+    "program_name": "BSc. Hospitality Management",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Social Science",
+    "cutoff_criteria": {
+      "minimum_aggregate": 22,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["home_economics", "food_nutrition", "clothing_textiles", "business_management", "financial_accounting", "economics", "geography", "literature", "government", "history", "french", "music", "dance", "art"],
+        "count": 3
+      }
+    },
+    "_note": "Split from BSc. Hospitality / Tourism Management. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCTOURISMMGT_041B",
+    "program_name": "BSc. Tourism Management",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Social Science",
+    "cutoff_criteria": {
+      "minimum_aggregate": 22,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": [ "food_and_nutrition", "clothing_and_textiles", "business_management", "financial_accounting", "economics", "geography", "literature_in_english", "government", "history", "french", "music","biology","chemistry","management_in_living","cost_accounting"],
+        "count": 3
+      }
+    },
+    "_note": "Split from BSc. Hospitality / Tourism Management. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCBEDCOSC_042",
+    "program_name": "B.Ed. Computer Science",
+    "college": "College of Education Studies",
+    "faculty": "Faculty of Science & Technology Education",
+    "cutoff_criteria": {
+      "minimum_aggregate": 20,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["elective_maths", "physics", "chemistry", "biology", "geography", "economics", "financial_accounting", "business_management"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCBEDACCT_043A",
+    "program_name": "B.Ed. Accounting",
+    "college": "College of Education Studies",
+    "faculty": "Faculty of Humanities & Social Sciences Education",
+    "cutoff_criteria": {
+      "minimum_aggregate": 18,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["financial_accounting", "cost_accounting", "business_management", "economics", "elective_maths","ict","physics"],
+        "count": 3
+      }
+    },
+    "_note": "Split from B.Ed. Accounting / Management. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCBEDMGT_043B",
+    "program_name": "B.Ed. Management",
+    "college": "College of Education Studies",
+    "faculty": "Faculty of Humanities & Social Sciences Education",
+    "cutoff_criteria": {
+      "minimum_aggregate": 18,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["financial_accounting", "cost_accounting", "business_management", "economics", "elective_maths", "marketing", "procurement", "supply_chain"],
+        "count": 3
+      }
+    },
+    "_note": "Split from B.Ed. Accounting / Management. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCBEDMATH_044A",
+    "program_name": "B.Ed. Mathematics",
+    "college": "College of Education Studies",
+    "faculty": "Faculty of Science & Technology Education",
+    "cutoff_criteria": {
+      "minimum_aggregate": 24,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["elective_maths", "physics", "chemistry", "biology", "general_agriculture","economics","business_management", "geography"],
+        "count": 3
+      }
+    },
+    "_note": "Split from B.Ed. Mathematics / Science. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCBEDSCI_044B",
+    "program_name": "B.Ed. Science",
+    "college": "College of Education Studies",
+    "faculty": "Faculty of Science & Technology Education",
+    "cutoff_criteria": {
+      "minimum_aggregate": 24,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["elective_maths", "physics", "chemistry", "biology", "general_agriculture", "geography"],
+        "count": 3
+      }
+    },
+    "_note": "Split from B.Ed. Mathematics / Science. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCBEDSOCSCI_045A",
+    "program_name": "B.Ed. Social Sciences",
+    "college": "College of Education Studies",
+    "faculty": "Faculty of Humanities & Social Sciences Education",
+    "cutoff_criteria": {
+      "minimum_aggregate": 16,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["government", "history", "geography", "economics", "religious_studies", "french", "literature_in_english","elective_maths","cost_accounting", "business_management", "financial_accounting", "akan", "ewe", "ga"],
+        "count": 3
+      }
+    },
+    "_note": "Split from B.Ed. Social Sciences / Social Studies. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCBEDSOCSTUD_045B",
+    "program_name": "B.Ed. Social Studies",
+    "college": "College of Education Studies",
+    "faculty": "Faculty of Humanities & Social Sciences Education",
+    "cutoff_criteria": {
+      "minimum_aggregate": 17,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["government", "history", "geography", "economics", "religious_studies", "french", "literature_in_english", "business_management", "financial_accounting", "akan", "ewe", "ga"],
+        "count": 3
+      }
+    },
+    "_note": "Split from B.Ed. Social Sciences / Social Studies. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCBEDENGLISH_046A",
+    "program_name": "B.Ed. English",
+    "college": "College of Education Studies",
+    "faculty": "Faculty of Humanities & Social Sciences Education",
+    "cutoff_criteria": {
+      "minimum_aggregate": 20,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["literature_in_english", "french", "english", "government", "history", "geography", "religious_studies", "akan", "ewe", "ga","music","elective_maths"],
+        "count": 3
+      }
+    },
+    "_note": "Split from B.Ed. English / French. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCBEDFRENCH_046B",
+    "program_name": "B.Ed. French",
+    "college": "College of Education Studies",
+    "faculty": "Faculty of Humanities & Social Sciences Education",
+    "cutoff_criteria": {
+      "minimum_aggregate": 20,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["literature_in_english", "french","music", "government", "history", "geography", "religious_studies", "akan", "ewe", "ga"],
+        "count": 3
+      }
+    },
+    "_note": "Split from B.Ed. English / French. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCBEDEARLY_047A",
+    "program_name": "B.Ed. Early Childhood Education",
+    "college": "College of Education Studies",
+    "faculty": "Faculty of Educational Foundations",
+    "cutoff_criteria": {
+      "minimum_aggregate": 20,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology", "chemistry", "physics", "elective_maths", "literature_in_english", "government", "history", "geography", "religious_studies", "french", "akan", "ewe", "ga", "music", "food_and_nutrition", "clothing_and_textiles", "general_agriculture", "economics", "business_management", "financial_accounting","management_in_living"],
+        "count": 3
+      }
+    },
+    "_note": "Split from B.Ed. Early Childhood / Primary Education. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCBEDPRIMARY_047B",
+    "program_name": "B.Ed. Primary Education",
+    "college": "College of Education Studies",
+    "faculty": "Faculty of Educational Foundations",
+    "cutoff_criteria": {
+      "minimum_aggregate": 20,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology", "chemistry", "physics", "elective_maths", "literature_in_english", "government", "history", "geography", "religious_studies", "french", "akan", "ewe", "ga", "music","food_and_nutrition", "clothing_and_textiles", "general_agriculture", "economics", "business_management", "financial_accounting"],
+        "count": 3
+      }
+    },
+    "_note": "Split from B.Ed. Early Childhood / Primary Education. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCBEDHOME_048",
+    "program_name": "B.Ed. Home Economics",
+    "college": "College of Education Studies",
+    "faculty": "Faculty of Science & Technology Education",
+    "cutoff_criteria": {
+      "minimum_aggregate": 18,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["food_and_nutrition", "clothing_and_textiles",  "biology", "chemistry", "general_agriculture", "business_management", "economics", "general_knowledge_in_art"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCBEDPHYSED_049",
+    "program_name": "B.Ed. Health, Physical Education & Recreation",
+    "college": "College of Education Studies",
+    "faculty": "Faculty of Science & Technology Education",
+    "cutoff_criteria": {
+      "minimum_aggregate": 23,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology", "chemistry", "physics", "elective_maths", "food_and_nutrition", "general_agriculture", "geography", "government", "history", "literature_in_english", "religious_studies", "music", "business_management"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCAUTOMOB_050",
+    "program_name": "B.Ed. Automobile & Metal Technology",
+    "college": "College of Education Studies",
+    "faculty": "Faculty of Science & Technology Education",
+    "cutoff_criteria": {
+      "minimum_aggregate": 18,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["automobile", "construction", "woodwork", "applied_electricity", "physics", "chemistry", "elective_maths", "geography","metal_work"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCCONSTRUCT_051",
+    "program_name": "B.Ed. Construction & Woodwork Technology",
+    "college": "College of Education Studies",
+    "faculty": "Faculty of Science & Technology Education",
+    "cutoff_criteria": {
+      "minimum_aggregate": 18,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["building_construction", "woodwork", "automobile", "applied_electricity", "mechanical", "physics", "chemistry", "elective_maths", "geography"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCELECTRICAL_052",
+    "program_name": "B.Ed. Electrical & Electronic Engineering",
+    "college": "College of Education Studies",
+    "faculty": "Faculty of Science & Technology Education",
+    "cutoff_criteria": {
+      "minimum_aggregate": 19,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["applied_electricity", "automobile", "building_construction", "woodwork", "mechanical", "physics", "chemistry", "elective_maths", "geography"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCCONSTRUCTEDU_053",
+    "program_name": "B.Ed. Construction Technology Education",
+    "college": "College of Education Studies",
+    "faculty": "Faculty of Science & Technology Education",
+    "cutoff_criteria": {
+      "minimum_aggregate": 19,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["building_construction", "woodwork", "automobile", "applied_electricity", "mechanical", "physics", "chemistry", "elective_maths", "visual_arts", "art", "geography"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCMECHANICAL_054",
+    "program_name": "B.Ed. Mechanical Technology Education",
+    "college": "College of Education Studies",
+    "faculty": "Faculty of Science & Technology Education",
+    "cutoff_criteria": {
+      "minimum_aggregate": 20,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["mechanical", "automobile", "building_construction", "woodwork", "applied_electricity", "physics", "chemistry", "elective_maths", "geography"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCCHEMENG_055",
+    "program_name": "BSc. Chemical Engineering",
+    "college": "College of Agriculture & Natural Sciences",
+    "faculty": "Faculty of Physical Science",
+    "cutoff_criteria": {
+      "minimum_aggregate": 22,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["elective_maths", "chemistry", "physics", "biology"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCAGRICENG_056",
+    "program_name": "BSc. Agricultural Engineering",
+    "college": "College of Agriculture & Natural Sciences",
+    "faculty": "Faculty of Agriculture",
+    "cutoff_criteria": {
+      "minimum_aggregate": 25,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["elective_maths", "physics", "general_agriculture", "chemistry", "biology", "geography"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCENTOMOL_057",
+    "program_name": "BSc. Entomology & Wildlife",
+    "college": "College of Agriculture & Natural Sciences",
+    "faculty": "Faculty of Biological Science",
+    "cutoff_criteria": {
+      "minimum_aggregate": 28,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology", "chemistry", "physics", "general_agriculture"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCENVSCI_058",
+    "program_name": "BSc. Environmental Science",
+    "college": "College of Agriculture & Natural Sciences",
+    "faculty": "Faculty of Biological Science",
+    "cutoff_criteria": {
+      "minimum_aggregate": 29,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology", "chemistry", "physics", "geography", "general_agriculture", "elective_maths"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCFISHERIES_059",
+    "program_name": "BSc. Fisheries & Aquatic Sciences",
+    "college": "College of Agriculture & Natural Sciences",
+    "faculty": "Faculty of Biological Science",
+    "cutoff_criteria": {
+      "minimum_aggregate": 24,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology", "chemistry", "physics", "general_agriculture", "geography"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCMARINE_060",
+    "program_name": "BSc. Marine Science",
+    "college": "College of Agriculture & Natural Sciences",
+    "faculty": "Faculty of Biological Science",
+    "cutoff_criteria": {
+      "minimum_aggregate": 26,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology", "chemistry", "physics", "general_agriculture", "geography", "elective_maths"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCMETEO_061",
+    "program_name": "BSc. Meteorology & Atmospheric Physics",
+    "college": "College of Agriculture & Natural Sciences",
+    "faculty": "Faculty of Physical Science",
+    "cutoff_criteria": {
+      "minimum_aggregate": 27,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["elective_maths", "physics", "chemistry", "geography"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCWATER_062",
+    "program_name": "BSc. Water & Sanitation",
+    "college": "College of Agriculture & Natural Sciences",
+    "faculty": "Faculty of Physical Science",
+    "cutoff_criteria": {
+      "minimum_aggregate": 28,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["chemistry", "physics", "biology", "elective_maths", "geography", "general_agriculture"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCAGROPROCESS_063",
+    "program_name": "BSc. Agro-Processing",
+    "college": "College of Agriculture & Natural Sciences",
+    "faculty": "Faculty of Agriculture",
+    "cutoff_criteria": {
+      "minimum_aggregate": 34,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["general_agriculture", "biology", "chemistry", "physics", "elective_maths", "food_and_nutrition"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCSOIL_064A",
+    "program_name": "BSc. Soil Science",
+    "college": "College of Agriculture & Natural Sciences",
+    "faculty": "Faculty of Agriculture",
+    "cutoff_criteria": {
+      "minimum_aggregate": 32,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["general_agriculture", "biology", "chemistry", "physics", "elective_maths", "geography"],
+        "count": 3
+      }
+    },
+    "_note": "Split from BSc. Soil Science / Crop Science. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCCROPSCI_064B",
+    "program_name": "BSc. Crop Science",
+    "college": "College of Agriculture & Natural Sciences",
+    "faculty": "Faculty of Agriculture",
+    "cutoff_criteria": {
+      "minimum_aggregate": 32,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["general_agriculture", "biology", "chemistry", "physics", "elective_maths", "geography"],
+        "count": 3
+      }
+    },
+    "_note": "Split from BSc. Soil Science / Crop Science. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCGHANALANG_065",
+    "program_name": "BA. Ghanaian Languages (Akan, Ewe, Ga)",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Arts",
+    "cutoff_criteria": {
+      "minimum_aggregate": 20,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["akan", "ewe", "ga", "literature", "government", "history", "geography", "religious_studies", "french", "music"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCINFOSCI_066",
+    "program_name": "BA. Information Science",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Arts",
+    "cutoff_criteria": {
+      "minimum_aggregate": 22,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["literature_in_english", "government", "history", "geography", "religious_studies", "french", "economics", "business_management", "financial_accounting", "elective_maths", "physics", "chemistry", "biology", "akan", "ewe", "ga", "music"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCRELMORAL_067",
+    "program_name": "BA. Religious & Moral Studies",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Arts",
+    "cutoff_criteria": {
+      "minimum_aggregate": 22,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["religious_studies", "literature_in_english", "government", "history", "geography", "french", "akan", "ewe", "ga", "music", "economics"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCMUSIC_068A",
+    "program_name": "BA. Music",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Arts",
+    "cutoff_criteria": {
+      "minimum_aggregate": 28,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["music", "dance", "literature_in_english", "government", "history", "geography", "religious_studies", "french", "akan", "ewe", "ga"],
+        "count": 3
+      }
+    },
+    "_note": "Split from BA. Music / Dance. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCDANCE_068B",
+    "program_name": "BA. Dance",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Arts",
+    "cutoff_criteria": {
+      "minimum_aggregate": 28,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["music", "literature_in_english", "government", "history", "geography", "religious_studies", "french", "akan", "ewe", "ga","general_knowledge_in_art"],
+        "count": 3
+      }
+    },
+    "_note": "Split from BA. Music / Dance. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCCLASSICS_069A",
+    "program_name": "BA. Classics",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Arts",
+    "cutoff_criteria": {
+      "minimum_aggregate": 25,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["literature_in_english", "government", "history", "geography", "religious_studies", "french", "economics", "akan", "ewe", "ga", "music"],
+        "count": 3
+      }
+    },
+    "_note": "Split from BA. Classics & Philosophy. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCPHILOSOPHY_069B",
+    "program_name": "BA. Philosophy",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Arts",
+    "cutoff_criteria": {
+      "minimum_aggregate": 25,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["literature_in_english", "government", "history", "geography", "religious_studies", "french", "economics", "akan", "ewe", "ga", "music","business_management","elective_maths","physics","management_in_living"],
+        "count": 3
+      }
+    },
+    "_note": "Split from BA. Classics & Philosophy. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCPOPHEALTH_070",
+    "program_name": "BSc. Population & Health",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Social Science",
+    "cutoff_criteria": {
+      "minimum_aggregate": 20,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology", "chemistry", "physics", "elective_maths", "geography", "economics", "government", "history", "religious_studies", "general_agriculture", "food_and_nutrition", "business_management"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCTOURISM_071",
+    "program_name": "BSc. Tourism Management",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Social Science",
+    "cutoff_criteria": {
+      "minimum_aggregate": 32,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["geography", "economics", "literature_in_english", "government", "history", "religious_studies", "french", "business_management", "financial_accounting","food_and_nutrition", "music","cost_accounting","biology", "chemistry", "physics","general_knowledge_in_art","management_in_living","elective_maths"],
+        "count": 3
+      }
+    },
+    "_note": "This is the standalone BSc. Tourism Management (aggregate 32). The split from BSc. Hospitality / Tourism Management (aggregate 22) is at UCCTOURISMMGT_041B."
+  },
+  {
+    "programid": "UCCBCOMENTREP_072",
+    "program_name": "B.Com (Entrepreneurship with Graphics)",
+    "college": "College of Humanities & Legal Studies",
+    "faculty": "Faculty of Business",
+    "cutoff_criteria": {
+      "minimum_aggregate": 18,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["business_management", "financial_accounting", "cost_accounting", "economics", "elective_maths", "graphic_design", "government", "history", "geography", "literature_in_english","general_knowledge_in_art","picture_making"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCBEDINCLUSIVE_073",
+    "program_name": "B.Ed. Inclusive Education",
+    "college": "College of Education Studies",
+    "faculty": "Faculty of Educational Foundations",
+    "cutoff_criteria": {
+      "minimum_aggregate": 23,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["biology", "chemistry", "physics", "elective_maths", "literature_in_english", "government", "history", "geography", "religious_studies", "french", "akan", "ewe", "ga", "music","food_and_nutrition", "clothing_and_textiles", "general_agriculture", "economics", "business_management","general_knowledge_in_art","management_in_living", "financial_accounting"],
+        "count": 3
+      }
+    }
+  },
+  {
+    "programid": "UCCBEDARABIC_074A",
+    "program_name": "B.Ed. Arabic",
+    "college": "College of Education Studies",
+    "faculty": "Faculty of Humanities & Social Sciences Education",
+    "cutoff_criteria": {
+      "minimum_aggregate": 25,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["french", "chinese", "literature_in_english", "government", "history", "geography", "religious_studies", "akan", "ewe", "ga"],
+        "count": 3
+      }
+    },
+    "_note": "Split from B.Ed. Arabic / French / Chinese. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCBEDFRENCHB_074B",
+    "program_name": "B.Ed. French",
+    "college": "College of Education Studies",
+    "faculty": "Faculty of Humanities & Social Sciences Education",
+    "cutoff_criteria": {
+      "minimum_aggregate": 25,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["french"],
+        "count": 1
+      }
+    },
+    "_note": "Split from B.Ed. Arabic / French / Chinese. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCBEDCHINESE_074C",
+    "program_name": "B.Ed. Chinese",
+    "college": "College of Education Studies",
+    "faculty": "Faculty of Humanities & Social Sciences Education",
+    "cutoff_criteria": {
+      "minimum_aggregate": 25,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": ["french", "chinese", "literature_in_english", "government", "history", "geography", "religious_studies", "akan", "ewe", "ga"],
+        "count": 3
+      }
+    },
+    "_note": "Split from B.Ed. Arabic / French / Chinese. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCBEDVISUALART_075A",
+    "program_name": "B.Ed. Visual Arts",
+    "college": "College of Education Studies",
+    "faculty": "Faculty of Science & Technology Education",
+    "cutoff_criteria": {
+      "minimum_aggregate": 20,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": [ "graphic_design", "building_construction", "woodwork", "clothing_and_textiles", "literature_in_english", "government", "history", "geography", "music","sculpture","business_management","ceramics","clothing_and_textiles","jewellery"],
+        "count": 3
+      }
+    },
+    "_note": "Split from B.Ed. Visual Arts / Graphic Design. Verify individual cut-off on admissions.ucc.edu.gh"
+  },
+  {
+    "programid": "UCCBEDGRAPHICDES_075B",
+    "program_name": "B.Ed. Graphic Design",
+    "college": "College of Education Studies",
+    "faculty": "Faculty of Science & Technology Education",
+    "cutoff_criteria": {
+      "minimum_aggregate": 20,
+      "coresubjectsrequired": ["english", "core_maths", "int_science", "social_studies"],
+      "elective_required": {
+        "any_of": [ "graphic_design", "art", "building_construction", "woodwork","clothing_and_textiles", "literature_in_english", "government", "history", "geography", "music","business_management","picture_making","ceramics","sculpture","leatherwork"],
+        "count": 3
+      }
+    },
+    "_note": "Split from B.Ed. Visual Arts / Graphic Design. Verify individual cut-off on admissions.ucc.edu.gh"
+  }
+  ]
   },
   {
     "UMAT":[]
+  },
+  {
+    "UPSA":[
+  {
+    "program_id": "UPSA_DIP_001",
+    "program_name": "Diploma in Information Technology Management",
+    "college": "",
+    "faculty": "Faculty of IT & Communication Studies",
+    "cutoff_criteria": {
+      "minimum_aggregate": 25,
+      "core_subjects_required": [
+        "english",
+        "core_maths",
+        "int_science"
+      ],
+      "elective_required": {
+        "any_of": [
+          "elective_maths",
+          "physics",
+          "economics",
+          "government",
+          "business_management",
+          "accounting",
+          "literature_in_english",
+          "crs",
+          "irs",
+          "geography",
+          "history"
+        ],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UPSA_DIP_002",
+    "program_name": "Diploma in Accounting",
+    "college": "",
+    "faculty": "Faculty of Accounting & Finance",
+    "cutoff_criteria": {
+      "minimum_aggregate": 25,
+      "core_subjects_required": [
+        "english",
+        "core_maths",
+        "social_studies"
+      ],
+      "elective_required": {
+        "any_of": [
+          "financial_accounting",
+          "business_management"
+        ],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UPSA_DIP_003",
+    "program_name": "Diploma in Marketing",
+    "college": "",
+    "faculty": "Faculty of Management Studies",
+    "cutoff_criteria": {
+      "minimum_aggregate": 25,
+      "core_subjects_required": [
+        "english",
+        "core_maths",
+        "social_studies"
+      ],
+      "elective_required": {
+        "any_of": [
+          "business_management",
+          "economics",
+          "accounting",
+          "cost_accounting",
+          "government",
+          "literature_in_english",
+          "crs",
+          "irs",
+          "history",
+          "geography"
+        ],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UPSA_DIP_004",
+    "program_name": "Diploma in Management",
+    "college": "",
+    "faculty": "Faculty of Management Studies",
+    "cutoff_criteria": {
+      "minimum_aggregate": 25,
+      "core_subjects_required": [
+        "english",
+        "core_maths",
+        "social_studies"
+      ],
+      "elective_required": {
+        "any_of": [
+          "business_management",
+          "economics",
+          "accounting",
+          "cost_accounting",
+          "government",
+          "literature_in_english",
+          "crs",
+          "irs",
+          "history",
+          "geography"
+        ],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UPSA_DIP_005",
+    "program_name": "Diploma in Public Relations",
+    "college": "",
+    "faculty": "Faculty of IT & Communication Studies",
+    "cutoff_criteria": {
+      "minimum_aggregate": 25,
+      "core_subjects_required": [
+        "english",
+        "core_maths",
+        "social_studies"
+      ],
+      "elective_required": {
+        "any_of": [
+          "government",
+          "literature_in_english",
+          "crs",
+          "irs",
+          "economics",
+          "history",
+          "geography"
+        ],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UPSA_IT_001",
+    "program_name": "BSc Information Technology Management",
+    "college": "",
+    "faculty": "Faculty IT & Communication Studies",
+    "cutoff_criteria": {
+      "minimum_aggregate": 14,
+      "core_subjects_required": [
+        "english",
+        "core_maths",
+        "int_science"
+      ],
+      "elective_required": {
+        "any_of": [
+          "elective_maths",
+          "physics",
+          "economics",
+          "government"
+        ],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UPSA_IT_002",
+    "program_name": "BSc Data Science and Analytics",
+    "college": "",
+    "faculty": "Faculty of IT & Communication Studies",
+    "cutoff_criteria": {
+      "minimum_aggregate": 14,
+      "core_subjects_required": [
+        "english",
+        "core_maths",
+        "int_science"
+      ],
+      "elective_required": {
+        "any_of": [
+          "elective_maths",
+          "physics",
+          "chemistry",
+          "biology",
+          "economics",
+          "business_management",
+          "accounting"
+        ],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UPSA_IT_003",
+    "program_name": "BSc Applied Statistics",
+    "college": "",
+    "faculty": "Faculty of IT & Communication Studies",
+    "cutoff_criteria": {
+      "minimum_aggregate": 15,
+      "core_subjects_required": [
+        "english",
+        "core_maths",
+        "int_science"
+      ],
+      "elective_required": {
+        "any_of": [
+          "elective_maths",
+          "physics",
+          "chemistry",
+          "biology",
+          "economics",
+          "business_management",
+          "accounting"
+        ],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UPSA_IT_004",
+    "program_name": "BA Communication Studies",
+    "college": "",
+    "faculty": "Faculty of IT & Communication Studies",
+    "cutoff_criteria": {
+      "minimum_aggregate": 20,
+      "core_subjects_required": [
+        "english",
+        "core_maths",
+        "social_studies"
+      ],
+      "elective_required": {
+        "any_of": [
+          "government",
+          "literature_in_english",
+          "crs",
+          "irs",
+          "economics",
+          "history",
+          "geography",
+          "french"
+        ],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UPSA_IT_005",
+    "program_name": "BA Public Relations Management",
+    "college": "",
+    "faculty": "Faculty of IT & Communication Studies",
+    "cutoff_criteria": {
+      "minimum_aggregate": 18,
+      "core_subjects_required": [
+        "english",
+        "core_maths",
+        "social_studies"
+      ],
+      "elective_required": {
+        "any_of": [
+          "government",
+          "literature_in_english",
+          "crs",
+          "irs",
+          "economics",
+          "history",
+          "geography"
+        ],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UPSA_IT_006",
+    "program_name": "BA Journalism",
+    "college": "",
+    "faculty": "Faculty of IT & Communication Studies",
+    "cutoff_criteria": {
+      "minimum_aggregate": 20,
+      "core_subjects_required": [
+        "english",
+        "core_maths",
+        "social_studies"
+      ],
+      "elective_required": {
+        "any_of": [
+          "government",
+          "literature_in_english",
+          "crs",
+          "irs",
+          "economics",
+          "history"
+        ],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UPSA_ACC_001",
+    "program_name": "BSc Accounting",
+    "college": "",
+    "faculty": "Faculty of Accounting & Finance",
+    "cutoff_criteria": {
+      "minimum_aggregate": 14,
+      "core_subjects_required": [
+        "english",
+        "core_maths",
+        "social_studies"
+      ],
+      "elective_required": {
+        "any_of": [
+          "financial_accounting",
+          "business_management",
+          "economics"
+        ],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UPSA_ACC_002",
+    "program_name": "BSc Accounting and Finance",
+    "college": "",
+    "faculty": "Faculty of Accounting & Finance",
+    "cutoff_criteria": {
+      "minimum_aggregate": 14,
+      "core_subjects_required": [
+        "english",
+        "core_maths",
+        "social_studies"
+      ],
+      "elective_required": {
+        "any_of": [
+          "financial_accounting",
+          "economics",
+          "cost_accounting",
+          "elective_maths"
+        ],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UPSA_ACC_003",
+    "program_name": "BSc Banking and Finance",
+    "college": "",
+    "faculty": "Faculty of Accounting & Finance",
+    "cutoff_criteria": {
+      "minimum_aggregate": 14,
+      "core_subjects_required": [
+        "english",
+        "core_maths",
+        "social_studies"
+      ],
+      "elective_required": {
+        "any_of": [
+          "accounting",
+          "business_management",
+          "economics",
+          "elective_maths",
+          "physics",
+          "chemistry",
+          "biology"
+        ],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UPSA_ACC_004",
+    "program_name": "BSc Actuarial Science",
+    "college": "",
+    "faculty": "Faculty of Accounting & Finance",
+    "cutoff_criteria": {
+      "minimum_aggregate": 12,
+      "core_subjects_required": [
+        "english",
+        "core_maths",
+        "int_science"
+      ],
+      "elective_required": {
+        "any_of": [
+          "elective_maths",
+          "physics",
+          "chemistry",
+          "biology",
+          "economics",
+          "business_management",
+          "accounting"
+        ],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UPSA_ACC_005",
+    "program_name": "BSc Business Economics",
+    "college": "",
+    "faculty": "Faculty of Accounting & Finance",
+    "cutoff_criteria": {
+      "minimum_aggregate": 15,
+      "core_subjects_required": [
+        "english",
+        "core_maths",
+        "social_studies"
+      ],
+      "elective_required": {
+        "any_of": [
+          "economics",
+          "elective_maths"
+        ],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UPSA_MGT_001",
+    "program_name": "Bachelor of Business Administration (BBA)",
+    "college": "",
+    "faculty": "Faculty of Management Studies",
+    "cutoff_criteria": {
+      "minimum_aggregate": 16,
+      "core_subjects_required": [
+        "english",
+        "core_maths",
+        "social_studies"
+      ],
+      "elective_required": {
+        "any_of": [
+          "business_management",
+          "economics",
+          "financial_accounting",
+          "cost_accounting"
+        ],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UPSA_MGT_002",
+    "program_name": "BSc Applied Marketing",
+    "college": "",
+    "faculty": "Faculty of Management Studies",
+    "cutoff_criteria": {
+      "minimum_aggregate": 18,
+      "core_subjects_required": [
+        "english",
+        "core_maths",
+        "social_studies"
+      ],
+      "elective_required": {
+        "any_of": [
+          "business_management",
+          "economics",
+          "accounting",
+          "cost_accounting",
+          "government",
+          "literature_in_english",
+          "crs",
+          "irs",
+          "history",
+          "geography"
+        ],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UPSA_MGT_003",
+    "program_name": "BSc Logistics and Transport Management",
+    "college": "",
+    "faculty": "Faculty of Management Studies",
+    "cutoff_criteria": {
+      "minimum_aggregate": 18,
+      "core_subjects_required": [
+        "english",
+        "core_maths",
+        "social_studies"
+      ],
+      "elective_required": {
+        "any_of": [
+          "business_management",
+          "economics",
+          "accounting",
+          "elective_maths",
+          "physics",
+          "chemistry",
+          "geography",
+          "government"
+        ],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UPSA_MGT_004",
+    "program_name": "BSc Procurement Management",
+    "college": "",
+    "faculty": "Faculty of Management Studies",
+    "cutoff_criteria": {
+      "minimum_aggregate": 18,
+      "core_subjects_required": [
+        "english",
+        "core_maths",
+        "social_studies"
+      ],
+      "elective_required": {
+        "any_of": [
+          "business_management",
+          "economics",
+          "accounting",
+          "cost_accounting",
+          "government",
+          "literature_in_english",
+          "crs",
+          "irs",
+          "history",
+          "geography"
+        ],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UPSA_MGT_005",
+    "program_name": "BSc Real Estate Management and Finance",
+    "college": "",
+    "faculty": "Faculty of Management Studies",
+    "cutoff_criteria": {
+      "minimum_aggregate": 20,
+      "core_subjects_required": [
+        "english",
+        "core_maths",
+        "social_studies"
+      ],
+      "elective_required": {
+        "any_of": [
+          "business_management",
+          "economics",
+          "accounting",
+          "geography",
+          "government",
+          "literature_in_english"
+        ],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UPSA_MGT_006",
+    "program_name": "BSc Office Management",
+    "college": "",
+    "faculty": "Faculty of Management Studies",
+    "cutoff_criteria": {
+      "minimum_aggregate": 22,
+      "core_subjects_required": [
+        "english",
+        "core_maths",
+        "social_studies"
+      ],
+      "elective_required": {
+        "any_of": [
+          "business_management",
+          "economics",
+          "accounting",
+          "typewriting",
+          "government",
+          "literature_in_english"
+        ],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UPSA_LAW_001",
+    "program_name": "Bachelor of Laws (LLB) - 4 Year",
+    "college": "",
+    "faculty": "Faculty of Law & Humanities",
+    "cutoff_criteria": {
+      "minimum_aggregate": 8,
+      "core_subjects_required": [
+        "english",
+        "core_maths",
+        "social_studies"
+      ],
+      "elective_required": {
+        "any_of": [
+          "government",
+          "literature_in_english",
+          "economics",
+          "history",
+          "crs",
+          "irs",
+          "geography",
+          "business_management",
+          "accounting",
+          "elective_maths",
+          "physics",
+          "chemistry",
+          "biology"
+        ],
+        "count": 3
+      }
+    }
+  },
+  {
+    "program_id": "UPSA_LAW_002",
+    "program_name": "BA Applied French and Communication",
+    "college": "",
+    "faculty": "Faculty of Law & Humanities",
+    "cutoff_criteria": {
+      "minimum_aggregate": 20,
+      "core_subjects_required": [
+        "english",
+        "core_maths",
+        "social_studies"
+      ],
+      "elective_required": {
+        "any_of": [
+          "french",
+          "government",
+          "literature_in_english",
+          "crs",
+          "irs",
+          "economics",
+          "history",
+          "geography"
+        ],
+        "count": 3
+      }
+    }
+  }
+  ]
   }
 ]

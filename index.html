@@ -5,7 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="images/png" href="images/u-logo.png" />
     <link rel="stylesheet" href="style/unilift.css" />
-    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            
+            if (theme === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+        })();
+    </script>
+    
+    
+     <script src="https://js.paystack.co/v1/inline.js"></script>
     <title>Unilift</title>
   </head>
   <body>
@@ -209,11 +221,11 @@
             </option>
             <option value="UG">University of Ghana(UG)</option>
             <option value="UCC">University of Capecoast(UCC)</option>
-           <!--  <option value="UMAT">University of Mines and Technology(UMAT)</option>
+           <!--  <option value="UMAT">University of Mines and Technology(UMAT)</option> -->
             <option value="UPSA">
               University of Professional Studies Accra(UPSA)
             </option>
-            <option value="UHAS">University of Health Allied Sciences(UHAS)</option> -->
+            <!-- <option value="UHAS">University of Health Allied Sciences(UHAS)</option> -->
           </select>
         </div>
 
@@ -313,6 +325,7 @@
                   </option>
                   <option value="arabic">Arabic</option>
                   <option value="animal_husbandary">Animal husbandary</option>
+                  <option value="automobile">Automobile</option>
                   <option value="basketry">Basketry</option>
                   <option value="biology">Biology</option>
                   <option value="building_construction">
@@ -334,12 +347,14 @@
                   <option value="economics">Economics</option>
                   <option value="elective_maths">Elective Mathematics</option>
                   <option value="ict">Elective ICT</option>
+                  <option value="ewe">Ewe</option>
                   <option value="financial_accounting">
                     Financial Accounting
                   </option>
                   <option value="food_nutrition">Food Nutrition</option>
                   <option value="french">French</option>
-                  <option value="akan">Ghanaian Language</option>
+                  <option value="ga">Ga</option>
+                  <option value="akan">Akan</option>
                   <option value="general_agriculture">
                     General Agriculture
                   </option>
@@ -359,13 +374,16 @@
                   <option value="literature_in_english">
                     Literature in English
                   </option>
+                  <option value="mechanical">Mechanical</option>
                   <option value="management_in_living">
                     Management in Living
                   </option>
                   <option value="metal_work">Metal Work</option>
+                  <option value="music">Music</option>
                   <option value="picture_making">Picture Making</option>
                   <option value="physics">Physics</option>
                   <option value="sculpture">Sculpture</option>
+                  <option value="spanish">Spanish</option>
                   <option value="technical_drawing">Technical Drawing</option>
                   <option value="textiles">Textiles</option>
                   <option value="woodwork">Wood Work</option>
@@ -393,6 +411,7 @@
                   </option>
                   <option value="arabic">Arabic</option>
                   <option value="animal_husbandary">Animal husbandary</option>
+                  <option value="automobile">Automobile</option>
                   <option value="basketry">Basketry</option>
                   <option value="biology">Biology</option>
                   <option value="building_construction">
@@ -414,12 +433,14 @@
                   <option value="economics">Economics</option>
                   <option value="elective_maths">Elective Mathematics</option>
                   <option value="ict">Elective ICT</option>
+                  <option value="ewe">Ewe</option>
                   <option value="financial_accounting">
                     Financial Accounting
                   </option>
                   <option value="food_nutrition">Food Nutrition</option>
                   <option value="french">French</option>
-                  <option value="akan">Ghanaian Language</option>
+                  <option value="ga">Ga</option>
+                  <option value="akan">Akan</option>
                   <option value="general_agriculture">
                     General Agriculture
                   </option>
@@ -439,13 +460,16 @@
                   <option value="literature_in_english">
                     Literature in English
                   </option>
+                  <option value="mechanical">Mechanical</option>
                   <option value="management_in_living">
                     Management in Living
                   </option>
                   <option value="metal_work">Metal Work</option>
+                   <option value="music">Music</option>
                   <option value="picture_making">Picture Making</option>
                   <option value="physics">Physics</option>
                   <option value="sculpture">Sculpture</option>
+                  <option value="spanish">Spanish</option>
                   <option value="technical_drawing">Technical Drawing</option>
                   <option value="textiles">Textiles</option>
                   <option value="woodwork">Wood Work</option>
@@ -473,6 +497,7 @@
                   </option>
                   <option value="arabic">Arabic</option>
                   <option value="animal_husbandary">Animal husbandary</option>
+                  <option value="automobile">Automobile</option>
                   <option value="basketry">Basketry</option>
                   <option value="biology">Biology</option>
                   <option value="building_construction">
@@ -494,12 +519,14 @@
                   <option value="economics">Economics</option>
                   <option value="elective_maths">Elective Mathematics</option>
                   <option value="ict">Elective ICT</option>
+                  <option value="ewe">Ewe</option>
                   <option value="financial_accounting">
                     Financial Accounting
                   </option>
                   <option value="food_nutrition">Food Nutrition</option>
                   <option value="french">French</option>
-                  <option value="akan">Ghanaian Language</option>
+                  <option value="ga">Ga</option>
+                  <option value="akan">Akan</option>
                   <option value="general_agriculture">
                     General Agriculture
                   </option>
@@ -519,13 +546,16 @@
                   <option value="literature_in_english">
                     Literature in English
                   </option>
+                  <option value="mechanical">Mechanical</option>
                   <option value="management_in_living">
                     Management in Living
                   </option>
                   <option value="metal_work">Metal Work</option>
+                   <option value="music">Music</option>
                   <option value="picture_making">Picture Making</option>
                   <option value="physics">Physics</option>
                   <option value="sculpture">Sculpture</option>
+                  <option value="spanish">Spanish</option>
                   <option value="technical_drawing">Technical Drawing</option>
                   <option value="textiles">Textiles</option>
                   <option value="woodwork">Wood Work</option>
@@ -553,6 +583,7 @@
                   </option>
                   <option value="arabic">Arabic</option>
                   <option value="animal_husbandary">Animal husbandary</option>
+                  <option value="automobile">Automobile</option>
                   <option value="basketry">Basketry</option>
                   <option value="biology">Biology</option>
                   <option value="building_construction">
@@ -574,12 +605,14 @@
                   <option value="economics">Economics</option>
                   <option value="elective_maths">Elective Mathematics</option>
                   <option value="ict">Elective ICT</option>
+                  <option value="ewe">Ewe</option>
                   <option value="financial_accounting">
                     Financial Accounting
                   </option>
                   <option value="food_nutrition">Food Nutrition</option>
                   <option value="french">French</option>
-                  <option value="akan">Ghanaian Language</option>
+                  <option value="ga">Ga</option>
+                  <option value="akan">Akan</option>
                   <option value="general_agriculture">
                     General Agriculture
                   </option>
@@ -599,13 +632,16 @@
                   <option value="literature_in_english">
                     Literature in English
                   </option>
+                  <option value="mechanical">Mechanical</option>
                   <option value="management_in_living">
                     Management in Living
                   </option>
                   <option value="metal_work">Metal Work</option>
+                   <option value="music">Music</option>
                   <option value="picture_making">Picture Making</option>
                   <option value="physics">Physics</option>
                   <option value="sculpture">Sculpture</option>
+                  <option value="spanish">Spanish</option>
                   <option value="technical_drawing">Technical Drawing</option>
                   <option value="textiles">Textiles</option>
                   <option value="woodwork">Wood Work</option>

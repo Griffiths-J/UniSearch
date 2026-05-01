@@ -128,8 +128,10 @@ export function pages() {
   }
 
   const themeToggle = document.getElementById("theme-toggle");
-  if (themeToggle) {
-    let currentTheme = localStorage.getItem("theme");
+  let currentTheme = localStorage.getItem("theme");
+
+  
+   
     if (!currentTheme) {
       const prefersDark = window.matchMedia(
         "(prefers-color-scheme: dark)",
@@ -146,6 +148,8 @@ export function pages() {
       advert("dark");
       reviewIcon("light");
     }
+    
+    if (themeToggle) {
     themeToggle.addEventListener("click", () => {
       document.body.classList.toggle("dark-mode");
       const isDark = document.body.classList.contains("dark-mode");
