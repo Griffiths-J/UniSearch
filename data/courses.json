@@ -3591,13 +3591,13 @@
         "any_of": [
           "elective_maths",
           "physics",
+          "chemistry",
           "economics",
           "government",
           "business_management",
           "accounting",
           "literature_in_english",
-          "crs",
-          "irs",
+          "religious_studies",
           "geography",
           "history"
         ],
@@ -3622,7 +3622,7 @@
           "financial_accounting",
           "business_management"
         ],
-        "count": 3
+        "count": 1
       }
     }
   },
@@ -3641,17 +3641,17 @@
       "elective_required": {
         "any_of": [
           "business_management",
+          "elective_maths",
           "economics",
           "accounting",
           "cost_accounting",
           "government",
           "literature_in_english",
-          "crs",
-          "irs",
+          "religious_studies",
           "history",
-          "geography"
+          "geography","physics"
         ],
-        "count": 3
+        "count": 2
       }
     }
   },
@@ -3675,12 +3675,13 @@
           "cost_accounting",
           "government",
           "literature_in_english",
-          "crs",
-          "irs",
+          "religious_studies",
           "history",
-          "geography"
+          "geography",
+          "physics",
+          "elective_maths"
         ],
-        "count": 3
+        "count": 1
       }
     }
   },
@@ -3700,13 +3701,12 @@
         "any_of": [
           "government",
           "literature_in_english",
-          "crs",
-          "irs",
+          "religious_studies",
           "economics",
           "history",
-          "geography"
+          "geography","physics","chemistry","elective_maths"
         ],
-        "count": 3
+        "count": 1
       }
     }
   },
@@ -3725,11 +3725,11 @@
       "elective_required": {
         "any_of": [
           "elective_maths",
-          "physics",
+          "physics","chemistry","business_management","cost_accounting",
           "economics",
           "government"
         ],
-        "count": 3
+        "count": 2
       }
     }
   },
@@ -3753,9 +3753,9 @@
           "biology",
           "economics",
           "business_management",
-          "accounting"
+          "cost_accounting","financial_accounting"
         ],
-        "count": 3
+        "count": 2
       }
     }
   },
@@ -3779,9 +3779,9 @@
           "biology",
           "economics",
           "business_management",
-          "accounting"
+          "cost_accounting"
         ],
-        "count": 3
+        "count": 2
       }
     }
   },
@@ -3801,14 +3801,13 @@
         "any_of": [
           "government",
           "literature_in_english",
-          "crs",
-          "irs",
+          "religious_studies",
           "economics",
           "history",
           "geography",
-          "french"
+          "french","elective_maths","physics"
         ],
-        "count": 3
+        "count": 2
       }
     }
   },
@@ -3828,13 +3827,12 @@
         "any_of": [
           "government",
           "literature_in_english",
-          "crs",
-          "irs",
+          "religious_studies",
           "economics",
           "history",
-          "geography"
+          "geography","physics","chemistry","elective_maths"
         ],
-        "count": 3
+        "count": 2
       }
     }
   },
@@ -3854,12 +3852,11 @@
         "any_of": [
           "government",
           "literature_in_english",
-          "crs",
-          "irs",
+          "religious_studies",
           "economics",
-          "history"
+          "history","elective_maths"
         ],
-        "count": 3
+        "count": 1
       }
     }
   },
@@ -3879,9 +3876,9 @@
         "any_of": [
           "financial_accounting",
           "business_management",
-          "economics"
+          "economics","elective_maths"
         ],
-        "count": 3
+        "count": 2
       }
     }
   },
@@ -3904,7 +3901,7 @@
           "cost_accounting",
           "elective_maths"
         ],
-        "count": 3
+        "count": 1
       }
     }
   },
@@ -3922,7 +3919,7 @@
       ],
       "elective_required": {
         "any_of": [
-          "accounting",
+          "cost_accounting","financial_accounting",
           "business_management",
           "economics",
           "elective_maths",
@@ -3954,7 +3951,7 @@
           "biology",
           "economics",
           "business_management",
-          "accounting"
+          "cost_accounting","financial_accounting"
         ],
         "count": 3
       }
@@ -3977,7 +3974,7 @@
           "economics",
           "elective_maths"
         ],
-        "count": 3
+        "count": 1
       }
     }
   },
@@ -4000,7 +3997,7 @@
           "financial_accounting",
           "cost_accounting"
         ],
-        "count": 3
+        "count": 1
       }
     }
   },
@@ -4020,16 +4017,15 @@
         "any_of": [
           "business_management",
           "economics",
-          "accounting",
+          "financial_accounting",
           "cost_accounting",
           "government",
           "literature_in_english",
-          "crs",
-          "irs",
+          "religious_studies",
           "history",
-          "geography"
+          "geography","elective_maths"
         ],
-        "count": 3
+        "count": 2
       }
     }
   },
@@ -4049,7 +4045,7 @@
         "any_of": [
           "business_management",
           "economics",
-          "accounting",
+          "financial_accounting","cost_accounting",
           "elective_maths",
           "physics",
           "chemistry",
@@ -4076,16 +4072,15 @@
         "any_of": [
           "business_management",
           "economics",
-          "accounting",
+          "financial_accounting",
           "cost_accounting",
           "government",
           "literature_in_english",
-          "crs",
-          "irs",
+          "religious_studies",
           "history",
-          "geography"
+          "geography","elective_maths"
         ],
-        "count": 3
+        "count": 1
       }
     }
   },
@@ -4105,12 +4100,12 @@
         "any_of": [
           "business_management",
           "economics",
-          "accounting",
+          "cost_accounting","financial_accounting",
           "geography",
           "government",
           "literature_in_english"
         ],
-        "count": 3
+        "count": 1
       }
     }
   },
@@ -4130,7 +4125,7 @@
         "any_of": [
           "business_management",
           "economics",
-          "accounting",
+          "cost_accounting","elective_maths","financial_accounting",
           "typewriting",
           "government",
           "literature_in_english"
@@ -4157,17 +4152,16 @@
           "literature_in_english",
           "economics",
           "history",
-          "crs",
-          "irs",
+          "religious_studies",
           "geography",
           "business_management",
-          "accounting",
+          "financial_accounting","cost_accounting",
           "elective_maths",
           "physics",
           "chemistry",
           "biology"
         ],
-        "count": 3
+        "count": 2
       }
     }
   },
@@ -4188,13 +4182,12 @@
           "french",
           "government",
           "literature_in_english",
-          "crs",
-          "irs",
+          "religious_studies",
           "economics",
           "history",
           "geography"
         ],
-        "count": 3
+        "count": 1
       }
     }
   }
