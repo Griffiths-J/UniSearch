@@ -90,7 +90,7 @@ function displayHostels(uniFilter = 'all') {
 
 
 function openEnquiry(hostelName, university) {
-    const myNumber = "233256689934";
+    const myNumber = "233509304981";
     const text = `Hello UniLift! I saw ${hostelName} (${university}) on your website. I want to more enquires.`;
     window.open(`https://wa.me/${myNumber}?text=${encodeURIComponent(text)}`, '_blank');
 }
