@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="style/unilift.css" />
     <link rel="stylesheet" href="style/how-works.css" />
     <title>Unilift | How it works</title>
+
+    <script>
+            const theme = localStorage.getItem('theme') || 
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            
+            if (theme === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+    </script>
+
   </head>
   <body>
     <header>

@@ -6,6 +6,16 @@
     <link rel="icon" type="images/png" href="images/u-logo.png" />
     <link rel="stylesheet" href="style/unilift.css" />
     <title>Unilift | Saved Results</title>
+
+    <script>
+            const theme = localStorage.getItem('theme') || 
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            
+            if (theme === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+    </script>
+
   </head>
   <body>
     <header>
