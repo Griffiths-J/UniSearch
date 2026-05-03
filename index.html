@@ -35,7 +35,7 @@
 
       document.querySelectorAll(".homePage").forEach((btn) => {
         btn.addEventListener("click", (e) => {
-         /*  e.preventDefault();  */
+          e.preventDefault(); 
           window.location.href = "index.html";
           sessionStorage.setItem("uniSearchPageState", "landing");
          
@@ -44,7 +44,7 @@
 
       document.querySelectorAll(".getStarted-btn").forEach((btn) => {
         btn.addEventListener("click", (e) => {
-          /* e.preventDefault(); */
+          e.preventDefault();
           window.location.href = "index.html";
           sessionStorage.setItem("uniSearchPageState", "grade");
           
