@@ -1389,6 +1389,8 @@ footer {
 
 
 
+
+
 .loader-container {
   display: flex;
   flex-direction: column;
@@ -1428,4 +1430,8 @@ footer {
   to {
     transform: rotate(360deg);
   }
+}
+
+.controlLoader{
+  min-height: 500px;
 }

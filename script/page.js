@@ -6,6 +6,7 @@ export function pages() {
   const landingSection = document.querySelector(".landingPage");
   const gradeSection = document.querySelector(".gradePage");
   const resultSection = document.querySelector(".resultPage");
+  const hideLoader = document.querySelector(".controlLoader");
 
   function hideAll() {
     if (landingSection) landingSection.style.display = "none";
@@ -15,13 +16,20 @@ export function pages() {
 
   function showLandingPage() {
     hideAll();
-    if (landingSection) landingSection.style.display = "block";
+    if (landingSection){
+       landingSection.style.display = "block"
+      hideLoader.style.display= "none";
+    };
     sessionStorage.setItem("uniSearchPageState", "landing");
+
   }
 
   function showGradePage() {
     hideAll();
-    if (gradeSection) gradeSection.style.display = "block";
+    if (gradeSection){
+       gradeSection.style.display = "block"; 
+      hideLoader.style.display= "none";
+    }
     sessionStorage.setItem("uniSearchPageState", "grade");
   }
 
