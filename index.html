@@ -20,12 +20,14 @@
     <meta property="twitter:description" content="Calculate your aggregates and see your eligible courses in one click.">
     <meta property="twitter:image" content="https://unilift-g.netlify.app/og-image.jpeg">
     <script>
+        (function(){
             const theme = localStorage.getItem('theme') || 
                 (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             
             if (theme === 'dark') {
-                document.body.classList.add('dark-mode');
+                document.documentElement.classList.add('dark-mode');
             }
+            })();
     </script>
 
     <script>
