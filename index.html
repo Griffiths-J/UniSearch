@@ -837,17 +837,19 @@
 
       document.querySelectorAll(".homePage").forEach((btn) => {
         btn.addEventListener("click", (e) => {
-          e.preventDefault();
-          sessionStorage.setItem("uniSearchPageState", "landing");
+          e.preventDefault(); 
           window.location.href = "index.html";
+          sessionStorage.setItem("uniSearchPageState", "landing");
+         
         });
       });
 
       document.querySelectorAll(".getStarted-btn").forEach((btn) => {
         btn.addEventListener("click", (e) => {
           e.preventDefault();
-          sessionStorage.setItem("uniSearchPageState", "grade");
           window.location.href = "index.html";
+          sessionStorage.setItem("uniSearchPageState", "grade");
+          
         });
       });
     });
