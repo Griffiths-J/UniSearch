@@ -52,7 +52,10 @@ export function pages() {
 
   function showResultPage() {
     hideAll();
-    if (resultSection) resultSection.style.display = "block";
+    if (resultSection){
+       resultSection.style.display = "block";
+      hideLoader.style.display= "none";
+    }
     sessionStorage.setItem("uniSearchPageState", "result");
 
 

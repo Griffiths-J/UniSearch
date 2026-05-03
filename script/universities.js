@@ -263,4 +263,3 @@ searchInput?.addEventListener("input", (event) => {
 });
 
 modalClose?.addEventListener("click", closeUniversityModal);
-
