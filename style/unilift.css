@@ -27,7 +27,7 @@
   ---bg-h: #001f3f;
 }
 
-html .dark-mode {
+html.dark-mode {
   --text-color: #e2e8f0;
   --main-bg: #1a202c;
   --header-cl: #2d3748;
@@ -177,11 +177,11 @@ html {
   transition: all 0.3s ease;
 }
 
-.dark-mode .theme-toggle {
+html.dark-mode .theme-toggle {
   background: #555;
 }
 
-.dark-mode .toggle-ball {
+html.dark-mode .toggle-ball {
   background: #333;
   left: 27.5px;
 }
