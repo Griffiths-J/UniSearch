@@ -23,6 +23,8 @@
   --gray: gray;
   --white: #fff;
   --navy: #001f3f;
+  --input-bg: #f5fbff;
+  --input-border: rgba(23, 125, 228, 0.25);
   ---mm: rgba(255, 255, 255, 0.21);
   ---bg-h: #001f3f;
 }
@@ -38,6 +40,8 @@ html.dark-mode {
   --footer-p: #a6b7ca;
   --gray: #a7c4c9;
   --white: #000;
+  --input-bg: #22303d;
+  --input-border: rgba(99, 179, 237, 0.25);
   ---mm: rgba(255, 255, 255, 0.82);
   ---bg-h: #f1f5f9;
 }
@@ -915,8 +919,8 @@ select:focus {
   width: 100%;
   max-width: 420px;
   background: var(--card-surface);
-  border: 1px solid rgba(64, 224, 208, 0.15);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(64, 224, 208, 0.16);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
   border-radius: 18px;
   padding: 1rem;
 }
@@ -932,7 +936,7 @@ select:focus {
   width: 100%;
   padding: 0.95rem 1rem;
   border-radius: 14px;
-  border: 1px solid rgba(21, 101, 226, 0.25);
+  border: 1px solid var(--input-border);
   background: var(--input-bg);
   color: var(--text-color);
   font-size: 0.95rem;
@@ -944,8 +948,13 @@ select:focus {
 
 #result-uni-switcher:hover,
 #result-uni-switcher:focus {
-  border-color: #177de4;
-  box-shadow: 0 0 0 4px rgba(23, 125, 228, 0.08);
+  border-color: var(--Hspan);
+  box-shadow: 0 0 0 4px rgba(99, 179, 237, 0.14);
+}
+
+#result-uni-switcher option {
+  color: var(--text-color);
+  background: var(--input-bg);
 }
 
 .btn-return {
