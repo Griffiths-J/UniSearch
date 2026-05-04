@@ -152,8 +152,11 @@ function initSavedResults() {
       reviewIcon("light");
     }
     themeToggle.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-      const isDark = document.body.classList.contains("dark-mode");
+
+      const root = document.documentElement
+      root.classList.toggle("dark-mode");
+
+      const isDark = root.classList.contains("dark-mode");
 
       isDark ? advert("light") : advert("dark");
       isDark ? reviewIcon("dark") : reviewIcon("light");
