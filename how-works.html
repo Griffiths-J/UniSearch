@@ -4,18 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="images/w-logo.jpeg" />
-    
+
     <title>Unilift | How it works</title>
 
     <script>
-            (function(){
-            const theme = localStorage.getItem('theme') || 
-                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-            
-            if (theme === 'dark') {
-                document.documentElement.classList.add('dark-mode');
-            }
-            })();
+      (function () {
+        const theme =
+          localStorage.getItem("theme") ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
+
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark-mode");
+        }
+      })();
     </script>
     <link rel="stylesheet" href="style/unilift.css" />
     <link rel="stylesheet" href="style/how-works.css" />
@@ -30,7 +33,7 @@
       <ul class="uls">
         <a href="index.html" class="homePage"><li>Home</li></a>
         <a href="universities.html"><li>Universities</li></a>
-        <a href="how-works.html" ><li class="active">How it Works</li></a>
+        <a href="how-works.html"><li class="active">How it Works</li></a>
         <a href="saved-results.html"><li>My Results</li></a>
         <div class="astray">
           <a class="last last-js getStarted-btn" href="#">Get Started</a>
@@ -193,68 +196,82 @@
       </section>
     </main>
 
-    
     <footer>
-  <div class="footer-container">
-    <div class="footer-section">
-      <h3>Unilift</h3>
-      <p>
-        Your gateway to university success in Ghana. Discover courses that
-        match your WASSCE grades.
-      </p>
-    </div>
-    <div class="footer-section">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="universities.html">Universities</a></li>
-        <li><a href="how-works.html">How it Works</a></li>
-        <li><a href="saved-results.html">My Results</a></li>
-        <li><a href="#" class="last-js getStarted-btn">Get Started</a></li>
-      </ul>
-    </div>
-    <div class="footer-section">
-      <h4>Contact Us</h4>
-      <p>Email: unilift@gmail.com</p>
-      <p>Phone: +233256689934</p>
-      <p>Accra, Ghana</p>
-    </div>
-  </div>
-  
-  <div class="footer-bottom" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;width: 100%;">
-    <p style="width:88%;max-width: 800px; margin: 0 auto 15px auto; font-size: 0.75rem; line-height: 1.5; color: #b0b0b0;">
-      <span style="color: #00d2ff; font-weight: bold;">Pro-Tip:</span> UniLift uses the latest official brochures to give you the most accurate match. Since universities occasionally update requirements during the admission season, we always recommend a final double-check on their official portal before you submit your application. 
-    </p>
-    <p>&copy; 2026 Unilift. All rights reserved.</p>
-  </div>
-</footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Unilift</h3>
+          <p>
+            Your gateway to university success in Ghana. Discover courses that
+            match your WASSCE grades.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="universities.html">Universities</a></li>
+            <li><a href="how-works.html">How it Works</a></li>
+            <li><a href="saved-results.html">My Results</a></li>
+            <li><a href="#" class="last-js getStarted-btn">Get Started</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p>Email: unilift@gmail.com</p>
+          <p>Phone: +233256689934</p>
+          <p>Accra, Ghana</p>
+        </div>
+      </div>
 
+      <div
+        class="footer-bottom"
+        style="
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+          padding-top: 20px;
+          width: 100%;
+        "
+      >
+        <p
+          style="
+            width: 88%;
+            max-width: 800px;
+            margin: 0 auto 15px auto;
+            font-size: 0.75rem;
+            line-height: 1.5;
+            color: #b0b0b0;
+          "
+        >
+          <span style="color: #00d2ff; font-weight: bold">Pro-Tip:</span>
+          UniLift uses the latest official catalog to give you the most accurate
+          match. Since universities occasionally update requirements during the
+          admission season, we always recommend a final double-check on their
+          official portal before you submit your application.
+        </p>
+        <p>&copy; 2026 Unilift. All rights reserved.</p>
+      </div>
+    </footer>
 
     <script src="script/burger.js"></script>
     <script type="module" src="script/unilift.js"></script>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".homePage").forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            sessionStorage.setItem("uniSearchPageState", "landing");
+            window.location.href = "index.html";
+          });
+        });
 
-     <script>
-    document.addEventListener("DOMContentLoaded", () => {
-
-      document.querySelectorAll(".homePage").forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-          e.preventDefault();
-          sessionStorage.setItem("uniSearchPageState", "landing");
-          window.location.href = "index.html";
+        document.querySelectorAll(".getStarted-btn").forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            sessionStorage.setItem("uniSearchPageState", "grade");
+            window.location.href = "index.html";
+          });
         });
       });
-
-      document.querySelectorAll(".getStarted-btn").forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-          e.preventDefault();
-          sessionStorage.setItem("uniSearchPageState", "grade");
-          window.location.href = "index.html";
-        });
-      });
-    });
-</script>
-
-
+    </script>
 
     <div class="whatsapp-float">
       <a
