@@ -4,58 +4,78 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="images/png" href="images/u-logo.png" />
-   
-    <meta name="title" content="UniLift | Know Your Future in 5 Seconds">
-    <meta name="description" content="Stop guessing. Enter your WASSCE grades and instantly see every university course you qualify for. Built by students, for students.">
 
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://unilift-g.netlify.app/">
-    <meta property="og:title" content="UniLift: The Ultimate University Eligibility Checker">
-    <meta property="og:description" content="Don't waste money on the wrong forms. Check your admission chances at KNUST, UG, and more instantly!">
-    <meta property="og:image" content="https://unilift-g.netlify.app/og-image.jpeg"> 
+    <meta name="title" content="UniLift | Know Your Future in 5 Seconds" />
+    <meta
+      name="description"
+      content="Stop guessing. Enter your WASSCE grades and instantly see every university course you qualify for. Built by students, for students."
+    />
 
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://unilift-g.netlify.app/">
-    <meta property="twitter:title" content="UniLift | Your University Admission Guide">
-    <meta property="twitter:description" content="Calculate your aggregates and see your eligible courses in one click.">
-    <meta property="twitter:image" content="https://unilift-g.netlify.app/og-image.jpeg">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://unilift-g.netlify.app/" />
+    <meta
+      property="og:title"
+      content="UniLift: The Ultimate University Eligibility Checker"
+    />
+    <meta
+      property="og:description"
+      content="Don't waste money on the wrong forms. Check your admission chances at KNUST, UG, and more instantly!"
+    />
+    <meta
+      property="og:image"
+      content="https://unilift-g.netlify.app/og-image.jpeg"
+    />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://unilift-g.netlify.app/" />
+    <meta
+      property="twitter:title"
+      content="UniLift | Your University Admission Guide"
+    />
+    <meta
+      property="twitter:description"
+      content="Calculate your aggregates and see your eligible courses in one click."
+    />
+    <meta
+      property="twitter:image"
+      content="https://unilift-g.netlify.app/og-image.jpeg"
+    />
     <script>
-        (function(){
-            const theme = localStorage.getItem('theme') || 
-                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-            
-            if (theme === 'dark') {
-                document.documentElement.classList.add('dark-mode');
-               
-            }
-            })();
+      (function () {
+        const theme =
+          localStorage.getItem("theme") ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
+
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark-mode");
+        }
+      })();
     </script>
 
     <script>
-    document.addEventListener("DOMContentLoaded", () => {
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".homePage").forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            window.location.href = "index.html";
+            sessionStorage.setItem("uniSearchPageState", "landing");
+          });
+        });
 
-      document.querySelectorAll(".homePage").forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-          e.preventDefault(); 
-          window.location.href = "index.html";
-          sessionStorage.setItem("uniSearchPageState", "landing");
-         
+        document.querySelectorAll(".getStarted-btn").forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            window.location.href = "index.html";
+            sessionStorage.setItem("uniSearchPageState", "grade");
+          });
         });
       });
+    </script>
 
-      document.querySelectorAll(".getStarted-btn").forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-          e.preventDefault();
-          window.location.href = "index.html";
-          sessionStorage.setItem("uniSearchPageState", "grade");
-          
-        });
-      });
-    });
-</script>
-    
-     <link rel="stylesheet" href="style/unilift.css" />
-     <script src="https://js.paystack.co/v1/inline.js"></script>
+    <link rel="stylesheet" href="style/unilift.css" />
+    <script src="https://js.paystack.co/v1/inline.js"></script>
     <title>Unilift</title>
   </head>
   <body>
@@ -98,10 +118,10 @@
       ==============
   -->
 
-            <div class="loader-container controlLoader">
-              <div class="loader-spinner"></div>
-              <p class="loader-text">Loading page...</p>
-            </div>
+      <div class="loader-container controlLoader">
+        <div class="loader-spinner"></div>
+        <p class="loader-text">Loading page...</p>
+      </div>
 
       <div class="landingPage">
         <!--hero sec-->
@@ -237,11 +257,11 @@
             <div class="review-card">
               <p class="review-text">
                 <span class="reviewIcon"><img src="" alt="reviewicon" /></span>
-                "Unilift is user friendly, easy to navigate throug. I got my eligible courses without stress at a low cost."
+                "Unilift is user friendly, easy to navigate throug. I got my
+                eligible courses without stress at a low cost."
               </p>
               <span class="review-author">— Justice Osei</span>
             </div>
-
           </div>
         </div>
       </div>
@@ -263,7 +283,7 @@
             </option>
             <option value="UG">University of Ghana(UG)</option>
             <option value="UCC">University of Capecoast(UCC)</option>
-           <!--  <option value="UMAT">University of Mines and Technology(UMAT)</option> -->
+            <!--  <option value="UMAT">University of Mines and Technology(UMAT)</option> -->
             <option value="UPSA">
               University of Professional Studies Accra(UPSA)
             </option>
@@ -507,7 +527,7 @@
                     Management in Living
                   </option>
                   <option value="metal_work">Metal Work</option>
-                   <option value="music">Music</option>
+                  <option value="music">Music</option>
                   <option value="picture_making">Picture Making</option>
                   <option value="physics">Physics</option>
                   <option value="sculpture">Sculpture</option>
@@ -593,7 +613,7 @@
                     Management in Living
                   </option>
                   <option value="metal_work">Metal Work</option>
-                   <option value="music">Music</option>
+                  <option value="music">Music</option>
                   <option value="picture_making">Picture Making</option>
                   <option value="physics">Physics</option>
                   <option value="sculpture">Sculpture</option>
@@ -679,7 +699,7 @@
                     Management in Living
                   </option>
                   <option value="metal_work">Metal Work</option>
-                   <option value="music">Music</option>
+                  <option value="music">Music</option>
                   <option value="picture_making">Picture Making</option>
                   <option value="physics">Physics</option>
                   <option value="sculpture">Sculpture</option>
@@ -772,65 +792,106 @@
         </form>
       </div>
 
-
-      <div class="cancelPayment">
-        
-      </div>
-
-
+      <div class="cancelPayment"></div>
     </div>
 
     <!--==================
     RESULT PAGE
     ===============-->
     <div class="resultPage">
+      <div class="result-actions">
+        <div
+          class="result-university-switcher"
+          style="display: none; margin-bottom: 16px"
+        >
+          <label
+            for="result-uni-switcher"
+            style="display: block; margin-bottom: 8px; font-weight: 600"
+            >Switch University (same grades)</label
+          >
+          <select
+            id="result-uni-switcher"
+            style="
+              width: 100%;
+              max-width: 420px;
+              padding: 12px;
+              border-radius: 8px;
+              border: 1px solid #ccc;
+            "
+          >
+            <option value="Select University">Select University</option>
+            <option value="KNUST">
+              Kwame Nkrumah University of Science and Technology (KNUST)
+            </option>
+            <option value="UG">University of Ghana (UG)</option>
+            <option value="UCC">University of Cape Coast (UCC)</option>
+            <option value="UPSA">
+              University of Professional Studies Accra (UPSA)
+            </option>
+          </select>
+        </div>
+      </div>
       <div class="resultPagehero"></div>
-      <div class="result-actions"></div>
     </div>
-
-    
 
     <footer>
-  <div class="footer-container">
-    <div class="footer-section">
-      <h3>Unilift</h3>
-      <p>
-        Your gateway to university success in Ghana. Discover courses that
-        match your WASSCE grades.
-      </p>
-    </div>
-    <div class="footer-section">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="universities.html">Universities</a></li>
-        <li><a href="how-works.html">How it Works</a></li>
-        <li><a href="saved-results.html">My Results</a></li>
-        <li><a href="#" class="last-js getStarted-btn">Get Started</a></li>
-      </ul>
-    </div>
-    <div class="footer-section">
-      <h4>Contact Us</h4>
-      <p>Email: unilift@gmail.com</p>
-      <p>Phone: +233256689934</p>
-      <p>Accra, Ghana</p>
-    </div>
-  </div>
-  
-  <div class="footer-bottom" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;width: 100%;">
-    <p style="width:88%;max-width: 800px; margin: 0 auto 15px auto; font-size: 0.75rem; line-height: 1.5; color: #b0b0b0;">
-      <span style="color: #00d2ff; font-weight: bold;">Pro-Tip:</span> UniLift uses the latest official brochures to give you the most accurate match. Since universities occasionally update requirements during the admission season, we always recommend a final double-check on their official portal before you submit your application. 
-    </p>
-    <p>&copy; 2026 Unilift. All rights reserved.</p>
-  </div>
-</footer>
-    
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Unilift</h3>
+          <p>
+            Your gateway to university success in Ghana. Discover courses that
+            match your WASSCE grades.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="universities.html">Universities</a></li>
+            <li><a href="how-works.html">How it Works</a></li>
+            <li><a href="saved-results.html">My Results</a></li>
+            <li><a href="#" class="last-js getStarted-btn">Get Started</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p>Email: unilift@gmail.com</p>
+          <p>Phone: +233256689934</p>
+          <p>Accra, Ghana</p>
+        </div>
+      </div>
+
+      <div
+        class="footer-bottom"
+        style="
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+          padding-top: 20px;
+          width: 100%;
+        "
+      >
+        <p
+          style="
+            width: 88%;
+            max-width: 800px;
+            margin: 0 auto 15px auto;
+            font-size: 0.75rem;
+            line-height: 1.5;
+            color: #b0b0b0;
+          "
+        >
+          <span style="color: #00d2ff; font-weight: bold">Pro-Tip:</span>
+          UniLift uses the latest official brochures to give you the most
+          accurate match. Since universities occasionally update requirements
+          during the admission season, we always recommend a final double-check
+          on their official portal before you submit your application.
+        </p>
+        <p>&copy; 2026 Unilift. All rights reserved.</p>
+      </div>
+    </footer>
 
     <script type="module" src="script/page.js"></script>
     <script type="module" src="script/unilift.js"></script>
     <script src="script/burger.js"></script>
     <script src="script/take-values.js"></script>
-
-    
 
     <div class="whatsapp-float">
       <a

@@ -1,9 +1,99 @@
-
-
-
 async function unis() {
+  function getUniversityCode(title) {
+    switch (title) {
+      case "Kwame Nkrumah University of Science Technology":
+        return "KNUST";
+      case "University of Ghana":
+        return "UG";
+      case "University of Cape Coast":
+        return "UCC";
+      case "University of Mines and Technology":
+        return "UMAT";
+      case "University of Professional Studies Accra":
+        return "UPSA";
+      default:
+        return "Select University";
+    }
+  }
 
-  function renderEligiblePrograms(elegible, aggregate, Uni) {
+  function getUniversityTitle(code) {
+    switch (code) {
+      case "KNUST":
+        return "Kwame Nkrumah University of Science Technology";
+      case "UG":
+        return "University of Ghana";
+      case "UCC":
+        return "University of Cape Coast";
+      case "UMAT":
+        return "University of Mines and Technology";
+      case "UPSA":
+        return "University of Professional Studies Accra";
+      default:
+        return "Unknown University";
+    }
+  }
+
+  function saveResultData(elegible, aggregate, Uni) {
+    const resultData = JSON.stringify({ elegible, aggregate, Uni });
+    sessionStorage.setItem("uniSearchResult", resultData);
+    sessionStorage.setItem("uniSearchPageState", "result");
+  }
+
+  function showResultLoading() {
+    const resultHero = document.querySelector(".resultPagehero");
+    if (!resultHero) return;
+    resultHero.innerHTML = `
+      <div class="loader-container">
+        <div class="loader-spinner"></div>
+        <p class="loader-text">Fetching your eligible programs...</p>
+      </div>
+    `;
+  }
+
+  function toggleResultUniversitySwitcher(show, selectedCode) {
+    const switcherContainer = document.querySelector(
+      ".result-university-switcher",
+    );
+    const switcher = document.getElementById("result-uni-switcher");
+    if (!switcherContainer || !switcher) return;
+
+    if (show) {
+      switcherContainer.style.display = "block";
+      switcher.value = selectedCode || "Select University";
+    } else {
+      switcherContainer.style.display = "none";
+    }
+  }
+
+  async function fetchResultsForUniversity(universityCode) {
+    const studentDataRaw = sessionStorage.getItem("uniSearchStudentData");
+    if (!studentDataRaw) {
+      throw new Error(
+        "Student data is not available. Please calculate and pay first.",
+      );
+    }
+
+    const studentData = JSON.parse(studentDataRaw);
+    studentData.Uni = getUniversityTitle(universityCode);
+    sessionStorage.setItem("uniSearchStudentData", JSON.stringify(studentData));
+
+    showResultLoading();
+
+    const res = await fetch("/.netlify/functions/get-data", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ university: universityCode, studentData }),
+    });
+
+    if (!res.ok) {
+      const errorBody = await res.text();
+      throw new Error(`Fetch failed: ${res.status} ${errorBody}`);
+    }
+
+    return res.json();
+  }
+
+  async function renderEligiblePrograms(elegible, aggregate, Uni) {
     const resultHero = document.querySelector(".resultPagehero");
     if (!resultHero) {
       console.error("resultPagehero element not found");
@@ -61,9 +151,10 @@ async function unis() {
       <div class="eligible-programs">${listItems}</div>
     `;
 
-    const resultData = JSON.stringify({ elegible, aggregate, Uni });
-    sessionStorage.setItem("uniSearchResult", resultData);
-    sessionStorage.setItem("uniSearchPageState", "result");
+    saveResultData(elegible, aggregate, Uni);
+    const switcherCode = getUniversityCode(Uni);
+    const hasPaid = Boolean(sessionStorage.getItem("uniSearchStudentData"));
+    toggleResultUniversitySwitcher(hasPaid, switcherCode);
   }
 
   window.restoreResultFromStorage = function () {
@@ -83,6 +174,45 @@ async function unis() {
     }
   };
 
+  function initResultUniversitySwitcher() {
+    const switcher = document.getElementById("result-uni-switcher");
+    if (!switcher) return;
+    if (switcher.dataset.initialized === "true") return;
+    switcher.dataset.initialized = "true";
+
+    switcher.addEventListener("change", async (event) => {
+      const selectedUniversity = event.target.value;
+      if (!selectedUniversity || selectedUniversity === "Select University") {
+        return;
+      }
+
+      try {
+        const result = await fetchResultsForUniversity(selectedUniversity);
+        if (result && result.elegible) {
+          await renderEligiblePrograms(
+            result.elegible,
+            result.aggregate,
+            result.Uni,
+          );
+        }
+      } catch (error) {
+        console.error("Error switching university:", error);
+        const resultHero = document.querySelector(".resultPagehero");
+        if (resultHero) {
+          resultHero.innerHTML = `
+            <div class="no-saved-results">
+              <div class="no-results-icon">
+                <img src="icons/exclamation-mark-L.png" alt="Error" />
+              </div>
+              <h2>Unable to switch university</h2>
+              <p>Please refresh the page or try again.</p>
+            </div>
+          `;
+        }
+      }
+    });
+  }
+
   const returnHomeBtn = document.getElementById("return-home-btn");
   if (returnHomeBtn) {
     returnHomeBtn.addEventListener("click", () => {
@@ -101,6 +231,7 @@ async function unis() {
 
     if (window.showResultPage) window.showResultPage();
     window.restoreResultFromStorage();
+    initResultUniversitySwitcher();
   }
 
   function Getvalues() {
@@ -126,10 +257,10 @@ async function unis() {
         resultUniTitle = "University of Cape Coast";
         break;
       case "UMAT":
-        resultUniTitle = "University of Mines and Technology";  
+        resultUniTitle = "University of Mines and Technology";
         break;
       case "UPSA":
-        resultUniTitle = "University of Professional Studies Accra"; 
+        resultUniTitle = "University of Professional Studies Accra";
         break;
     }
 
@@ -316,9 +447,9 @@ async function unis() {
 
     console.log(studentData);
 
-    document.querySelector('.modal-overlay').style.display = "flex";
+    document.querySelector(".modal-overlay").style.display = "flex";
     document.getElementById("payment-modal").style.display = "flex";
-    document.querySelector('.cancelPayment').style.display = "none";
+    document.querySelector(".cancelPayment").style.display = "none";
     document.getElementById("display-agg").innerText = `${finalAggregrate}`;
 
     document.getElementById("pay-button").onclick = function (e) {
@@ -342,46 +473,58 @@ async function unis() {
         amount: 1150,
         currency: "GHS",
         ref: "" + Math.floor(Math.random() * 99999 + 1),
-        callback:  function (responds) {
-        document.getElementById("payment-modal").style.display = "none";
-        
-        //result page +  loader
-        if (window.showResultPage) {
-          window.showResultPage();
-        } else {
-          const resultPageEl = document.querySelector(".resultPage");
-          if (resultPageEl) resultPageEl.style.display = "block";
-        }
+        callback: function (responds) {
+          document.getElementById("payment-modal").style.display = "none";
 
-        const resultHero = document.querySelector(".resultPagehero");
-        if (resultHero) {
-          resultHero.innerHTML = `
+          //result page +  loader
+          if (window.showResultPage) {
+            window.showResultPage();
+          } else {
+            const resultPageEl = document.querySelector(".resultPage");
+            if (resultPageEl) resultPageEl.style.display = "block";
+          }
+
+          const resultHero = document.querySelector(".resultPagehero");
+          if (resultHero) {
+            resultHero.innerHTML = `
             <div class="loader-container">
               <div class="loader-spinner"></div>
               <p class="loader-text">Fetching your eligible programs...</p>
             </div>
           `;
-        }
+          }
 
-        fetch("/.netlify/functions/get-data", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ university, studentData })
-        })
-          .then(res => {
-            if (!res.ok) throw new Error("Failed to fetch results");
-            return res.json();
+          sessionStorage.setItem(
+            "uniSearchStudentData",
+            JSON.stringify(studentData),
+          );
+
+          fetch("/.netlify/functions/get-data", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ university, studentData }),
           })
-          .then(result => {
-            renderEligiblePrograms(result.elegible, result.aggregate, result.Uni);
-          })
-          .catch(error => {
-            console.error("Error fetching results:", error);
-            if (resultHero) {
-              const isDark = document.body.classList.contains("dark-mode");
-              const exclamationMark = isDark ? "icons/exclamation-mark-D.png" : "icons/exclamation-mark-L.png";
-              
-              resultHero.innerHTML = `
+            .then((res) => {
+              if (!res.ok) throw new Error("Failed to fetch results");
+              return res.json();
+            })
+            .then((result) => {
+              renderEligiblePrograms(
+                result.elegible,
+                result.aggregate,
+                result.Uni,
+              );
+              initResultUniversitySwitcher();
+            })
+            .catch((error) => {
+              console.error("Error fetching results:", error);
+              if (resultHero) {
+                const isDark = document.body.classList.contains("dark-mode");
+                const exclamationMark = isDark
+                  ? "icons/exclamation-mark-D.png"
+                  : "icons/exclamation-mark-L.png";
+
+                resultHero.innerHTML = `
                 <div class="no-saved-results">
                   <div class="no-results-icon">
                     <img src="${exclamationMark}" alt="Error" />
@@ -391,18 +534,20 @@ async function unis() {
                   <a href="#" class="heroButton getStarted-btn" onclick="location.reload()">Try Again</a>
                 </div>
               `;
-            }
-          });
-      },
-          
+              }
+            });
+        },
+
         onClose: function () {
           document.querySelector(".modal-content").style.display = "none";
-          document.querySelector('.cancelPayment').style.display = "flex";
-          let why = document.querySelector('.cancelPayment');
+          document.querySelector(".cancelPayment").style.display = "flex";
+          let why = document.querySelector(".cancelPayment");
 
           let exclamationMark;
           const isDark = document.body.classList.contains("dark-mode");
-          isDark ? exclamationMark= "icons/exclamation-mark-D.png" :exclamationMark= "icons/exclamation-mark-L.png";
+          isDark
+            ? (exclamationMark = "icons/exclamation-mark-D.png")
+            : (exclamationMark = "icons/exclamation-mark-L.png");
 
           why.innerHTML = `
             <div class="no-saved-results">
@@ -430,8 +575,8 @@ async function unis() {
 
   window.cancelW = cancelW;
 
-  function cancelW(){
-    document.querySelector('.modal-overlay').style.display="none";
+  function cancelW() {
+    document.querySelector(".modal-overlay").style.display = "none";
     document.querySelector(".modal-content").style.display = "block";
   }
 
