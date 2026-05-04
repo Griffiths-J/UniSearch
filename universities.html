@@ -4,18 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="images/w-logo.jpeg" />
-    
+
     <title>Unilift | Universities</title>
 
     <script>
-            (function(){
-            const theme = localStorage.getItem('theme') || 
-                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-            
-            if (theme === 'dark') {
-                document.documentElement.classList.add('dark-mode');
-            }
-            })();
+      (function () {
+        const theme =
+          localStorage.getItem("theme") ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
+
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark-mode");
+        }
+      })();
     </script>
     <link rel="stylesheet" href="style/unilift.css" />
     <link rel="stylesheet" href="style/navsContent.css" />
@@ -57,16 +60,24 @@
     <main>
       <div class="universities">
         <div class="universities-header">
-          <p class="uni-p">Explore Universities In Ghana</p>
-        </div>
+          <div class="universities-intro">
+            <p class="uni-p">Explore Universities In Ghana</p>
+            <p class="uni-subtitle">
+              Discover top public and private campuses, compare programmes, and
+              find the best match for your grades.
+            </p>
+          </div>
 
-        <div class="searchCont">
-          <div class="search">
-            <img src="icons/search.svg" alt="search_icon" />
-            <input
-              type="text"
-              placeholder=" search university eg KNUST,UG,UCC ....."
-            />
+          <div class="searchCont">
+            <label class="sr-only" for="uniSearch">Search universities</label>
+            <div class="search">
+              <img src="icons/search.svg" alt="Search icon" />
+              <input
+                id="uniSearch"
+                type="text"
+                placeholder="Search university: KNUST, UG, UCC..."
+              />
+            </div>
           </div>
         </div>
 
@@ -77,13 +88,11 @@
               <p class="loader-text">Loading page...</p>
             </div>
           </div>
-           
         </div>
       </div>
     </main>
 
     <div class="modal-overlay" id="uniModal" aria-hidden="true">
-      
       <div class="modal-content-university">
         <div class="modal-header-fixed">
           <div class="header-title-group">
@@ -101,18 +110,15 @@
           <button class="modal-close" id="modalClose">×</button>
         </div>
 
-        
         <div class="modal-scrollable">
           <div class="modal-hero">
             <img id="modalimage" src="" alt="" />
           </div>
 
-        
           <div class="modal-section">
             <p id="modalDescription" class="description-text"></p>
           </div>
 
-          
           <div class="modal-section">
             <h3 class="section-title">Quick Info</h3>
             <div class="info-grid">
@@ -135,7 +141,6 @@
             </div>
           </div>
 
-          
           <div class="modal-section">
             <h3 class="section-title">Contact Information</h3>
             <div class="contact-info">
@@ -150,7 +155,6 @@
             </div>
           </div>
 
-          
           <div class="modal-section">
             <h3 class="section-title">Academics</h3>
             <div class="academic-info">
@@ -165,84 +169,98 @@
             </div>
           </div>
 
-         
           <div class="modal-section">
             <h3 class="section-title">Campus Facilities</h3>
             <p id="modalFacilitiesInfo" class="facilities-text"></p>
           </div>
 
-        
           <div class="modal-section">
             <h3 class="section-title">Campus Gallery</h3>
             <div class="modal-gallery" id="modalGallery">
               <div class="no-gallery">No images available</div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
 
-  
-   <footer>
-  <div class="footer-container">
-    <div class="footer-section">
-      <h3>Unilift</h3>
-      <p>
-        Your gateway to university success in Ghana. Discover courses that
-        match your WASSCE grades.
-      </p>
-    </div>
-    <div class="footer-section">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="universities.html">Universities</a></li>
-        <li><a href="how-works.html">How it Works</a></li>
-        <li><a href="saved-results.html">My Results</a></li>
-        <li><a href="#" class="last-js getStarted-btn">Get Started</a></li>
-      </ul>
-    </div>
-    <div class="footer-section">
-      <h4>Contact Us</h4>
-      <p>Email: unilift@gmail.com</p>
-      <p>Phone: +233256689934</p>
-      <p>Accra, Ghana</p>
-    </div>
-  </div>
-  
-  <div class="footer-bottom" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;width: 100%;">
-    <p style="width:88%;max-width: 800px; margin: 0 auto 15px auto; font-size: 0.75rem; line-height: 1.5; color: #b0b0b0;">
-      <span style="color: #00d2ff; font-weight: bold;">Pro-Tip:</span> UniLift uses the latest official brochures to give you the most accurate match. Since universities occasionally update requirements during the admission season, we always recommend a final double-check on their official portal before you submit your application. 
-    </p>
-    <p>&copy; 2026 Unilift. All rights reserved.</p>
-  </div>
-</footer>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Unilift</h3>
+          <p>
+            Your gateway to university success in Ghana. Discover courses that
+            match your WASSCE grades.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="universities.html">Universities</a></li>
+            <li><a href="how-works.html">How it Works</a></li>
+            <li><a href="saved-results.html">My Results</a></li>
+            <li><a href="#" class="last-js getStarted-btn">Get Started</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p>Email: unilift@gmail.com</p>
+          <p>Phone: +233256689934</p>
+          <p>Accra, Ghana</p>
+        </div>
+      </div>
 
+      <div
+        class="footer-bottom"
+        style="
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+          padding-top: 20px;
+          width: 100%;
+        "
+      >
+        <p
+          style="
+            width: 88%;
+            max-width: 800px;
+            margin: 0 auto 15px auto;
+            font-size: 0.75rem;
+            line-height: 1.5;
+            color: #b0b0b0;
+          "
+        >
+          <span style="color: #00d2ff; font-weight: bold">Pro-Tip:</span>
+          UniLift uses the latest official brochures to give you the most
+          accurate match. Since universities occasionally update requirements
+          during the admission season, we always recommend a final double-check
+          on their official portal before you submit your application.
+        </p>
+        <p>&copy; 2026 Unilift. All rights reserved.</p>
+      </div>
+    </footer>
 
     <script src="script/burger.js"></script>
     <script type="module" src="script/unilift.js"></script>
     <script type="module" src="script/universities.js"></script>
 
     <script>
-    document.addEventListener("DOMContentLoaded", () => {
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".homePage").forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            sessionStorage.setItem("uniSearchPageState", "landing");
+            window.location.href = "index.html";
+          });
+        });
 
-      document.querySelectorAll(".homePage").forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-          e.preventDefault();
-          sessionStorage.setItem("uniSearchPageState", "landing");
-          window.location.href = "index.html";
+        document.querySelectorAll(".getStarted-btn").forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            sessionStorage.setItem("uniSearchPageState", "grade");
+            window.location.href = "index.html";
+          });
         });
       });
-
-      document.querySelectorAll(".getStarted-btn").forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-          e.preventDefault();
-          sessionStorage.setItem("uniSearchPageState", "grade");
-          window.location.href = "index.html";
-        });
-      });
-    });
-</script>
+    </script>
 
     <div class="whatsapp-float">
       <a

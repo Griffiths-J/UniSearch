@@ -74,9 +74,11 @@ const universityData = [
       "Minimum aggregate of 7-36 in relevant subjects, WASSCE results required",
     facilities:
       "Coastal campus, academic libraries, sports facilities, student accommodation, health clinic",
-    gallery: ["https://th.bing.com/th/id/R.84cdfc3bc2579f4e55ba52eff5cc2409?rik=6UbTzREv6FOXFA&pid=ImgRaw&r=0",
-       "https://tse3.mm.bing.net/th/id/OIP.Og7EEfvMRyuvkTyUHcUoFwHaFr?pid=ImgDet&w=474&h=363&rs=1&o=7&rm=3", 
-       "https://tse1.mm.bing.net/th/id/OIP.NLioFjODKtAYfE6kg8jIgwHaEl?rs=1&pid=ImgDetMain&o=7&rm=3"],
+    gallery: [
+      "https://th.bing.com/th/id/R.84cdfc3bc2579f4e55ba52eff5cc2409?rik=6UbTzREv6FOXFA&pid=ImgRaw&r=0",
+      "https://tse3.mm.bing.net/th/id/OIP.Og7EEfvMRyuvkTyUHcUoFwHaFr?pid=ImgDet&w=474&h=363&rs=1&o=7&rm=3",
+      "https://tse1.mm.bing.net/th/id/OIP.NLioFjODKtAYfE6kg8jIgwHaEl?rs=1&pid=ImgDetMain&o=7&rm=3",
+    ],
   },
   {
     id: "umat",
@@ -99,9 +101,11 @@ const universityData = [
       "Minimum aggregate of 7-9 with strong science grades, WASSCE results required",
     facilities:
       "Mining museum, geology laboratory, computer centers, student hostels, library",
-    gallery: ["https://tse1.mm.bing.net/th/id/OIP.Nqiu26dIsHyiu0qR_X_GNAHaE7?w=4332&h=2880&rs=1&pid=ImgDetMain&o=7&rm=3",
-       "https://tse3.mm.bing.net/th/id/OIP.I9JB5Ewb9gsFNQvuJ4sEYgHaDa?rs=1&pid=ImgDetMain&o=7&rm=3",
-        "https://tse2.mm.bing.net/th/id/OIP.e9Lv0o9BF1SpLhM6WgzIbgHaFO?rs=1&pid=ImgDetMain&o=7&rm=3"],
+    gallery: [
+      "https://tse1.mm.bing.net/th/id/OIP.Nqiu26dIsHyiu0qR_X_GNAHaE7?w=4332&h=2880&rs=1&pid=ImgDetMain&o=7&rm=3",
+      "https://tse3.mm.bing.net/th/id/OIP.I9JB5Ewb9gsFNQvuJ4sEYgHaDa?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "https://tse2.mm.bing.net/th/id/OIP.e9Lv0o9BF1SpLhM6WgzIbgHaFO?rs=1&pid=ImgDetMain&o=7&rm=3",
+    ],
   },
   {
     id: "upsa",
@@ -124,9 +128,11 @@ const universityData = [
       "Minimum aggregate of 8-36, WASSCE results required, competitive selection",
     facilities:
       "Modern classrooms, computer labs, business center, student accommodation, library",
-    gallery: ["https://tse1.mm.bing.net/th/id/OIP.Ym-0brpi3WCz2KP8c4Xg8wHaEK?rs=1&pid=ImgDetMain&o=7&rm=3", 
+    gallery: [
+      "https://tse1.mm.bing.net/th/id/OIP.Ym-0brpi3WCz2KP8c4Xg8wHaEK?rs=1&pid=ImgDetMain&o=7&rm=3",
       "https://tse2.mm.bing.net/th/id/OIP.7MTcCcIZkAKNynkkXC2XXgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3",
-       "https://tse3.mm.bing.net/th/id/OIP.mF2LTiS15NHxWBpMx_VG8wHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"],
+      "https://tse3.mm.bing.net/th/id/OIP.mF2LTiS15NHxWBpMx_VG8wHaE8?rs=1&pid=ImgDetMain&o=7&rm=3",
+    ],
   },
   {
     id: "ashesi",
@@ -149,9 +155,11 @@ const universityData = [
       "Minimum aggregate of 6-8, strong academic record, entrance examination, WASSCE results required",
     facilities:
       "State-of-the-art IT labs, modern campus facilities, student residence halls, recreational facilities",
-    gallery: ["https://lh4.googleusercontent.com/-wPq14l-Ygqs/TjA1A9RwdPI/AAAAAAAAAFM/zlkv75jbEwY/w620-h413-k/1.jpg", 
+    gallery: [
+      "https://lh4.googleusercontent.com/-wPq14l-Ygqs/TjA1A9RwdPI/AAAAAAAAAFM/zlkv75jbEwY/w620-h413-k/1.jpg",
       "https://lh3.googleusercontent.com/-dG8JRXQPE2c/TjA1dbOhmOI/AAAAAAAAAGc/88ZymOwSWMU/w453-h287-k/22.jpg",
-       "https://tse2.mm.bing.net/th/id/OIP.fs6IkuP5drqRxbHN35pYIgAAAA?pid=ImgDet&w=390&h=260&rs=1&o=7&rm=3"],
+      "https://tse2.mm.bing.net/th/id/OIP.fs6IkuP5drqRxbHN35pYIgAAAA?pid=ImgDet&w=390&h=260&rs=1&o=7&rm=3",
+    ],
   },
 ];
 
@@ -166,18 +174,22 @@ function renderCards(data) {
     .map(
       (uni) => `
     <div class="card uni-card" data-id="${uni.id}">
-      <div class="topsec">
-        <img class="card-img" src="${uni.logo}" alt="${uni.short} logo">
-        <div>
+      <div class="card-top">
+        <img class="card-logo" src="${uni.logo}" alt="${uni.short} logo" />
+        <div class="card-details">
           <p class="card-sch">${uni.short}</p>
           <p class="location">${uni.location}</p>
         </div>
-        <div class="rank">${uni.rank}</div>
+        <span class="rank-badge">${uni.rank}</span>
       </div>
-      <div class="middlesec">
-        <div class="card-sch-type">${uni.type}</div>
+      <div class="card-tags">
+        <span class="card-type">${uni.type}</span>
+        <span class="card-faculty">${uni.faculties.slice(0, 2).join(" • ")}</span>
       </div>
-      <div class="downsec">
+      <p class="card-excerpt">
+        ${uni.description.length > 110 ? uni.description.slice(0, 110) + "…" : uni.description}
+      </p>
+      <div class="card-actions">
         <button class="view-profile-btn" data-id="${uni.id}">View Profile</button>
       </div>
     </div>
