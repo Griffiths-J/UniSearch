@@ -507,6 +507,7 @@ main {
   line-height: 1.8;
   color: var(--text-color);
   margin-bottom: 1rem;
+  font-style: italic;
 }
 
 .review-author {
@@ -1434,4 +1435,13 @@ footer {
 
 .controlLoader{
   min-height: 500px;
+}
+
+
+.uniloader{
+  width: 90vw;
+}
+
+.uniloader .loader-container{
+  width: 100%;
 }
