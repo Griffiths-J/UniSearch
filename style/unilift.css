@@ -187,11 +187,11 @@ html.dark-mode .toggle-ball {
 }
 
 .theme-toggle:hover {
-  background: #bbb;
+  background:#b8b7b7;
 }
 
-.dark-mode .theme-toggle:hover {
-  background: #666;
+html.dark-mode .theme-toggle:hover {
+  background: #787777;
 }
 
 @media (max-width: 768px) {
