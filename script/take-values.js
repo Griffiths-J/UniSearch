@@ -479,6 +479,8 @@ async function unis() {
         callback: function (responds) {
           document.getElementById("payment-modal").style.display = "none";
 
+          notifyPaymentSuccess(email);
+
           //result page +  loader
           if (window.showResultPage) {
             window.showResultPage();
@@ -570,6 +572,7 @@ async function unis() {
 
   document.querySelector(".gradeButton1").addEventListener("click", () => {
     Getvalues();
+    notifyProceed();
   });
 
   document.getElementById("closeM").addEventListener("click", () => {
@@ -584,6 +587,34 @@ async function unis() {
   }
 
   restoreResultPageIfNeeded();
+
+
+
+
+
+
+// Function for Button 1 (Proceeding to Payment)
+async function notifyProceed() {
+  const name = "A student";
+  await fetch('/.netlify/functions/alert-proceed', {
+    method: 'POST',
+    body: JSON.stringify({ name: name })
+  });
+}
+
+// Function for Button 2 (After Payment is finished)
+async function notifyPaymentSuccess(email) {
+  const name = email || "A student";
+  await fetch('/.netlify/functions/alert-paid', {
+    method: 'POST',
+    body: JSON.stringify({ name: name })
+  });
+}
+
+
+
+
+
 }
 
 unis();
