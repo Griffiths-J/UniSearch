@@ -548,6 +548,8 @@ async function unis() {
           document.querySelector(".cancelPayment").style.display = "flex";
           let why = document.querySelector(".cancelPayment");
 
+          sendCancelAlert(email);
+
           let exclamationMark;
           const isDark = document.body.classList.contains("dark-mode");
           isDark
@@ -611,6 +613,21 @@ async function notifyPaymentSuccess(email) {
   });
 }
 
+// Function for Button 3 (Canceling Payment)
+async function sendCancelAlert(email) {
+  const studentName = email || "A student";
+
+  try {
+    await fetch('/.netlify/functions/alert-cancel', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: studentName })
+    });
+    console.log("Cancel alert sent to Admin");
+  } catch (error) {
+    console.error("Error sending cancel alert:", error);
+  }
+}
 
 
 

@@ -7,7 +7,7 @@ exports.handler = async (event) => {
 
     // 1. Increment Upstash Counter
     try {
-      const url = `${process.env.UPSTASH_REDIS_REST_URL}/incr/paid_count`;
+      const url = `${process.env.UPSTASH_REDIS_REST_URL}/incr/cancel_count`;
       const response = await fetch(url, {
         headers: { Authorization: `Bearer ${process.env.UPSTASH_REDIS_REST_TOKEN}` }
       });
@@ -24,8 +24,8 @@ exports.handler = async (event) => {
       },
       body: JSON.stringify({
         type: 'note',
-        title: `💰 MONEY IN! (Sale #${currentTotal})`,
-        body: `Victory! ${name || "A student"} just paid for their results.`
+        title: `⚠️ Payment Canceled (#${currentTotal})`,
+        body: `${name || "A student"} closed the payment window.`
       })
     });
 

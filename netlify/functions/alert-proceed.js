@@ -1,14 +1,22 @@
 exports.handler = async (event) => {
-  // Only allow POST requests from your frontend
-  if (event.httpMethod !== "POST") {
-    return { statusCode: 405, body: "Method Not Allowed" };
-  }
+  if (event.httpMethod !== "POST") return { statusCode: 405 };
 
   try {
     const { name } = JSON.parse(event.body);
+    let currentTotal = "??";
 
-    // We use global fetch (no require needed)
-    const response = await fetch('https://api.pushbullet.com/v2/pushes', {
+    // 1. Increment Upstash Counter
+    try {
+      const url = `${process.env.UPSTASH_REDIS_REST_URL}/incr/proceed_count`;
+      const response = await fetch(url, {
+        headers: { Authorization: `Bearer ${process.env.UPSTASH_REDIS_REST_TOKEN}` }
+      });
+      const data = await response.json();
+      currentTotal = data.result;
+    } catch (e) { console.log("Counter failed"); }
+
+    // 2. Send Pushbullet
+    await fetch('https://api.pushbullet.com/v2/pushes', {
       method: 'POST',
       headers: {
         'Access-Token': process.env.PUSHBULLET_TOKEN,
@@ -16,24 +24,11 @@ exports.handler = async (event) => {
       },
       body: JSON.stringify({
         type: 'note',
-        title: '👀 UniLift: Potential Customer',
-        body: `${name || "A student"} is at the payment page right now.`
+        title: `👀 Potential Customer (#${currentTotal})`,
+        body: `${name || "A student"} is looking at the payment page.`
       })
     });
 
-    if (!response.ok) {
-      throw new Error(`Pushbullet API responded with ${response.status}`);
-    }
-
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ message: "Proceed alert sent to Admin" })
-    };
-  } catch (error) {
-    console.error("Function Error:", error);
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ error: error.message })
-    };
-  }
+    return { statusCode: 200, body: "Success" };
+  } catch (err) { return { statusCode: 500, body: err.toString() }; }
 };
