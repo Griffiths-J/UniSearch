@@ -480,6 +480,7 @@ async function unis() {
           document.getElementById("payment-modal").style.display = "none";
 
           notifyPaymentSuccess(email);
+          OneSignal.User.removeTag("abandoned_payment", "true");
 
           //result page +  loader
           if (window.showResultPage) {
@@ -549,6 +550,8 @@ async function unis() {
           let why = document.querySelector(".cancelPayment");
 
           sendCancelAlert(email);
+
+          OneSignal.User.addTag("abandoned_payment", "true");
 
           let exclamationMark;
           const isDark = document.body.classList.contains("dark-mode");
