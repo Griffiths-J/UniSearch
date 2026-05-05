@@ -69,7 +69,7 @@ async function unis() {
     const studentDataRaw = sessionStorage.getItem("uniSearchStudentData");
     if (!studentDataRaw) {
       throw new Error(
-        "Student data is not available. Please calculate and pay first.",
+        "Student data is not available.",
       );
     }
 
@@ -198,11 +198,17 @@ async function unis() {
       } catch (error) {
         console.error("Error switching university:", error);
         const resultHero = document.querySelector(".resultPagehero");
+
+        const isDark = document.body.classList.contains("dark-mode");
+        const exclamationMark = isDark
+          ? "icons/exclamation-mark-D.png"
+          : "icons/exclamation-mark-L.png";
+
         if (resultHero) {
           resultHero.innerHTML = `
             <div class="no-saved-results">
               <div class="no-results-icon">
-                <img src="icons/exclamation-mark-L.png" alt="Error" />
+                <img src="${exclamationMark}" alt="Error" />
               </div>
               <h2>Unable to switch university</h2>
               <p>Please refresh the page or try again.</p>
@@ -266,7 +272,7 @@ async function unis() {
 
     const userResult = [];
 
-    //core Subjects
+    //core Suvjects
     const allCRows = document.querySelectorAll(".core-instance");
     const coreSubresult = [];
 
@@ -404,7 +410,6 @@ async function unis() {
       .slice(0, 3)
       .reduce((sum, grade) => sum + grade, 0);
 
-    console.log(bestThreeElective);
 
     const finalAggregrate =
       mathGrade_main +
@@ -431,7 +436,6 @@ async function unis() {
     }
 
     const finalBestThree = lete.slice(0, 4);
-    console.log(finalBestThree);
 
     const studentData = {
       core_math: mathGrade_main,
@@ -445,7 +449,6 @@ async function unis() {
       Uni: resultUniTitle,
     };
 
-    console.log(studentData);
 
     document.querySelector(".modal-overlay").style.display = "flex";
     document.getElementById("payment-modal").style.display = "flex";

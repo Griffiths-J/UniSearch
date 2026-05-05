@@ -1,6 +1,3 @@
-/* import renderEligiblePrograms from '.take-values.js'; */
-
-/* console.log(renderEligiblePrograms); */
 
 export function pages() {
   const landingSection = document.querySelector(".landingPage");
