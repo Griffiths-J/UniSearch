@@ -1,8 +1,7 @@
-
 .how-it-works-hero {
   text-align: center;
   padding: 100px 20px;
-  background: var(--Hspan); 
+  background: var(--Hspan);
   color: #fff;
 }
 
@@ -27,7 +26,7 @@
   color: var(--text-color);
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
 }
 
@@ -36,7 +35,7 @@
 }
 
 .step-number {
-  background: var(--Hspan); 
+  background: var(--Hspan);
   color: white;
   width: 40px;
   height: 40px;
@@ -122,8 +121,20 @@
   margin-bottom: 15px;
 }
 
-.feature-icon img{
-  width: 3.8rem;
+.feature-icon i {
+  color: var(--Hspan);
+}
+
+.feature-item:nth-child(1) .feature-icon i {
+  color: var(--Hspan);
+}
+
+.feature-item:nth-child(2) .feature-icon i {
+  color: #177de4;
+}
+
+.feature-item:nth-child(3) .feature-icon i {
+  color: #40e0d0;
 }
 
 .faq-section {
@@ -143,7 +154,6 @@
   color: var(--Hspan);
   margin-bottom: 8px;
 }
-
 
 @media (max-width: 768px) {
   .step-card {
