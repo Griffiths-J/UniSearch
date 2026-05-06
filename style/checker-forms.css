@@ -1,0 +1,293 @@
+.checker-forms-main {
+  padding: 2rem 1.5rem 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hero-icon {
+  width: 78px;
+  height: 78px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 22px;
+  background: rgba(99, 179, 237, 0.12);
+  color: var(--Hspan);
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.hero-section h1 {
+  font-family: var(--montserrat);
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.hero-section p {
+  max-width: 680px;
+  margin: 0 auto;
+  color: var(--text-color);
+  opacity: 0.82;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.75rem;
+  margin-bottom: 3rem;
+}
+
+.service-card {
+  background: var(--card-surface);
+  border: 1px solid rgba(23, 125, 228, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 12px 30px var(--shadow-cl);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+  transition: transform 0.25s ease;
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon-box {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: rgba(99, 179, 237, 0.16);
+  color: var(--Hspan);
+  font-size: 1.1rem;
+}
+
+.service-card h2 {
+  font-size: 1.35rem;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.service-copy {
+  color: var(--text-color);
+  opacity: 0.8;
+  line-height: 1.7;
+}
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.service-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: var(--text-color);
+  line-height: 1.7;
+}
+
+.service-list i {
+  color: var(--Hspan);
+  margin-top: 0.15rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.95rem 1.35rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.96rem;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  width: fit-content;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  position: relative;
+  background: var(--background-btn);
+  color: var(--white);
+  border: none;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 12px 30px rgba(23, 125, 228, 0.25);
+}
+
+.btn-secondary {
+  position: relative;
+  background: transparent;
+  border: 2px solid var(--Hspan);
+  color: var(--Hspan);
+}
+
+.btn-secondary:hover {
+  background: rgba(99, 179, 237, 0.12);
+}
+
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  background: var(--card-surface);
+  border: 1px solid rgba(23, 125, 228, 0.08);
+  border-radius: 20px;
+  padding: 1.7rem;
+  text-align: center;
+  box-shadow: 0 10px 20px var(--shadow-cl);
+}
+
+.stat-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+  color: var(--Hspan);
+}
+
+.stat-card p {
+  margin: 0;
+  color: var(--text-color);
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+}
+
+.steps-section {
+  margin-bottom: 3rem;
+}
+
+.steps-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: var(--montserrat);
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.step-card {
+  background: var(--card-surface);
+  border: 1px solid rgba(23, 125, 228, 0.08);
+  border-radius: 20px;
+  padding: 1.7rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  box-shadow: 0 12px 24px var(--shadow-cl);
+}
+
+.step-number {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--Hspan);
+  color: var(--white);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.step-card h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.step-card p {
+  margin: 0;
+  color: var(--text-color);
+  opacity: 0.8;
+  line-height: 1.7;
+}
+
+.faq-section {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.faq-section h2 {
+  text-align: center;
+  margin-bottom: 1.75rem;
+  font-family: var(--montserrat);
+  font-size: 1.95rem;
+  color: var(--text-color);
+}
+
+.faq-item {
+  background: var(--card-surface);
+  border: 1px solid rgba(23, 125, 228, 0.08);
+  border-radius: 18px;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 10px 20px var(--shadow-cl);
+}
+
+.faq-item h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  color: var(--Hspan);
+}
+
+.faq-item p {
+  margin: 0;
+  color: var(--text-color);
+  opacity: 0.85;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .checker-forms-main {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .stat-card,
+  .step-card,
+  .service-card {
+    padding: 1.5rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2.2rem;
+  }
+}
