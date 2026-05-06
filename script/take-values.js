@@ -125,16 +125,27 @@ async function unis() {
     const noProgramsHtml =
       elegible.length === 0
         ? `
-       <div class="result-card no-match">
-        <h2>Payment complete ✅</h2>
-        <p class="no-p1"><span>⚠️</span> No eligible programs matched your aggregate and electives.</p>
-        <div class="wa-link">
-          <p class="no-p2">Get a personal assistant for your grade: </p>
-          <a href="https://wa.me/+233256689934?text=Hi,I need help with selecting courses for my grade in ${Uni}">
-            <img src="./icons/icons8-whatsapp-48.png" alt="whatsapp_logo">CHAT HERE
-          </a>
-        </div>
-      </div>
+      <div class="no-match-card">
+          <span class="status-badge">Payment Confirmed ✅</span>
+          
+          <div class="no-match-icon">
+            <i class="fas fa-exclamation-triangle"></i>
+          </div>
+          
+          <h2>No Direct Matches</h2>
+          
+          <p class="message">
+            Based on your aggregate and electives, you don't currently meet the standard requirements for programs at <strong>${Uni}</strong>.
+          </p>
+
+          <div class="wa-link-wrapper">
+            <p style="font-size: 0.9rem; color: var(--muted-text); margin-bottom: 12px;">Don't give up! We can help you find alternatives:</p>
+            <a href="https://wa.me/+233256689934?text=Hi Unilift, I need help with selecting courses for my grade in ${Uni}" class="assistant-link">
+              <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="whatsapp_logo">
+              TALK TO AN ASSISTANT
+            </a>
+          </div>
+    </div>
     `
         : "";
 

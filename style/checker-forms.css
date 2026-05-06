@@ -136,7 +136,8 @@
 .btn-primary {
   position: relative;
   background: var(--background-btn);
-  color: var(--white);
+  color: #fff;
+  font-weight: 600;
   border: none;
 }
 
@@ -277,7 +278,8 @@
   padding: 0.95rem 1.5rem;
   border-radius: 999px;
   background: var(--background-btn);
-  color: var(--white);
+  color: #fff;
+  font-weight: 700;
   text-decoration: none;
   font-weight: 700;
   min-width: 230px;

@@ -14,7 +14,7 @@ function initSavedResults() {
           <img src="" alt="No results" />
         </div>
         <h2>No Saved Results</h2>
-        <p>You haven't checked for eligible courses yet.</p>
+        <p>You haven't checked for eligible courses yet.<br>(While you are in session yout results are saved here)</p>
         <p>Click "Get Started" to find university courses that match your WASSCE grades.</p>
         <a href="#" class="heroButton getStarted-btn" onclick="goToGradePage()">Get Started Now</a>
       </div>
