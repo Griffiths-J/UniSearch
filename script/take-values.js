@@ -149,6 +149,14 @@ async function unis() {
     `
         : "";
 
+        const buy = `
+              
+      <div class="result-cta">
+        <p>Ready to apply? Get your admission forms here.</p>
+        <a href="checker&forms.html">Get yours now →</a>
+      </div>
+        `
+
     resultHero.innerHTML = `
       <div class="result-summary">
           <h2>Eligible Courses at <br><span class="result-summaryUni">${Uni}</span> </h2>
@@ -159,7 +167,8 @@ async function unis() {
       </div>
       ${noProgramsHtml}
       <div class="numberCourses">${elegible.length} COURSE${elegible.length > 1 ? "S" : ""} FOUND</div>
-      <div class="eligible-programs">${listItems}</div>
+      <div class="eligible-programs">${listItems} </div>
+      ${buy}
     `;
 
     saveResultData(elegible, aggregate, Uni);

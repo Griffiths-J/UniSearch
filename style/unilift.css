@@ -379,6 +379,7 @@ main {
 
 .heroButton:hover {
   background: linear-gradient(to left, #1575d5, #0db1e8, #3bd1c2);
+  transform: translateY(-2px);
 }
 
 /*Unicards*/
@@ -1563,4 +1564,77 @@ footer {
 
 .uniloader .loader-container {
   width: 100%;
+}
+
+
+.promo-section {
+ /*  background: linear-gradient(160deg, #e8f4fa 0%, #d0ebf8 100%); */
+  border-radius: 2rem;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.promo-section h3 {
+  font-family: var(--montserrat);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color:var(--text-color);
+  margin-bottom: 0.7rem;
+}
+
+.promo-section p {
+  font-family: var(--inter);
+  font-size: 1.05rem;
+  color: var(--muted-text);
+  max-width: 500px;
+  margin: 0 auto 1.5rem auto;
+  line-height: 1.6;
+}
+
+.promo-btn {
+  background: var(--background-btn);
+  color: #fff;
+  padding: 0.85rem 2rem;
+  border-radius: 45px;
+  font-family: var(--montserrat);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.2s, box-shadow 0.2s;
+}
+
+.promo-btn:hover {
+  opacity: 0.9;
+  box-shadow: 0 10px 20px rgba(23, 125, 228, 0.25);
+  transform: translateY(-2px);
+}
+
+
+
+
+
+.result-cta {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 1.5rem;
+}
+
+.result-cta p {
+  font-family: var(--inter);
+  font-size: 1rem;
+  color: var(--muted-text);
+  margin-bottom: 0.7rem;
+}
+
+.result-cta a {
+  font-family: var(--montserrat);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--Hspan);
+  text-decoration: none;
+  transition: color 0.2s;
 }
