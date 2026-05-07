@@ -100,7 +100,7 @@ function initSavedResults() {
     `;
   }
 
-  let savedResult = sessionStorage.getItem("uniSearchResult");
+  let savedResult = localStorage.getItem("uniSearchResult");
 
   if (savedResult) {
     try {

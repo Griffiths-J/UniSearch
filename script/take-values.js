@@ -35,7 +35,7 @@ async function unis() {
 
   function saveResultData(elegible, aggregate, Uni) {
     const resultData = JSON.stringify({ elegible, aggregate, Uni });
-    sessionStorage.setItem("uniSearchResult", resultData);
+    localStorage.setItem("uniSearchResult", resultData);
     sessionStorage.setItem("uniSearchPageState", "result");
   }
 
@@ -178,7 +178,7 @@ async function unis() {
   }
 
   window.restoreResultFromStorage = function () {
-    const stored = sessionStorage.getItem("uniSearchResult");
+    const stored = localStorage.getItem("uniSearchResult");
     if (!stored) return;
     try {
       const parsed = JSON.parse(stored);
@@ -244,7 +244,7 @@ async function unis() {
     returnHomeBtn.addEventListener("click", () => {
       if (window.showLandingPage) window.showLandingPage();
       sessionStorage.setItem("uniSearchPageState", "landing");
-      sessionStorage.removeItem("uniSearchResult");
+      localStorage.removeItem("uniSearchResult");
     });
   }
 
@@ -252,7 +252,7 @@ async function unis() {
     const pageState = sessionStorage.getItem("uniSearchPageState");
     if (pageState !== "result") return;
 
-    const stored = sessionStorage.getItem("uniSearchResult");
+    const stored = localStorage.getItem("uniSearchResult");
     if (!stored) return;
 
     if (window.showResultPage) window.showResultPage();
