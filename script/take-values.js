@@ -149,6 +149,37 @@ async function unis() {
     `
         : "";
 
+        
+
+
+/* console.log(weakMarkArray)
+
+
+         let gradeHtml = ''
+            weakMarkArray.map(e=>{
+                gradeHtml+=`
+                   ${e.grade},
+                `
+            })
+
+            let subjectHtml = '';
+            weakMarkArray.map(e=>{
+                subjectHtml+=`
+                    ${e.subject},
+                `
+            }) */
+
+
+       /*  const weakMarkRemark = 
+                `
+            <div class="weakmark" style="font-style:italic">
+               Getting ${gradeHtml} in ${subjectHtml} respectively may reduce your chances of admission.
+               Even though you may see eligible programs, universities often prioritize stronger grades.
+               <a href="https://www.google.com">Talk to an assistant</a>
+            </div>    
+            ` 
+               ; */
+
         const buy = `
               
       <div class="result-cta">
@@ -259,6 +290,8 @@ async function unis() {
     window.restoreResultFromStorage();
     initResultUniversitySwitcher();
   }
+
+
 
   function Getvalues() {
     const university = document.querySelector(".getsch-select-value").value;
@@ -378,6 +411,42 @@ async function unis() {
       });
     });
 
+
+
+
+
+     let weakMarkArray = [];
+
+    const weakMark = userResult.map(e=>{
+      let grade = e.finalGrade;
+      let subject = e.finalSub;
+
+      if(grade > 6){
+
+       switch(grade){
+        case 7:
+          grade = 'D7'
+          break;
+        case 8:
+          grade =  'E8'
+          break;
+        case 9:
+          grade = 'F9'
+          break;
+        default :
+          grade = 'weak mark'    
+       }
+
+        weakMarkArray.push({
+        grade,subject
+        });
+      }
+    })
+
+    console.log(weakMarkArray)
+
+
+   
     const allResult = userResult;
 
     const cores = allResult.filter((e) => e.finalType === "core");
@@ -466,8 +535,10 @@ async function unis() {
       [finalBestThree[2].finalSub]: finalBestThree[2].finalGrade,
       [finalBestThree[3].finalSub]: finalBestThree[3].finalGrade,
       aggregrate: finalAggregrate,
-      Uni: resultUniTitle,
+      Uni: resultUniTitle
     };
+
+
 
 
     document.querySelector(".modal-overlay").style.display = "flex";
@@ -491,7 +562,7 @@ async function unis() {
 
       document.querySelector(".resultPage").style.display = "none";
       const handler = PaystackPop.setup({
-        key: "pk_live_db6a66b9372f3b2a5c775bfd81dc6f3171a7e66a",
+        key: "pk_test_217133aa809e4d9c253ad67a39601a632ad77e4f",
         email: email,
         amount: 1150,
         currency: "GHS",
@@ -538,7 +609,7 @@ async function unis() {
               renderEligiblePrograms(
                 result.elegible,
                 result.aggregate,
-                result.Uni,
+                result.Uni
               );
               initResultUniversitySwitcher();
             })
