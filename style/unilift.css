@@ -1638,3 +1638,38 @@ footer {
   text-decoration: none;
   transition: color 0.2s;
 }
+
+
+
+.weakmarksave{
+  color: var(--text-color);
+  margin-top: 4.2rem;
+  line-height: 23px;
+}
+
+
+.weakmarktake{
+  color: var(--text-color);
+  margin: 0.7rem auto;
+  font-size: 0.9rem;
+  line-height: 23px;
+}
+
+
+.weakmarksave a ,.weakmarktake a{
+  color: var(--Hspan);
+font-size: 1rem;
+border: 1px solid var(--Hspan);
+padding: 4px;
+border-radius: 10px;
+white-space: nowrap;
+text-decoration: none;
+margin-top: 2px;
+font-weight: 700;
+font-style: normal;
+transition: all .5s ease;
+}
+
+.weakmarktake a:hover{
+  background-color: #fff;
+}

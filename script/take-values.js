@@ -33,8 +33,8 @@ async function unis() {
     }
   }
 
-  function saveResultData(elegible, aggregate, Uni) {
-    const resultData = JSON.stringify({ elegible, aggregate, Uni });
+  function saveResultData(elegible, aggregate, Uni,weakGrades) {
+    const resultData = JSON.stringify({ elegible, aggregate, Uni,weakGrades });
     localStorage.setItem("uniSearchResult", resultData);
     sessionStorage.setItem("uniSearchPageState", "result");
   }
@@ -100,6 +100,46 @@ async function unis() {
       return;
     }
 
+    const studentDataRaw = sessionStorage.getItem("uniSearchStudentData");
+
+    const studentData = studentDataRaw ? 
+                  JSON.parse(studentDataRaw):{};
+
+      const weakGrades = studentData.weakGrades||[];
+      
+
+ let gradeHtml = ''
+            weakGrades.map((e)=>{
+                gradeHtml+=`
+                   ${e.grade},
+                `
+            })
+
+            let subjectHtml = '';
+            weakGrades.map((e)=>{
+                subjectHtml+=`
+                    ${e.subject},
+                `
+            }) 
+
+
+ const weakMarkRemark = weakGrades.length>1 ? 
+                `
+            <div class="weakmarktake" style="font-style:italic">
+               Getting ${gradeHtml} in ${subjectHtml} respectively may reduce your chances of admission.
+               Even though you may see eligible programs, universities often prioritize stronger grades.
+               <a href="https://wa.me/+233509304981?text=Hi Unilift, I need help with selecting courses for my grades.">Talk to an assistant</a>
+            </div>    
+            ` : '';
+
+
+
+
+
+
+
+
+
     const listItems = elegible
       .map(
         (p) => `
@@ -140,7 +180,7 @@ async function unis() {
 
           <div class="wa-link-wrapper">
             <p style="font-size: 0.9rem; color: var(--muted-text); margin-bottom: 12px;">Don't give up! We can help you find alternatives:</p>
-            <a href="https://wa.me/+233256689934?text=Hi Unilift, I need help with selecting courses for my grade in ${Uni}" class="assistant-link">
+            <a href="https://wa.me/+233509304981?text=Hi Unilift, I need help with selecting courses for my grade in ${Uni}" class="assistant-link">
               <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="whatsapp_logo">
               TALK TO AN ASSISTANT
             </a>
@@ -149,36 +189,8 @@ async function unis() {
     `
         : "";
 
-        
 
 
-/* console.log(weakMarkArray)
-
-
-         let gradeHtml = ''
-            weakMarkArray.map(e=>{
-                gradeHtml+=`
-                   ${e.grade},
-                `
-            })
-
-            let subjectHtml = '';
-            weakMarkArray.map(e=>{
-                subjectHtml+=`
-                    ${e.subject},
-                `
-            }) */
-
-
-       /*  const weakMarkRemark = 
-                `
-            <div class="weakmark" style="font-style:italic">
-               Getting ${gradeHtml} in ${subjectHtml} respectively may reduce your chances of admission.
-               Even though you may see eligible programs, universities often prioritize stronger grades.
-               <a href="https://www.google.com">Talk to an assistant</a>
-            </div>    
-            ` 
-               ; */
 
         const buy = `
               
@@ -197,12 +209,16 @@ async function unis() {
           </div>
       </div>
       ${noProgramsHtml}
-      <div class="numberCourses">${elegible.length} COURSE${elegible.length > 1 ? "S" : ""} FOUND</div>
+      <div class="numberCourses">${elegible.length} COURSE${elegible.length > 1 ? "S" : ""} FOUND <br>
+         ${weakMarkRemark}      
+      </div>
       <div class="eligible-programs">${listItems} </div>
       ${buy}
+     
+       
     `;
 
-    saveResultData(elegible, aggregate, Uni);
+    saveResultData(elegible, aggregate, Uni,weakGrades);
     const switcherCode = getUniversityCode(Uni);
     const hasPaid = Boolean(sessionStorage.getItem("uniSearchStudentData"));
     toggleResultUniversitySwitcher(hasPaid, switcherCode);
@@ -218,6 +234,7 @@ async function unis() {
           parsed.elegible,
           parsed.aggregate,
           parsed.Uni || "N/A",
+          parsed.weakGrades
         );
       }
     } catch (e) {
@@ -285,6 +302,7 @@ async function unis() {
 
     const stored = localStorage.getItem("uniSearchResult");
     if (!stored) return;
+
 
     if (window.showResultPage) window.showResultPage();
     window.restoreResultFromStorage();
@@ -417,7 +435,7 @@ async function unis() {
 
      let weakMarkArray = [];
 
-    const weakMark = userResult.map(e=>{
+    const weakMark = userResult.forEach(e=>{
       let grade = e.finalGrade;
       let subject = e.finalSub;
 
@@ -442,8 +460,8 @@ async function unis() {
         });
       }
     })
-
-    console.log(weakMarkArray)
+/* 
+    console.log(weakMarkArray */
 
 
    
@@ -535,7 +553,8 @@ async function unis() {
       [finalBestThree[2].finalSub]: finalBestThree[2].finalGrade,
       [finalBestThree[3].finalSub]: finalBestThree[3].finalGrade,
       aggregrate: finalAggregrate,
-      Uni: resultUniTitle
+      Uni: resultUniTitle,
+      weakGrades:weakMarkArray
     };
 
 
@@ -562,7 +581,7 @@ async function unis() {
 
       document.querySelector(".resultPage").style.display = "none";
       const handler = PaystackPop.setup({
-        key: "pk_test_217133aa809e4d9c253ad67a39601a632ad77e4f",
+        key: "pk_live_db6a66b9372f3b2a5c775bfd81dc6f3171a7e66a",
         email: email,
         amount: 1150,
         currency: "GHS",
@@ -609,13 +628,14 @@ async function unis() {
               renderEligiblePrograms(
                 result.elegible,
                 result.aggregate,
-                result.Uni
+                result.Uni,
+                studentData.weakGrades
               );
               initResultUniversitySwitcher();
             })
             .catch((error) => {
-              console.error("Error fetching results:", error);
-              if (resultHero) {
+              /* console.error("Error fetching results:", error);
+              if (resultHero) */{
                 const isDark = document.body.classList.contains("dark-mode");
                 const exclamationMark = isDark
                   ? "icons/exclamation-mark-D.png"
@@ -689,7 +709,7 @@ async function unis() {
 
 
 
-// Function for Button 1 (Proceeding to Payment)
+//  (Proceeding to Payment)
 async function notifyProceed() {
   const name = "A student";
   await fetch('/.netlify/functions/alert-proceed', {
@@ -698,7 +718,7 @@ async function notifyProceed() {
   });
 }
 
-// Function for Button 2 (After Payment is finished)
+// (After Payment is finished)
 async function notifyPaymentSuccess(email) {
   const name = email || "A student";
   await fetch('/.netlify/functions/alert-paid', {
@@ -707,7 +727,7 @@ async function notifyPaymentSuccess(email) {
   });
 }
 
-// Function for Button 3 (Canceling Payment)
+// (Canceling Payment)
 async function sendCancelAlert(email) {
   const studentName = email || "A student";
 
@@ -717,7 +737,7 @@ async function sendCancelAlert(email) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name: studentName })
     });
-    console.log("Cancel alert sent to Admin");
+    /* console.log("Cancel alert sent to Admin"); */
   } catch (error) {
     console.error("Error sending cancel alert:", error);
   }

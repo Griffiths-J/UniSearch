@@ -90,6 +90,8 @@ export function pages() {
   window.addEventListener("pageshow", () => {
     const state = sessionStorage.getItem("uniSearchPageState");
     const savedResult = sessionStorage.getItem("uniSearchResult");
+
+    const hasSavedData= localStorage.getItem("uniSearchResult")
       
       console.log("live session state:" , state)
 
@@ -103,8 +105,17 @@ export function pages() {
     return;
   }
 
-  if (state === "result" && savedResult) {
+/*   if (state === "result" && savedResult) {
     showResultPage();
+    return;
+  } */
+
+  if (state === "result" && hasSavedData) {
+    showResultPage();
+
+    if(window.restoreResultFromStorage){
+      window.restoreResultFromStorage();
+    }
     return;
   }
 

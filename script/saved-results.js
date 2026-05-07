@@ -3,7 +3,7 @@ function initSavedResults() {
   const savedResultActions = document.querySelector(".saved-result-actions");
 
   if (!resultHero || !savedResultActions) {
-    console.error("Container elements not found - DOM may not be ready");
+   /*  console.error("Container elements not found - DOM may not be ready"); */
     return;
   }
 
@@ -24,10 +24,10 @@ function initSavedResults() {
 
 
   function displaySavedResults(data) {
-    const { elegible, aggregate, Uni } = data;
+    const { elegible, aggregate, Uni,weakGrades =[] } = data;
 
     if (!Array.isArray(elegible)) {
-      console.error("elegible is not an array:", elegible);
+     /*  console.error("elegible is not an array:", elegible); */
       displayNoDataMessage();
       return;
     }
@@ -71,7 +71,7 @@ function initSavedResults() {
 
           <div class="wa-link-wrapper">
             <p style="font-size: 0.9rem; color: var(--muted-text); margin-bottom: 12px;">Don't give up! We can help you find alternatives:</p>
-            <a href="https://wa.me/+233256689934?text=Hi Unilift, I need help with selecting courses for my grade in ${Uni}" class="assistant-link">
+            <a href="https://wa.me/+233509304981?text=Hi Unilift, I need help with selecting courses for my grade in ${Uni}" class="assistant-link">
               <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="whatsapp_logo">
               TALK TO AN ASSISTANT
             </a>
@@ -79,6 +79,28 @@ function initSavedResults() {
      </div>
        `
         : "";
+
+        let subjectHtml = '';
+            weakGrades.map((e)=>{
+                subjectHtml+=`
+                    ${e.subject},
+                `
+            }) 
+
+        let gradeHtml;
+         weakGrades.map((e)=>{
+                gradeHtml+=`
+                   ${e.grade},
+                `
+            })
+
+        const weakGradesHtml = weakGrades.length>0 ? `
+           <div class="weakmarksave" style="font-style:italic">
+               Getting ${gradeHtml} in ${subjectHtml} respectively may reduce your chances of admission.
+               Even though you may see eligible programs, universities often prioritize stronger grades.
+               <a href="https://wa.me/+233509304981?text=Hi Unilift, I need help with selecting courses for my grades."><span style="white-space:nowrap" >Talk to an assistant </span></a>
+            </div>   
+        `: '';
 
     resultHero.innerHTML = `
       <div class="result-summary">
@@ -91,6 +113,7 @@ function initSavedResults() {
       ${noProgramsHtml}
       <div class="numberCourses">${elegible.length} COURSE${elegible.length > 1 ? "S" : ""} FOUND</div>
       <div class="eligible-programs">${listItems}</div>
+      ${weakGradesHtml}
     `;
 
     savedResultActions.innerHTML = `
@@ -105,13 +128,13 @@ function initSavedResults() {
   if (savedResult) {
     try {
       const parsed = JSON.parse(savedResult);
-      console.log("Parsed result:", parsed);
+     /*  console.log("Parsed result:", parsed); */
 
       if (parsed && Array.isArray(parsed.elegible)) {
-        console.log("Displaying saved results...");
+       /*  console.log("Displaying saved results..."); */
         displaySavedResults(parsed);
       } else {
-        console.log("Result structure is invalid - showing no data message");
+        /* console.log("Result structure is invalid - showing no data message"); */
         displayNoDataMessage();
       }
     } catch (e) {
@@ -119,7 +142,7 @@ function initSavedResults() {
       displayNoDataMessage();
     }
   } else {
-    console.log("No saved results found in sessionStorage");
+    /* console.log("No saved results found in sessionStorage"); */
     displayNoDataMessage();
   }
 
