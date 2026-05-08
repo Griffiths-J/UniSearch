@@ -634,8 +634,8 @@ async function unis() {
               initResultUniversitySwitcher();
             })
             .catch((error) => {
-              /* console.error("Error fetching results:", error);
-              if (resultHero) */{
+              /* console.error("Error fetching results:", error);*/
+               if (resultHero) {
                 const isDark = document.body.classList.contains("dark-mode");
                 const exclamationMark = isDark
                   ? "icons/exclamation-mark-D.png"
