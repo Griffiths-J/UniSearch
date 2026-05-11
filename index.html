@@ -1,193 +1,930 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UniLift | Maintenance</title>
-    <style>
-        :root {
-            --bg: #f2f4f7;
-            --accent: ##3cc6d6; 
-            --glass: rgba(42, 42, 42, 0.05);
-            --glass-hover: rgba(255, 255, 255, 0.1);
-            --text-main: #000;
-            --text-dim: #1a1919;
-            
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="images/png" href="favicon.png" />
+
+    <meta name="title" content="UniLift | Know Your Future in 5 Seconds" />
+    <meta
+      name="description"
+      content="Stop guessing. Enter your WASSCE grades and instantly see every university course you qualify for. Built by students, for students."
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://unilift.app/" />
+    <meta
+      property="og:title"
+      content="UniLift: The Ultimate University Eligibility Checker"
+    />
+    <meta
+      property="og:description"
+      content="Don't waste money on the wrong forms. Check your admission chances at KNUST, UG, and more instantly!"
+    />
+    <meta
+      property="og:image"
+      content="https://unilift.app/og-image.jpeg"
+    />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://unilift.app/" />
+    <meta
+      property="twitter:title"
+      content="UniLift | Your University Admission Guide"
+    />
+    <meta
+      property="twitter:description"
+      content="Calculate your aggregates and see your eligible courses in one click."
+    />
+    <meta
+      property="twitter:image"
+      content="https://unilift.app/og-image.jpeg"
+    />
+    <script>
+      (function () {
+        const theme =
+          localStorage.getItem("theme") ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
+
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark-mode");
         }
+      })();
+    </script>
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    
 
-        body {
-            background-color: var(--bg);
-            color: var(--text-main);
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            padding: 20px;
-            overflow-x: hidden;
-        }
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+      OneSignalDeferred.push(async function(OneSignal) {
+        await OneSignal.init({
+          appId: "a744f9a7-2c80-40fd-af37-16630dc784cc",
+        });
+      });
+    </script>
 
-        .wrapper {
-            width: 100%;
-            max-width: 700px;
-            text-align: center;
-            animation: fadeIn 1.2s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .logo {
-            font-weight: 700;
-            letter-spacing: 5px;
-            font-size: 0.8rem;
-            color: var(--accent);
-            text-transform: uppercase;
-            margin-bottom: 1.5rem;
-            display: block;
-        }
-
-        h1 {
-            font-size: clamp(2rem, 10vw, 4rem); 
-            font-weight: 600;
-            letter-spacing: -0.03em;
-            margin-bottom: 1rem;
-            line-height: 1.1;
-        }
-
-        p {
-            font-size: clamp(1rem, 4vw, 1.2rem);
-            color: var(--text-dim);
-            max-width: 500px;
-            margin: 0 auto 3rem auto;
-            line-height: 1.6;
-        }
-
-      
-        .countdown-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 12px;
-            margin-bottom: 3rem;
-        }
-
-        .time-box {
-            background: var(--glass);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: clamp(1rem, 3vw, 2rem) 0;
-            border-radius: 18px;
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-        }
-
-        .time-box span { display: block; }
-        
-        .number {
-            font-size: clamp(1.2rem, 5vw, 2.2rem);
-            font-weight: 700;
-            font-variant-numeric: tabular-nums;
-        }
-
-        .label {
-            font-size: 0.65rem;
-            text-transform: uppercase;
-            color: var(--text-dim);
-            margin-top: 4px;
-            letter-spacing: 1px;
-        }
-
-     
-        .enquiry-btn {
-            display: inline-block;
-            background: var(--glass);
-            color: var(--text-main);
-            text-decoration: none;
-            padding: 14px 32px;
-            border-radius: 30px;
-            font-size: 0.95rem;
-            font-weight: 500;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
-            margin-top: 1rem;
-        }
-
-        .enquiry-btn:hover {
-            background: var(--text-main);
-            color: var(--bg);
-            transform: scale(1.05);
-        }
-
-       
-        @media (max-width: 400px) {
-            .countdown-grid { gap: 8px; }
-            .time-box { border-radius: 12px; }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="wrapper">
-        <span class="logo">
-           <div class="logo">
-        <img width="40px" loading="lazy" src="images/u-logo.png" alt="logo" />
-        <p>UniLift</p>
-      </div>
-        </span>
-        <h1>We're upgrading.</h1>
-        <p>Enhancing our eligibility engine for a better admission experience. We'll be back in:</p>
-
-        <div class="countdown-grid" id="timer">
-            <div class="time-box">
-                <span class="number" id="days">00</span>
-                <span class="label">Days</span>
-            </div>
-            <div class="time-box">
-                <span class="number" id="hours">00</span>
-                <span class="label">Hrs</span>
-            </div>
-            <div class="time-box">
-                <span class="number" id="mins">00</span>
-                <span class="label">Mins</span>
-            </div>
-            <div class="time-box">
-                <span class="number" id="secs">00</span>
-                <span class="label">Secs</span>
-            </div>
-        </div>
-
-        <a href="https://wa.me/+233509304981?text=Hi Unilift, I need some enquires." target="_blank" class="enquiry-btn">Tap here for enquiries</a>
-    </div>
 
     <script>
-        
-        const target = new Date("2026-05-11T16:30:00Z").getTime();
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".homePage").forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            window.location.href = "index.html";
+            sessionStorage.setItem("uniSearchPageState", "landing");
+          });
+        });
 
-        function runTimer() {
-            const now = new Date().getTime();
-            const diff = target - now;
-
-            if (diff <= 0) {
-                document.querySelector(".wrapper").innerHTML = "<h1>We are Live.</h1><p>Refresh to access the portal.</p>";
-                return;
-            }
-
-            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const s = Math.floor((diff % (1000 * 60)) / 1000);
-
-            document.getElementById("days").innerText = d.toString().padStart(2, '0');
-            document.getElementById("hours").innerText = h.toString().padStart(2, '0');
-            document.getElementById("mins").innerText = m.toString().padStart(2, '0');
-            document.getElementById("secs").innerText = s.toString().padStart(2, '0');
-        }
-
-        setInterval(runTimer, 1000);
-        runTimer();
+        document.querySelectorAll(".getStarted-btn").forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            window.location.href = "index.html";
+            sessionStorage.setItem("uniSearchPageState", "grade");
+          });
+        });
+      });
     </script>
-</body>
+
+    <link rel="stylesheet" href="style/unilift.css" />
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <title>Unilift | Know Your Courses</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img loading="lazy" src="images/u-logo.png" alt="logo" />
+        <p>UniLift</p>
+      </div>
+
+      <ul class="uls">
+        <a href="index.html" class="homePage"><li>Home</li></a>
+        <a href="universities.html"><li>Universities</li></a>
+        <a href="how-works.html"><li>How it Works</li></a>
+        <a href="checker&forms.html"><li>Checker/Forms</li></a>
+        <a href="saved-results.html"><li>My Results</li></a>
+        <div class="astray">
+          <a class="last last-js getStarted-btn" href="#">Get Started</a>
+        </div>
+      </ul>
+
+      <div class="nav-controls">
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Toggle dark mode"
+        >
+          <div class="toggle-ball"></div>
+        </button>
+
+        <div class="burger">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!--===========
+      LANDING Page
+      ==============
+  -->
+
+      <div class="loader-container controlLoader">
+        <div class="loader-spinner"></div>
+        <p class="loader-text">Loading page...</p>
+      </div>
+
+      <div class="landingPage">
+        <!--hero sec-->
+        <div class="mainHero">
+          <div class="heroText">
+            <div class="mainn">
+              <p class="first">
+                Your
+                <abbr title="West Africa Senior Secondary Council Examination"
+                  >WASSCE</abbr
+                >
+                grades are key.
+              </p>
+              <p class="second">
+                Let's find which <span class="heroSpan">doors they open</span>
+              </p>
+            </div>
+
+            <p class="third">
+              Ghana's most accurate University course recommender. Trusted by
+              10,000+ students.
+            </p>
+          </div>
+
+          <button class="heroButton getStarted-btn">Check Available Courses</button>
+        </div>
+
+        <!--Unicards-->
+        <div class="uni">
+          <div class="uni-icons">
+            <span
+              ><img
+                loading="lazy"
+                src="images/kwame-nkrumah-university-of-science-technology-seeklogo.png"
+                alt="knust logo"
+            /></span>
+            <span
+              ><img
+                loading="lazy"
+                src="images/university-of-ghana-seeklogo.svg"
+                alt="ug logo"
+            /></span>
+            <span
+              ><img loading="lazy" src="images/ucc.png" alt="ucc logo"
+            /></span>
+            <span
+              ><img loading="lazy" src="images/umat.png" alt="umat logo"
+            /></span>
+            <span
+              ><img loading="lazy" src="images/upsa.png" alt="upsa logo"
+            /></span>
+          </div>
+        </div>
+        <!--why-->
+        <div class="whyTitle">Why Choose Unilift ?</div>
+
+        <div class="whyCont">
+          <div class="whyCard">
+            <div class="iconCont">
+              <img
+                loading="lazy"
+                width="60px"
+                src="icons/icons8-check-document-100.png"
+                alt=""
+              />
+              <p>Data Driven</p>
+            </div>
+
+            <p>Uses official 2025/2026 university cutoff points.</p>
+          </div>
+
+          <div class="whyCard">
+            <div class="iconCont">
+              <img
+                loading="lazy"
+                width="60px"
+                src="icons/icons8-stopwatch-100.png"
+                alt=""
+              />
+              <p>Fast Results</p>
+            </div>
+
+            <p>Get your matches in seconds</p>
+          </div>
+
+          <div class="whyCard">
+            <div class="iconCont">
+              <img
+                loading="lazy"
+                width="60px"
+                src="icons/icons8-alternate-100.png"
+                alt=""
+              />
+              <p>Alternate Paths</p>
+            </div>
+
+            <p>We suggest programs that fit your grade profile perfectly.</p>
+          </div>
+        </div>
+
+        <div class="trustedSection">
+          <div class="trustedTitle">Trusted by students</div>
+          <div class="trustedCards">
+            <div class="review-card">
+              <p class="review-text">
+                <span class="reviewIcon"><img src="" alt="reviewicon" /></span>
+                "Unilift showed me course options I never considered and helped
+                me pick the best fit for my WASSCE results. The process was fast
+                and accurate."
+              </p>
+              <span class="review-author">— Prince Fiavi</span>
+            </div>
+
+            <div class="review-card">
+              <p class="review-text">
+                <span class="reviewIcon"><img src="" alt="reviewicon" /></span>
+                "I loved how simple the site was. I got a clear picture of what
+                I could study and the results felt trustworthy."
+              </p>
+              <span class="review-author">— Hellen</span>
+            </div>
+
+            <div class="review-card">
+              <p class="review-text">
+                <span class="reviewIcon"><img src="" alt="reviewicon" /></span>
+                "The recommended programs matched my grades perfectly. I would
+                recommend Unilift to every student preparing for university
+                admissions."
+              </p>
+              <span class="review-author">— Cyrus Aggrey</span>
+            </div>
+
+            <div class="review-card">
+              <p class="review-text">
+                <span class="reviewIcon"><img src="" alt="reviewicon" /></span>
+                "Unilift is user friendly, easy to navigate throug. I got my
+                eligible courses without stress at a low cost."
+              </p>
+              <span class="review-author">— Justice Osei</span>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- PROMO SECTION -->
+      <div class="promo-section">
+        <div class="promo-content">
+          <h3>We don't stop at checking eligibility.</h3>
+          <p>University admission forms and result <span style="white-space: nowrap;">checkers (WASSCE & BECE)</span> — all in one place.</p>
+          <a href="checker&forms.html" class="btn promo-btn">Get yours now <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+
+      </div>
+
+      <!--===========
+  TAKE GRADE
+  ==================
+  -->
+
+      <div style="display: none" id="gradePage" class="gradePage">
+        <div class="getsch">
+          <div class="getsch-title">Choose University</div>
+          <select class="getsch-select-value">
+            <option selected value="Select University">
+              Select University
+            </option>
+            <option value="KNUST">
+              Kwame Nkrumah University of Science and Technology(KNUST)
+            </option>
+            <option value="UG">University of Ghana(UG)</option>
+            <option value="UCC">University of Capecoast(UCC)</option>
+            <!--  <option value="UMAT">University of Mines and Technology(UMAT)</option> -->
+            <option value="UPSA">
+              University of Professional Studies Accra(UPSA)
+            </option>
+            <!-- <option value="UHAS">University of Health Allied Sciences(UHAS)</option> -->
+          </select>
+        </div>
+
+        <div class="gradePagehero">
+          <p class="grade-p-1">Enter Your WASSCE Grades</p>
+          <p class="grade-p-2">select your subjects and grades below</p>
+        </div>
+        <div class="gradeWrapper">
+          <!--grade container-->
+          <div class="gradeCon">
+            <!--core-cont-->
+            <div class="coreSub">
+              <p class="type-topic">Core Subjects:</p>
+              <!--core 1-->
+              <div class="Csubjects-1 core-instance">
+                <p class="subjectName1 coresub-js">English Language</p>
+                →
+                <select class="coregrade-js">
+                  <option selected value="Select Grade">Select Grade</option>
+                  <option value="1">A1</option>
+                  <option value="2">B2</option>
+                  <option value="3">B3</option>
+                  <option value="4">C4</option>
+                  <option value="5">C5</option>
+                  <option value="6">C6</option>
+                  <option value="7">D7</option>
+                  <option value="8">E8</option>
+                  <option value="9">F9</option>
+                </select>
+              </div>
+
+              <!--core 2-->
+              <div class="Csubjects-2 core-instance">
+                <p class="subjectName1 coresub-js">Core Mathematics</p>
+                →
+                <select class="coregrade-js">
+                  <option selected value="Select Grade">Select Grade</option>
+                  <option value="1">A1</option>
+                  <option value="2">B2</option>
+                  <option value="3">B3</option>
+                  <option value="4">C4</option>
+                  <option value="5">C5</option>
+                  <option value="6">C6</option>
+                  <option value="7">D7</option>
+                  <option value="8">E8</option>
+                  <option value="9">F9</option>
+                </select>
+              </div>
+
+              <!--core 3-->
+              <div class="Csubjects-3 core-instance">
+                <p class="subjectName1 coresub-js">Integrated Science</p>
+                →
+                <select class="coregrade-js">
+                  <option selected value="Select Grade">Select Grade</option>
+                  <option value="1">A1</option>
+                  <option value="2">B2</option>
+                  <option value="3">B3</option>
+                  <option value="4">C4</option>
+                  <option value="5">C5</option>
+                  <option value="6">C6</option>
+                  <option value="7">D7</option>
+                  <option value="8">E8</option>
+                  <option value="9">F9</option>
+                </select>
+              </div>
+
+              <!--core 4-->
+              <div class="Csubjects-4 core-instance">
+                <p class="subjectName1 coresub-js">Social studies</p>
+                →
+                <select class="coregrade-js">
+                  <option selected value="Select Grade">Select Grade</option>
+                  <option value="1">A1</option>
+                  <option value="2">B2</option>
+                  <option value="3">B3</option>
+                  <option value="4">C4</option>
+                  <option value="5">C5</option>
+                  <option value="6">C6</option>
+                  <option value="7">D7</option>
+                  <option value="8">E8</option>
+                  <option value="9">F9</option>
+                </select>
+              </div>
+            </div>
+            <!--close of core cont-->
+
+            <!--elective cont-->
+            <div class="elective-sub">
+              <p class="type-topic">Elective Subjects:</p>
+              <!--elective 1-->
+              <div class="Esubjects-1 elective-instance">
+                <select class="subjectName electivesub-js">
+                  <option selected value="Select Course">Select Course</option>
+                  <option value="applied_electricity">
+                    Applied Electricity
+                  </option>
+                  <option value="arabic">Arabic</option>
+                  <option value="animal_husbandary">Animal husbandary</option>
+                  <option value="automobile">Automobile</option>
+                  <option value="basketry">Basketry</option>
+                  <option value="biology">Biology</option>
+                  <option value="building_construction">
+                    Building Construction
+                  </option>
+                  <option value="business_management">
+                    Business Management
+                  </option>
+                  <option value="ceramics">Ceramics</option>
+                  <option value="chemistry">Chemistry</option>
+                  <option value="christian_religious_studies">
+                    Christian Religious Studies
+                  </option>
+                  <option value="clothing_and_textiles">
+                    Clothing and Textiles
+                  </option>
+                  <option value="cost_accounting">Cost Accounting</option>
+                  <option value="crop_husbandary">Crop Husbandary</option>
+                  <option value="economics">Economics</option>
+                  <option value="elective_maths">Elective Mathematics</option>
+                  <option value="ict">Elective ICT</option>
+                  <option value="ewe">Ewe</option>
+                  <option value="financial_accounting">
+                    Financial Accounting
+                  </option>
+                  <option value="food_and_nutrition">Food and Nutrition</option>
+                  <option value="french">French</option>
+                  <option value="ga">Ga</option>
+                  <option value="akan">Akan</option>
+                  <option value="general_agriculture">
+                    General Agriculture
+                  </option>
+                  <option value="general_knowledge_in_art">
+                    General Knowledge in Art
+                  </option>
+                  <option value="geography">Geography</option>
+                  <option value="government">Government</option>
+                  <option value="graphic_design">Graphic Design</option>
+                  <option value="history">History</option>
+                  <option value="horticulture">Horticulture</option>
+                  <option value="islamic_religious_studies">
+                    Islamic Religious Studies
+                  </option>
+                  <option value="jewellery">Jewellery</option>
+                  <option value="leatherwork">Leatherwork</option>
+                  <option value="literature_in_english">
+                    Literature in English
+                  </option>
+                  <option value="mechanical">Mechanical</option>
+                  <option value="management_in_living">
+                    Management in Living
+                  </option>
+                  <option value="metal_work">Metal Work</option>
+                  <option value="music">Music</option>
+                  <option value="picture_making">Picture Making</option>
+                  <option value="physics">Physics</option>
+                  <option value="sculpture">Sculpture</option>
+                  <option value="spanish">Spanish</option>
+                  <option value="technical_drawing">Technical Drawing</option>
+                  <option value="textiles">Textiles</option>
+                  <option value="woodwork">Wood Work</option>
+                </select>
+                →
+                <select class="electivegrade-js">
+                  <option selected value="Select Grade">Select Grade</option>
+                  <option value="1">A1</option>
+                  <option value="2">B2</option>
+                  <option value="3">B3</option>
+                  <option value="4">C4</option>
+                  <option value="5">C5</option>
+                  <option value="6">C6</option>
+                  <option value="7">D7</option>
+                  <option value="8">E8</option>
+                  <option value="9">F9</option>
+                </select>
+              </div>
+              <!--elective 2-->
+              <div class="Esubjects-2 elective-instance">
+                <select class="subjectName electivesub-js">
+                  <option selected value="Select Course">Select Course</option>
+                  <option value="applied_electricity">
+                    Applied Electricity
+                  </option>
+                  <option value="arabic">Arabic</option>
+                  <option value="animal_husbandary">Animal husbandary</option>
+                  <option value="automobile">Automobile</option>
+                  <option value="basketry">Basketry</option>
+                  <option value="biology">Biology</option>
+                  <option value="building_construction">
+                    Building Construction
+                  </option>
+                  <option value="business_management">
+                    Business Management
+                  </option>
+                  <option value="ceramics">Ceramics</option>
+                  <option value="chemistry">Chemistry</option>
+                  <option value="christian_religious_studies">
+                    Christian Religious Studies
+                  </option>
+                  <option value="clothing_and_textiles">
+                    Clothing and Textiles
+                  </option>
+                  <option value="cost_accounting">Cost Accounting</option>
+                  <option value="crop_husbandary">Crop Husbandary</option>
+                  <option value="economics">Economics</option>
+                  <option value="elective_maths">Elective Mathematics</option>
+                  <option value="ict">Elective ICT</option>
+                  <option value="ewe">Ewe</option>
+                  <option value="financial_accounting">
+                    Financial Accounting
+                  </option>
+                  <option value="food_and_nutrition">Food and Nutrition</option>
+                  <option value="french">French</option>
+                  <option value="ga">Ga</option>
+                  <option value="akan">Akan</option>
+                  <option value="general_agriculture">
+                    General Agriculture
+                  </option>
+                  <option value="general_knowledge_in_art">
+                    General Knowledge in Art
+                  </option>
+                  <option value="geography">Geography</option>
+                  <option value="government">Government</option>
+                  <option value="graphic_design">Graphic Design</option>
+                  <option value="history">History</option>
+                  <option value="horticulture">Horticulture</option>
+                  <option value="islamic_religious_studies">
+                    Islamic Religious Studies
+                  </option>
+                  <option value="jewellery">Jewellery</option>
+                  <option value="leatherwork">Leatherwork</option>
+                  <option value="literature_in_english">
+                    Literature in English
+                  </option>
+                  <option value="mechanical">Mechanical</option>
+                  <option value="management_in_living">
+                    Management in Living
+                  </option>
+                  <option value="metal_work">Metal Work</option>
+                  <option value="music">Music</option>
+                  <option value="picture_making">Picture Making</option>
+                  <option value="physics">Physics</option>
+                  <option value="sculpture">Sculpture</option>
+                  <option value="spanish">Spanish</option>
+                  <option value="technical_drawing">Technical Drawing</option>
+                  <option value="textiles">Textiles</option>
+                  <option value="woodwork">Wood Work</option>
+                </select>
+                →
+                <select class="electivegrade-js">
+                  <option selected value="Select Grade">Select Grade</option>
+                  <option value="1">A1</option>
+                  <option value="2">B2</option>
+                  <option value="3">B3</option>
+                  <option value="4">C4</option>
+                  <option value="5">C5</option>
+                  <option value="6">C6</option>
+                  <option value="7">D7</option>
+                  <option value="8">E8</option>
+                  <option value="9">F9</option>
+                </select>
+              </div>
+              <!--elective 3-->
+              <div class="Esubjects-3 elective-instance">
+                <select class="subjectName electivesub-js">
+                  <option selected value="Select Course">Select Course</option>
+                  <option value="applied_electricity">
+                    Applied Electricity
+                  </option>
+                  <option value="arabic">Arabic</option>
+                  <option value="animal_husbandary">Animal husbandary</option>
+                  <option value="automobile">Automobile</option>
+                  <option value="basketry">Basketry</option>
+                  <option value="biology">Biology</option>
+                  <option value="building_construction">
+                    Building Construction
+                  </option>
+                  <option value="business_management">
+                    Business Management
+                  </option>
+                  <option value="ceramics">Ceramics</option>
+                  <option value="chemistry">Chemistry</option>
+                  <option value="christian_religious_studies">
+                    Christian Religious Studies
+                  </option>
+                  <option value="clothing_and_textiles">
+                    Clothing and Textiles
+                  </option>
+                  <option value="cost_accounting">Cost Accounting</option>
+                  <option value="crop_husbandary">Crop Husbandary</option>
+                  <option value="economics">Economics</option>
+                  <option value="elective_maths">Elective Mathematics</option>
+                  <option value="ict">Elective ICT</option>
+                  <option value="ewe">Ewe</option>
+                  <option value="financial_accounting">
+                    Financial Accounting
+                  </option>
+                  <option value="food_and_nutrition">Food and Nutrition</option>
+                  <option value="french">French</option>
+                  <option value="ga">Ga</option>
+                  <option value="akan">Akan</option>
+                  <option value="general_agriculture">
+                    General Agriculture
+                  </option>
+                  <option value="general_knowledge_in_art">
+                    General Knowledge in Art
+                  </option>
+                  <option value="geography">Geography</option>
+                  <option value="government">Government</option>
+                  <option value="graphic_design">Graphic Design</option>
+                  <option value="history">History</option>
+                  <option value="horticulture">Horticulture</option>
+                  <option value="islamic_religious_studies">
+                    Islamic Religious Studies
+                  </option>
+                  <option value="jewellery">Jewellery</option>
+                  <option value="leatherwork">Leatherwork</option>
+                  <option value="literature_in_english">
+                    Literature in English
+                  </option>
+                  <option value="mechanical">Mechanical</option>
+                  <option value="management_in_living">
+                    Management in Living
+                  </option>
+                  <option value="metal_work">Metal Work</option>
+                  <option value="music">Music</option>
+                  <option value="picture_making">Picture Making</option>
+                  <option value="physics">Physics</option>
+                  <option value="sculpture">Sculpture</option>
+                  <option value="spanish">Spanish</option>
+                  <option value="technical_drawing">Technical Drawing</option>
+                  <option value="textiles">Textiles</option>
+                  <option value="woodwork">Wood Work</option>
+                </select>
+                →
+                <select class="electivegrade-js">
+                  <option selected value="Select Grade">Select Grade</option>
+                  <option value="1">A1</option>
+                  <option value="2">B2</option>
+                  <option value="3">B3</option>
+                  <option value="4">C4</option>
+                  <option value="5">C5</option>
+                  <option value="6">C6</option>
+                  <option value="7">D7</option>
+                  <option value="8">E8</option>
+                  <option value="9">F9</option>
+                </select>
+              </div>
+              <!--elective 4-->
+              <div class="Esubjects-4 elective-instance">
+                <select class="subjectName electivesub-js">
+                  <option selected value="Select Course">Select Course</option>
+                  <option value="applied_electricity">
+                    Applied Electricity
+                  </option>
+                  <option value="arabic">Arabic</option>
+                  <option value="animal_husbandary">Animal husbandary</option>
+                  <option value="automobile">Automobile</option>
+                  <option value="basketry">Basketry</option>
+                  <option value="biology">Biology</option>
+                  <option value="building_construction">
+                    Building Construction
+                  </option>
+                  <option value="business_management">
+                    Business Management
+                  </option>
+                  <option value="ceramics">Ceramics</option>
+                  <option value="chemistry">Chemistry</option>
+                  <option value="christian_religious_studies">
+                    Christian Religious Studies
+                  </option>
+                  <option value="clothing_and_textiles">
+                    Clothing and Textiles
+                  </option>
+                  <option value="cost_accounting">Cost Accounting</option>
+                  <option value="crop_husbandary">Crop Husbandary</option>
+                  <option value="economics">Economics</option>
+                  <option value="elective_maths">Elective Mathematics</option>
+                  <option value="ict">Elective ICT</option>
+                  <option value="ewe">Ewe</option>
+                  <option value="financial_accounting">
+                    Financial Accounting
+                  </option>
+                  <option value="food_and_nutrition">Food and Nutrition</option>
+                  <option value="french">French</option>
+                  <option value="ga">Ga</option>
+                  <option value="akan">Akan</option>
+                  <option value="general_agriculture">
+                    General Agriculture
+                  </option>
+                  <option value="general_knowledge_in_art">
+                    General Knowledge in Art
+                  </option>
+                  <option value="geography">Geography</option>
+                  <option value="government">Government</option>
+                  <option value="graphic_design">Graphic Design</option>
+                  <option value="history">History</option>
+                  <option value="horticulture">Horticulture</option>
+                  <option value="islamic_religious_studies">
+                    Islamic Religious Studies
+                  </option>
+                  <option value="jewellery">Jewellery</option>
+                  <option value="leatherwork">Leatherwork</option>
+                  <option value="literature_in_english">
+                    Literature in English
+                  </option>
+                  <option value="mechanical">Mechanical</option>
+                  <option value="management_in_living">
+                    Management in Living
+                  </option>
+                  <option value="metal_work">Metal Work</option>
+                  <option value="music">Music</option>
+                  <option value="picture_making">Picture Making</option>
+                  <option value="physics">Physics</option>
+                  <option value="sculpture">Sculpture</option>
+                  <option value="spanish">Spanish</option>
+                  <option value="technical_drawing">Technical Drawing</option>
+                  <option value="textiles">Textiles</option>
+                  <option value="woodwork">Wood Work</option>
+                </select>
+                →
+                <select class="electivegrade-js">
+                  <option selected value="Select Grade">Select Grade</option>
+                  <option value="1">A1</option>
+                  <option value="2">B2</option>
+                  <option value="3">B3</option>
+                  <option value="4">C4</option>
+                  <option value="5">C5</option>
+                  <option value="6">C6</option>
+                  <option value="7">D7</option>
+                  <option value="8">E8</option>
+                  <option value="9">F9</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!--close of grade cont-->
+        </div>
+
+        <div class="prompt"></div>
+
+        <div class="find">
+          <button class="heroButton gradeButton1">Find My Match</button>
+          <button class="heroButton gradeButton2 backTolanding">
+            Back to Home
+          </button>
+        </div>
+      </div>
+    </main>
+    <!--===========
+      PAYMENT PAGE
+  ============-->
+    <div
+      style="display: none"
+      id="payment-modal"
+      class="modal-overlay"
+      style="display: none"
+    >
+      <div class="modal-content">
+        <h3>
+          <img src="icons/icons8-instagram-check-mark-50.png" alt="" />
+          <span class="calcom">Calculation Complete!</span>
+        </h3>
+        <p class="agg">Your aggregate is <span id="display-agg"></span></p>
+        <p>Enter your details to unlock your full University Match Report.</p>
+
+        <form>
+          <div class="form-group">
+            <label for="student-name">Full Name:</label>
+            <input
+              type="text"
+              id="student-name"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="student-email">Email Address:</label>
+            <input
+              type="email"
+              id="student-email"
+              placeholder="Enter your email address"
+              required
+            />
+          </div>
+
+          <div class="payment-info">
+            <span>Price: <strong>GHS 11.50</strong></span>
+          </div>
+
+          <p class="payment-note">
+            Your payment is secure and processed by Paystack. Unilift does not
+            store your payment information.
+          </p>
+
+          <button id="pay-button" class="btn-primary">
+            Pay & Unlock Results
+          </button>
+          <div class="btn-secondary" id="closeM">&times;</div>
+
+          <div class="checkinputerror"></div>
+        </form>
+      </div>
+
+      <div class="cancelPayment"></div>
+    </div>
+
+    <!--==================
+    RESULT PAGE
+    ===============-->
+    <div class="resultPage">
+      <div class="result-actions">
+        <div class="result-university-switcher">
+          <label
+            for="result-uni-switcher"
+            class="result-university-switcher-label"
+            >Switch university with same grades</label
+          >
+          <select id="result-uni-switcher">
+            <option value="Select University">Select University</option>
+            <option value="KNUST">
+              Kwame Nkrumah University of Science and Technology (KNUST)
+            </option>
+            <option value="UG">University of Ghana (UG)</option>
+            <option value="UCC">University of Cape Coast (UCC)</option>
+            <option value="UPSA">
+              University of Professional Studies Accra (UPSA)
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="resultPagehero"></div>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Unilift</h3>
+          <p>
+            Your gateway to university success in Ghana. Discover courses that
+            match your WASSCE grades.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="universities.html">Universities</a></li>
+            <li><a href="how-works.html">How it Works</a></li>
+            <li><a href="checker&forms.html">Checker/Forms</a></li>
+            <li><a href="saved-results.html">My Results</a></li>
+            <li><a href="#" class="last-js getStarted-btn">Get Started</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p>Email: uniliftapp1@gmail.com</p>
+          <p>Phone: +233509304981</p>
+          <p>Accra, Ghana</p>
+        </div>
+      </div>
+
+      <div
+        class="footer-bottom"
+        style="
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+          padding-top: 20px;
+          width: 100%;
+        "
+      >
+        <p
+          style="
+            width: 88%;
+            max-width: 800px;
+            margin: 0 auto 15px auto;
+            font-size: 0.75rem;
+            line-height: 1.5;
+            color: #b0b0b0;
+          "
+        >
+          UniLift uses the latest official catalog to give you the most accurate
+          match. Since universities occasionally update requirements during the
+          admission season, we always recommend a final double-check on their
+          official portal before you submit your application.
+        </p>
+        <p>&copy; 2026 Unilift. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="script/page.js"></script>
+    <script type="module" src="script/unilift.js"></script>
+    <script src="script/burger.js"></script>
+    <script src="script/take-values.js"></script>
+
+    <div class="whatsapp-float">
+      <a
+        href="https://wa.me/+233509304981?text=Hi Unilift, I need some enquires."
+        target="_blank"
+        aria-label="Contact us on WhatsApp"
+      >
+        <img
+          src="icons/icons8-whatsapp-48.png"
+          alt="WhatsApp"
+          width="24"
+          height="24"
+        />
+      </a>
+    </div>
+  </body>
 </html>

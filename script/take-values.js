@@ -1,4 +1,24 @@
 async function unis() {
+  function isDarkModeActive() {
+    return document.documentElement.classList.contains("dark-mode");
+  }
+
+  function safeOneSignalTag(action, key, value) {
+    try {
+      const oneSignalUser = window.OneSignal?.User;
+      if (!oneSignalUser) return;
+
+      if (action === "add" && typeof oneSignalUser.addTag === "function") {
+        oneSignalUser.addTag(key, value);
+      }
+      if (action === "remove" && typeof oneSignalUser.removeTag === "function") {
+        oneSignalUser.removeTag(key, value);
+      }
+    } catch (error) {
+      console.warn("OneSignal tag update skipped:", error);
+    }
+  }
+
   function getUniversityCode(title) {
     switch (title) {
       case "Kwame Nkrumah University of Science Technology":
@@ -590,7 +610,7 @@ async function unis() {
           document.getElementById("payment-modal").style.display = "none";
 
           notifyPaymentSuccess(email);
-          OneSignal.User.removeTag("abandoned_payment", "true");
+          safeOneSignalTag("remove", "abandoned_payment", "true");
 
           //result page +  loader
           if (window.showResultPage) {
@@ -636,7 +656,7 @@ async function unis() {
             .catch((error) => {
               /* console.error("Error fetching results:", error);*/
                if (resultHero) {
-                const isDark = document.body.classList.contains("dark-mode");
+                const isDark = isDarkModeActive();
                 const exclamationMark = isDark
                   ? "icons/exclamation-mark-D.png"
                   : "icons/exclamation-mark-L.png";
@@ -662,10 +682,10 @@ async function unis() {
 
           sendCancelAlert(email);
 
-          OneSignal.User.addTag("abandoned_payment", "true");
+          safeOneSignalTag("add", "abandoned_payment", "true");
 
           let exclamationMark;
-          const isDark = document.body.classList.contains("dark-mode");
+          const isDark = isDarkModeActive();
           isDark
             ? (exclamationMark = "icons/exclamation-mark-D.png")
             : (exclamationMark = "icons/exclamation-mark-L.png");

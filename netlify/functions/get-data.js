@@ -59,28 +59,28 @@ export const handler = async (event) => {
       const data = await response.json();
 
      
-      let requiredUni;
-      switch (university) {
-        case "KNUST":
-          requiredUni = data[0].KNUST;
-          break;
-        case "UG":
-          requiredUni = data[1].UG;
-          break;
-        case "UCC":
-          requiredUni = data[2].UCC;
-          break;
-        case "UMAT":
-          requiredUni = data[3].UMAT;
-          break;
-        case "UPSA":
-          requiredUni = data[4].UPSA;  
-          break;
-        default:
-          return {
-            statusCode: 400,
-            body: JSON.stringify({ error: "Invalid university" }),
-          };
+      const allowedUniversities = new Set(["KNUST", "UG", "UCC", "UMAT", "UPSA"]);
+      if (!allowedUniversities.has(university)) {
+        return {
+          statusCode: 400,
+          body: JSON.stringify({ error: "Invalid university" }),
+        };
+      }
+
+      const requiredUni = Array.isArray(data)
+        ? data.find(
+            (entry) =>
+              entry &&
+              typeof entry === "object" &&
+              Array.isArray(entry[university]),
+          )?.[university]
+        : undefined;
+
+      if (!Array.isArray(requiredUni)) {
+        return {
+          statusCode: 500,
+          body: JSON.stringify({ error: "University data unavailable" }),
+        };
       }
 
       

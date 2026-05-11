@@ -77,7 +77,7 @@ export function pages() {
     returnHomeBtn.addEventListener("click", () => {
       showLandingPage();
       sessionStorage.setItem("uniSearchPageState", "landing");
-      sessionStorage.removeItem("uniSearchResult");
+      localStorage.removeItem("uniSearchResult");
     });
   }
 
@@ -89,11 +89,7 @@ export function pages() {
 
   window.addEventListener("pageshow", () => {
     const state = sessionStorage.getItem("uniSearchPageState");
-    const savedResult = sessionStorage.getItem("uniSearchResult");
-
     const hasSavedData= localStorage.getItem("uniSearchResult")
-      
-      console.log("live session state:" , state)
 
    if (!state || state === "landing") {
     showLandingPage();
@@ -159,11 +155,11 @@ export function pages() {
       localStorage.setItem("theme", currentTheme);
     }
     if (currentTheme === "dark") {
-      document.body.classList.add("dark-mode");
+      document.documentElement.classList.add("dark-mode");
       advert("light");
       reviewIcon("dark");
     } else {
-      document.body.classList.remove("dark-mode");
+      document.documentElement.classList.remove("dark-mode");
       advert("dark");
       reviewIcon("light");
     }

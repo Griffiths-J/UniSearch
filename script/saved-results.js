@@ -87,7 +87,7 @@ function initSavedResults() {
                 `
             }) 
 
-        let gradeHtml;
+        let gradeHtml = '';
          weakGrades.map((e)=>{
                 gradeHtml+=`
                    ${e.grade},
@@ -183,11 +183,11 @@ function initSavedResults() {
       localStorage.setItem("theme", currentTheme);
     }
     if (currentTheme === "dark") {
-      document.body.classList.add("dark-mode");
+      document.documentElement.classList.add("dark-mode");
       advert("light");
       reviewIcon("dark");
     } else {
-      document.body.classList.remove("dark-mode");
+      document.documentElement.classList.remove("dark-mode");
       advert("dark");
       reviewIcon("light");
     }
