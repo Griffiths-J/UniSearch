@@ -71,7 +71,7 @@ function initSavedResults() {
 
           <div class="wa-link-wrapper">
             <p style="font-size: 0.9rem; color: var(--muted-text); margin-bottom: 12px;">Don't give up! We can help you find alternatives:</p>
-            <a href="https://wa.me/+233509304981?text=Hi Unilift, I need help with selecting courses for my grade in ${Uni}" class="assistant-link">
+            <a href="https://wa.me/+233509304981?text=Hi Unilift, I need help with selecting courses for my grade in ${Uni}. Didn't meet the requirements." class="assistant-link">
               <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="whatsapp_logo">
               TALK TO AN ASSISTANT
             </a>
@@ -98,7 +98,7 @@ function initSavedResults() {
            <div class="weakmarksave" style="font-style:italic">
                Getting ${gradeHtml} in ${subjectHtml} respectively may reduce your chances of admission.
                Even though you may see eligible programs, universities often prioritize stronger grades.
-               <a href="https://wa.me/+233509304981?text=Hi Unilift, I need help with selecting courses for my grades."><span style="white-space:nowrap" >Talk to an assistant </span></a>
+               <a href="https://wa.me/+233509304981?text=Hi Unilift,, I need help with selecting courses for my grades."><span style="white-space:nowrap" >Talk to an assistant </span></a>
             </div>   
         `: '';
 
