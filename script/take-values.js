@@ -600,7 +600,7 @@ async function unis() {
       const handler = PaystackPop.setup({
         key: "pk_live_db6a66b9372f3b2a5c775bfd81dc6f3171a7e66a",
         email: email,
-        amount: 1150,
+        amount: 1165,
         currency: "GHS",
         ref: "" + Math.floor(Math.random() * 99999 + 1),
         callback: function (responds) {
