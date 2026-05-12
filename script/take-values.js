@@ -581,6 +581,8 @@ async function unis() {
     document.getElementById("display-agg").innerText = `${finalAggregrate}`;
 
     document.getElementById("pay-button").onclick = function (e) {
+      
+       notifyProceed();
       e.preventDefault();
       const name = document.getElementById("student-name").value;
       const email = document.getElementById("student-email").value;
@@ -703,7 +705,6 @@ async function unis() {
 
   document.querySelector(".gradeButton1").addEventListener("click", () => {
     Getvalues();
-    notifyProceed();
   });
 
   document.getElementById("closeM").addEventListener("click", () => {
