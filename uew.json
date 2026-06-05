@@ -1,0 +1,2138 @@
+{
+  "UEW": [
+    {
+      "program_id": "UEW_BUS_001",
+      "program_name": "B.B.A. (Bachelor of Business Administration) in Accounting",
+      "college": "School of Business",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 19,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "business_management",
+            "financial_accounting",
+            "elective_maths",
+            "cost_accounting",
+            "economics",
+            "government",
+            "geography"
+          ],
+          "count": 2
+        }
+      }
+    },
+    {
+      "program_id": "UEW_BUS_002",
+      "program_name": "B.B.A. (Bachelor of Business Administration) in Banking and Finance",
+      "college": "School of Business",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 20,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "business_management",
+            "financial_accounting",
+            "elective_maths",
+            "cost_accounting",
+            "economics",
+            "government",
+            "geography"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_BUS_003",
+      "program_name": "B.B.A. (Bachelor of Business Administration) in Human Resource Management",
+      "college": "School of Business",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 21,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "business_management",
+            "financial_accounting",
+            "elective_maths",
+            "cost_accounting",
+            "economics",
+            "government",
+            "geography"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_BUS_004",
+      "program_name": "B.B.A. (Bachelor of Business Administration) in Marketing and Entrepreneurship",
+      "college": "School of Business",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 24,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "business_management",
+            "financial_accounting",
+            "elective_maths",
+            "economics",
+            "cost_accounting",
+            "government",
+            "geography"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_BUS_005",
+      "program_name": "B.B.A. (Bachelor of Business Administration) in Procurement and Supply Chain Management",
+      "college": "School of Business",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 22,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "business_management",
+            "financial_accounting",
+            "elective_maths",
+            "economics",
+            "cost_accounting",
+            "government",
+            "geography"
+          ],
+          "count": 2
+        }
+      }
+    },
+    {
+      "program_id": "UEW_BUS_006",
+      "program_name": "B.B.A. (Bachelor of Business Administration) in Business Information Systems",
+      "college": "School of Business",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 25,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "business_management",
+            "financial_accounting",
+            "elective_maths",
+            "economics",
+            "cost_accounting",
+            "government",
+            "geography"
+          ],
+          "count": 2
+        }
+      }
+    },
+    {
+      "program_id": "UEW_BUS_007",
+      "program_name": "B.Sc. Accounting Education",
+      "college": "School of Business",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 24,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "business_management",
+            "financial_accounting",
+            "elective_maths",
+            "cost_accounting",
+            "economics"
+          ],
+          "count": 2
+        }
+      }
+    },
+    {
+      "program_id": "UEW_BUS_008",
+      "program_name": "B.Sc. Management Education",
+      "college": "School of Business",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 26,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "business_management",
+            "financial_accounting",
+            "elective_maths",
+            "cost_accounting",
+            "economics"
+          ],
+          "count": 2
+        }
+      }
+    },
+    {
+      "program_id": "UEW_BUS_009",
+      "program_name": "B.Sc. Insurance and Risk Management",
+      "college": "School of Business",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 28,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "business_management",
+            "financial_accounting",
+            "elective_maths",
+            "economics",
+            "cost_accounting",
+            "government",
+            "geography"
+          ],
+          "count": 2
+        }
+      }
+    },
+    {
+      "program_id": "UEW_BUS_010",
+      "program_name": "Diploma in Accounting Studies",
+      "college": "School of Business",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 32,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "business_management",
+            "financial_accounting",
+            "elective_maths",
+            "cost_accounting",
+            "economics"
+          ],
+          "count": 2
+        }
+      }
+    },
+    {
+      "program_id": "UEW_BUS_011",
+      "program_name": "Diploma in Management Studies",
+      "college": "School of Business",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 33,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "business_management",
+            "financial_accounting",
+            "elective_maths",
+            "cost_accounting",
+            "economics",
+            "business_mathematics"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SCI_012",
+      "program_name": "B.Sc. Information and Communication Technology (ICT) Education",
+      "college": "Science, ICT, & Mathematics Education",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 20,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "physics",
+            "chemistry",
+            "biology",
+            "elective_maths",
+            "general_agriculture",
+            "ict"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SCI_013",
+      "program_name": "B.Sc. Mathematics Education",
+      "college": "Science, ICT, & Mathematics Education",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 23,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "elective_maths",
+            "physics",
+            "chemistry",
+            "economics",
+            "cost_accounting",
+            "business_management"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SCI_014",
+      "program_name": "B.Sc. Mathematics Education with Economics",
+      "college": "Science, ICT, & Mathematics Education",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 24,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "elective_maths",
+            "economics",
+            "geography",
+            "government",
+            "physics"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SCI_015",
+      "program_name": "B.Sc. Computer Science Education",
+      "college": "Science, ICT, & Mathematics Education",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 18,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "elective_maths",
+            "physics",
+            "chemistry",
+            "ict",
+            "biology"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SCI_016",
+      "program_name": "B.Sc. Physics Education",
+      "college": "Science, ICT, & Mathematics Education",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 26,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "physics",
+            "elective_maths",
+            "chemistry",
+            "biology"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SCI_017",
+      "program_name": "B.Sc. Chemistry Education",
+      "college": "Science, ICT, & Mathematics Education",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 26,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "chemistry",
+            "physics",
+            "biology",
+            "elective_maths"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SCI_018",
+      "program_name": "B.Sc. Biology Education",
+      "college": "Science, ICT, & Mathematics Education",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 22,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "biology",
+            "chemistry",
+            "physics",
+            "general_agriculture"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SCI_019",
+      "program_name": "B.Sc. Integrated Science Education",
+      "college": "Science, ICT, & Mathematics Education",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 24,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "biology",
+            "chemistry",
+            "physics",
+            "elective_maths",
+            "general_agriculture",
+            "animal_husbandary"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SCI_020",
+      "program_name": "B.Sc. Agriculture Education",
+      "college": "Science, ICT, & Mathematics Education",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 28,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "general_agriculture",
+            "biology",
+            "chemistry",
+            "physics",
+            "animal_husbandary",
+            "crop_husbandary"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SCI_021",
+      "program_name": "B.Sc. Environmental Science",
+      "college": "Science, ICT, & Mathematics Education",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 20,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "biology",
+            "chemistry",
+            "physics",
+            "geography",
+            "elective_maths",
+            "general_agriculture"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SCI_022",
+      "program_name": "B.Sc. Environmental Health & Sanitation Education",
+      "college": "Science, ICT, & Mathematics Education",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 27,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "biology",
+            "chemistry",
+            "physics",
+            "geography",
+            "food_and_nutrition",
+            "general_agriculture"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SCI_023",
+      "program_name": "B.Sc. Health Administration & Education",
+      "college": "Science, ICT, & Mathematics Education",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 20,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "biology",
+            "chemistry",
+            "physics",
+            "business_management",
+            "financial_accounting",
+            "economics",
+            "government"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SOC_025",
+      "program_name": "B.A. Political Science Education (Pure)",
+      "college": "Social Sciences Education Combinations",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 18,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "government",
+            "history",
+            "geography",
+            "economics",
+            "christian_religious_studies",
+            "islamic_religious_studies",
+            "literature_in_english"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SOC_026",
+      "program_name": "B.A. Political Science with Economics",
+      "college": "Social Sciences Education Combinations",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 17,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "government",
+            "economics",
+            "elective_maths",
+            "history",
+            "geography"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SOC_027",
+      "program_name": "B.A. Political Science with Geography",
+      "college": "Social Sciences Education Combinations",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 20,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "government",
+            "geography",
+            "history",
+            "economics"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SOC_028",
+      "program_name": "B.A. Political Science with History",
+      "college": "Social Sciences Education Combinations",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 22,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "government",
+            "history",
+            "geography",
+            "economics",
+            "literature_in_english"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SOC_029",
+      "program_name": "B.A. Political Science with Social Studies",
+      "college": "Social Sciences Education Combinations",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 20,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "government",
+            "history",
+            "geography",
+            "economics"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SOC_030",
+      "program_name": "B.A. Social Studies Education (Pure)",
+      "college": "Social Sciences Education Combinations",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 19,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "government",
+            "history",
+            "geography",
+            "economics"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SOC_031",
+      "program_name": "B.A. Social Studies with Economics",
+      "college": "Social Sciences Education Combinations",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 19,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "economics",
+            "government",
+            "history",
+            "geography",
+            "elective_maths"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SOC_032",
+      "program_name": "B.A. Social Studies with Geography",
+      "college": "Social Sciences Education Combinations",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 24,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "geography",
+            "government",
+            "history",
+            "economics"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SOC_033",
+      "program_name": "B.A. Social Studies with History",
+      "college": "Social Sciences Education Combinations",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 24,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "history",
+            "government",
+            "geography",
+            "economics"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SOC_034",
+      "program_name": "B.A. Social Studies with Political Science",
+      "college": "Social Sciences Education Combinations",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 20,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "government",
+            "history",
+            "geography",
+            "economics"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SOC_035",
+      "program_name": "B.A. Geography Education (Pure)",
+      "college": "Social Sciences Education Combinations",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 22,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "geography",
+            "government",
+            "history",
+            "economics",
+            "elective_maths"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SOC_036",
+      "program_name": "B.A. Geography with Economics",
+      "college": "Social Sciences Education Combinations",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 19,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "geography",
+            "economics",
+            "elective_maths",
+            "government",
+            "history"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SOC_037",
+      "program_name": "B.A. Geography with History",
+      "college": "Social Sciences Education Combinations",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 24,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "geography",
+            "history",
+            "government",
+            "economics"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SOC_038",
+      "program_name": "B.A. Geography with Political Science",
+      "college": "Social Sciences Education Combinations",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 22,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "geography",
+            "government",
+            "history",
+            "economics"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SOC_039",
+      "program_name": "B.A. Geography with Social Studies",
+      "college": "Social Sciences Education Combinations",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 22,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "geography",
+            "government",
+            "history",
+            "economics"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SOC_040",
+      "program_name": "B.A. History Education (Pure)",
+      "college": "Social Sciences Education Combinations",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 25,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "history",
+            "government",
+            "geography",
+            "economics",
+            "christian_religious_studies",
+            "islamic_religious_studies",
+            "literature_in_english"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SOC_041",
+      "program_name": "B.A. History with Economics",
+      "college": "Social Sciences Education Combinations",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 20,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "history",
+            "economics",
+            "elective_maths",
+            "government",
+            "geography"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SOC_042",
+      "program_name": "B.A. History with Geography",
+      "college": "Social Sciences Education Combinations",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 24,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "history",
+            "geography",
+            "government",
+            "economics"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SOC_043",
+      "program_name": "B.A. History with Political Science",
+      "college": "Social Sciences Education Combinations",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 22,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "history",
+            "government",
+            "geography",
+            "economics"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SOC_044",
+      "program_name": "B.A. History with Social Studies",
+      "college": "Social Sciences Education Combinations",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 25,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "history",
+            "government",
+            "geography",
+            "economics"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SOC_045",
+      "program_name": "B.A. Economics Education",
+      "college": "Social Sciences Education Combinations",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 18,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "economics",
+            "elective_maths",
+            "business_management",
+            "financial_accounting",
+            "government",
+            "geography"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SOC_046",
+      "program_name": "B.A. Religions and Moral Studies Education",
+      "college": "Social Sciences Education Combinations",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 26,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "christian_religious_studies",
+            "islamic_religious_studies",
+            "government",
+            "history",
+            "literature_in_english"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_EDU_047",
+      "program_name": "B.Ed. Early Grade Education / Early Childhood",
+      "college": "Educational Studies & Psychology",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 24,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "literature_in_english",
+            "government",
+            "history",
+            "geography",
+            "economics",
+            "christian_religious_studies",
+            "islamic_religious_studies",
+            "french",
+            "management_in_living",
+            "food_and_nutrition",
+            "clothing_and_textiles",
+            "general_knowledge_in_art",
+            "graphic_design",
+            "business_management",
+            "financial_accounting"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_EDU_048",
+      "program_name": "B.Ed. Basic Education (Junior High School option)",
+      "college": "Educational Studies & Psychology",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 22,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "literature_in_english",
+            "government",
+            "history",
+            "geography",
+            "economics",
+            "christian_religious_studies",
+            "islamic_religious_studies",
+            "french",
+            "biology",
+            "chemistry",
+            "physics",
+            "elective_maths",
+            "general_agriculture",
+            "business_management",
+            "financial_accounting"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_EDU_049",
+      "program_name": "B.Ed. Basic Education (Upper Primary option)",
+      "college": "Educational Studies & Psychology",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 25,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "literature_in_english",
+            "government",
+            "history",
+            "geography",
+            "economics",
+            "christian_religious_studies",
+            "islamic_religious_studies",
+            "french",
+            "management_in_living",
+            "food_and_nutrition",
+            "clothing_and_textiles",
+            "general_knowledge_in_art",
+            "business_management",
+            "financial_accounting"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_EDU_050",
+      "program_name": "B.Ed. Counselling Psychology",
+      "college": "Educational Studies & Psychology",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 22,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "government",
+            "history",
+            "geography",
+            "economics",
+            "literature_in_english",
+            "christian_religious_studies",
+            "islamic_religious_studies",
+            "business_management",
+            "management_in_living"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_EDU_051",
+      "program_name": "B.Ed. Psychology",
+      "college": "Educational Studies & Psychology",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 21,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "government",
+            "history",
+            "geography",
+            "economics",
+            "literature_in_english",
+            "christian_religious_studies",
+            "biology",
+            "elective_maths"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_EDU_052",
+      "program_name": "B.Ed. Special Education",
+      "college": "Educational Studies & Psychology",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 26,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "government",
+            "history",
+            "geography",
+            "economics",
+            "literature_in_english",
+            "christian_religious_studies",
+            "islamic_religious_studies",
+            "management_in_living",
+            "food_and_nutrition"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_EDU_053",
+      "program_name": "B.Ed. Community-Based Rehabilitation and Disability Studies",
+      "college": "Educational Studies & Psychology",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 28,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "government",
+            "history",
+            "geography",
+            "economics",
+            "literature_in_english",
+            "christian_religious_studies",
+            "management_in_living",
+            "food_and_nutrition"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_EDU_055",
+      "program_name": "Diploma in Early Grade Education",
+      "college": "Educational Studies & Psychology",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 31,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "government",
+            "history",
+            "geography",
+            "economics",
+            "literature_in_english",
+            "christian_religious_studies",
+            "management_in_living",
+            "general_knowledge_in_art"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_EDU_056",
+      "program_name": "Diploma in Basic Education",
+      "college": "Educational Studies & Psychology",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 30,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "government",
+            "history",
+            "geography",
+            "economics",
+            "literature_in_english",
+            "christian_religious_studies",
+            "biology",
+            "chemistry",
+            "physics"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_ART_057",
+      "program_name": "B.A. Graphic Design",
+      "college": "Creative Arts, Design, & Home Economics",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 24,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "general_knowledge_in_art",
+            "graphic_design",
+            "picture_making",
+            "textiles",
+            "sculpture",
+            "ceramics",
+            "leatherwork",
+            "basketry",
+            "literature_in_english",
+            "history",
+            "geography"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_ART_058",
+      "program_name": "B.A. Art Education",
+      "college": "Creative Arts, Design, & Home Economics",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 25,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "general_knowledge_in_art",
+            "graphic_design",
+            "picture_making",
+            "textiles",
+            "sculpture",
+            "ceramics",
+            "leatherwork",
+            "basketry",
+            "government",
+            "history"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_ART_059",
+      "program_name": "B.A. Creative Arts and Design Education",
+      "college": "Creative Arts, Design, & Home Economics",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 24,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "general_knowledge_in_art",
+            "graphic_design",
+            "picture_making",
+            "textiles",
+            "music",
+            "literature_in_english",
+            "theatre_arts",
+            "clothing_and_textiles"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_ART_060",
+      "program_name": "B.A. Fashion Design and Textile Education",
+      "college": "Creative Arts, Design, & Home Economics",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 22,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "clothing_and_textiles",
+            "textiles",
+            "general_knowledge_in_art",
+            "management_in_living",
+            "food_and_nutrition",
+            "graphic_design",
+            "chemistry"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_ART_061",
+      "program_name": "B.A. Theatre Arts",
+      "college": "Creative Arts, Design, & Home Economics",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 26,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "literature_in_english",
+            "history",
+            "government",
+            "general_knowledge_in_art",
+            "music",
+            "christian_religious_studies",
+            "french"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_ART_062",
+      "program_name": "B.A. Music/Music Education",
+      "college": "Creative Arts, Design, & Home Economics",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 28,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "music",
+            "literature_in_english",
+            "history",
+            "government",
+            "christian_religious_studies",
+            "french",
+            "general_knowledge_in_art"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_ART_063",
+      "program_name": "B.F.A. Animation",
+      "college": "Creative Arts, Design, & Home Economics",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 22,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "general_knowledge_in_art",
+            "graphic_design",
+            "picture_making",
+            "ict",
+            "physics",
+            "elective_maths"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_ART_064",
+      "program_name": "B.Sc. Home Economics Education",
+      "college": "Creative Arts, Design, & Home Economics",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 22,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "management_in_living",
+            "food_and_nutrition",
+            "clothing_and_textiles",
+            "chemistry",
+            "biology",
+            "general_knowledge_in_art"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_ART_065",
+      "program_name": "2-Year Diploma in Art Education",
+      "college": "Creative Arts, Design, & Home Economics",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 32,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "general_knowledge_in_art",
+            "graphic_design",
+            "picture_making",
+            "textiles",
+            "sculpture",
+            "ceramics",
+            "leatherwork"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_ART_066",
+      "program_name": "Diploma in Music Education",
+      "college": "Creative Arts, Design, & Home Economics",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 34,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "music",
+            "literature_in_english",
+            "history",
+            "government",
+            "christian_religious_studies"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_ART_067",
+      "program_name": "Diploma in Theatre Arts",
+      "college": "Creative Arts, Design, & Home Economics",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 32,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "literature_in_english",
+            "history",
+            "government",
+            "general_knowledge_in_art",
+            "music"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_LNG_068",
+      "program_name": "B.A. English Education",
+      "college": "Languages & Linguistics",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 18,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "literature_in_english",
+            "government",
+            "history",
+            "christian_religious_studies",
+            "islamic_religious_studies",
+            "geography",
+            "french"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_LNG_069",
+      "program_name": "B.A. French Education",
+      "college": "Languages & Linguistics",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 22,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "french",
+            "literature_in_english",
+            "government",
+            "history",
+            "christian_religious_studies",
+            "geography"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_LNG_070",
+      "program_name": "B.A. Linguistics Education",
+      "college": "Languages & Linguistics",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 24,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "literature_in_english",
+            "french",
+            "government",
+            "history",
+            "christian_religious_studies",
+            "geography"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_LNG_071",
+      "program_name": "B.A. Ghanaian Language Education (Ewe)",
+      "college": "Languages & Linguistics",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 26,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "ewe",
+            "literature_in_english",
+            "government",
+            "history",
+            "christian_religious_studies",
+            "geography"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_LNG_072",
+      "program_name": "B.A. Ghanaian Language Education (Fante)",
+      "college": "Languages & Linguistics",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 24,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "fante",
+            "literature_in_english",
+            "government",
+            "history",
+            "christian_religious_studies",
+            "geography"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_LNG_073",
+      "program_name": "B.A. Ghanaian Language Education (Ga)",
+      "college": "Languages & Linguistics",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 26,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "ga",
+            "literature_in_english",
+            "government",
+            "history",
+            "christian_religious_studies",
+            "geography"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_LNG_074",
+      "program_name": "B.A. Ghanaian Language Education (Dangme)",
+      "college": "Languages & Linguistics",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 26,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "dangme",
+            "literature_in_english",
+            "government",
+            "history",
+            "christian_religious_studies",
+            "geography"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_LNG_075",
+      "program_name": "B.A. Ghanaian Language Education (Dagbani)",
+      "college": "Languages & Linguistics",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 26,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "dagbani",
+            "literature_in_english",
+            "government",
+            "history",
+            "christian_religious_studies",
+            "geography"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_LNG_076",
+      "program_name": "B.A. Ghanaian Language Education (Dagaare)",
+      "college": "Languages & Linguistics",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 26,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "dagaare",
+            "literature_in_english",
+            "government",
+            "history",
+            "christian_religious_studies",
+            "geography"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_LNG_077",
+      "program_name": "B.A. Ghanaian Language Education (Nzema)",
+      "college": "Languages & Linguistics",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 26,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "nzema",
+            "literature_in_english",
+            "government",
+            "history",
+            "christian_religious_studies",
+            "geography"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_LNG_078",
+      "program_name": "B.A. Ghanaian Language Education (Kasem)",
+      "college": "Languages & Linguistics",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 26,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "kasem",
+            "literature_in_english",
+            "government",
+            "history",
+            "christian_religious_studies",
+            "geography"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_LNG_079",
+      "program_name": "B.A. Ghanaian Language Education (Twi)",
+      "college": "Languages & Linguistics",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 20,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "literature_in_english",
+            "government",
+            "history",
+            "christian_religious_studies",
+            "geography"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_LNG_080",
+      "program_name": "B.A. Ghanaian Language Education (Gonja)",
+      "college": "Languages & Linguistics",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 26,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "gonja",
+            "literature_in_english",
+            "government",
+            "history",
+            "christian_religious_studies",
+            "geography"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_LNG_081",
+      "program_name": "B.A. Ghanaian Language Education (Gurene)",
+      "college": "Languages & Linguistics",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 26,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "gurene",
+            "literature_in_english",
+            "government",
+            "history",
+            "christian_religious_studies",
+            "geography"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SPT_082",
+      "program_name": "B.Sc. Physical Education",
+      "college": "Sports & Physical Education",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 25,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "biology",
+            "chemistry",
+            "physics",
+            "elective_maths",
+            "general_agriculture",
+            "government",
+            "history",
+            "geography",
+            "economics"
+          ],
+          "count": 3
+        }
+      }
+    },
+    {
+      "program_id": "UEW_SPT_083",
+      "program_name": "B.Sc. Sports Coaching",
+      "college": "Sports & Physical Education",
+      "faculty": "",
+      "cutoff_criteria": {
+        "minimum_aggregate": 27,
+        "core_subjects_required": [
+          "english",
+          "core_maths",
+          "int_science",
+          "social_studies"
+        ],
+        "elective_required": {
+          "any_of": [
+            "biology",
+            "chemistry",
+            "physics",
+            "elective_maths",
+            "general_agriculture",
+            "government",
+            "history",
+            "geography",
+            "economics"
+          ],
+          "count": 3
+        }
+      }
+    }
+  ]
+}
