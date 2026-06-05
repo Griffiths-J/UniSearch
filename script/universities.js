@@ -136,6 +136,33 @@ const universityData = [
     ],
   },
   {
+    id: "uhas",
+    name: "University of Health and Allied Sciences",
+    short: "UHAS",
+    type: "Public",
+    location: "Ho, Volta Region",
+    rank: "#6",
+    logo: "images/uhas.png",
+    image: "images/uhas.png",
+    faculties: ["Health Sciences", "Clinical Sciences", "Public Health"],
+    description:
+      "UHAS is Ghana's leading health-focused university, known for strong medical and allied health programmes.",
+    established: "2011",
+    website: "www.uhas.edu.gh",
+    contact: "+233-3620-28566",
+    accreditation: "NAB (National Accreditation Board)",
+    studentPopulation: "10,000+",
+    admissionRequirement:
+      "Minimum aggregate of 7-24 in relevant subjects, WASSCE results required",
+    facilities:
+      "Clinical training labs, research centers, teaching hospitals, hostels, modern classrooms",
+    gallery: [
+      "https://allevents.in/images/dates/2/3/1/8/6/o/normal_123180259_01_02.jpg",
+      "https://uhas.edu.gh/wp-content/uploads/2020/07/uhas-%E2%80%94-capture.jpg",
+      "https://uhas.edu.gh/wp-content/uploads/2020/12/uhas.png",
+    ],
+  },
+  {
     id: "ashesi",
     name: "Ashesi University",
     short: "Ashesi",
