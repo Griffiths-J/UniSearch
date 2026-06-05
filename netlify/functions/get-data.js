@@ -59,7 +59,7 @@ export const handler = async (event) => {
       const data = await response.json();
 
      
-      const allowedUniversities = new Set(["KNUST", "UG", "UCC", "UMAT", "UPSA" , "UHAS",/* "UENR", "ATU",*/ "UEW" ]);
+      const allowedUniversities = new Set(["KNUST", "UG", "UCC", "UMAT", "UPSA" , "UHAS","UEW" /* "UENR", "ATU",*/ ]);
       if (!allowedUniversities.has(university)) {
         return {
           statusCode: 400,
