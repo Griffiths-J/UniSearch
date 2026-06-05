@@ -991,6 +991,19 @@ select:focus {
   font-size: clamp(0.8rem, 1vw + 0.89rem, 1.7rem);
   color: var(--text-color);
 }
+.result-page-note {
+  font-size: 0.95rem;
+  color: var(--gray);
+  margin-top: 0.35rem;
+  line-height: 1.5;
+}
+.result-page-note a {
+  color: var(--Hspan);
+  text-decoration: underline;
+}
+.result-page-note a:hover {
+  text-decoration: none;
+}
 .result-summaryUni {
   background: linear-gradient(to left, #177de4, #00bfff, #40e0d0);
   background-clip: text;

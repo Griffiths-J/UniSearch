@@ -232,6 +232,9 @@ async function unis() {
             <div class="resultAgg-t">Your Aggregrate</div> <span>|</span>
             <div class="resultAgg">${aggregate}</div>
           </div>
+          <div class="result-page-note">
+            You can view this checked result anytime on <a href="saved-results.html">My Results</a>.
+          </div>
       </div>
       ${noProgramsHtml}
       <div class="numberCourses">${elegible.length} COURSE${elegible.length > 1 ? "S" : ""} FOUND <br>
