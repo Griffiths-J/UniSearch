@@ -575,7 +575,7 @@ async function unis() {
 
       document.querySelector(".resultPage").style.display = "none";
       const handler = PaystackPop.setup({
-        key: "pk_test_4bf95eea05cc22ee8197c0fc61514b7e6fc93a3b",
+        key: "pk_live_db6a66b9372f3b2a5c775bfd81dc6f3171a7e66a",
         email: email,
         amount: 1500,
         currency: "GHS",
