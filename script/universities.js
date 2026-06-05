@@ -157,9 +157,9 @@ const universityData = [
     facilities:
       "Clinical training labs, research centers, teaching hospitals, hostels, modern classrooms",
     gallery: [
-      "https://allevents.in/images/dates/2/3/1/8/6/o/normal_123180259_01_02.jpg",
-      "https://uhas.edu.gh/wp-content/uploads/2020/07/uhas-%E2%80%94-capture.jpg",
-      "https://uhas.edu.gh/wp-content/uploads/2020/12/uhas.png",
+      "https://tse1.mm.bing.net/th/id/OIP.3dBt5QxXdmXpaIs4p4Q_-AHaEc?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+      "https://tse1.mm.bing.net/th/id/OIP._aI8cIUZ0fPLc5q2yC7izgAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+      "https://tse3.mm.bing.net/th/id/OIP.bJhb6--GUStvW3Sz4F5EHgHaEi?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
     ],
   },
   {
@@ -168,7 +168,7 @@ const universityData = [
     short: "Ashesi",
     type: "Private",
     location: "Berekuso, Eastern Region",
-    rank: "#6",
+    rank: "#7",
     logo: "images/Ashesi 3.png",
     image: "images/kwame-nkrumah-university-of-science-technology-seeklogo.png",
     faculties: ["Computer Science", "Business", "Engineering"],
