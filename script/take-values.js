@@ -31,6 +31,14 @@ async function unis() {
         return "UMAT";
       case "University of Professional Studies Accra":
         return "UPSA";
+      case "UHAS":
+        return "University of Health and Allied Sciences";  
+      case "UENR":
+        return "University of Energy and Natural Resources";
+      case "ATU":
+        return "Accra Technical University";  
+      case "UEW":
+        return "University of Education, Winneba";    
       default:
         return "Select University";
     }
@@ -48,6 +56,14 @@ async function unis() {
         return "University of Mines and Technology";
       case "UPSA":
         return "University of Professional Studies Accra";
+      case "UHAS":
+        return "University of Health and Allied Sciences";
+      case "UENR":
+        return "University of Energy and Natural Resources";
+      case "ATU":
+        return "Accra Technical University";
+      case "UEW":
+        return "University of Education, Winneba";
       default:
         return "Unknown University";
     }
@@ -354,6 +370,20 @@ async function unis() {
       case "UPSA":
         resultUniTitle = "University of Professional Studies Accra";
         break;
+      case "UHAS":
+        resultUniTitle = "University of Health Allied Sciences"  ;
+        break;
+       case "UENR":
+        resultUniTitle = "University of Energy and Natural Resources"  ;
+        break;
+       case "ATU":
+        resultUniTitle = "Accra Technical University"  ;
+        break;
+        case "UEW":
+        resultUniTitle = "University of Education, Winneba"  ;
+        break;
+      default:
+        console.error("error");  
     }
 
     const userResult = [];
@@ -499,7 +529,7 @@ async function unis() {
     }
 
     function knustCheck(grade) {
-      if (university === "KNUST") {
+      if (university === "KNUST" || university === "UHAS") {
         if (grade >= 4 && grade <= 6) {
           grade = 4;
         } else {
@@ -598,9 +628,9 @@ async function unis() {
 
       document.querySelector(".resultPage").style.display = "none";
       const handler = PaystackPop.setup({
-        key: "pk_live_7711535ed36b3efe24e9b511ffeed1bc7f8c2ec8",
+        key: "pk_test_4bf95eea05cc22ee8197c0fc61514b7e6fc93a3b",
         email: email,
-        amount: 1170,
+        amount: 1500,
         currency: "GHS",
         ref: "" + Math.floor(Math.random() * 99999 + 1),
         callback: function (responds) {
