@@ -11,7 +11,10 @@ async function unis() {
       if (action === "add" && typeof oneSignalUser.addTag === "function") {
         oneSignalUser.addTag(key, value);
       }
-      if (action === "remove" && typeof oneSignalUser.removeTag === "function") {
+      if (
+        action === "remove" &&
+        typeof oneSignalUser.removeTag === "function"
+      ) {
         oneSignalUser.removeTag(key, value);
       }
     } catch (error) {
@@ -31,14 +34,14 @@ async function unis() {
         return "UMAT";
       case "University of Professional Studies Accra":
         return "UPSA";
-      case "UHAS":
-        return "University of Health and Allied Sciences";  
-      case "UENR":
-        return "University of Energy and Natural Resources";
-      case "ATU":
-        return "Accra Technical University";  
-      case "UEW":
-        return "University of Education, Winneba";    
+      case "University of Health and Allied Sciences":
+        return "UHAS";
+      case "University of Energy and Natural Resources":
+        return "UENR";
+      case "Accra Technical University":
+        return "ATU";
+      case "University of Education, Winneba":
+        return "UEW";
       default:
         return "Select University";
     }
@@ -69,8 +72,8 @@ async function unis() {
     }
   }
 
-  function saveResultData(elegible, aggregate, Uni,weakGrades) {
-    const resultData = JSON.stringify({ elegible, aggregate, Uni,weakGrades });
+  function saveResultData(elegible, aggregate, Uni, weakGrades) {
+    const resultData = JSON.stringify({ elegible, aggregate, Uni, weakGrades });
     localStorage.setItem("uniSearchResult", resultData);
     sessionStorage.setItem("uniSearchPageState", "result");
   }
@@ -104,9 +107,7 @@ async function unis() {
   async function fetchResultsForUniversity(universityCode) {
     const studentDataRaw = sessionStorage.getItem("uniSearchStudentData");
     if (!studentDataRaw) {
-      throw new Error(
-        "Student data is not available.",
-      );
+      throw new Error("Student data is not available.");
     }
 
     const studentData = JSON.parse(studentDataRaw);
@@ -138,38 +139,34 @@ async function unis() {
 
     const studentDataRaw = sessionStorage.getItem("uniSearchStudentData");
 
-    const studentData = studentDataRaw ? 
-                  JSON.parse(studentDataRaw):{};
+    const studentData = studentDataRaw ? JSON.parse(studentDataRaw) : {};
 
-      const weakGrades = studentData.weakGrades||[];
-      
+    const weakGrades = studentData.weakGrades || [];
 
- let gradeHtml = ''
-            weakGrades.map((e)=>{
-                gradeHtml+=`
+    let gradeHtml = "";
+    weakGrades.map((e) => {
+      gradeHtml += `
                    ${e.grade},
-                `
-            })
+                `;
+    });
 
-            let subjectHtml = '';
-            weakGrades.map((e)=>{
-                subjectHtml+=`
+    let subjectHtml = "";
+    weakGrades.map((e) => {
+      subjectHtml += `
                     ${e.subject},
-                `
-            }) 
+                `;
+    });
 
-
- const weakMarkRemark = weakGrades.length>1 ? 
-                `
+    const weakMarkRemark =
+      weakGrades.length > 1
+        ? `
             <div class="weakmarktake" style="font-style:italic">
                Getting ${gradeHtml} in ${subjectHtml} respectively may reduce your chances of admission.
                Even though you may see eligible programs, universities often prioritize stronger grades.
                <a href="https://wa.me/+233509304981?text=Hi Unilift,, I need help with selecting courses for my grades.">Talk to an assistant</a>
             </div>    
-            ` : '';
-
-
-
+            `
+        : "";
 
     const listItems = elegible
       .map(
@@ -220,16 +217,13 @@ async function unis() {
     `
         : "";
 
-
-
-
-        const buy = `
+    const buy = `
               
       <div class="result-cta">
         <p>Ready to apply? Get your admission forms here.</p>
         <a href="checker&forms.html">Get yours now →</a>
       </div>
-        `
+        `;
 
     resultHero.innerHTML = `
       <div class="result-summary">
@@ -249,7 +243,7 @@ async function unis() {
        
     `;
 
-    saveResultData(elegible, aggregate, Uni,weakGrades);
+    saveResultData(elegible, aggregate, Uni, weakGrades);
     const switcherCode = getUniversityCode(Uni);
     const hasPaid = Boolean(sessionStorage.getItem("uniSearchStudentData"));
     toggleResultUniversitySwitcher(hasPaid, switcherCode);
@@ -265,7 +259,7 @@ async function unis() {
           parsed.elegible,
           parsed.aggregate,
           parsed.Uni || "N/A",
-          parsed.weakGrades
+          parsed.weakGrades,
         );
       }
     } catch (e) {
@@ -334,13 +328,10 @@ async function unis() {
     const stored = localStorage.getItem("uniSearchResult");
     if (!stored) return;
 
-
     if (window.showResultPage) window.showResultPage();
     window.restoreResultFromStorage();
     initResultUniversitySwitcher();
   }
-
-
 
   function Getvalues() {
     const university = document.querySelector(".getsch-select-value").value;
@@ -371,31 +362,40 @@ async function unis() {
         resultUniTitle = "University of Professional Studies Accra";
         break;
       case "UHAS":
-        resultUniTitle = "University of Health Allied Sciences"  ;
+        resultUniTitle = "University of Health and Allied Sciences";
         break;
-       case "UENR":
-        resultUniTitle = "University of Energy and Natural Resources"  ;
+      case "UENR":
+        resultUniTitle = "University of Energy and Natural Resources";
         break;
-       case "ATU":
-        resultUniTitle = "Accra Technical University"  ;
+      case "ATU":
+        resultUniTitle = "Accra Technical University";
         break;
-        case "UEW":
-        resultUniTitle = "University of Education, Winneba"  ;
+      case "UEW":
+        resultUniTitle = "University of Education, Winneba";
         break;
       default:
-        console.error("error");  
+        console.error("error");
     }
 
     const userResult = [];
 
-    //core Suvjects
+    function knustCheck(grade) {
+      const numericGrade = Number(grade);
+      if (Number.isNaN(numericGrade)) return grade;
+      if (university === "KNUST" || university === "UHAS") {
+        return numericGrade >= 4 && numericGrade <= 6 ? 4 : numericGrade;
+      }
+      return numericGrade;
+    }
+
+    // core Subjects
     const allCRows = document.querySelectorAll(".core-instance");
     const coreSubresult = [];
 
     allCRows.forEach((row) => {
-      let name = row.querySelector(".coresub-js").innerHTML;
-      let grade = row.querySelector(".coregrade-js").value;
-      let type = "core";
+      const name = row.querySelector(".coresub-js").innerHTML;
+      const grade = row.querySelector(".coregrade-js").value;
+      const type = "core";
 
       if (grade === "Select Grade" || grade === "") {
         document.querySelector(".prompt").innerHTML =
@@ -409,19 +409,18 @@ async function unis() {
       coreSubresult.push({
         type,
         name,
-        grade,
+        grade: knustCheck(grade),
       });
     });
 
-    //electives
+    // electives
     const electiveSubresult = [];
     const allERows = document.querySelectorAll(".elective-instance");
 
     allERows.forEach((row) => {
-      let name = row.querySelector(".electivesub-js").value;
-      let grade = row.querySelector(".electivegrade-js").value;
-
-      let type = "elective";
+      const name = row.querySelector(".electivesub-js").value;
+      const grade = row.querySelector(".electivegrade-js").value;
+      const type = "elective";
 
       if (name === "Select Course" || grade == "Select Grade" || grade === "") {
         document.querySelector(".prompt").innerHTML =
@@ -432,11 +431,10 @@ async function unis() {
         throw new Error("Missing elective selection");
       }
 
-      let grade_main = knustCheck(grade);
       electiveSubresult.push({
         type,
         name,
-        grade: grade_main,
+        grade: knustCheck(grade),
       });
     });
 
@@ -449,11 +447,11 @@ async function unis() {
       return;
     }
 
-    //add core to main array
+    // add core and elective values to a unified result array
     coreSubresult.forEach((course) => {
-      let finalSub = course.name;
-      let finalGrade = parseInt(course.grade);
-      let finalType = course.type;
+      const finalSub = course.name;
+      const finalGrade = Number(course.grade);
+      const finalType = course.type;
 
       userResult.push({
         finalType,
@@ -461,11 +459,11 @@ async function unis() {
         finalGrade,
       });
     });
-    //add elective to main array
+
     electiveSubresult.forEach((course) => {
-      let finalSub = course.name;
-      let finalGrade = parseInt(course.grade);
-      let finalType = course.type;
+      const finalSub = course.name;
+      const finalGrade = Number(course.grade);
+      const finalType = course.type;
 
       userResult.push({
         finalType,
@@ -474,44 +472,32 @@ async function unis() {
       });
     });
 
+    let weakMarkArray = [];
 
-
-
-
-     let weakMarkArray = [];
-
-    const weakMark = userResult.forEach(e=>{
+    userResult.forEach((e) => {
       let grade = e.finalGrade;
       let subject = e.finalSub;
 
-      if(grade > 6){
+      if (grade > 6) {
+        switch (grade) {
+          case 7:
+            grade = "D7";
+            break;
+          case 8:
+            grade = "E8";
+            break;
+          case 9:
+            grade = "F9";
+            break;
+          default:
+            grade = "weak mark";
+        }
 
-       switch(grade){
-        case 7:
-          grade = 'D7'
-          break;
-        case 8:
-          grade =  'E8'
-          break;
-        case 9:
-          grade = 'F9'
-          break;
-        default :
-          grade = 'weak mark'    
-       }
-
-        weakMarkArray.push({
-        grade,subject
-        });
+        weakMarkArray.push({ grade, subject });
       }
-    })
-/* 
-    console.log(weakMarkArray */
+    });
 
-
-   
     const allResult = userResult;
-
     const cores = allResult.filter((e) => e.finalType === "core");
     const elective = allResult.filter((e) => e.finalType === "elective");
 
@@ -528,82 +514,41 @@ async function unis() {
       return;
     }
 
-    function knustCheck(grade) {
-      if (university === "KNUST" || university === "UHAS") {
-        if (grade >= 4 && grade <= 6) {
-          grade = 4;
-        } else {
-          grade = grade;
-        }
-      }
-      return grade;
-    }
-
-    const englishSelect = cores.find((en) => en.finalSub.includes("English"));
-    const englishGrade = englishSelect.finalGrade;
-    const englishGrade_main = knustCheck(englishGrade);
-
-    const mathSelect = cores.find((mth) =>
-      mth.finalSub.includes("Mathematics"),
-    );
-    const mathGrade = mathSelect.finalGrade;
-    const mathGrade_main = knustCheck(mathGrade);
-
-    const scienceSelect = cores.find((sci) => sci.finalSub.includes("Science"));
-    const scienceGrade = scienceSelect.finalGrade;
-    const scienceGrade_main = knustCheck(scienceGrade);
-
-    const socialSelect = cores.find((soc) => soc.finalSub.includes("Social"));
-    const socialGrade = socialSelect.finalGrade;
-
-    const bestThreeElective = elective
-      .map((el) => el.finalGrade)
+    const bestThreeCoreGrades = cores
+      .map((core) => core.finalGrade)
       .sort((a, b) => a - b)
+      .slice(0, 3);
+
+    const coreTotal = bestThreeCoreGrades.reduce(
+      (sum, grade) => sum + grade,
+      0,
+    );
+
+    const sortedElectives = elective
+      .slice()
+      .sort((a, b) => a.finalGrade - b.finalGrade);
+
+    const electiveTotal = sortedElectives
       .slice(0, 3)
-      .reduce((sum, grade) => sum + grade, 0);
+      .reduce((sum, course) => sum + course.finalGrade, 0);
 
-
-    const finalAggregrate =
-      mathGrade_main +
-      scienceGrade_main +
-      englishGrade_main +
-      bestThreeElective;
-
-    const electiveOne = elective[0];
-    const electivetwo = elective[1];
-    const electivethree = elective[2];
-    const electivefour = elective[3];
-
-    const lete = [electiveOne, electivetwo, electivethree, electivefour];
-    let i;
-    let j;
-    for (i = 0; i < lete.length - 1; i++) {
-      for (j = 0; j < lete.length - 1; j++) {
-        if (lete[j].finalGrade > lete[j + 1].finalGrade) {
-          let temp = lete[j];
-          lete[j] = lete[j + 1];
-          lete[j + 1] = temp;
-        }
-      }
-    }
-
-    const finalBestThree = lete.slice(0, 4);
+    const finalAggregrate = coreTotal + electiveTotal;
 
     const studentData = {
-      core_math: mathGrade_main,
-      int_science: scienceGrade_main,
-      english: englishGrade_main,
-      [finalBestThree[0].finalSub]: finalBestThree[0].finalGrade,
-      [finalBestThree[1].finalSub]: finalBestThree[1].finalGrade,
-      [finalBestThree[2].finalSub]: finalBestThree[2].finalGrade,
-      [finalBestThree[3].finalSub]: finalBestThree[3].finalGrade,
+      core_math: cores.find((core) => core.finalSub.includes("Mathematics"))
+        .finalGrade,
+      int_science: cores.find((core) => core.finalSub.includes("Science"))
+        .finalGrade,
+      english: cores.find((core) => core.finalSub.includes("English"))
+        .finalGrade,
+      ...elective.reduce((acc, course) => {
+        acc[course.finalSub] = course.finalGrade;
+        return acc;
+      }, {}),
       aggregrate: finalAggregrate,
       Uni: resultUniTitle,
-      weakGrades:weakMarkArray
+      weakGrades: weakMarkArray,
     };
-
-
-
 
     document.querySelector(".modal-overlay").style.display = "flex";
     document.getElementById("payment-modal").style.display = "flex";
@@ -611,8 +556,7 @@ async function unis() {
     document.getElementById("display-agg").innerText = `${finalAggregrate}`;
 
     document.getElementById("pay-button").onclick = function (e) {
-      
-       notifyProceed();
+      notifyProceed();
       e.preventDefault();
       const name = document.getElementById("student-name").value;
       const email = document.getElementById("student-email").value;
@@ -676,13 +620,13 @@ async function unis() {
                 result.elegible,
                 result.aggregate,
                 result.Uni,
-                studentData.weakGrades
+                studentData.weakGrades,
               );
               initResultUniversitySwitcher();
             })
             .catch((error) => {
               /* console.error("Error fetching results:", error);*/
-               if (resultHero) {
+              if (resultHero) {
                 const isDark = isDarkModeActive();
                 const exclamationMark = isDark
                   ? "icons/exclamation-mark-D.png"
@@ -750,48 +694,39 @@ async function unis() {
 
   restoreResultPageIfNeeded();
 
-
-
-
-
-
-//  (Proceeding to Payment)
-async function notifyProceed() {
-  const name = "A student";
-  await fetch('/.netlify/functions/alert-proceed', {
-    method: 'POST',
-    body: JSON.stringify({ name: name })
-  });
-}
-
-// (After Payment is finished)
-async function notifyPaymentSuccess(email) {
-  const name = email || "A student";
-  await fetch('/.netlify/functions/alert-paid', {
-    method: 'POST',
-    body: JSON.stringify({ name: name })
-  });
-}
-
-// (Canceling Payment)
-async function sendCancelAlert(email) {
-  const studentName = email || "A student";
-
-  try {
-    await fetch('/.netlify/functions/alert-cancel', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name: studentName })
+  //  (Proceeding to Payment)
+  async function notifyProceed() {
+    const name = "A student";
+    await fetch("/.netlify/functions/alert-proceed", {
+      method: "POST",
+      body: JSON.stringify({ name: name }),
     });
-    /* console.log("Cancel alert sent to Admin"); */
-  } catch (error) {
-    console.error("Error sending cancel alert:", error);
   }
-}
 
+  // (After Payment is finished)
+  async function notifyPaymentSuccess(email) {
+    const name = email || "A student";
+    await fetch("/.netlify/functions/alert-paid", {
+      method: "POST",
+      body: JSON.stringify({ name: name }),
+    });
+  }
 
+  // (Canceling Payment)
+  async function sendCancelAlert(email) {
+    const studentName = email || "A student";
 
-
+    try {
+      await fetch("/.netlify/functions/alert-cancel", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: studentName }),
+      });
+      /* console.log("Cancel alert sent to Admin"); */
+    } catch (error) {
+      console.error("Error sending cancel alert:", error);
+    }
+  }
 }
 
 unis();
