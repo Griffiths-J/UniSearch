@@ -468,6 +468,120 @@ main {
   font-size: 1.2rem;
 }
 
+.deadline-section {
+  width: 85%;
+  margin: 3rem auto 2rem;
+  text-align: left;
+}
+
+.deadline-header {
+  max-width: 700px;
+  margin-bottom: 1.25rem;
+}
+
+.deadline-eyebrow {
+  display: inline-block;
+  margin: 0 0 0.35rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(23, 125, 228, 0.12);
+  color: var(--Hspan);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.deadline-header h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.deadline-header p {
+  margin: 0;
+  color: var(--muted-text);
+  line-height: 1.7;
+}
+
+.deadline-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.deadline-card {
+  background: var(--card-surface);
+  border: 1px solid rgba(23, 125, 228, 0.1);
+  border-radius: 1.2rem;
+  padding: 1rem;
+  box-shadow: 0 16px 35px rgba(15, 23, 42, 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.deadline-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.7rem;
+}
+
+.deadline-card h4 {
+  margin: 0 0 0.2rem;
+  color: var(--text-color);
+  font-size: 1.05rem;
+}
+
+.deadline-label {
+  margin: 0;
+  color: var(--muted-text);
+  font-size: 0.8rem;
+}
+
+.deadline-pill {
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.14);
+  color: var(--Hspan);
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.deadline-meta {
+  margin: 0;
+  color: var(--muted-text);
+  line-height: 1.65;
+  font-size: 0.95rem;
+}
+
+.deadline-points {
+  margin: 0;
+  padding-left: 1rem;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.deadline-card a {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--Hspan);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.deadline-card a:hover {
+  text-decoration: underline;
+}
+
 .trustedSection {
   width: 85%;
   margin: 3rem auto;
