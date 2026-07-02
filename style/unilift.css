@@ -530,8 +530,9 @@ main {
 
 .deadline-card h4 {
   margin: 0 0 0.2rem;
-  color: var(--text-color);
+  color: var(--Hspan);
   font-size: 1.05rem;
+  font-weight: 700;
 }
 
 .deadline-label {
@@ -580,6 +581,11 @@ main {
 
 .deadline-card a:hover {
   text-decoration: underline;
+}
+
+.deadline-label-accent {
+  color: var(--Hspan);
+  font-weight: 700;
 }
 
 .trustedSection {
