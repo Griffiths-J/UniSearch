@@ -5,7 +5,7 @@ exports.handler = async (event) => {
     const { name } = JSON.parse(event.body);
     let currentTotal = "??";
 
-    // 1. Increment Upstash Counter
+    //  Increment Upstash Counter
     try {
       const url = `${process.env.UPSTASH_REDIS_REST_URL}/incr/paid_count`;
       const response = await fetch(url, {
@@ -15,7 +15,7 @@ exports.handler = async (event) => {
       currentTotal = data.result;
     } catch (e) { console.log("Counter failed"); }
 
-    // 2. Send Pushbullet
+    //  Send Pushbullet
     await fetch('https://api.pushbullet.com/v2/pushes', {
       method: 'POST',
       headers: {
