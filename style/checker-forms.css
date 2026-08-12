@@ -7,6 +7,7 @@
 .hero-section {
   text-align: center;
   margin-bottom: 3rem;
+  animation: fadeUp 0.75s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
 .hero-icon {
@@ -20,6 +21,7 @@
   color: var(--Hspan);
   font-size: 1.5rem;
   margin-bottom: 1.25rem;
+  animation: softFloat 4s ease-in-out infinite;
 }
 
 .hero-section h1 {
@@ -28,6 +30,7 @@
   line-height: 1.1;
   margin-bottom: 1rem;
   color: var(--text-color);
+  animation: fadeUp 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) 0.08s both;
 }
 
 .hero-section p {
@@ -37,6 +40,7 @@
   opacity: 0.82;
   font-size: 1rem;
   line-height: 1.8;
+  animation: fadeUp 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) 0.14s both;
 }
 
 .services-grid {
@@ -55,11 +59,15 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  animation: fadeUp 0.75s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
 .service-card:hover {
   transform: translateY(-3px);
-  transition: transform 0.25s ease;
+  box-shadow: 0 18px 34px rgba(15, 23, 42, 0.09);
 }
 
 .card-head {
@@ -170,6 +178,7 @@
   padding: 1.7rem;
   text-align: center;
   box-shadow: 0 10px 20px var(--shadow-cl);
+  animation: fadeUp 0.76s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
 .stat-card h3 {
@@ -214,6 +223,15 @@
   align-items: flex-start;
   gap: 1rem;
   box-shadow: 0 12px 24px var(--shadow-cl);
+  animation: fadeUp 0.76s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.08);
 }
 
 .step-number {
@@ -251,6 +269,7 @@
   border-radius: 28px;
   box-shadow: 0 24px 40px rgba(0, 0, 0, 0.08);
   text-align: center;
+  animation: fadeUp 0.75s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
 .cta-section h2 {
@@ -321,7 +340,13 @@
   overflow: hidden;
   transition:
     border-color 0.25s ease,
-    box-shadow 0.25s ease;
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+  animation: fadeUp 0.72s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.faq-item:hover {
+  transform: translateY(-2px);
 }
 
 .faq-item.active {

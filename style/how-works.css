@@ -3,12 +3,18 @@
   padding: 100px 20px;
   background: var(--Hspan);
   color: #fff;
+  animation: fadeUp 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
 .how-it-works-hero h1 {
   font-family: var(--montserrat);
   font-size: 3rem;
   margin-bottom: 10px;
+  animation: fadeUp 0.72s cubic-bezier(0.2, 0.7, 0.2, 1) 0.08s both;
+}
+
+.how-it-works-hero p {
+  animation: fadeUp 0.72s cubic-bezier(0.2, 0.7, 0.2, 1) 0.14s both;
 }
 
 .steps-container {
@@ -27,11 +33,15 @@
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  animation: fadeUp 0.75s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
 .step-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
 }
 
 .step-number {
@@ -68,11 +78,15 @@
   border-radius: 50px;
   font-weight: bold;
   margin-top: 20px;
-  transition: transform 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  animation: fadeUp 0.75s cubic-bezier(0.2, 0.7, 0.2, 1) 0.2s both;
 }
 
 .cta-primary:hover {
   transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(23, 125, 228, 0.2);
 }
 
 .section-title {
@@ -80,6 +94,7 @@
   margin-bottom: 40px;
   font-size: 2rem;
   color: var(--text-color);
+  animation: fadeUp 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
 .section-divider {
@@ -105,15 +120,21 @@
   border: 1px solid var(--muted-text);
   color: var(--text-color);
   border-radius: 15px;
-  transition: 0.3s;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
   display: grid;
   grid-template-rows: 80px 65px;
   place-content: center;
+  animation: fadeUp 0.78s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
 .feature-item:hover {
   background: var(--header-cl);
   border-color: var(--Hspan);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
 }
 
 .feature-icon {
@@ -154,6 +175,15 @@
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+  animation: fadeUp 0.72s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-2px);
 }
 
 .faq-item.active {
