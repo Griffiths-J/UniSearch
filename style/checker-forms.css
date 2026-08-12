@@ -308,23 +308,62 @@
   color: var(--text-color);
 }
 
+.faq-accordion {
+  display: grid;
+  gap: 0.9rem;
+}
+
 .faq-item {
   background: var(--card-surface);
   border: 1px solid rgba(23, 125, 228, 0.08);
   border-radius: 18px;
-  padding: 1.5rem 1.75rem;
-  margin-bottom: 1rem;
   box-shadow: 0 10px 20px var(--shadow-cl);
+  overflow: hidden;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-.faq-item h3 {
-  margin: 0 0 0.75rem;
-  font-size: 1rem;
+.faq-item.active {
+  border-color: rgba(23, 125, 228, 0.22);
+  box-shadow: 0 14px 28px rgba(23, 125, 228, 0.08);
+}
+
+.faq-question {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 1.4rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+  color: var(--Hspan);
+  cursor: pointer;
+}
+
+.faq-question i {
+  font-size: 0.9rem;
+  transition: transform 0.25s ease;
   color: var(--Hspan);
 }
 
-.faq-item p {
+.faq-item.active .faq-question i {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
   margin: 0;
+  padding: 0 1.5rem 1.4rem;
   color: var(--text-color);
   opacity: 0.85;
   line-height: 1.8;

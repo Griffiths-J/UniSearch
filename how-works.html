@@ -20,7 +20,7 @@
         }
       })();
     </script>
-     <link
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
@@ -167,29 +167,47 @@
       <section class="faq-section">
         <h2 class="section-title">Frequently Asked Questions</h2>
 
-        <div class="faq-item">
-          <h4>How does UniLift work?</h4>
-          <p>
-            UniLift simplifies the university course selection process by
-            automatically calculating your aggregate and matching you with
-            eligible programs based on your WASSCE results.
-          </p>
-        </div>
+        <div class="faq-accordion">
+          <div class="faq-item active">
+            <button class="faq-question" type="button" aria-expanded="true">
+              <span>How does UniLift work?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                UniLift simplifies the university course selection process by
+                automatically calculating your aggregate and matching you with
+                eligible programs based on your WASSCE results.
+              </p>
+            </div>
+          </div>
 
-        <div class="faq-item">
-          <h4>Which universities are supported?</h4>
-          <p>
-            Currently, we support KNUST, University of Ghana (Legon), UCC, UPSA,UHAS,UEW.
-          </p>
-        </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Which universities are supported?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Currently, we support KNUST, University of Ghana (Legon), UCC,
+                UPSA, UHAS, and UEW.
+              </p>
+            </div>
+          </div>
 
-        <div class="faq-item">
-          <h4>Does an aggregate of 6 guarantee admission?</h4>
-          <p>
-            While UniLift checks eligibility based on cutoff points, final
-            admission depends on the university's competitive intake for that
-            year.
-          </p>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Does an aggregate of 6 guarantee admission?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                While UniLift checks eligibility based on cutoff points, final
+                admission depends on the university's competitive intake for
+                that year.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -274,6 +292,46 @@
             sessionStorage.setItem("uniSearchPageState", "grade");
             window.location.href = "index.html";
           });
+        });
+
+        const faqItems = document.querySelectorAll(".faq-item");
+
+        const setFaqHeight = (item) => {
+          const answer = item.querySelector(".faq-answer");
+          const isOpen = item.classList.contains("active");
+
+          answer.style.maxHeight = isOpen ? answer.scrollHeight + "px" : "0px";
+        };
+
+        faqItems.forEach((item) => {
+          const button = item.querySelector(".faq-question");
+          const answer = item.querySelector(".faq-answer");
+
+          button.setAttribute(
+            "aria-expanded",
+            item.classList.contains("active") ? "true" : "false",
+          );
+          setFaqHeight(item);
+
+          button.addEventListener("click", () => {
+            const isOpen = item.classList.contains("active");
+
+            faqItems.forEach((faq) => {
+              faq.classList.remove("active");
+              faq
+                .querySelector(".faq-question")
+                .setAttribute("aria-expanded", "false");
+              setFaqHeight(faq);
+            });
+
+            if (!isOpen) {
+              item.classList.add("active");
+              button.setAttribute("aria-expanded", "true");
+              setFaqHeight(item);
+            }
+          });
+
+          window.addEventListener("resize", () => setFaqHeight(item));
         });
       });
     </script>

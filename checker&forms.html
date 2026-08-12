@@ -4,12 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="title" content="UniLift | University Forms & WASSCE Result Checker">
-    <meta name="description" content="Get your university admission forms and WASSCE result checker PINs — all in one place. Fast, reliable, and just a message away.">
+    <meta
+      name="title"
+      content="UniLift | University Forms & WASSCE Result Checker"
+    />
+    <meta
+      name="description"
+      content="Get your university admission forms and WASSCE result checker PINs — all in one place. Fast, reliable, and just a message away."
+    />
 
-
-
-    
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://unilift.app/checker&forms" />
     <meta
@@ -20,10 +23,7 @@
       property="og:description"
       content="Get your university admission forms and WASSCE result checker PINs — all in one place. Fast, reliable, and just a message away."
     />
-    <meta
-      property="og:image"
-      content="https://unilift.app/check-img.jpeg"
-    />
+    <meta property="og:image" content="https://unilift.app/check-img.jpeg" />
 
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://unilift.app/" />
@@ -40,7 +40,6 @@
       content="https://unilift.app/check-img.jpeg"
     />
 
-  
     <link rel="icon" type="images/png" href="favicon.png" />
 
     <title>Unilift | Checker/Forms</title>
@@ -225,32 +224,54 @@
           Confirm your grades against admission requirements so you can choose
           the right next step.
         </p>
-        <a href="#" class="getStarted-btn cta-primary"><i class="fa fa-eye"></i>Check now</a>
+        <a href="#" class="getStarted-btn cta-primary"
+          ><i class="fa fa-eye"></i>Check now</a
+        >
       </section>
 
       <section class="faq-section">
         <h2>Common Questions</h2>
-        <article class="faq-item">
-          <h3>Are these official forms and PINs?</h3>
-          <p>
-            Absolutely. We only provide official university admission serials
-            and WAEC-approved result checkers.
-          </p>
-        </article>
-        <article class="faq-item">
-          <h3>How fast is the delivery?</h3>
-          <p>
-            For checkers, it is instant. For university forms, once payment is
-            confirmed, delivery usually happens within 5-10 minutes.
-          </p>
-        </article>
-        <article class="faq-item">
-          <h3>What if I need help filling the form?</h3>
-          <p>
-            Our WhatsApp support is always open to guide you through any
-            technical issues or questions during your application.
-          </p>
-        </article>
+
+        <div class="faq-accordion">
+          <article class="faq-item active">
+            <button class="faq-question" type="button" aria-expanded="true">
+              <span>Are these official forms and PINs?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Absolutely. We only provide official university admission
+                serials and WAEC-approved result checkers.
+              </p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>How fast is the delivery?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                For checkers, it is instant. For university forms, once payment
+                is confirmed, delivery usually happens within 5-10 minutes.
+              </p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>What if I need help filling the form?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Our WhatsApp support is always open to guide you through any
+                technical issues or questions during your application.
+              </p>
+            </div>
+          </article>
+        </div>
       </section>
     </main>
 
@@ -326,6 +347,35 @@
             e.preventDefault();
             sessionStorage.setItem("uniSearchPageState", "grade");
             window.location.href = "index.html";
+          });
+        });
+
+        const faqItems = document.querySelectorAll(".faq-item");
+
+        faqItems.forEach((item) => {
+          const button = item.querySelector(".faq-question");
+          const answer = item.querySelector(".faq-answer");
+
+          if (item.classList.contains("active")) {
+            answer.style.maxHeight = answer.scrollHeight + "px";
+          }
+
+          button.addEventListener("click", () => {
+            const isOpen = item.classList.contains("active");
+
+            faqItems.forEach((faq) => {
+              faq.classList.remove("active");
+              faq
+                .querySelector(".faq-question")
+                .setAttribute("aria-expanded", "false");
+              faq.querySelector(".faq-answer").style.maxHeight = null;
+            });
+
+            if (!isOpen) {
+              item.classList.add("active");
+              button.setAttribute("aria-expanded", "true");
+              answer.style.maxHeight = answer.scrollHeight + "px";
+            }
           });
         });
       });
