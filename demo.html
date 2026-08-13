@@ -163,167 +163,165 @@ This report is for guidance only. Verify program requirements on official univer
         const { jsPDF } = window.jspdf;
         const doc = new jsPDF({ unit: "mm", format: "a4" });
 
-        // header band
-        doc.setFillColor(...hexToRgb(BRAND.primary));
-        doc.rect(0, 0, 210, 26, "F");
+        // Use Helvetica for a clean, lightweight look
+        doc.setFont("helvetica", "normal");
 
-        // logo
+        // Header (logo + title)
+        doc.setDrawColor(...hexToRgb(BRAND.primary));
+        doc.setLineWidth(0.6);
+        doc.line(14, 22, 196, 22);
+
         try {
           const logoEl = document.getElementById("logo-img");
           const logoData = await imageToDataUrl(logoEl);
-          doc.addImage(logoData, "PNG", 12, 4.5, 22, 17);
-        } catch (e) {
-          /* ignore */
-        }
+          doc.addImage(logoData, "PNG", 14, 8, 18, 18);
+        } catch (e) {}
 
-        // title
-        doc.setFontSize(18);
-        doc.setTextColor(255, 255, 255);
-        doc.setFont(undefined, "bold");
-        doc.text("UniLift — University Match Report", 40, 15);
-
-        // watermark
-        doc.setTextColor(200);
-        doc.setFontSize(40);
-        doc.setFont(undefined, "normal");
-        doc.text("UNILIFT", 105, 150, { angle: -35, align: "center" });
-
-        // student card
-        const left = 14;
-        let y = 36;
-        doc.setFillColor(255, 255, 255);
-        doc.roundedRect(left - 2, y - 4, 182, 28, 3, 3, "F");
-
-        doc.setFontSize(11);
-        doc.setTextColor(...hexToRgb(BRAND.muted));
-        doc.text("Name", left + 4, y + 4);
-        doc.setFontSize(12);
-        doc.setTextColor(...hexToRgb(BRAND.text));
-        doc.text(sample.name, left + 4, y + 11);
-
-        doc.setFontSize(11);
-        doc.setTextColor(...hexToRgb(BRAND.muted));
-        doc.text("Email", left + 80, y + 4);
-        doc.setFontSize(12);
-        doc.setTextColor(...hexToRgb(BRAND.text));
-        doc.text(sample.email || "—", left + 80, y + 11);
-
-        doc.setFontSize(11);
-        doc.setTextColor(...hexToRgb(BRAND.muted));
-        doc.text("University", left + 4, y + 24);
-        doc.setFontSize(12);
-        doc.setTextColor(...hexToRgb(BRAND.text));
-        doc.text(sample.university, left + 4, y + 31);
-
-        doc.setFontSize(26);
+        doc.setFontSize(14);
         doc.setTextColor(...hexToRgb(BRAND.primary));
-        doc.text(String(sample.aggregate), left + 150, y + 18, {
-          align: "right",
-        });
+        doc.text("UniLift", 38, 14);
 
-        // separator
-        y = y + 42;
-        doc.setDrawColor(...hexToRgb(BRAND.accent));
-        doc.setLineWidth(0.6);
-        doc.line(14, y, 196, y);
+        doc.setFontSize(9);
+        doc.setTextColor(...hexToRgb(BRAND.muted));
+        doc.text("University Match Report", 38, 19);
 
-        // courses header
-        y += 8;
-        doc.setFontSize(12);
+        // Profile card (two-column)
+        let left = 14;
+        let y = 34;
+        const cardH = 26;
+        doc.setFillColor(247, 250, 252);
+        doc.roundedRect(left, y, 182, cardH, 4, 4, "F");
+
+        // left column
+        doc.setFontSize(9);
+        doc.setTextColor(...hexToRgb(BRAND.muted));
+        doc.text("Student Name", left + 6, y + 7);
+        doc.setFontSize(11);
+        doc.setTextColor(...hexToRgb(BRAND.text));
+        doc.text(sample.name || "—", left + 6, y + 13);
+
+        doc.setFontSize(9);
+        doc.setTextColor(...hexToRgb(BRAND.muted));
+        doc.text("Email Address", left + 6, y + 18);
+        doc.setFontSize(10);
+        doc.setTextColor(...hexToRgb(BRAND.text));
+        doc.text(sample.email || "—", left + 6, y + 24);
+
+        // right column
+        const rightColX = left + 92;
+        doc.setFontSize(9);
+        doc.setTextColor(...hexToRgb(BRAND.muted));
+        doc.text("Target University", rightColX + 6, y + 7);
+        doc.setFontSize(11);
+        doc.setTextColor(...hexToRgb(BRAND.text));
+        doc.text(sample.university || "—", rightColX + 6, y + 13);
+
+        doc.setFontSize(9);
+        doc.setTextColor(...hexToRgb(BRAND.muted));
+        doc.text("Aggregate Score", rightColX + 6, y + 18);
+        doc.setFontSize(16);
         doc.setTextColor(...hexToRgb(BRAND.primary));
-        doc.text("Eligible Programs", 14, y);
-        y += 8;
+        doc.text(String(sample.aggregate), rightColX + 50, y + 18);
+
+        // section title
+        y += cardH + 8;
+        doc.setFontSize(12);
+        doc.setTextColor(...hexToRgb(BRAND.text));
+        doc.setFont("helvetica", "bold");
+        doc.text("Eligible Programs", left, y);
+        doc.setFont("helvetica", "normal");
+        y += 6;
 
         // table header
-        doc.setFontSize(10);
-        doc.setTextColor(255, 255, 255);
+        const tableX = left;
+        const tableW = 182;
+        const thH = 8;
         doc.setFillColor(...hexToRgb(BRAND.primary));
-        doc.rect(14, y - 6, 182, 8, "F");
-        doc.text("Program", 16, y);
-        doc.text("Cutoff", 182, y, { align: "right" });
-        y += 8;
+        doc.setTextColor(255, 255, 255);
+        doc.rect(tableX, y, tableW, thH, "F");
+        doc.setFontSize(10);
+        doc.text("Program Name", tableX + 4, y + 6);
+        doc.text("Cutoff Grade", tableX + tableW - 28, y + 6, {
+          align: "right",
+        });
+        doc.setTextColor(...hexToRgb(BRAND.text));
+        y += thH + 2;
 
-        // compute eligibles (used for gating + tips)
-        const elegible = sample.courses.filter(
-          (c) => sample.aggregate <= c.cutoff,
-        );
-
-        // rows (program + cutoff), highlight when sample.aggregate <= cutoff
+        // rows and pagination
         const rowH = 8;
         for (let i = 0; i < sample.courses.length; i++) {
           const c = sample.courses[i];
-          if (y + rowH > 280) {
+          if (y + rowH > 270) {
             doc.addPage();
-            doc.setFillColor(...hexToRgb(BRAND.primary));
-            doc.rect(0, 0, 210, 20, "F");
-            doc.setFontSize(12);
-            doc.setTextColor(255, 255, 255);
-            doc.text("UniLift — University Match Report", 14, 12);
-            y = 28;
-            doc.setFillColor(...hexToRgb(BRAND.primary));
-            doc.rect(14, y - 6, 182, 8, "F");
-            doc.setTextColor(255, 255, 255);
-            doc.text("Program", 16, y);
-            doc.text("Cutoff", 182, y, { align: "right" });
-            y += 8;
+            y = 20;
           }
 
-          const pass = sample.aggregate <= c.cutoff;
-          if (pass) {
-            doc.setFillColor(...hexToRgb(BRAND.passBg));
-            doc.rect(14, y - 6, 182, rowH, "F");
-          } else if (i % 2 === 0) {
-            doc.setFillColor(249, 250, 251);
-            doc.rect(14, y - 6, 182, rowH, "F");
+          if (i % 2 === 0) {
+            doc.setFillColor(248, 250, 252);
+            doc.rect(tableX, y - 2, tableW, rowH, "F");
           }
 
           doc.setFontSize(10);
           doc.setTextColor(...hexToRgb(BRAND.text));
-          doc.text(c.program_name, 16, y);
+          doc.text(c.program_name, tableX + 4, y + 4);
+
+          const cutoff = String(
+            c.cutoff ?? c.cutoff_criteria?.minimum_aggregate ?? "—",
+          );
           doc.setTextColor(...hexToRgb(BRAND.muted));
-          doc.text(String(c.cutoff), 182, y, { align: "right" });
+          doc.text(cutoff, tableX + tableW - 8, y + 4, { align: "right" });
           y += rowH;
         }
 
-        // selection rules: pick up to 2 encouraging tips
+        // advice box
+        y += 6;
         const tips = selectTips(
           sample,
-          { elegible, weakGrades: sample.weakGrades },
+          {
+            elegible: sample.courses.filter(
+              (c) => sample.aggregate <= c.cutoff,
+            ),
+            weakGrades: sample.weakGrades,
+          },
           2,
         );
+        doc.setFillColor(235, 248, 255);
+        doc.roundedRect(left, y - 2, 182, 18 + tips.length * 6, 3, 3, "F");
         doc.setFontSize(10);
-        doc.setTextColor(...hexToRgb(BRAND.muted));
-        for (let t = 0; t < tips.length; t++) {
-          doc.text(`• ${tips[t]}`, 14, y + 6 + t * 6);
-        }
-        y = y + 6 + tips.length * 6;
-
-        // CTAs
-        doc.setFontSize(11);
         doc.setTextColor(...hexToRgb(BRAND.primary));
-        doc.text("Learn more: https://unilift.app/checker", 14, y + 14);
-        doc.text("Need help? Chat on WhatsApp → +233509304981", 14, y + 20);
-
-        // custom note + footer (moved up to fit A4 margins)
-        const customNote = document.getElementById("customNote")?.value?.trim();
-        if (customNote) {
-          doc.setFontSize(9);
-          doc.setTextColor(...hexToRgb(BRAND.muted));
-          doc.text(customNote, 14, 276);
+        doc.text("Next Steps & Recommendations:", left + 4, y + 6);
+        doc.setFontSize(9);
+        doc.setTextColor(...hexToRgb(BRAND.text));
+        for (let t = 0; t < tips.length; t++) {
+          doc.text(`• ${tips[t]}`, left + 8, y + 12 + t * 6);
         }
+        y += 18 + tips.length * 6;
+
+        // footer
         const ts = new Date().toLocaleString();
         doc.setFontSize(9);
-        doc.setTextColor(120);
-        doc.text(`Generated: ${ts}`, 14, 282);
-        doc.text("Contact: uniliftapp1@gmail.com · unilift.app", 14, 287);
+        doc.setTextColor(...hexToRgb(BRAND.muted));
+        if (y + 24 > 287) {
+          doc.addPage();
+          y = 20;
+        }
+        doc.setDrawColor(...hexToRgb(BRAND.primary));
+        doc.line(14, 285, 196, 285);
+        doc.text(`Generated on: ${ts}`, 14, 290);
+        doc.text(
+          `Website: unilift.app · Email: uniliftapp1@gmail.com · WhatsApp: +233 50 930 4981`,
+          105,
+          290,
+          { align: "right" },
+        );
 
         try {
           const logoEl2 = document.getElementById("logo-img");
           const logoData2 = await imageToDataUrl(logoEl2);
-          doc.addImage(logoData2, "PNG", 170, 280, 14, 14);
+          doc.addImage(logoData2, "PNG", 170, 284, 16, 16);
         } catch (e) {}
 
-        const filename = `Unilft_Result_${sample.name.replace(/\s+/g, "_")}_${sample.university.replace(/\s+/g, "_")}.pdf`;
+        const filename = `UniLift_Result_${(sample.name || "student").replace(/\s+/g, "_")}_${(sample.university || "university").replace(/\s+/g, "_")}.pdf`;
         doc.save(filename);
       });
 
