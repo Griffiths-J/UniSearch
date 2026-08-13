@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Unilift PDF Demo</title>
+    <style>
+      body {
+        font-family: Inter, Arial, sans-serif;
+        background: #f7f9fb;
+        color: #0f1724;
+        padding: 28px;
+      }
+      .card {
+        max-width: 820px;
+        margin: 28px auto;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+        padding: 22px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .brand img {
+        width: 44px;
+        height: 44px;
+        object-fit: contain;
+      }
+      .controls {
+        margin-top: 20px;
+      }
+      button {
+        background: linear-gradient(to left, #177de4, #00bfff, #40e0d0);
+        border: none;
+        color: #fff;
+        padding: 12px 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 700;
+        box-shadow: 0 6px 18px rgba(23, 125, 228, 0.16);
+      }
+      pre {
+        background: #f3f7fb;
+        padding: 14px;
+        border-radius: 8px;
+        overflow: auto;
+      }
+      .muted {
+        color: #6b7280;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="brand">
+        <img
+          id="logo-img"
+          src="images/u-logo.png"
+          alt="UniLift logo"
+          crossorigin="anonymous"
+        />
+        <div>
+          <div style="font-weight: 700; font-size: 1.05rem">
+            UniLift — PDF Demo
+          </div>
+          <div style="font-size: 0.9rem; color: #475569">
+            This demo forces the light-mode brand colors for the PDF.
+          </div>
+        </div>
+      </div>
+
+      <p style="margin-top: 14px">
+        Click the button to generate a sample premium PDF for a mocked student
+        result. The PDF is created client-side using jsPDF and downloads
+        automatically.
+      </p>
+
+      <div class="controls">
+        <button id="genPdf">Generate Premium PDF</button>
+      </div>
+
+      <h4 style="margin-top: 18px">Sample data used</h4>
+      <pre id="sampleData"></pre>
+
+      <label
+        for="customNote"
+        style="display: block; margin-top: 12px; font-weight: 600"
+        >Custom sentence (appears above footer)</label
+      >
+      <textarea
+        id="customNote"
+        rows="2"
+        style="
+          width: 100%;
+          margin-top: 8px;
+          padding: 10px;
+          border-radius: 8px;
+          border: 1px solid #e6eef6;
+        "
+      >
+This report is for guidance only. Verify program requirements on official university portals.</textarea
+      >
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+      // Light-mode brand colors (force these in PDF regardless of page theme)
+      const BRAND = {
+        primary: "#177de4",
+        accent: "#3cc6d6",
+        text: "#0f1724",
+        muted: "#6b7280",
+        passBg: "#e6fffa",
+      };
+
+      const sample = {
+        name: "John Doe",
+        email: "john.doe@example.com",
+        university: "University of Ghana",
+        aggregate: 12,
+        // weakGrades used to choose targeted tips (length > 2 triggers private-university tip)
+        weakGrades: ["Mathematics", "Physics", "Chemistry"],
+        courses: [
+          { program_name: "BSc Computer Science", cutoff: 12 },
+          { program_name: "BSc Economics", cutoff: 10 },
+          { program_name: "BSc Information Technology", cutoff: 13 },
+          { program_name: "BA Communication Studies", cutoff: 14 },
+          { program_name: "BSc Mathematics", cutoff: 11 },
+        ],
+      };
+
+      document.getElementById("sampleData").innerText = JSON.stringify(
+        sample,
+        null,
+        2,
+      );
+
+      async function imageToDataUrl(imgEl) {
+        return new Promise((resolve, reject) => {
+          const img = new Image();
+          img.crossOrigin = "anonymous";
+          img.onload = () => {
+            const canvas = document.createElement("canvas");
+            canvas.width = img.width;
+            canvas.height = img.height;
+            const ctx = canvas.getContext("2d");
+            ctx.drawImage(img, 0, 0);
+            try {
+              resolve(canvas.toDataURL("image/png"));
+            } catch (err) {
+              reject(err);
+            }
+          };
+          img.onerror = reject;
+          img.src = imgEl.src;
+        });
+      }
+
+      document.getElementById("genPdf").addEventListener("click", async () => {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF({ unit: "mm", format: "a4" });
+
+        // header band
+        doc.setFillColor(...hexToRgb(BRAND.primary));
+        doc.rect(0, 0, 210, 26, "F");
+
+        // logo
+        try {
+          const logoEl = document.getElementById("logo-img");
+          const logoData = await imageToDataUrl(logoEl);
+          doc.addImage(logoData, "PNG", 12, 4.5, 22, 17);
+        } catch (e) {
+          /* ignore */
+        }
+
+        // title
+        doc.setFontSize(18);
+        doc.setTextColor(255, 255, 255);
+        doc.setFont(undefined, "bold");
+        doc.text("UniLift — University Match Report", 40, 15);
+
+        // watermark
+        doc.setTextColor(200);
+        doc.setFontSize(40);
+        doc.setFont(undefined, "normal");
+        doc.text("UNILIFT", 105, 150, { angle: -35, align: "center" });
+
+        // student card
+        const left = 14;
+        let y = 36;
+        doc.setFillColor(255, 255, 255);
+        doc.roundedRect(left - 2, y - 4, 182, 28, 3, 3, "F");
+
+        doc.setFontSize(11);
+        doc.setTextColor(...hexToRgb(BRAND.muted));
+        doc.text("Name", left + 4, y + 4);
+        doc.setFontSize(12);
+        doc.setTextColor(...hexToRgb(BRAND.text));
+        doc.text(sample.name, left + 4, y + 11);
+
+        doc.setFontSize(11);
+        doc.setTextColor(...hexToRgb(BRAND.muted));
+        doc.text("Email", left + 80, y + 4);
+        doc.setFontSize(12);
+        doc.setTextColor(...hexToRgb(BRAND.text));
+        doc.text(sample.email || "—", left + 80, y + 11);
+
+        doc.setFontSize(11);
+        doc.setTextColor(...hexToRgb(BRAND.muted));
+        doc.text("University", left + 4, y + 24);
+        doc.setFontSize(12);
+        doc.setTextColor(...hexToRgb(BRAND.text));
+        doc.text(sample.university, left + 4, y + 31);
+
+        doc.setFontSize(26);
+        doc.setTextColor(...hexToRgb(BRAND.primary));
+        doc.text(String(sample.aggregate), left + 150, y + 18, {
+          align: "right",
+        });
+
+        // separator
+        y = y + 42;
+        doc.setDrawColor(...hexToRgb(BRAND.accent));
+        doc.setLineWidth(0.6);
+        doc.line(14, y, 196, y);
+
+        // courses header
+        y += 8;
+        doc.setFontSize(12);
+        doc.setTextColor(...hexToRgb(BRAND.primary));
+        doc.text("Eligible Programs", 14, y);
+        y += 8;
+
+        // table header
+        doc.setFontSize(10);
+        doc.setTextColor(255, 255, 255);
+        doc.setFillColor(...hexToRgb(BRAND.primary));
+        doc.rect(14, y - 6, 182, 8, "F");
+        doc.text("Program", 16, y);
+        doc.text("Cutoff", 182, y, { align: "right" });
+        y += 8;
+
+        // compute eligibles (used for gating + tips)
+        const elegible = sample.courses.filter(
+          (c) => sample.aggregate <= c.cutoff,
+        );
+
+        // rows (program + cutoff), highlight when sample.aggregate <= cutoff
+        const rowH = 8;
+        for (let i = 0; i < sample.courses.length; i++) {
+          const c = sample.courses[i];
+          if (y + rowH > 280) {
+            doc.addPage();
+            doc.setFillColor(...hexToRgb(BRAND.primary));
+            doc.rect(0, 0, 210, 20, "F");
+            doc.setFontSize(12);
+            doc.setTextColor(255, 255, 255);
+            doc.text("UniLift — University Match Report", 14, 12);
+            y = 28;
+            doc.setFillColor(...hexToRgb(BRAND.primary));
+            doc.rect(14, y - 6, 182, 8, "F");
+            doc.setTextColor(255, 255, 255);
+            doc.text("Program", 16, y);
+            doc.text("Cutoff", 182, y, { align: "right" });
+            y += 8;
+          }
+
+          const pass = sample.aggregate <= c.cutoff;
+          if (pass) {
+            doc.setFillColor(...hexToRgb(BRAND.passBg));
+            doc.rect(14, y - 6, 182, rowH, "F");
+          } else if (i % 2 === 0) {
+            doc.setFillColor(249, 250, 251);
+            doc.rect(14, y - 6, 182, rowH, "F");
+          }
+
+          doc.setFontSize(10);
+          doc.setTextColor(...hexToRgb(BRAND.text));
+          doc.text(c.program_name, 16, y);
+          doc.setTextColor(...hexToRgb(BRAND.muted));
+          doc.text(String(c.cutoff), 182, y, { align: "right" });
+          y += rowH;
+        }
+
+        // selection rules: pick up to 2 encouraging tips
+        const tips = selectTips(
+          sample,
+          { elegible, weakGrades: sample.weakGrades },
+          2,
+        );
+        doc.setFontSize(10);
+        doc.setTextColor(...hexToRgb(BRAND.muted));
+        for (let t = 0; t < tips.length; t++) {
+          doc.text(`• ${tips[t]}`, 14, y + 6 + t * 6);
+        }
+        y = y + 6 + tips.length * 6;
+
+        // CTAs
+        doc.setFontSize(11);
+        doc.setTextColor(...hexToRgb(BRAND.primary));
+        doc.text("Learn more: https://unilift.app/checker", 14, y + 14);
+        doc.text("Need help? Chat on WhatsApp → +233509304981", 14, y + 20);
+
+        // custom note + footer (moved up to fit A4 margins)
+        const customNote = document.getElementById("customNote")?.value?.trim();
+        if (customNote) {
+          doc.setFontSize(9);
+          doc.setTextColor(...hexToRgb(BRAND.muted));
+          doc.text(customNote, 14, 276);
+        }
+        const ts = new Date().toLocaleString();
+        doc.setFontSize(9);
+        doc.setTextColor(120);
+        doc.text(`Generated: ${ts}`, 14, 282);
+        doc.text("Contact: uniliftapp1@gmail.com · unilift.app", 14, 287);
+
+        try {
+          const logoEl2 = document.getElementById("logo-img");
+          const logoData2 = await imageToDataUrl(logoEl2);
+          doc.addImage(logoData2, "PNG", 170, 280, 14, 14);
+        } catch (e) {}
+
+        const filename = `Unilft_Result_${sample.name.replace(/\s+/g, "_")}_${sample.university.replace(/\s+/g, "_")}.pdf`;
+        doc.save(filename);
+      });
+
+      // Tip selection logic: prioritized rules then fill from pool (deterministic by name seed)
+      function selectTips(
+        student,
+        { elegible = [], weakGrades = [] } = {},
+        N = 2,
+      ) {
+        const pool = [
+          "Small improvements in one subject often beat large drops elsewhere.",
+          "Strengthening electives can improve chances for selective programs.",
+          "Look for foundation/bridge courses if you’re just under cutoffs.",
+          "If you have many options, prioritize by course fit not prestige.",
+        ];
+
+        const results = [];
+
+        // 1) Weak-grades rule
+        if ((weakGrades || []).length > 2) {
+          results.push(
+            "Target private universities with flexible entry or bursaries.",
+          );
+        }
+
+        // 2) No matches
+        if ((elegible || []).length === 0) {
+          results.push(
+            "Look for foundation/bridge courses if you’re just under cutoffs.",
+          );
+        }
+
+        // 3) Many options
+        if ((elegible || []).length >= 8 && results.length < N) {
+          results.push(
+            "Shortlist 3–5 programs and apply early to improve chances.",
+          );
+        }
+
+        // 4) Near-cutoff (within 2 points)
+        const near = (student.courses || []).some(
+          (c) => Math.abs(student.aggregate - c.cutoff) <= 2,
+        );
+        if (near && results.length < N) {
+          results.push(
+            "Try mock tests/tutors for subjects closest to the cutoff.",
+          );
+        }
+
+        // fill remaining from pool deterministically using name seed
+        const seed = hashString(student.name || "") || Date.now();
+        const rnd = mulberry32(seed);
+        // shuffle pool deterministic
+        const shuffled = pool.slice().sort(() => rnd() - 0.5);
+        for (let i = 0; i < shuffled.length && results.length < N; i++) {
+          if (!results.includes(shuffled[i])) results.push(shuffled[i]);
+        }
+
+        return results.slice(0, N);
+      }
+
+      // small deterministic PRNG helpers
+      function hashString(str) {
+        if (!str) return 0;
+        let h = 2166136261 >>> 0;
+        for (let i = 0; i < str.length; i++) {
+          h ^= str.charCodeAt(i);
+          h = Math.imul(h, 16777619) >>> 0;
+        }
+        return h;
+      }
+
+      function mulberry32(a) {
+        return function () {
+          var t = (a += 0x6d2b79f5);
+          t = Math.imul(t ^ (t >>> 15), t | 1);
+          t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+          return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+        };
+      }
+
+      // UI gating: hide download button when there are no eligible programs
+      (function applyGatingToButton() {
+        const btn = document.getElementById("genPdf");
+        const elegible = sample.courses.filter(
+          (c) => sample.aggregate <= c.cutoff,
+        );
+        if (!elegible || elegible.length === 0) {
+          btn.style.display = "none";
+          const note = document.createElement("div");
+          note.className = "muted";
+          note.style.marginTop = "10px";
+          note.innerText = "Download disabled — no eligible programs found.";
+          btn.parentNode.appendChild(note);
+        }
+      })();
+
+      function hexToRgb(hex) {
+        const cleaned = hex.replace("#", "");
+        const r = parseInt(cleaned.substring(0, 2), 16);
+        const g = parseInt(cleaned.substring(2, 4), 16);
+        const b = parseInt(cleaned.substring(4, 6), 16);
+        return [r, g, b];
+      }
+    </script>
+  </body>
+</html>
