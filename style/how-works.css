@@ -81,7 +81,7 @@
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
-  animation: fadeUp 0.75s cubic-bezier(0.2, 0.7, 0.2, 1) 0.2s both;
+  /* removed entrance animation so CTA appears without load animation */
 }
 
 .cta-primary:hover {

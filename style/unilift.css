@@ -416,7 +416,7 @@ main {
     box-shadow 0.25s ease,
     filter 0.25s ease;
   -webkit-box-reflect: below 0px linear-gradient(transparent, #00000013);
-  animation: fadeUp 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) 0.16s both;
+  /* removed entrance animation to avoid unexpected motion on page load */
 }
 
 .heroButton:hover {
