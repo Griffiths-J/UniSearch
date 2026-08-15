@@ -64,10 +64,10 @@
     <main>
       <div class="savedResultsPage">
         <div class="savedResultsPagehero">
-           <div class="loader-container controlLoader">
-        <div class="loader-spinner"></div>
-        <p class="loader-text">Loading page...</p>
-      </div>
+          <div class="loader-container controlLoader">
+            <div class="loader-spinner"></div>
+            <p class="loader-text">Loading page...</p>
+          </div>
         </div>
         <div class="saved-result-actions"></div>
       </div>
@@ -87,7 +87,7 @@
           <ul>
             <li><a href="universities.html">Universities</a></li>
             <li><a href="how-works.html">How it Works</a></li>
-            <li><a href="checker&forms.html">Checker/Forms</a></li>   
+            <li><a href="checker&forms.html">Checker/Forms</a></li>
             <li><a href="saved-results.html">My Results</a></li>
             <li><a href="#" class="last-js getStarted-btn">Get Started</a></li>
           </ul>
@@ -130,6 +130,15 @@
     <script src="script/saved-results.js"></script>
     <script src="script/burger.js"></script>
 
+    <div
+      id="back-to-top"
+      class="back-to-top"
+      aria-label="Back to top"
+      title="Back to top"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </div>
+
     <div class="whatsapp-float">
       <a
         href="https://wa.me/+233509304981?text=Hi Unilift, I need more enquires."
@@ -144,5 +153,50 @@
         />
       </a>
     </div>
+
+    <script>
+      (() => {
+        const backToTopBtn = document.getElementById("back-to-top");
+        const whatsappFloat = document.querySelector(".whatsapp-float");
+
+        if (!backToTopBtn || !whatsappFloat) return;
+
+        let whatsappHideTimer;
+
+        function updateBackToTop() {
+          const threshold = document.documentElement.scrollHeight * 0.52;
+          if (window.scrollY >= threshold) {
+            backToTopBtn.classList.add("visible");
+          } else {
+            backToTopBtn.classList.remove("visible");
+          }
+        }
+
+        function showWhatsapp() {
+          whatsappFloat.classList.add("visible");
+          clearTimeout(whatsappHideTimer);
+          whatsappHideTimer = setTimeout(() => {
+            whatsappFloat.classList.remove("visible");
+          }, 5000);
+        }
+
+        function handleScroll() {
+          updateBackToTop();
+
+          if (window.scrollY > 0) {
+            showWhatsapp();
+          } else {
+            whatsappFloat.classList.remove("visible");
+          }
+        }
+
+        backToTopBtn.addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        handleScroll();
+      })();
+    </script>
   </body>
 </html>
