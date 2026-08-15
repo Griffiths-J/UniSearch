@@ -390,29 +390,11 @@
       <i class="fas fa-arrow-up"></i>
     </div>
 
-    <div class="whatsapp-float">
-      <a
-        href="https://wa.me/+233509304981?text=Hi Unilift, I need more enquires."
-        target="_blank"
-        aria-label="Contact us on WhatsApp"
-      >
-        <img
-          src="icons/icons8-whatsapp-48.png"
-          alt="WhatsApp"
-          width="24"
-          height="24"
-        />
-      </a>
-    </div>
-
     <script>
       (() => {
         const backToTopBtn = document.getElementById("back-to-top");
-        const whatsappFloat = document.querySelector(".whatsapp-float");
 
-        if (!backToTopBtn || !whatsappFloat) return;
-
-        let whatsappHideTimer;
+        if (!backToTopBtn) return;
 
         function updateBackToTop() {
           const maxScrollHeight = Math.max(
@@ -427,22 +409,8 @@
           backToTopBtn.classList.toggle("visible", window.scrollY >= threshold);
         }
 
-        function showWhatsapp() {
-          whatsappFloat.classList.add("visible");
-          clearTimeout(whatsappHideTimer);
-          whatsappHideTimer = setTimeout(() => {
-            whatsappFloat.classList.remove("visible");
-          }, 5000);
-        }
-
         function handleScroll() {
           updateBackToTop();
-
-          if (window.scrollY > 0) {
-            showWhatsapp();
-          } else {
-            whatsappFloat.classList.remove("visible");
-          }
         }
 
         backToTopBtn.addEventListener("click", () => {
