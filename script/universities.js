@@ -22,7 +22,7 @@ const universityData = [
       "Modern libraries, research laboratories, sports facilities, hostels, health centers, commercial area",
     gallery: [
       "https://tse4.mm.bing.net/th/id/OIP.tNvoQkOobGiNbTvY6utnWQHaE8?w=768&h=512&rs=1&pid=ImgDetMain&o=7&rm=3",
-      "https://cohss.knust.edu.gh/sites/cohss.knust.edu.gh/files/styles/large/public/2023-08/maxresdefault-1%20(1).jpg?itok=o_s6qUf7",
+      "https://th.bing.com/th/id/R.a34edac857018572fe19a553ad46cc4a?rik=hBr30W%2bDlFeZgg&pid=ImgRaw&r=0",
       "https://www.knust.edu.gh/sites/default/files/2025-08/IMG_6179.JPG",
       "https://coverghana.com.gh/wp-content/uploads/2021/08/FB_IMG_1629955591420.jpg",
     ],
