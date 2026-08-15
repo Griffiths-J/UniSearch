@@ -297,12 +297,16 @@
         let whatsappHideTimer;
 
         function updateBackToTop() {
-          const threshold = document.documentElement.scrollHeight * 0.52;
-          if (window.scrollY >= threshold) {
-            backToTopBtn.classList.add("visible");
-          } else {
-            backToTopBtn.classList.remove("visible");
-          }
+          const maxScrollHeight = Math.max(
+            document.documentElement.scrollHeight,
+            document.body.scrollHeight,
+            document.documentElement.offsetHeight,
+            document.body.offsetHeight,
+            document.documentElement.clientHeight,
+            window.innerHeight,
+          );
+          const threshold = maxScrollHeight * 0.52;
+          backToTopBtn.classList.toggle("visible", window.scrollY >= threshold);
         }
 
         function showWhatsapp() {
