@@ -260,11 +260,16 @@ async function unis() {
     if (!resultActions) return;
 
     // Check if download button already exists to prevent duplicates
-    if (resultActions.querySelector(".download-pdf-btn")) {
-      // Update existing button
-      const downloadBtn = resultActions.querySelector(".download-pdf-btn");
-      downloadBtn.onclick = () =>
-        triggerPdfDownload(elegible, aggregate, Uni, weakGrades);
+    const existingBtn = resultActions.querySelector(".download-pdf-btn");
+    if (existingBtn) {
+      // Remove old listeners and re-attach
+      existingBtn.replaceWith(existingBtn.cloneNode(true));
+      const newBtn = resultActions.querySelector(".download-pdf-btn");
+      if (newBtn) {
+        newBtn.addEventListener("click", () => {
+          triggerPdfDownload(elegible, aggregate, Uni, weakGrades);
+        });
+      }
       return;
     }
 
@@ -300,35 +305,49 @@ async function unis() {
   }
 
   function triggerPdfDownload(elegible, aggregate, Uni, weakGrades) {
+    // Validate inputs
+    if (!Array.isArray(elegible) || elegible.length === 0) {
+      alert("No eligible programs to generate PDF for.");
+      return;
+    }
+
+    if (!window.jspdf || !window.UniLiftPDFGenerator) {
+      alert("PDF library not available. Please refresh the page.");
+      return;
+    }
+
     // Get student data from localStorage
     const studentName =
       localStorage.getItem("uniSearchStudentName") || "Student";
     const studentEmail = localStorage.getItem("uniSearchStudentEmail") || "";
 
-    // Build PDF payload
+    // Build PDF payload with defensive checks
     const pdfPayload = {
       name: studentName,
       email: studentEmail,
-      university: Uni,
-      aggregate: aggregate,
+      university: Uni || "Unknown University",
+      aggregate: aggregate || 0,
       courses: elegible.map((course) => ({
-        program_name: course.program_name,
-        college: course.college,
-        faculty: course.faculty,
+        program_name: course.program_name || "Unknown Program",
+        college: course.college || "College",
+        faculty: course.faculty || "Faculty",
         cutoff: course.cutoff_criteria?.minimum_aggregate ?? "N/A",
       })),
-      weakGrades: weakGrades || [],
+      weakGrades: Array.isArray(weakGrades) ? weakGrades : [],
     };
 
     // Generate PDF using UniLiftPDFGenerator
-    if (window.UniLiftPDFGenerator) {
+    try {
       const generator = new window.UniLiftPDFGenerator();
       generator.generatePDF(pdfPayload).catch((error) => {
         console.error("PDF generation failed:", error);
         alert("Failed to generate PDF. Please try again.");
       });
-    } else {
-      alert("PDF library not available. Please refresh the page.");
+    } catch (error) {
+      console.error("PDF generator error:", error);
+      alert(
+        "An error occurred while preparing the PDF. Please refresh and try again.",
+      );
     }
   }
 
@@ -457,7 +476,8 @@ async function unis() {
         resultUniTitle = "University of Education, Winneba";
         break;
       default:
-        console.error("error");
+        resultUniTitle = "Select University";
+        console.error("University not recognized, using default");
     }
 
     const userResult = [];
@@ -505,12 +525,18 @@ async function unis() {
       const grade = row.querySelector(".electivegrade-js").value;
       const type = "elective";
 
-      if (name === "Select Course" || grade == "Select Grade" || grade === "") {
-        document.querySelector(".prompt").innerHTML =
-          "Select all elective subjects and grades";
-        setTimeout(() => {
-          document.querySelector(".prompt").innerHTML = "";
-        }, 5000);
+      if (
+        name === "Select Course" ||
+        grade === "Select Grade" ||
+        grade === ""
+      ) {
+        const promptEl = document.querySelector(".prompt");
+        if (promptEl) {
+          promptEl.innerHTML = "Select all elective subjects and grades";
+          setTimeout(() => {
+            if (promptEl) promptEl.innerHTML = "";
+          }, 5000);
+        }
         throw new Error("Missing elective selection");
       }
 
@@ -558,25 +584,26 @@ async function unis() {
     let weakMarkArray = [];
 
     userResult.forEach((e) => {
-      let grade = e.finalGrade;
-      let subject = e.finalSub;
+      const originalGrade = e.finalGrade;
+      let displayGrade = originalGrade;
+      const subject = e.finalSub;
 
-      if (grade > 6) {
-        switch (grade) {
+      if (originalGrade > 6) {
+        switch (originalGrade) {
           case 7:
-            grade = "D7";
+            displayGrade = "D7";
             break;
           case 8:
-            grade = "E8";
+            displayGrade = "E8";
             break;
           case 9:
-            grade = "F9";
+            displayGrade = "F9";
             break;
           default:
-            grade = "weak mark";
+            displayGrade = "weak mark";
         }
 
-        weakMarkArray.push({ grade, subject });
+        weakMarkArray.push({ grade: displayGrade, subject });
       }
     });
 
@@ -617,13 +644,32 @@ async function unis() {
 
     const finalAggregrate = coreTotal + electiveTotal;
 
+    const mathSubject = cores.find((core) =>
+      core.finalSub.includes("Mathematics"),
+    );
+    const scienceSubject = cores.find((core) =>
+      core.finalSub.includes("Science"),
+    );
+    const englishSubject = cores.find((core) =>
+      core.finalSub.includes("English"),
+    );
+
+    if (!mathSubject || !scienceSubject || !englishSubject) {
+      const promptEl = document.querySelector(".prompt");
+      if (promptEl) {
+        promptEl.innerHTML =
+          "Error: Missing required core subjects (Mathematics, Science, English)";
+        setTimeout(() => {
+          if (promptEl) promptEl.innerHTML = "";
+        }, 5000);
+      }
+      throw new Error("Missing required core subjects");
+    }
+
     const studentData = {
-      core_math: cores.find((core) => core.finalSub.includes("Mathematics"))
-        .finalGrade,
-      int_science: cores.find((core) => core.finalSub.includes("Science"))
-        .finalGrade,
-      english: cores.find((core) => core.finalSub.includes("English"))
-        .finalGrade,
+      core_math: mathSubject.finalGrade,
+      int_science: scienceSubject.finalGrade,
+      english: englishSubject.finalGrade,
       ...elective.reduce((acc, course) => {
         acc[course.finalSub] = course.finalGrade;
         return acc;
@@ -633,10 +679,15 @@ async function unis() {
       weakGrades: weakMarkArray,
     };
 
-    document.querySelector(".modal-overlay").style.display = "flex";
-    document.getElementById("payment-modal").style.display = "flex";
-    document.querySelector(".cancelPayment").style.display = "none";
-    document.getElementById("display-agg").innerText = `${finalAggregrate}`;
+    const modalOverlay = document.querySelector(".modal-overlay");
+    const paymentModal = document.getElementById("payment-modal");
+    const cancelPayment = document.querySelector(".cancelPayment");
+    const displayAgg = document.getElementById("display-agg");
+
+    if (modalOverlay) modalOverlay.style.display = "flex";
+    if (paymentModal) paymentModal.style.display = "flex";
+    if (cancelPayment) cancelPayment.style.display = "none";
+    if (displayAgg) displayAgg.innerText = `${finalAggregrate}`;
 
     document.getElementById("pay-button").onclick = function (e) {
       notifyProceed();
@@ -644,12 +695,15 @@ async function unis() {
       const name = document.getElementById("student-name").value;
       const email = document.getElementById("student-email").value;
 
-      if (!name || !email.includes("@")) {
-        document.querySelector(".checkinputerror").innerHTML =
-          "Enter valid name and email";
-        setTimeout(() => {
-          document.querySelector(".checkinputerror").innerHTML = "";
-        }, 5000);
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!name || !emailRegex.test(email)) {
+        const errorEl = document.querySelector(".checkinputerror");
+        if (errorEl) {
+          errorEl.innerHTML = "Enter valid name and email";
+          setTimeout(() => {
+            if (errorEl) errorEl.innerHTML = "";
+          }, 5000);
+        }
         return;
       }
 

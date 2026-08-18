@@ -1,4 +1,3 @@
-
 export function pages() {
   const landingSection = document.querySelector(".landingPage");
   const gradeSection = document.querySelector(".gradePage");
@@ -13,19 +12,22 @@ export function pages() {
 
   function showLandingPage() {
     hideAll();
-    if (landingSection){
-       landingSection.style.display = "block"
-      hideLoader.style.display= "none";
-    };
+    if (landingSection) {
+      landingSection.style.display = "block";
+    }
+    if (hideLoader) {
+      hideLoader.style.display = "none";
+    }
     sessionStorage.setItem("uniSearchPageState", "landing");
-
   }
 
   function showGradePage() {
     hideAll();
-    if (gradeSection){
-       gradeSection.style.display = "block"; 
-      hideLoader.style.display= "none";
+    if (gradeSection) {
+      gradeSection.style.display = "block";
+    }
+    if (hideLoader) {
+      hideLoader.style.display = "none";
     }
     sessionStorage.setItem("uniSearchPageState", "grade");
   }
@@ -49,14 +51,13 @@ export function pages() {
 
   function showResultPage() {
     hideAll();
-    if (resultSection){
-       resultSection.style.display = "block";
-      hideLoader.style.display= "none";
+    if (resultSection) {
+      resultSection.style.display = "block";
+    }
+    if (hideLoader) {
+      hideLoader.style.display = "none";
     }
     sessionStorage.setItem("uniSearchPageState", "result");
-
-
-
     clearFormSelections();
   }
 
@@ -81,44 +82,40 @@ export function pages() {
     });
   }
 
-
-    window.showGradePage = showGradePage;
-    window.showLandingPage = showLandingPage;
-    window.showResultPage = showResultPage;
-
+  window.showGradePage = showGradePage;
+  window.showLandingPage = showLandingPage;
+  window.showResultPage = showResultPage;
 
   window.addEventListener("pageshow", () => {
     const state = sessionStorage.getItem("uniSearchPageState");
-    const hasSavedData= localStorage.getItem("uniSearchResult")
+    const hasSavedData = localStorage.getItem("uniSearchResult");
 
-   if (!state || state === "landing") {
-    showLandingPage();
-    return;
-  } 
+    if (!state || state === "landing") {
+      showLandingPage();
+      return;
+    }
 
-  if (state === "grade") {
-    showGradePage();
-    return;
-  }
+    if (state === "grade") {
+      showGradePage();
+      return;
+    }
 
-/*   if (state === "result" && savedResult) {
+    /*   if (state === "result" && savedResult) {
     showResultPage();
     return;
   } */
 
-  if (state === "result" && hasSavedData) {
-    showResultPage();
+    if (state === "result" && hasSavedData) {
+      showResultPage();
 
-    if(window.restoreResultFromStorage){
-      window.restoreResultFromStorage();
+      if (window.restoreResultFromStorage) {
+        window.restoreResultFromStorage();
+      }
+      return;
     }
-    return;
-  }
 
-  showLandingPage();
-});
-
-
+    showLandingPage();
+  });
 
   function advert(mode) {
     const advertImage = document.querySelector(".advert-image img");
@@ -145,33 +142,29 @@ export function pages() {
   const themeToggle = document.getElementById("theme-toggle");
   let currentTheme = localStorage.getItem("theme");
 
-  
-   
-    if (!currentTheme) {
-      const prefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)",
-      ).matches;
-      currentTheme = prefersDark ? "dark" : "light";
-      localStorage.setItem("theme", currentTheme);
-    }
-    if (currentTheme === "dark") {
-      document.documentElement.classList.add("dark-mode");
-      advert("light");
-      reviewIcon("dark");
-    } else {
-      document.documentElement.classList.remove("dark-mode");
-      advert("dark");
-      reviewIcon("light");
-    }
-    
-    if (themeToggle) {
-    themeToggle.addEventListener("click", () => {
+  if (!currentTheme) {
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)",
+    ).matches;
+    currentTheme = prefersDark ? "dark" : "light";
+    localStorage.setItem("theme", currentTheme);
+  }
+  if (currentTheme === "dark") {
+    document.documentElement.classList.add("dark-mode");
+    advert("light");
+    reviewIcon("dark");
+  } else {
+    document.documentElement.classList.remove("dark-mode");
+    advert("dark");
+    reviewIcon("light");
+  }
 
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
       const root = document.documentElement;
       root.classList.toggle("dark-mode");
 
       const isDark = root.classList.contains("dark-mode");
-      
 
       isDark ? advert("light") : advert("dark");
       isDark ? reviewIcon("dark") : reviewIcon("light");
@@ -179,6 +172,4 @@ export function pages() {
       localStorage.setItem("theme", isDark ? "dark" : "light");
     });
   }
-
-
 }
