@@ -250,6 +250,86 @@ async function unis() {
     const switcherCode = getUniversityCode(Uni);
     const hasPaid = Boolean(sessionStorage.getItem("uniSearchStudentData"));
     toggleResultUniversitySwitcher(hasPaid, switcherCode);
+
+    // Set up download button
+    initDownloadPdfButton(elegible, aggregate, Uni, weakGrades);
+  }
+
+  function initDownloadPdfButton(elegible, aggregate, Uni, weakGrades) {
+    const resultActions = document.querySelector(".result-actions");
+    if (!resultActions) return;
+
+    // Check if download button already exists to prevent duplicates
+    if (resultActions.querySelector(".download-pdf-btn")) {
+      // Update existing button
+      const downloadBtn = resultActions.querySelector(".download-pdf-btn");
+      downloadBtn.onclick = () =>
+        triggerPdfDownload(elegible, aggregate, Uni, weakGrades);
+      return;
+    }
+
+    // Create download button HTML
+    const downloadButtonHtml = `<button class="download-pdf-btn" title="Download your eligibility report as PDF"><i class="fas fa-download"></i> Download Report</button>`;
+
+    // Create a wrapper div if needed
+    const switcherContainer = resultActions.querySelector(
+      ".result-university-switcher",
+    );
+    if (switcherContainer) {
+      // Insert after the switcher container
+      const downloadWrapper = document.createElement("div");
+      downloadWrapper.innerHTML = downloadButtonHtml;
+      resultActions.insertBefore(
+        downloadWrapper.firstElementChild,
+        switcherContainer.nextSibling,
+      );
+    } else {
+      // Just append to result-actions
+      const downloadWrapper = document.createElement("div");
+      downloadWrapper.innerHTML = downloadButtonHtml;
+      resultActions.appendChild(downloadWrapper.firstElementChild);
+    }
+
+    // Attach event listener
+    const downloadBtn = resultActions.querySelector(".download-pdf-btn");
+    if (downloadBtn) {
+      downloadBtn.addEventListener("click", () => {
+        triggerPdfDownload(elegible, aggregate, Uni, weakGrades);
+      });
+    }
+  }
+
+  function triggerPdfDownload(elegible, aggregate, Uni, weakGrades) {
+    // Get student data from localStorage
+    const studentName =
+      localStorage.getItem("uniSearchStudentName") || "Student";
+    const studentEmail = localStorage.getItem("uniSearchStudentEmail") || "";
+
+    // Build PDF payload
+    const pdfPayload = {
+      name: studentName,
+      email: studentEmail,
+      university: Uni,
+      aggregate: aggregate,
+      courses: elegible.map((course) => ({
+        program_name: course.program_name,
+        college: course.college,
+        faculty: course.faculty,
+        cutoff: course.cutoff_criteria?.minimum_aggregate ?? "N/A",
+      })),
+      weakGrades: weakGrades || [],
+    };
+
+    // Generate PDF using UniLiftPDFGenerator
+    if (window.UniLiftPDFGenerator) {
+      const generator = new window.UniLiftPDFGenerator();
+      generator.generatePDF(pdfPayload).catch((error) => {
+        console.error("PDF generation failed:", error);
+        alert("Failed to generate PDF. Please try again.");
+      });
+    } else {
+      alert("PDF library not available. Please refresh the page.");
+    }
   }
 
   window.restoreResultFromStorage = function () {
@@ -575,7 +655,7 @@ async function unis() {
 
       document.querySelector(".resultPage").style.display = "none";
       const handler = PaystackPop.setup({
-        key: "pk_live_db6a66b9372f3b2a5c775bfd81dc6f3171a7e66a",
+        key: "pk_test_217133aa809e4d9c253ad67a39601a632ad77e4f",
         email: email,
         amount: 1400,
         currency: "GHS",
@@ -603,6 +683,10 @@ async function unis() {
             </div>
           `;
           }
+
+          // Store student name and email in localStorage for PDF generation
+          localStorage.setItem("uniSearchStudentName", name);
+          localStorage.setItem("uniSearchStudentEmail", email);
 
           sessionStorage.setItem(
             "uniSearchStudentData",

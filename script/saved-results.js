@@ -3,7 +3,7 @@ function initSavedResults() {
   const savedResultActions = document.querySelector(".saved-result-actions");
 
   if (!resultHero || !savedResultActions) {
-   /*  console.error("Container elements not found - DOM may not be ready"); */
+    /*  console.error("Container elements not found - DOM may not be ready"); */
     return;
   }
 
@@ -22,39 +22,53 @@ function initSavedResults() {
     savedResultActions.innerHTML = "";
   }
 
+  function getCourseCutoffValue(course) {
+    const cutoff = course?.cutoff_criteria || course?.cutoff || {};
+    return (
+      cutoff.minimum_aggregate ??
+      cutoff.minimumAggregate ??
+      cutoff.aggregate ??
+      course?.minimum_aggregate ??
+      course?.minimumAggregate ??
+      "N/A"
+    );
+  }
 
   function displaySavedResults(data) {
-    const { elegible, aggregate, Uni,weakGrades =[] } = data;
+    const { elegible, aggregate, Uni, weakGrades = [] } = data;
 
     if (!Array.isArray(elegible)) {
-     /*  console.error("elegible is not an array:", elegible); */
+      /*  console.error("elegible is not an array:", elegible); */
       displayNoDataMessage();
       return;
     }
 
     const listItems = elegible
-      .map(
-        (p) => `
+      .map((p) => {
+        const cutoffValue = getCourseCutoffValue(p);
+
+        return `
        <div class="result-card">
           <div class="result-card-left">
               <div class="result-card-top">${p.program_name}</div>
           <div class="Co_Fa">
               <div class="result-card-college">
-                <img src="icons/icons8-pentagon-24.png" alt="icon">${p.college}</div>
+                <img src="icons/icons8-pentagon-24.png" alt="icon">${p.college || "College"}</div>
               <div class="result-card-faculty">
-                <img src="icons/icons8-pencil-24.png" alt="icon">${p.faculty}</div>
+                <img src="icons/icons8-pencil-24.png" alt="icon">${p.faculty || "Faculty"}</div>
             </div>
           </div>
           <div class="result-card-right">
-            <div class="resultAgg">${p.cutoff_criteria.minimum_aggregate}</div>
+            <div class="resultAgg">${cutoffValue}</div>
             <div class="resultAgg-t1">AGG</div>
           </div>
       </div>
-    `,
-      )
+    `;
+      })
       .join("");
 
-    const noProgramsHtml = elegible.length === 0
+    const noProgramsHtml =
+      elegible.length === 0
         ? `
          <div class="no-match-card">
           <span class="status-badge">Payment Confirmed ✅</span>
@@ -80,27 +94,30 @@ function initSavedResults() {
        `
         : "";
 
-        let subjectHtml = '';
-            weakGrades.map((e)=>{
-                subjectHtml+=`
+    let subjectHtml = "";
+    weakGrades.map((e) => {
+      subjectHtml += `
                     ${e.subject},
-                `
-            }) 
+                `;
+    });
 
-        let gradeHtml = '';
-         weakGrades.map((e)=>{
-                gradeHtml+=`
+    let gradeHtml = "";
+    weakGrades.map((e) => {
+      gradeHtml += `
                    ${e.grade},
-                `
-            })
+                `;
+    });
 
-        const weakGradesHtml = weakGrades.length>0 ? `
+    const weakGradesHtml =
+      weakGrades.length > 0
+        ? `
            <div class="weakmarksave" style="font-style:italic">
                Getting ${gradeHtml} in ${subjectHtml} respectively may reduce your chances of admission.
                Even though you may see eligible programs, universities often prioritize stronger grades.
                <a href="https://wa.me/+233509304981?text=Hi Unilift,, I need help with selecting courses for my grades."><span style="white-space:nowrap" >Talk to an assistant </span></a>
             </div>   
-        `: '';
+        `
+        : "";
 
     resultHero.innerHTML = `
       <div class="result-summary">
@@ -118,9 +135,19 @@ function initSavedResults() {
 
     savedResultActions.innerHTML = `
       <div class="result-actions-buttons">
+        <button class="download-pdf-btn saved-download-pdf" title="Download your eligibility report as PDF"><i class="fas fa-download"></i> Download Report</button>
         <a href="#" class="heroButton" onclick="goToGradePage()">Check New Results</a>
       </div>
     `;
+
+    // Set up download button for saved results
+    const downloadBtn = document.querySelector(".saved-download-pdf");
+    if (downloadBtn) {
+      downloadBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        triggerSavedResultsPdfDownload(elegible, aggregate, Uni, weakGrades);
+      });
+    }
   }
 
   let savedResult = localStorage.getItem("uniSearchResult");
@@ -128,10 +155,10 @@ function initSavedResults() {
   if (savedResult) {
     try {
       const parsed = JSON.parse(savedResult);
-     /*  console.log("Parsed result:", parsed); */
+      /*  console.log("Parsed result:", parsed); */
 
       if (parsed && Array.isArray(parsed.elegible)) {
-       /*  console.log("Displaying saved results..."); */
+        /*  console.log("Displaying saved results..."); */
         displaySavedResults(parsed);
       } else {
         /* console.log("Result structure is invalid - showing no data message"); */
@@ -159,16 +186,16 @@ function initSavedResults() {
 
   function reviewIcon(mode) {
     const reviewIcons = document.querySelectorAll(".reviewIcon img");
-    const exclamationMark = document.querySelector('.no-results-icon img');
+    const exclamationMark = document.querySelector(".no-results-icon img");
     if (!reviewIcons) return;
-    if(!exclamationMark) return;
+    if (!exclamationMark) return;
 
     if (mode === "light") {
       reviewIcons.forEach((icon) => (icon.src = "icons/quote-L.png"));
-      exclamationMark.src= "icons/exclamation-mark-L.png"
+      exclamationMark.src = "icons/exclamation-mark-L.png";
     } else if (mode === "dark") {
       reviewIcons.forEach((icon) => (icon.src = "icons/quote-D.png"));
-      exclamationMark.src= "icons/exclamation-mark-D.png";
+      exclamationMark.src = "icons/exclamation-mark-D.png";
     }
   }
 
@@ -192,8 +219,7 @@ function initSavedResults() {
       reviewIcon("light");
     }
     themeToggle.addEventListener("click", () => {
-
-      const root = document.documentElement
+      const root = document.documentElement;
       root.classList.toggle("dark-mode");
 
       const isDark = root.classList.contains("dark-mode");
@@ -212,7 +238,6 @@ function initSavedResults() {
     });
   });
 
-  
   const getStartedBtns = document.querySelectorAll(".getStarted-btn");
   getStartedBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
@@ -226,6 +251,50 @@ window.goToGradePage = function () {
   sessionStorage.setItem("uniSearchPageState", "grade");
 
   window.location.href = "index.html";
+};
+
+window.triggerSavedResultsPdfDownload = function (
+  elegible,
+  aggregate,
+  Uni,
+  weakGrades,
+) {
+  // Get student data from localStorage
+  const studentName = localStorage.getItem("uniSearchStudentName") || "Student";
+  const studentEmail = localStorage.getItem("uniSearchStudentEmail") || "";
+
+  // Build PDF payload
+  const pdfPayload = {
+    name: studentName,
+    email: studentEmail,
+    university: Uni,
+    aggregate: aggregate,
+    courses: elegible.map((course) => ({
+      program_name: course.program_name,
+      college: course.college || "College",
+      faculty: course.faculty || "Faculty",
+      cutoff:
+        course.cutoff_criteria?.minimum_aggregate ??
+        course.cutoff_criteria?.minimumAggregate ??
+        course.cutoff?.minimum_aggregate ??
+        course.cutoff?.aggregate ??
+        course.minimum_aggregate ??
+        course.minimumAggregate ??
+        "N/A",
+    })),
+    weakGrades: weakGrades || [],
+  };
+
+  // Generate PDF using UniLiftPDFGenerator
+  if (window.UniLiftPDFGenerator) {
+    const generator = new window.UniLiftPDFGenerator();
+    generator.generatePDF(pdfPayload).catch((error) => {
+      console.error("PDF generation failed:", error);
+      alert("Failed to generate PDF. Please try again.");
+    });
+  } else {
+    alert("PDF library not available. Please refresh the page.");
+  }
 };
 
 if (document.readyState === "loading") {

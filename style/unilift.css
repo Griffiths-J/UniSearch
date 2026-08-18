@@ -1294,6 +1294,54 @@ select:focus {
   background: #0f65b5;
 }
 
+/* Download PDF Button */
+.download-pdf-btn {
+  background: var(--background-btn);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.95rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(23, 125, 228, 0.3);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+  white-space: nowrap;
+}
+
+.download-pdf-btn:hover {
+  background: linear-gradient(to left, #1575d5, #0db1e8, #3bd1c2);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(23, 125, 228, 0.4);
+}
+
+.download-pdf-btn:active {
+  transform: translateY(0);
+}
+
+.download-pdf-btn i {
+  font-size: 1rem;
+}
+
+/* Download button in result actions */
+.result-actions-buttons {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.result-actions-buttons .download-pdf-btn {
+  padding: 0.85rem 1rem;
+  font-size: 0.9rem;
+}
+
 .eligible-programs {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

@@ -1,15 +1,18 @@
 <!doctype html>
 <html lang="en">
   <head>
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="favicon.png" />
 
-  
-    <title>UniLift | University Course Recommender & Grade Eligibility Checker</title>
+    <title>
+      UniLift | University Course Recommender & Grade Eligibility Checker
+    </title>
 
-    <meta name="title" content="UniLift | University Course Recommender & Grade Eligibility Checker" />
+    <meta
+      name="title"
+      content="UniLift | University Course Recommender & Grade Eligibility Checker"
+    />
     <meta
       name="description"
       content="Stop guessing your admission chances. Input your WASSCE grades into UniLift to calculate your aggregate score and instantly get recommended university courses you qualify for."
@@ -21,7 +24,6 @@
     <meta name="robots" content="index, follow" />
     <meta name="author" content="UniLift" />
 
-  
     <link rel="canonical" href="https://unilift.app/" />
 
     <meta property="og:type" content="website" />
@@ -37,7 +39,6 @@
     <meta property="og:image" content="https://unilift.app/og-image.jpeg" />
     <meta property="og:site_name" content="UniLift" />
 
-   
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://unilift.app/" />
     <meta
@@ -54,47 +55,45 @@
     />
 
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebApplication",
-          "@id": "https://unilift.app/#webapp",
-          "url": "https://unilift.app/",
-          "name": "UniLift Course Recommender",
-          "applicationCategory": "EducationalApplication",
-          "operatingSystem": "All",
-          "browserRequirements": "Requires JavaScript. Requires HTML5.",
-          "description": "An interactive web app that calculates WASSCE aggregate scores and recommends eligible university courses based on student grades.",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "GHS"
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "@id": "https://unilift.app/#webapp",
+            "url": "https://unilift.app/",
+            "name": "UniLift Course Recommender",
+            "applicationCategory": "EducationalApplication",
+            "operatingSystem": "All",
+            "browserRequirements": "Requires JavaScript. Requires HTML5.",
+            "description": "An interactive web app that calculates WASSCE aggregate scores and recommends eligible university courses based on student grades.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "GHS"
+            },
+            "featureList": [
+              "WASSCE aggregate score calculation",
+              "Automated university course recommendation",
+              "Admission eligibility checking",
+              "University cut-off point verification"
+            ]
           },
-          "featureList": [
-            "WASSCE aggregate score calculation",
-            "Automated university course recommendation",
-            "Admission eligibility checking",
-            "University cut-off point verification"
-          ]
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://unilift.app/#website",
-          "url": "https://unilift.app/",
-          "name": "UniLift",
-          "description": "University Course Recommender and Academic Eligibility Platform",
-          "publisher": {
-            "@type": "Organization",
+          {
+            "@type": "WebSite",
+            "@id": "https://unilift.app/#website",
+            "url": "https://unilift.app/",
             "name": "UniLift",
-            "url": "https://unilift.app/"
+            "description": "University Course Recommender and Academic Eligibility Platform",
+            "publisher": {
+              "@type": "Organization",
+              "name": "UniLift",
+              "url": "https://unilift.app/"
+            }
           }
-        }
-      ]
-    }
+        ]
+      }
     </script>
-
-
 
     <script>
       (function () {
@@ -126,7 +125,7 @@
           appId: "a744f9a7-2c80-40fd-af37-16630dc784cc",
         });
       });
-    </script> 
+    </script>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -1108,6 +1107,11 @@
         <p>&copy; 2026 Unilift. All rights reserved.</p>
       </div>
     </footer>
+
+    <!-- jsPDF library for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- UniLift PDF Generator -->
+    <script src="script/pdf-generator.js"></script>
 
     <script type="module" src="script/page.js"></script>
     <script type="module" src="script/unilift.js"></script>
