@@ -199,31 +199,123 @@
 
       <div class="landingPage">
         <!--hero sec-->
-        <div class="mainHero">
+        <section class="mainHero" aria-labelledby="hero-heading">
           <div class="heroText">
             <div class="mainn">
-              <p class="first">
-                Your
-                <abbr title="West Africa Senior Secondary Council Examination"
-                  >WASSCE</abbr
-                >
-                grades are key.
-              </p>
-              <p class="second">
-                Let's find which <span class="heroSpan">doors they open</span>
-              </p>
+              <h1 id="hero-heading" class="first">
+                Your grades. <span class="heroSpan">Your options.</span><br />
+                Your next step.
+              </h1>
             </div>
-
             <p class="third">
-              Ghana's most accurate University course recommender. Trusted by
-              10,000+ students.
+              Enter your WASSCE grades and UniLift matches them against
+              university requirements so you can see the programmes worth
+              considering.
             </p>
+            <div class="hero-actions">
+              <button class="heroButton getStarted-btn" type="button">
+                Check my course options
+                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              </button>
+              <a class="hero-secondary" href="how-works.html"
+                >See how it works</a
+              >
+            </div>
+            <div class="hero-trust" aria-label="UniLift benefits">
+              <span
+                ><i class="fas fa-check-circle" aria-hidden="true"></i>
+                WASSCE-based matching</span
+              >
+              <span
+                ><i class="fas fa-check-circle" aria-hidden="true"></i> Multiple
+                universities</span
+              >
+            </div>
           </div>
 
-          <button class="heroButton getStarted-btn">
-            Check Available Courses
-          </button>
-        </div>
+          <div
+            class="hero-visual"
+            aria-label="Illustrative UniLift course matching preview"
+          >
+            <div class="preview-card">
+              <div class="preview-header">
+                <div class="preview-brand">
+                  <img
+                    class="preview-logo"
+                    src="images/u-logo.png"
+                    alt="UniLift logo"
+                  />
+                  <div class="preview-brand-text">
+                    <strong>UniLift</strong>
+                    <span>Illustrative result preview</span>
+                  </div>
+                </div>
+                <span class="preview-status"
+                  ><span class="preview-status-dot"></span> Match ready</span
+                >
+              </div>
+              <div class="preview-result">
+                <div class="preview-meta">
+                  <span>WASSCE profile</span>
+                  <strong
+                    >Kwame Nkrumah University of Science and Technology</strong
+                  >
+                </div>
+                <div class="preview-aggregate">
+                  <span>Aggregate</span><strong>7</strong>
+                </div>
+              </div>
+              <div class="course-preview">
+                <div class="preview-label">Eligible programme examples</div>
+                <div class="course-match">
+                  <div class="course-top">
+                    <div>
+                      <strong class="course-title"
+                        >BSc. Computer Science</strong
+                      >
+                      <span class="course-details"
+                        >College of Basic &amp; Applied Sciences</span
+                      >
+                    </div>
+                    <span class="course-aggregate">Cutoff 8</span>
+                  </div>
+                  <div class="match-track"><span class="match-82"></span></div>
+                </div>
+                <div class="course-match">
+                  <div class="course-top">
+                    <div>
+                      <strong class="course-title">BSc. Administration</strong>
+                      <span class="course-details">Business School</span>
+                    </div>
+                    <span class="course-aggregate">Cutoff 11</span>
+                  </div>
+                  <div class="match-track"><span class="match-94"></span></div>
+                </div>
+                <div class="course-match secondary-course">
+                  <div class="course-top">
+                    <div>
+                      <strong class="course-title">BA. Economics</strong>
+                      <span class="course-details">Social Sciences</span>
+                    </div>
+                    <span class="course-aggregate">Cutoff 14</span>
+                  </div>
+                </div>
+              </div>
+              <div class="preview-stats">
+                <div class="preview-stat">
+                  <strong>3</strong><span>matches shown</span>
+                </div>
+                <div class="preview-stat">
+                  <strong>6</strong><span>universities available*</span>
+                </div>
+              </div>
+              <div class="preview-disclaimer">
+                *Illustrative sample only. Your actual results depend on the
+                grades and university you select.
+              </div>
+            </div>
+          </div>
+        </section>
 
         <!--Unicards-->
         <div class="uni">
@@ -313,17 +405,17 @@
               <div class="deadline-card-top">
                 <div class="deadline-card-brand">
                   <h4>KNUST</h4>
-                  <p class="deadline-label">Application closes</p>
+                  <p class="deadline-label">Applications closed</p>
                 </div>
                 <span class="deadline-pill priority">Priority</span>
               </div>
-              <div class="deadline-date">31 Aug 2026</div>
-              <p class="deadline-tip">Prepare your documents early.</p>
+              <div class="deadline-date">Closed</div>
+              <p class="deadline-tip">The application window has closed.</p>
               <a
                 href="https://www.knust.edu.gh"
                 target="_blank"
                 rel="noreferrer"
-                >Open portal</a
+                >Open portal &rarr;</a
               >
             </article>
 
@@ -331,16 +423,16 @@
               <div class="deadline-card-top">
                 <div class="deadline-card-brand">
                   <h4>UG</h4>
-                  <p class="deadline-label">Application window</p>
+                  <p class="deadline-label">Applications open</p>
                 </div>
                 <span class="deadline-pill popular">Popular</span>
               </div>
-              <div class="deadline-date">Open now</div>
+              <div class="deadline-date">Until WASSCE release</div>
               <p class="deadline-tip">
-                Confirm your preferred programmes early.
+                Applications remain open until WASSCE results are released.
               </p>
               <a href="https://www.ug.edu.gh" target="_blank" rel="noreferrer"
-                >Open portal</a
+                >Open portal &rarr;</a
               >
             </article>
 
@@ -348,16 +440,17 @@
               <div class="deadline-card-top">
                 <div class="deadline-card-brand">
                   <h4>UCC</h4>
-                  <p class="deadline-label">Application closes</p>
+                  <p class="deadline-label">Applications open</p>
                 </div>
                 <span class="deadline-pill strong">Strong option</span>
               </div>
-              <div class="deadline-date">31 Aug 2026</div>
+              <div class="deadline-date">Until WASSCE release</div>
               <p class="deadline-tip">
-                Review entry requirements before applying.
+                Applications remain open while WASSCE results are yet to be
+                released.
               </p>
               <a href="https://www.ucc.edu.gh" target="_blank" rel="noreferrer"
-                >Open portal</a
+                >Open portal &rarr;</a
               >
             </article>
 
@@ -374,7 +467,7 @@
                 Get your documents ready before the rush.
               </p>
               <a href="https://www.upsa.edu.gh" target="_blank" rel="noreferrer"
-                >Open portal</a
+                >Open portal &rarr;</a
               >
             </article>
           </div>

@@ -260,6 +260,33 @@
   line-height: 1.7;
 }
 
+.checker-forms-main .btn {
+  min-height: 46px;
+  padding: 0.75rem 1.15rem;
+  border-radius: 10px;
+  font-family: var(--inter);
+  font-size: 0.94rem;
+  font-weight: 700;
+}
+
+.checker-forms-main .btn-primary {
+  border: 1px solid transparent;
+  background: var(--background-btn);
+  color: #fff;
+}
+
+.checker-forms-main .btn-secondary {
+  border: 1px solid var(--Hspan);
+  background: transparent;
+  color: var(--Hspan);
+}
+
+.checker-forms-main .btn:hover,
+.checker-forms-main .btn:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(23, 125, 228, 0.2);
+}
+
 .cta-section {
   max-width: 760px;
   margin: 0 auto 4rem;
@@ -294,13 +321,16 @@
   align-items: center;
   justify-content: center;
   gap: 0.65rem;
+  min-height: 46px;
   padding: 0.95rem 1.5rem;
-  border-radius: 999px;
+  border: 1px solid transparent;
+  border-radius: 10px;
   background: var(--background-btn);
   color: #fff;
+  font-family: var(--inter);
+  font-size: 0.94rem;
   font-weight: 700;
   text-decoration: none;
-  font-weight: 700;
   min-width: 230px;
   transition:
     transform 0.25s ease,

@@ -25,9 +25,6 @@ class UniLiftPDFGenerator {
     this.bottomThreshold = this.pageHeight - 28;
   }
 
-  /**
-   * Convert hex color to RGB array
-   */
   hexToRgb(hex) {
     const cleaned = hex.replace("#", "");
     const r = parseInt(cleaned.substring(0, 2), 16);
@@ -36,9 +33,7 @@ class UniLiftPDFGenerator {
     return [r, g, b];
   }
 
-  /**
-   * Convert image element to data URL
-   */
+ 
   async imageToDataUrl(imgEl) {
     return new Promise((resolve) => {
       if (!imgEl || !imgEl.src) return resolve(null);
@@ -61,9 +56,7 @@ class UniLiftPDFGenerator {
     });
   }
 
-  /**
-   * Hash string for deterministic random selection
-   */
+
   hashString(str) {
     if (!str) return 0;
     let h = 2166136261 >>> 0;
@@ -74,9 +67,7 @@ class UniLiftPDFGenerator {
     return h;
   }
 
-  /**
-   * Seeded random number generator
-   */
+  
   mulberry32(a) {
     return function () {
       var t = (a += 0x6d2b79f5);
@@ -86,9 +77,7 @@ class UniLiftPDFGenerator {
     };
   }
 
-  /**
-   * Select contextual tips based on student performance
-   */
+
   selectTips(student, { elegible = [], weakGrades = [] } = {}, N = 2) {
     const pool = [
       "Small improvements in one core subject often significantly expand program eligibility.",
@@ -132,21 +121,18 @@ class UniLiftPDFGenerator {
     return results.slice(0, N);
   }
 
-  /**
-   * Draw PDF header with logo and branding
-   */
   drawHeader(doc, yPos, logoData) {
     const { primary, muted, border } = this.BRAND;
     const contentWidth = this.pageWidth - this.leftMargin - this.rightMargin;
 
-    // Decorative top accent bar
+  
     doc.setFillColor(...this.hexToRgb(primary));
     doc.rect(0, 0, this.pageWidth, 4, "F");
 
     if (logoData) {
       doc.addImage(logoData, "PNG", this.leftMargin, yPos, 12, 12);
 
-      // Site Name
+   
       doc.setFont("helvetica", "bold");
       doc.setFontSize(15);
       doc.setTextColor(...this.hexToRgb(primary));
@@ -176,7 +162,7 @@ class UniLiftPDFGenerator {
       );
     }
 
-    // Header separator line
+  
     doc.setDrawColor(...this.hexToRgb(border));
     doc.setLineWidth(0.3);
     doc.line(
@@ -187,9 +173,7 @@ class UniLiftPDFGenerator {
     );
   }
 
-  /**
-   * Generate and download PDF
-   */
+
   async generatePDF(studentData) {
     if (!window.jspdf) {
       alert("PDF library not loaded. Please refresh the page.");
@@ -201,7 +185,7 @@ class UniLiftPDFGenerator {
 
     const contentWidth = this.pageWidth - this.leftMargin - this.rightMargin;
 
-    // Load logo
+  
     let logoData = null;
     try {
       const logoEl = document.querySelector('img[src*="u-logo.png"]');
@@ -214,18 +198,18 @@ class UniLiftPDFGenerator {
 
     let currentY = 12;
 
-    // Header
+
     this.drawHeader(doc, currentY, logoData);
     currentY += 22;
 
-    // Executive Profile Box
+  
     const cardH = 28;
     doc.setFillColor(...this.hexToRgb(this.BRAND.lightBg));
     doc.setDrawColor(...this.hexToRgb(this.BRAND.border));
     doc.setLineWidth(0.3);
     doc.roundedRect(this.leftMargin, currentY, contentWidth, cardH, 3, 3, "FD");
 
-    // Profile Column 1 (Student Info)
+
     doc.setFont("helvetica", "bold");
     doc.setFontSize(7.5);
     doc.setTextColor(...this.hexToRgb(this.BRAND.muted));
@@ -246,7 +230,7 @@ class UniLiftPDFGenerator {
     doc.setTextColor(...this.hexToRgb(this.BRAND.text));
     doc.text(studentData.email || "—", this.leftMargin + 6, currentY + 24);
 
-    // Profile Column 2 (University & Score)
+
     const col2X = this.leftMargin + 92;
     doc.setFont("helvetica", "bold");
     doc.setFontSize(7.5);
@@ -270,14 +254,13 @@ class UniLiftPDFGenerator {
 
     currentY += cardH + 10;
 
-    // Section Heading
+
     doc.setFont("helvetica", "bold");
     doc.setFontSize(11);
     doc.setTextColor(...this.hexToRgb(this.BRAND.dark));
     doc.text("Eligible Academic Programs", this.leftMargin, currentY);
     currentY += 5;
 
-    // Table Setup
     const thH = 8;
     const colCutoffW = 35;
     const colProgW = contentWidth - colCutoffW;
@@ -297,7 +280,7 @@ class UniLiftPDFGenerator {
     drawTableHeader(currentY);
     currentY += thH;
 
-    // Table Rows
+
     const rowHeightMin = 8.5;
     const courses = studentData.courses || [];
 
@@ -309,7 +292,7 @@ class UniLiftPDFGenerator {
       const programLines = doc.splitTextToSize(c.program_name, colProgW - 8);
       const rowH = Math.max(rowHeightMin, programLines.length * 5 + 3);
 
-      // Page break if needed
+   
       if (currentY + rowH > this.bottomThreshold) {
         doc.addPage();
         currentY = 12;
@@ -319,7 +302,7 @@ class UniLiftPDFGenerator {
         currentY += thH;
       }
 
-      // Alternate row shading
+   
       if (i % 2 === 0) {
         doc.setFillColor(...this.hexToRgb(this.BRAND.lightBg));
         doc.rect(this.leftMargin, currentY, contentWidth, rowH, "F");
@@ -342,7 +325,7 @@ class UniLiftPDFGenerator {
 
     currentY += 8;
 
-    // Tips Section
+ 
     const tips = this.selectTips(
       studentData,
       {
@@ -383,7 +366,7 @@ class UniLiftPDFGenerator {
 
     currentY += tipsBoxH + 8;
 
-    // Disclaimer
+
     const disclaimer =
       "This eligibility report is strictly for guidance. Always cross-check entry thresholds on official university portals before submitting applications.";
     doc.setFont("helvetica", "italic");
@@ -403,7 +386,7 @@ class UniLiftPDFGenerator {
     doc.text(disclaimerLines, this.leftMargin, currentY + 3);
     currentY += disclaimerH + 6;
 
-    // Support Box
+  
     const inquiryBoxH = 14;
     if (currentY + inquiryBoxH > this.bottomThreshold) {
       doc.addPage();
@@ -443,7 +426,7 @@ class UniLiftPDFGenerator {
       currentY + 10.5,
     );
 
-    // Footer on all pages
+   
     const totalPages = doc.internal.getNumberOfPages();
     const rawTimestamp = new Date().toLocaleString();
 
@@ -474,7 +457,7 @@ class UniLiftPDFGenerator {
       );
     }
 
-    // Download
+    
     const filename = `UniLift_Result_${(studentData.name || "student")
       .replace(/\s+/g, "_")
       .toLowerCase()}_${(studentData.university || "university")
@@ -485,5 +468,4 @@ class UniLiftPDFGenerator {
   }
 }
 
-// Export for use
 window.UniLiftPDFGenerator = UniLiftPDFGenerator;

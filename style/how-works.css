@@ -70,13 +70,20 @@
 }
 
 .cta-primary {
-  display: inline-block;
-  padding: 15px 35px;
-  background-color: var(--Hspan);
-  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  min-width: 230px;
+  padding: 0 19px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: var(--background-btn);
+  color: #fff;
+  font-family: var(--inter);
+  font-size: 0.94rem;
+  font-weight: 700;
   text-decoration: none;
-  border-radius: 50px;
-  font-weight: bold;
   margin-top: 20px;
   transition:
     transform 0.3s ease,
@@ -85,8 +92,13 @@
 }
 
 .cta-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(23, 125, 228, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(23, 125, 228, 0.2);
+}
+
+.cta-primary:focus-visible {
+  outline: 3px solid rgba(23, 125, 228, 0.25);
+  outline-offset: 2px;
 }
 
 .section-title {
