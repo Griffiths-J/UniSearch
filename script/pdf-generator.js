@@ -1,8 +1,4 @@
-/**
- * UniLift PDF Report Generator
- * Generates a professional, branded PDF eligibility report
- * Uses jsPDF library (must be loaded globally as window.jspdf)
- */
+
 
 class UniLiftPDFGenerator {
   constructor() {

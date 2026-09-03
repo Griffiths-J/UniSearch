@@ -251,7 +251,6 @@ async function unis() {
     const hasPaid = Boolean(sessionStorage.getItem("uniSearchStudentData"));
     toggleResultUniversitySwitcher(hasPaid, switcherCode);
 
-    // Set up download button
     initDownloadPdfButton(elegible, aggregate, Uni, weakGrades);
   }
 
@@ -259,10 +258,9 @@ async function unis() {
     const resultActions = document.querySelector(".result-actions");
     if (!resultActions) return;
 
-    // Check if download button already exists to prevent duplicates
     const existingBtn = resultActions.querySelector(".download-pdf-btn");
     if (existingBtn) {
-      // Remove old listeners and re-attach
+     
       existingBtn.replaceWith(existingBtn.cloneNode(true));
       const newBtn = resultActions.querySelector(".download-pdf-btn");
       if (newBtn) {
@@ -273,15 +271,15 @@ async function unis() {
       return;
     }
 
-    // Create download button HTML
+    
     const downloadButtonHtml = `<button class="download-pdf-btn" title="Download your eligibility report as PDF"><i class="fas fa-download"></i> Download Report</button>`;
 
-    // Create a wrapper div if needed
+    
     const switcherContainer = resultActions.querySelector(
       ".result-university-switcher",
     );
     if (switcherContainer) {
-      // Insert after the switcher container
+      
       const downloadWrapper = document.createElement("div");
       downloadWrapper.innerHTML = downloadButtonHtml;
       resultActions.insertBefore(
@@ -305,7 +303,7 @@ async function unis() {
   }
 
   function triggerPdfDownload(elegible, aggregate, Uni, weakGrades) {
-    // Validate inputs
+    
     if (!Array.isArray(elegible) || elegible.length === 0) {
       alert("No eligible programs to generate PDF for.");
       return;
@@ -316,12 +314,12 @@ async function unis() {
       return;
     }
 
-    // Get student data from localStorage
+   
     const studentName =
       localStorage.getItem("uniSearchStudentName") || "Student";
     const studentEmail = localStorage.getItem("uniSearchStudentEmail") || "";
 
-    // Build PDF payload with defensive checks
+    
     const pdfPayload = {
       name: studentName,
       email: studentEmail,
@@ -335,8 +333,7 @@ async function unis() {
       })),
       weakGrades: Array.isArray(weakGrades) ? weakGrades : [],
     };
-
-    // Generate PDF using UniLiftPDFGenerator
+  ;
     try {
       const generator = new window.UniLiftPDFGenerator();
       generator.generatePDF(pdfPayload).catch((error) => {
