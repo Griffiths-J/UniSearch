@@ -148,6 +148,7 @@
     </script>
 
     <link rel="stylesheet" href="style/unilift.css" />
+    <link rel="stylesheet" href="style/student-contact.css" />
     <script src="https://js.paystack.co/v1/inline.js"></script>
     <title>Unilift | Know Your Courses</title>
   </head>
@@ -1233,6 +1234,56 @@
         />
       </a>
     </div>
+
+    <aside
+      class="student-contact"
+      id="student-contact"
+      aria-label="Chat with a KNUST student"
+      aria-hidden="true"
+    >
+      <button
+        class="student-contact-close"
+        type="button"
+        aria-label="Close KNUST student invitation"
+      >
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+
+      <div class="student-contact-intro">
+        <span class="student-contact-eyebrow">
+          <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+          KNUST community
+        </span>
+        <h2>Chat with a KNUST Student</h2>
+        <p>Get a real perspective on admissions, courses, and campus life.</p>
+        <button class="student-contact-start" type="button">
+          Choose a topic
+          <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="student-contact-topics" hidden>
+        <div class="student-contact-topics-header">
+          <button class="student-contact-back" type="button" aria-label="Back">
+            <i class="fas fa-arrow-left" aria-hidden="true"></i>
+          </button>
+          <div>
+            <span class="student-contact-eyebrow">Start a conversation</span>
+            <h2>What would you like to ask?</h2>
+          </div>
+        </div>
+        <div class="student-contact-topic-list">
+          <button type="button" data-topic="admissions">Admissions</button>
+          <button type="button" data-topic="programmes">Programmes and courses</button>
+          <button type="button" data-topic="accommodation">Accommodation</button>
+          <button type="button" data-topic="campus-life">Campus life</button>
+          <button type="button" data-topic="fees">Fees and school costs</button>
+          <button type="button" data-topic="other">Other question</button>
+        </div>
+      </div>
+    </aside>
+
+    <script src="script/student-contact.js"></script>
 
     <script>
       (() => {
