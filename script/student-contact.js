@@ -24,12 +24,12 @@
     sessionStorage.setItem(sessionKey, "true");
     contactPanel.classList.add("is-visible");
     contactPanel.setAttribute("aria-hidden", "false");
-    hideTimer = window.setTimeout(hidePanel, 8000);
+    hideTimer = window.setTimeout(hidePanel, 8500);
   }
 
   function showWhenNearPageBottom() {
     const pageBottom = window.scrollY + window.innerHeight;
-    const bottomThreshold = Math.max(240, window.innerHeight * 0.2);
+    const bottomThreshold = Math.max(250, window.innerHeight * 0.30);
     const isNearBottom =
       pageBottom >= document.documentElement.scrollHeight - bottomThreshold;
 
@@ -45,7 +45,7 @@
   function showIntro() {
     intro.hidden = false;
     topics.hidden = true;
-    hideTimer = window.setTimeout(hidePanel, 8000);
+    hideTimer = window.setTimeout(hidePanel, 8500);
   }
 
   function openWhatsApp(topic) {
